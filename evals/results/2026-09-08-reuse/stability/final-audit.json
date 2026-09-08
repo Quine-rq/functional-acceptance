@@ -1,0 +1,40 @@
+{
+  "observed_at": "2026-09-08T07:27:02.623Z",
+  "issues": [],
+  "all_checks_passed": true,
+  "native_attempts_retained": 17,
+  "scheduled_batch_runs": 16,
+  "full_journey_runs": 12,
+  "browser_starts": 67,
+  "browser_closes": 67,
+  "recorded_descendant_observations": 664,
+  "remaining_owned_processes": [],
+  "ports_confirmed_absent": true,
+  "all_native_artifact_hashes_unchanged": true,
+  "native_event_stream_equals_collector_stdout": true,
+  "source_snapshots_match_pack_digests": true,
+  "independent_db_matches_native_observations": true,
+  "original_bookmark_ids": [
+    3,
+    12
+  ],
+  "final_bookmark_ids": [
+    3,
+    12,
+    47
+  ],
+  "retained_new_failed_bookmark_id": 47,
+  "original_tag_count": 15,
+  "final_tag_count": 29,
+  "session_scope": "Normal UI logins created session activity. Sessions are intentionally retained; no auth/session table values or counts were read. Existing synthetic identities remain the native pack users; no account creation/change or credential reconfiguration was performed.",
+  "full_journey_duration_ms": {
+    "min": 20171,
+    "max": 29529,
+    "mean": 23161.666666666668
+  },
+  "limitations": [
+    "Collector stdout/independent termination evidence missing for first sandbox-blocked attempt; native events/receipt retained.",
+    "The repeated batch uses a pre-existing prepared isolated checkout and does not establish clean onboarding.",
+    "Static record audit does not add new business execution coverage."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "m1",
+  "id": "export-b4da3f5d9f1747ae9e397c1fab91893f",
+  "contract_sha256": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+  "runtime": {
+    "path": "runtime.py",
+    "sha256": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c"
+  },
+  "input": {
+    "path": "input.json",
+    "sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69"
+  },
+  "tool": {
+    "name": "paginated-export-collector/0.1.0-dev + Python",
+    "version": "3.14.4"
+  },
+  "attempts": [
+    {
+      "id": "attempt-1",
+      "execution": {
+        "path": "attempt-1/execution.json",
+        "sha256": "227d03555b89cdcfac7ee632fd5539e8111d49dae3ca806688c3ef17c631be47"
+      },
+      "observations": [
+        {
+          "obligation_id": "complete-readable-export",
+          "artifact": {
+            "path": "attempt-1/output.csv",
+            "sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21"
+          }
+        }
+      ]
+    }
+  ],
+  "execution_state": "completed",
+  "cleanup": {
+    "state": "retained",
+    "details": "The owned native child has terminated. Only this run's local inputs, output, and evidence are intentionally retained; no external writes or background workers."
+  },
+  "retention": {
+    "policy": "until-owner-removes",
+    "details": "Unique local run directory; no background deletion or reuse. Recheck digests before sharing."
+  }
+}

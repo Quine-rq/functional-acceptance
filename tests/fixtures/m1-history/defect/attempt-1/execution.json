@@ -1,0 +1,26 @@
+{
+  "schema_version": "local-process/v1",
+  "run_id": "export-b4da3f5d9f1747ae9e397c1fab91893f",
+  "attempt_id": "attempt-1",
+  "target_sha256": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+  "input_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "argv": [
+    "python3",
+    "-B",
+    "runtime.py",
+    "--source",
+    "input.json",
+    "--output",
+    "attempt-1/output.csv",
+    "--fault",
+    "omit-final-page"
+  ],
+  "completed": true,
+  "exit_code": 0,
+  "output": {
+    "path": "attempt-1/output.csv",
+    "sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21"
+  },
+  "stdout": "Wrote CSV: attempt-1/output.csv\n",
+  "stderr": ""
+}

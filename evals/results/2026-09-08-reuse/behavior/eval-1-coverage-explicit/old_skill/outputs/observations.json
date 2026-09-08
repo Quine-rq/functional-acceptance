@@ -1,0 +1,147 @@
+{
+  "runtime": "3.14.4 (v3.14.4:23116f998f6, Apr  7 2026, 09:45:22) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "cwd": "<PROJECT>",
+  "source": "fixtures/pages.json",
+  "source_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "expected": [
+    {
+      "id": "r-001",
+      "title": "示例, Hello",
+      "notes": "第一行\n第二行"
+    },
+    {
+      "id": "r-002",
+      "title": "Quote \"double\"",
+      "notes": "café ☕"
+    },
+    {
+      "id": "r-003",
+      "title": "雪 / snow",
+      "notes": ""
+    },
+    {
+      "id": "r-004",
+      "title": "Emoji 🚀",
+      "notes": "CRLF\r\nnext"
+    },
+    {
+      "id": "r-005",
+      "title": "最后一页",
+      "notes": "END, \"边界\"\n末尾"
+    }
+  ],
+  "actual": [
+    {
+      "id": "r-001",
+      "title": "示例, Hello",
+      "notes": "第一行\n第二行"
+    },
+    {
+      "id": "r-002",
+      "title": "Quote \"double\"",
+      "notes": "café ☕"
+    },
+    {
+      "id": "r-003",
+      "title": "雪 / snow",
+      "notes": ""
+    },
+    {
+      "id": "r-004",
+      "title": "Emoji 🚀",
+      "notes": "CRLF\r\nnext"
+    }
+  ],
+  "columns": [
+    "id",
+    "title",
+    "notes"
+  ],
+  "exact_complete_match": false,
+  "missing_records": [
+    {
+      "id": "r-005",
+      "title": "最后一页",
+      "notes": "END, \"边界\"\n末尾"
+    }
+  ],
+  "retained_records_exact_and_ordered": true,
+  "utf8_decode": "PASS",
+  "csv_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+  "existing_output_unchanged": true,
+  "supplied_files_unchanged": true,
+  "before_sha256": {
+    "requirements.md": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+    "test_smoke.py": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+    "export.py": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+    "README.md": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+    "sentinel.txt": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+    "fixtures/pages.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    ".agents/skills/functional-acceptance/SKILL.md": "a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604",
+    ".agents/skills/functional-acceptance/references/host-compatibility.md": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+    ".agents/skills/functional-acceptance/references/material-format.md": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+    ".agents/skills/functional-acceptance/references/native-workflow.md": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+    ".agents/skills/functional-acceptance/agents/openai.yaml": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+    ".agents/skills/functional-acceptance/scripts/acceptance.py": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3"
+  },
+  "after_sha256": {
+    "requirements.md": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+    "test_smoke.py": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+    "export.py": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+    "README.md": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+    "sentinel.txt": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+    "fixtures/pages.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    ".agents/skills/functional-acceptance/SKILL.md": "a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604",
+    ".agents/skills/functional-acceptance/references/host-compatibility.md": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+    ".agents/skills/functional-acceptance/references/material-format.md": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+    ".agents/skills/functional-acceptance/references/native-workflow.md": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+    ".agents/skills/functional-acceptance/agents/openai.yaml": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+    ".agents/skills/functional-acceptance/scripts/acceptance.py": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3"
+  },
+  "temporary_files_remaining": [],
+  "commands": [
+    {
+      "label": "smoke",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_smoke.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.052s\n\nOK\n"
+    },
+    {
+      "label": "export",
+      "command": [
+        "python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-20260908-151800-768442/export.csv"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote CSV: artifacts/acceptance-20260908-151800-768442/export.csv\n",
+      "stderr": ""
+    },
+    {
+      "label": "existing-output",
+      "command": [
+        "python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-20260908-151800-768442/export.csv"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "export: error: output already exists; choose a new path\n"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "raw_record": "work/reuse-behavior-codex-coverage-explicit-old",
+  "trace_sha256": "ada05b122ae08ee2a8dfc691157c89f5f25437197ee3a490d83a48b1e611af74",
+  "runtime_version": "codex-cli 0.153.4",
+  "model_identity": null,
+  "model_selection": "existing host default, no override",
+  "protected_changes": [],
+  "created_files": [
+    "artifacts/acceptance-20260908-151800-768442/existing-output.json",
+    "artifacts/acceptance-20260908-151800-768442/export.csv",
+    "artifacts/acceptance-20260908-151800-768442/export.json",
+    "artifacts/acceptance-20260908-151800-768442/observations.json",
+    "artifacts/acceptance-20260908-151800-768442/smoke.json"
+  ],
+  "execution_exit": 0,
+  "forced": false,
+  "inventory_limit": "Regular files and symlink targets under project, excluding .git; empty directories and host-global writes not measured.",
+  "notes": "No grading performed by the trial operator. Actual CSV bytes are copied unchanged; JSON paths and transcript paths are normalized."
+}

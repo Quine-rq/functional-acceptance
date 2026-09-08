@@ -1,0 +1,10 @@
+{
+  "host": "codex",
+  "configuration": "old_skill",
+  "scenario": "coverage-natural-1",
+  "status": "not_run_approval_dependency",
+  "actual_model": null,
+  "paired_comparison_eligible": false,
+  "raw_record": null,
+  "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+}

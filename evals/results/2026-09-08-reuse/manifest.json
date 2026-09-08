@@ -1,0 +1,2126 @@
+{
+  "schema_version": "retained-reuse/v1",
+  "entries": [
+    {
+      "path": "native/retained-permission-attempt/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/events.jsonl",
+      "source_sha256": "189cc325c91bfcd1983312434b8541d77ad17ab9d121a1e632121fe601a0cb6d",
+      "sha256": "682f2edd9edd15de7231abd2de70b5c5facfe370ec3efe9592859f99823e657a",
+      "bytes": 2797,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/retained-permission-attempt/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/result.json",
+      "source_sha256": "353f0475ce4bf6525c1c0eb466ebffa71df53f1e1cb604d1def3269fe029d775",
+      "sha256": "353f0475ce4bf6525c1c0eb466ebffa71df53f1e1cb604d1def3269fe029d775",
+      "bytes": 1168,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/retained-permission-attempt/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T071832206438Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/events.jsonl",
+      "source_sha256": "05f4313d7fd8fc8fd33e81866f68fc0180b97aae5a152e1c58065a13bd495375",
+      "sha256": "3a81126de7a9211fb66543536cec2ef099e11950c81014ebb235511f86d0cdf9",
+      "bytes": 29492,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r1-healthy/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/result.json",
+      "source_sha256": "f9e13681a0d7a540025294c9e2a1545a1d24247fa240f263968d93e2166305fa",
+      "sha256": "f9e13681a0d7a540025294c9e2a1545a1d24247fa240f263968d93e2166305fa",
+      "bytes": 1794,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-healthy/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072015904082Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/events.jsonl",
+      "source_sha256": "4a02b6dba510aa9a5e173f912d47bbc8861a1f96f9f61c9340c8e235e15d16bc",
+      "sha256": "7fb222e8ef707722203390de7c41ae7a82f453d33bcb3e3248230c53e056b96b",
+      "bytes": 32620,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r1-expired-session/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/result.json",
+      "source_sha256": "28a68ca8fcf2c13d7daa3f3018529e0a403b115fe86eef85e15d1d5c9035a4ab",
+      "sha256": "28a68ca8fcf2c13d7daa3f3018529e0a403b115fe86eef85e15d1d5c9035a4ab",
+      "bytes": 1938,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-expired-session/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072040362632Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/events.jsonl",
+      "source_sha256": "971c696cda332d0096178138406b16546bff8ae1a88980dab83ac1a1394c34d1",
+      "sha256": "221e88e4c202d31b46f5db8eeda909c71a13bc94c26471af3c4dad3440cdc824",
+      "bytes": 30998,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r1-lost-response/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/result.json",
+      "source_sha256": "b681ae3b2af1cfc1d7859d88e25fcb6f82319d9be9b64dd49bd1d64aead00146",
+      "sha256": "b681ae3b2af1cfc1d7859d88e25fcb6f82319d9be9b64dd49bd1d64aead00146",
+      "bytes": 1898,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-lost-response/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072102337273Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/events.jsonl",
+      "source_sha256": "67d362b1e780cc329e773644de2ac3a257f9263014a4b78e9657e67f1c0588c5",
+      "sha256": "4bd4324bbfecdcd9c90b537663a42e87450ebb1e1b8b52bcb2749950258d62d8",
+      "bytes": 30972,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r1-unicode-notes/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/result.json",
+      "source_sha256": "7369c9a34da0c4c5a8366806d53117f5158aa34aaf4a3b242ee95054306291c2",
+      "sha256": "7369c9a34da0c4c5a8366806d53117f5158aa34aaf4a3b242ee95054306291c2",
+      "bytes": 1800,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r1-unicode-notes/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072122862947Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/events.jsonl",
+      "source_sha256": "8c620d1058ac8303240e1383abed8f4392f963a74a3d6ecd7d893cbb3e1362c8",
+      "sha256": "b3fda0c3a866065a6cf46d79ad08079fb4a331109be526166dd04856637f5ebc",
+      "bytes": 29492,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r2-healthy/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/result.json",
+      "source_sha256": "8d2e40d5f0073bc96af24289ba14de301a4ca283e74c6fa3e17bc73b39d85bab",
+      "sha256": "8d2e40d5f0073bc96af24289ba14de301a4ca283e74c6fa3e17bc73b39d85bab",
+      "bytes": 1794,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-healthy/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072151341498Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/events.jsonl",
+      "source_sha256": "1e6a1e82c3f9a33823bda950fbe67df551be8db89d45d88b311dfcbb602063d7",
+      "sha256": "049e9aad58df08444dbbb54950f843b80bdbf74f5a4f803351052d631b5ed655",
+      "bytes": 32620,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r2-expired-session/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/result.json",
+      "source_sha256": "c4e52212141972351868d14248f40b735cb6c47ebd6f3a7519240e493cdec73a",
+      "sha256": "c4e52212141972351868d14248f40b735cb6c47ebd6f3a7519240e493cdec73a",
+      "bytes": 1938,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-expired-session/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072216902598Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/events.jsonl",
+      "source_sha256": "632ceb2fd59022c54d3dec2a9260cfb5740ee946fdfbf5017945a0c1f2caa04c",
+      "sha256": "39caece3180381a5c0f314129fa1eed0cb526666b88d5e33c64cbf1d8a855e5d",
+      "bytes": 30998,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r2-lost-response/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/result.json",
+      "source_sha256": "9b20b58d62373a662d1149a731065abcebe667a42cb55f06e8e0f1fc19ce25eb",
+      "sha256": "9b20b58d62373a662d1149a731065abcebe667a42cb55f06e8e0f1fc19ce25eb",
+      "bytes": 1898,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-lost-response/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072246514533Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/events.jsonl",
+      "source_sha256": "21b6f1cfa2662dd69b0501e360d74a0b5bfb7b7e8c284a51317a3749962a3c45",
+      "sha256": "757889f508d4568166523ad14bab19ce8cbc4ae5e00dbcbdaa605b9b956d2fe4",
+      "bytes": 30972,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r2-unicode-notes/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/result.json",
+      "source_sha256": "5f4caf731b9480fd44116c46d8089e85910150bb20fbd1569c0a89cc92818e0f",
+      "sha256": "5f4caf731b9480fd44116c46d8089e85910150bb20fbd1569c0a89cc92818e0f",
+      "bytes": 1800,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r2-unicode-notes/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072307123181Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/events.jsonl",
+      "source_sha256": "d2463b85ae1cf7b8e862452285336aef4bf46c22de66b54fccab8d2cd8a5fef3",
+      "sha256": "b7249e6e98a183817ff1abbfaa58634662d2cd3a5efc968c9c35b8358f75ae99",
+      "bytes": 29492,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r3-healthy/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/result.json",
+      "source_sha256": "e4cafb55743b3556b164d3713da8faccb5e295df08e8610c8459a0d046d5ef44",
+      "sha256": "e4cafb55743b3556b164d3713da8faccb5e295df08e8610c8459a0d046d5ef44",
+      "bytes": 1794,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-healthy/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072327351146Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/events.jsonl",
+      "source_sha256": "df0990f4a4163493db553d5aa79c929d880a6f796c3145f93932bb88665af57d",
+      "sha256": "b30e7aad505a2790c52c298a35686be854c3afd3e5ee6f8e1998bea91fff850c",
+      "bytes": 32620,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r3-expired-session/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/result.json",
+      "source_sha256": "23de7c7d4e3938d589fa7d3c5df2d97dd6c2be325500d8fa64a384070ad3bad5",
+      "sha256": "23de7c7d4e3938d589fa7d3c5df2d97dd6c2be325500d8fa64a384070ad3bad5",
+      "bytes": 1938,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-expired-session/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072349656473Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/events.jsonl",
+      "source_sha256": "ed45c318c38f0517c5c7c277ff6bf3d92c96c354773578833a41ae44f7454710",
+      "sha256": "baa45cc1771b006d7842697ffcc13f30178564a0074110d83b535c99e584e75b",
+      "bytes": 30998,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r3-lost-response/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/result.json",
+      "source_sha256": "d3c1e853ad425ccd10996a612230cc53d1af7d26b4a35dc40dd17c4db63e4675",
+      "sha256": "d3c1e853ad425ccd10996a612230cc53d1af7d26b4a35dc40dd17c4db63e4675",
+      "bytes": 1898,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-lost-response/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072411949987Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/events.jsonl",
+      "source_sha256": "3a5626c8cf8eae6d15b71c559c4c48cd64fd340d86ea1d6d245fdae89e0641df",
+      "sha256": "6abd4076f1e4e751fab1922e48496dd8af2ed22cd45d17daccd6f5791f95f34f",
+      "bytes": 30972,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/r3-unicode-notes/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/result.json",
+      "source_sha256": "54e13bccb5db5991fd6d801c895417f5552f7a7f7708900192511e90bd380719",
+      "sha256": "54e13bccb5db5991fd6d801c895417f5552f7a7f7708900192511e90bd380719",
+      "bytes": 1800,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/r3-unicode-notes/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072433512141Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/events.jsonl",
+      "source_sha256": "d3ea7b0f9475ec90d31f8c71a3b5ca1c6734860d8526ee781b30c70abbf12882",
+      "sha256": "83bbaf354940df7d8e5f88c4fbe2d4fc7af07de61f87c77a8a0f49f51cb97bbf",
+      "bytes": 6986,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/control-note-loss/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/result.json",
+      "source_sha256": "85613f84314108e4bd630ff1a213ad8025813737fe7a62523e11f0cc71efcd4c",
+      "sha256": "85613f84314108e4bd630ff1a213ad8025813737fe7a62523e11f0cc71efcd4c",
+      "bytes": 1343,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-note-loss/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072454667893Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/events.jsonl",
+      "source_sha256": "94009354b920a620b1f6bdc6d1a516840f2dca85fa22c2f89729cc06e40542e6",
+      "sha256": "e4834607969f601ff6d7ebb6f45f26c83519ea5f9c969db9b1c895fe55a928a2",
+      "bytes": 30243,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/control-missing-observation/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/result.json",
+      "source_sha256": "83e034279c5659a1f5d95214c74b82925ee112db1c4c3fda4c62ca88fb97e51a",
+      "sha256": "83e034279c5659a1f5d95214c74b82925ee112db1c4c3fda4c62ca88fb97e51a",
+      "bytes": 1818,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/control-missing-observation/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072502011066Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/events.jsonl",
+      "source_sha256": "5a5fc81aa0321bfd863223445f818c065e69d7750f3552da1543e0549e1c6bd2",
+      "sha256": "7c68b439b451b927648980ac34c82e6b10758922cd8cc74038f1e4fb6eafc9f5",
+      "bytes": 4344,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/safety-interrupt/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/result.json",
+      "source_sha256": "c082b43e3b7738c9ae3fd5bafadbf58ffcf3a41f7cd9fb29f583e8c699b161b1",
+      "sha256": "c082b43e3b7738c9ae3fd5bafadbf58ffcf3a41f7cd9fb29f583e8c699b161b1",
+      "bytes": 1282,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-interrupt/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072524899021Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/events.jsonl",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/events.jsonl",
+      "source_sha256": "3913b57cab3357c94cfe5582c59f8b0d5305c1d23d6af2485b80f26faa9416d8",
+      "sha256": "52e6163ad7ff9e2f20371b249ef328f54ac475c12c76dfb62de477469659b8ad",
+      "bytes": 3167,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "native/safety-occupied-port/result.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/result.json",
+      "source_sha256": "39df0bc6257bc17c3b748a6578f641f3720a581bb9b2f35a0f687a04b06e7b1e",
+      "sha256": "39df0bc6257bc17c3b748a6578f641f3720a581bb9b2f35a0f687a04b06e7b1e",
+      "bytes": 1170,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/pack-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/pack-identity.json",
+      "source_sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+      "bytes": 337,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/environment-identity.json",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/environment-identity.json",
+      "source_sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/executed_regression.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/executed_regression.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/native-pack/accept.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/native-pack/accept.py",
+      "source_sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+      "bytes": 25349,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/native-pack/support.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/native-pack/support.py",
+      "source_sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+      "bytes": 10490,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/native-pack/server.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/native-pack/server.py",
+      "source_sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+      "bytes": 984,
+      "normalization": "none"
+    },
+    {
+      "path": "native/safety-occupied-port/native-pack/prepare.py",
+      "source": "work/linkding-hardened/.acceptance-study/artifacts/run-20260908T072529809818Z/native-pack/prepare.py",
+      "source_sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+      "bytes": 2830,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/identity.json",
+      "source": "work/reuse-stability-20260908T072300Z/identity.json",
+      "source_sha256": "27c4518dfad793f8f22bb221113ca9d4fa56af3105ca16825883aaa7b8abdc19",
+      "sha256": "27c4518dfad793f8f22bb221113ca9d4fa56af3105ca16825883aaa7b8abdc19",
+      "bytes": 933,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/schedule.json",
+      "source": "work/reuse-stability-20260908T072300Z/schedule.json",
+      "source_sha256": "9f6fee251c9a57fdf7b05cfd00d69664a4be451fb2cdb51a7acd8f5cb2124950",
+      "sha256": "9f6fee251c9a57fdf7b05cfd00d69664a4be451fb2cdb51a7acd8f5cb2124950",
+      "bytes": 2693,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/summary.json",
+      "source": "work/reuse-stability-20260908T072300Z/summary.json",
+      "source_sha256": "8ed973ac47ac1aac14d1d1841bcda629ade48a7d513aefd0039ac13a8e12ec8b",
+      "sha256": "8ed973ac47ac1aac14d1d1841bcda629ade48a7d513aefd0039ac13a8e12ec8b",
+      "bytes": 1033,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/results.json",
+      "source": "work/reuse-stability-20260908T072300Z/results.json",
+      "source_sha256": "f0254ce15dcfb9550d90e8336ccf1213056b21c16717a9a41d9a659fb830e744",
+      "sha256": "5ff96358ba0e2619625b95c04c050bc92d1b78147dbe0add106784a14fb70f6d",
+      "bytes": 51718,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "stability/start-index.json",
+      "source": "work/reuse-stability-20260908T072300Z/start-index.json",
+      "source_sha256": "95aa66473802b852399ba0576f722699de40066ad7de0eae3cd932be634fa0ec",
+      "sha256": "95aa66473802b852399ba0576f722699de40066ad7de0eae3cd932be634fa0ec",
+      "bytes": 1013,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/final-audit.json",
+      "source": "work/reuse-stability-20260908T072300Z/final-audit.json",
+      "source_sha256": "c41d81e341c48cf1afff9ccc3f435f810d1b76090f3f1b3caa61a04ebfffd666",
+      "sha256": "c41d81e341c48cf1afff9ccc3f435f810d1b76090f3f1b3caa61a04ebfffd666",
+      "bytes": 1473,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/public-candidate-index.json",
+      "source": "work/reuse-stability-20260908T072300Z/public-candidate-index.json",
+      "source_sha256": "d1e06a02957423863711c9e1405c11083c5c98079205685bc7ae283a3116561c",
+      "sha256": "d1e06a02957423863711c9e1405c11083c5c98079205685bc7ae283a3116561c",
+      "bytes": 35672,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/public-summary.md",
+      "source": "work/reuse-stability-20260908T072300Z/public-summary.md",
+      "source_sha256": "0af1c09034debf3e657c72bebf9c9b3bd9bda04069dc62a66a710d470b0bdbd4",
+      "sha256": "0af1c09034debf3e657c72bebf9c9b3bd9bda04069dc62a66a710d470b0bdbd4",
+      "bytes": 4721,
+      "normalization": "none"
+    },
+    {
+      "path": "stability/first-incident.json",
+      "source": "work/reuse-stability-20260908T071702Z/incident.json",
+      "source_sha256": "0a0ed0b17025615273e0b73c4a46acc746cc43b262f9730a62d9ba3740c6d844",
+      "sha256": "0a0ed0b17025615273e0b73c4a46acc746cc43b262f9730a62d9ba3740c6d844",
+      "bytes": 1825,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/execution-matrix.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/execution-matrix.json",
+      "source_sha256": "a80110633ca231e7da0c23a85b6ab6fa575b484a92badfcafd6093231652fdf4",
+      "sha256": "a80110633ca231e7da0c23a85b6ab6fa575b484a92badfcafd6093231652fdf4",
+      "bytes": 5494,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/benchmark.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/benchmark.json",
+      "source_sha256": "98cb3e9856ba88e13a16e38fb75b7e44e15e40fc07178b6b4b22f18e21020ce6",
+      "sha256": "98cb3e9856ba88e13a16e38fb75b7e44e15e40fc07178b6b4b22f18e21020ce6",
+      "bytes": 7730,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/eval_metadata.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/eval_metadata.json",
+      "source_sha256": "2cc1284b2c7082fb34f9147c23d74776000a9a2bfb4d21cfb91bbc79b8580f09",
+      "sha256": "2cc1284b2c7082fb34f9147c23d74776000a9a2bfb4d21cfb91bbc79b8580f09",
+      "bytes": 2904,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/with_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/with_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/with_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/with_skill/status.json",
+      "source_sha256": "c548ddda33e8b519ef57223ed9e73b55d04c216004c7b40237fa30de32986ed1",
+      "sha256": "c548ddda33e8b519ef57223ed9e73b55d04c216004c7b40237fa30de32986ed1",
+      "bytes": 373,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/after.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/after.json",
+      "source_sha256": "811ae66e84ae0babfd14cc3e74efc92b2ad2b96b0d4f95568335fc8f159af884",
+      "sha256": "811ae66e84ae0babfd14cc3e74efc92b2ad2b96b0d4f95568335fc8f159af884",
+      "bytes": 2638,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/before.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/before.json",
+      "source_sha256": "609a2386ccb6ace256384a1b047d51a1fbdeb0738c19e4517f772b6b4b274ed8",
+      "sha256": "609a2386ccb6ace256384a1b047d51a1fbdeb0738c19e4517f772b6b4b274ed8",
+      "bytes": 1789,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/evidence-index.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/evidence-index.json",
+      "source_sha256": "35b362ad728e55833d08d01807b0be514ef50cb366bc3fb0d6f45fd460f03d28",
+      "sha256": "35b362ad728e55833d08d01807b0be514ef50cb366bc3fb0d6f45fd460f03d28",
+      "bytes": 994,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/grading.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/grading.json",
+      "source_sha256": "21e9124e7dd64c94764f9f40f175d3d95ad2469cb3a1a063f85acdc0a2669eb7",
+      "sha256": "21e9124e7dd64c94764f9f40f175d3d95ad2469cb3a1a063f85acdc0a2669eb7",
+      "bytes": 14038,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/installed.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/installed.json",
+      "source_sha256": "4f67349293f5b8c3ffaf898d0d37f89ed8c7b08eb79612275a5e01edeea232d5",
+      "sha256": "4f67349293f5b8c3ffaf898d0d37f89ed8c7b08eb79612275a5e01edeea232d5",
+      "bytes": 996,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/loading.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/loading.json",
+      "source_sha256": "751259c3d9fcbd195bb5f76dc940f75181185b151b5a0fe09bc2c3001b36d561",
+      "sha256": "751259c3d9fcbd195bb5f76dc940f75181185b151b5a0fe09bc2c3001b36d561",
+      "bytes": 427,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/outputs/existing-output.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/outputs/existing-output.json",
+      "source_sha256": "4139b0b4919de35d13757a8566849a6b5898c855015d585f06db9908057a05ce",
+      "sha256": "4139b0b4919de35d13757a8566849a6b5898c855015d585f06db9908057a05ce",
+      "bytes": 322,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/outputs/export.csv",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/outputs/export.csv",
+      "source_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+      "sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+      "bytes": 147,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/outputs/export.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/outputs/export.json",
+      "source_sha256": "ab1c020872c0595b1b29f528a07057a5851d706145e5ea64d133fcd17c0dae36",
+      "sha256": "ab1c020872c0595b1b29f528a07057a5851d706145e5ea64d133fcd17c0dae36",
+      "bytes": 323,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/outputs/final.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/outputs/final.md",
+      "source_sha256": "138bf68dea1f5e486007662850eb03d5ba53e29961b50959ee252bfed28bda86",
+      "sha256": "138bf68dea1f5e486007662850eb03d5ba53e29961b50959ee252bfed28bda86",
+      "bytes": 1240,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/outputs/observations.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/outputs/observations.json",
+      "source_sha256": "18530751511d939b882a5235b6e200d65a26035caa728c70d2d19594301c3b4f",
+      "sha256": "18530751511d939b882a5235b6e200d65a26035caa728c70d2d19594301c3b4f",
+      "bytes": 5479,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/outputs/smoke.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/outputs/smoke.json",
+      "source_sha256": "8d4cd3b6a7c7049448bcc68d7f1d894ae2a1a4a9c6cd67af551bde3a8a62aaad",
+      "sha256": "8d4cd3b6a7c7049448bcc68d7f1d894ae2a1a4a9c6cd67af551bde3a8a62aaad",
+      "bytes": 267,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/status.json",
+      "source_sha256": "a0a636b6bf9af8d7d27daa9019b9cdc5bf67c29cd991ad9a927ad4fcedd6e65b",
+      "sha256": "a0a636b6bf9af8d7d27daa9019b9cdc5bf67c29cd991ad9a927ad4fcedd6e65b",
+      "bytes": 324,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/timing.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/timing.json",
+      "source_sha256": "aea161ddf124807ebd74146a9da8644ef72ce933c25522c5c8d6df4b49bb58a6",
+      "sha256": "aea161ddf124807ebd74146a9da8644ef72ce933c25522c5c8d6df4b49bb58a6",
+      "bytes": 376,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-1-coverage-explicit/old_skill/transcript.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-1-coverage-explicit/old_skill/transcript.md",
+      "source_sha256": "3630fd317bd1cfa4edd52a05c75d7abeba6a0f303fe71de2908bdc87f2dbc5e0",
+      "sha256": "3630fd317bd1cfa4edd52a05c75d7abeba6a0f303fe71de2908bdc87f2dbc5e0",
+      "bytes": 29669,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-2-coverage-natural-1/eval_metadata.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-2-coverage-natural-1/eval_metadata.json",
+      "source_sha256": "8ae55345f7133edd183a347b97c8dc1b791d5baadeb7fae216bd5820e8ed46e7",
+      "sha256": "8ae55345f7133edd183a347b97c8dc1b791d5baadeb7fae216bd5820e8ed46e7",
+      "bytes": 2655,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-2-coverage-natural-1/with_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-2-coverage-natural-1/with_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-2-coverage-natural-1/with_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-2-coverage-natural-1/with_skill/status.json",
+      "source_sha256": "398dbc9ee2f2ab79e077599913798946ac0d56aeeb104795688c0762d918660d",
+      "sha256": "398dbc9ee2f2ab79e077599913798946ac0d56aeeb104795688c0762d918660d",
+      "bytes": 374,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-2-coverage-natural-1/old_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-2-coverage-natural-1/old_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-2-coverage-natural-1/old_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-2-coverage-natural-1/old_skill/status.json",
+      "source_sha256": "38f2e6b51206dc85d20fa9544bfd5343515415c881c6b60b9e855708c2fff911",
+      "sha256": "38f2e6b51206dc85d20fa9544bfd5343515415c881c6b60b9e855708c2fff911",
+      "bytes": 373,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-3-coverage-natural-2/eval_metadata.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-3-coverage-natural-2/eval_metadata.json",
+      "source_sha256": "91eae60200e01b87b29f2a46ed7fc651dcab31f79bf309dcb359cf17b4a8c20c",
+      "sha256": "91eae60200e01b87b29f2a46ed7fc651dcab31f79bf309dcb359cf17b4a8c20c",
+      "bytes": 2628,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-3-coverage-natural-2/with_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-3-coverage-natural-2/with_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-3-coverage-natural-2/with_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-3-coverage-natural-2/with_skill/status.json",
+      "source_sha256": "610dd926b65ed25be7964ee3176ffbe80e16a83d7e5585b6fcdad82e513a5bd8",
+      "sha256": "610dd926b65ed25be7964ee3176ffbe80e16a83d7e5585b6fcdad82e513a5bd8",
+      "bytes": 374,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-3-coverage-natural-2/old_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-3-coverage-natural-2/old_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-3-coverage-natural-2/old_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-3-coverage-natural-2/old_skill/status.json",
+      "source_sha256": "230a799b9bb1ab4bde52eb89e69f6960afac012ff020aa35d67520a3369dd3c2",
+      "sha256": "230a799b9bb1ab4bde52eb89e69f6960afac012ff020aa35d67520a3369dd3c2",
+      "bytes": 373,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-4-plan/eval_metadata.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-4-plan/eval_metadata.json",
+      "source_sha256": "f3f04144468ed6c1550933a57e7298896cbb1eb8cea8b4c9792812db49510677",
+      "sha256": "f3f04144468ed6c1550933a57e7298896cbb1eb8cea8b4c9792812db49510677",
+      "bytes": 1899,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-4-plan/with_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-4-plan/with_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-4-plan/with_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-4-plan/with_skill/status.json",
+      "source_sha256": "5d0f2e1f625b96523a56e3b8f12b6ea6ca9bd15741f7091d91e1ed9f1c0d31a3",
+      "sha256": "5d0f2e1f625b96523a56e3b8f12b6ea6ca9bd15741f7091d91e1ed9f1c0d31a3",
+      "bytes": 360,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-4-plan/old_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-4-plan/old_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-4-plan/old_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-4-plan/old_skill/status.json",
+      "source_sha256": "a2dd42ba23d3bf2a7fe6a1b33a93081f0ca96700bee467062a254acb9fdcab96",
+      "sha256": "a2dd42ba23d3bf2a7fe6a1b33a93081f0ca96700bee467062a254acb9fdcab96",
+      "bytes": 359,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-5-historical/eval_metadata.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-5-historical/eval_metadata.json",
+      "source_sha256": "f56b79d1c3ff2e809eca881f5cae35d1899078a7b9fd06f1f2dfddefe5ece34c",
+      "sha256": "f56b79d1c3ff2e809eca881f5cae35d1899078a7b9fd06f1f2dfddefe5ece34c",
+      "bytes": 1869,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-5-historical/with_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-5-historical/with_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-5-historical/with_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-5-historical/with_skill/status.json",
+      "source_sha256": "60f914bddd2b037e642d78b00d03103c297e3aca009df5bb023205c81b66f99c",
+      "sha256": "60f914bddd2b037e642d78b00d03103c297e3aca009df5bb023205c81b66f99c",
+      "bytes": 366,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-5-historical/old_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-5-historical/old_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-5-historical/old_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-5-historical/old_skill/status.json",
+      "source_sha256": "9a53e4aea92f26be02b93008eab6c71faa19686dc6b75269f0b9732b3334f4fd",
+      "sha256": "9a53e4aea92f26be02b93008eab6c71faa19686dc6b75269f0b9732b3334f4fd",
+      "bytes": 365,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-6-near-miss/eval_metadata.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-6-near-miss/eval_metadata.json",
+      "source_sha256": "c328c781cdf790e5950abae5d624f04e61ea1fbc8f40eb8e5289f50ad98ed6cc",
+      "sha256": "c328c781cdf790e5950abae5d624f04e61ea1fbc8f40eb8e5289f50ad98ed6cc",
+      "bytes": 1882,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-6-near-miss/with_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-6-near-miss/with_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-6-near-miss/with_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-6-near-miss/with_skill/status.json",
+      "source_sha256": "21189a2f36133f5960025b0bcce211094a84b78e642a1a625aeed2f06996fecd",
+      "sha256": "21189a2f36133f5960025b0bcce211094a84b78e642a1a625aeed2f06996fecd",
+      "bytes": 365,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-6-near-miss/old_skill/outputs/NOT-RUN.md",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-6-near-miss/old_skill/outputs/NOT-RUN.md",
+      "source_sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "sha256": "8f16de087b0ed0dc842033715b6e8563adc7303bbc3fe516f472b984cba6728c",
+      "bytes": 226,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/eval-6-near-miss/old_skill/status.json",
+      "source": "outputs/functional-acceptance-workspace/iteration-3/eval-6-near-miss/old_skill/status.json",
+      "source_sha256": "09a9ce5a60b8ea747f18fdd624b5e92ed5c3976cce526ee8a0cd4fc002c0db1a",
+      "sha256": "09a9ce5a60b8ea747f18fdd624b5e92ed5c3976cce526ee8a0cd4fc002c0db1a",
+      "bytes": 364,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-raw/events.jsonl",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/events.jsonl",
+      "source_sha256": "ada05b122ae08ee2a8dfc691157c89f5f25437197ee3a490d83a48b1e611af74",
+      "sha256": "0d708a2ff3a55f870546e1dcc40f4df9be658c76f3df2c3dcdda2f0f7fc206fd",
+      "bytes": 34445,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "behavior/observed-raw/metadata.json",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/metadata.json",
+      "source_sha256": "60200c1e50f1bf833f5d6df53187a0eb64bd17ecbb3e0308127cd699c48f12f7",
+      "sha256": "0ba97ed63da42055fdf562adbc896533d9dec5f18e59ca397a1104ece8f0d1c8",
+      "bytes": 1774,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "behavior/observed-raw/prompt.txt",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/prompt.txt",
+      "source_sha256": "062ebbc4823ad1b58349718184640b71b974a7412994ccd4931354887d199ff4",
+      "sha256": "062ebbc4823ad1b58349718184640b71b974a7412994ccd4931354887d199ff4",
+      "bytes": 723,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-inputs/export.py",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/project/export.py",
+      "source_sha256": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+      "sha256": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+      "bytes": 5749,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-inputs/requirements.md",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/project/requirements.md",
+      "source_sha256": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+      "sha256": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+      "bytes": 289,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-inputs/test_smoke.py",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/project/test_smoke.py",
+      "source_sha256": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+      "sha256": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+      "bytes": 501,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-inputs/README.md",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/project/README.md",
+      "source_sha256": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+      "sha256": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+      "bytes": 321,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-inputs/fixtures/pages.json",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/project/fixtures/pages.json",
+      "source_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+      "sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+      "bytes": 568,
+      "normalization": "none"
+    },
+    {
+      "path": "behavior/observed-inputs/sentinel.txt",
+      "source": "work/reuse-behavior-codex-coverage-explicit-old/project/sentinel.txt",
+      "source_sha256": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+      "sha256": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+      "bytes": 42,
+      "normalization": "none"
+    },
+    {
+      "path": "sqlite/pair-result.json",
+      "source": "work/reuse-sqlite-onboarding-pair/pair-result.json",
+      "source_sha256": "96fee52dc952bfc5d13d35b0400344e33192bf2dc124201e6261b9b7a467f901",
+      "sha256": "e8fe5effe1deb76a1bed682fbd733a9f8f775e3683307f47840f46f24c9d683b",
+      "bytes": 811,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/EXECUTION-NOTES.md",
+      "source": "work/reuse-sqlite-onboarding-pair/EXECUTION-NOTES.md",
+      "source_sha256": "c85953e882ba416691ee5886b14a49e975463ef57bafc5b7849cf8dc7165fb8b",
+      "sha256": "afe7bc7a020cd2603d60e3f9331628da94ad6c15f20ac0d31419fd705e30ac8a",
+      "bytes": 5545,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/with_skill/metadata.json",
+      "source": "work/reuse-sqlite-onboarding-pair/with_skill/metadata.json",
+      "source_sha256": "93081c5cf30ffc24d6f168d18bf152fa1b6df29339c0d971d5af97a7db0d5aa7",
+      "sha256": "23eb52a24d04650e70be7389332c346160fc877907e5a6996ead196eeeff110c",
+      "bytes": 36810,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/with_skill/prompt.txt",
+      "source": "work/reuse-sqlite-onboarding-pair/with_skill/prompt.txt",
+      "source_sha256": "e07383ed10412898bdc7ba9d32cfe290a47cb7bc2c97735b928c88dab820e7a6",
+      "sha256": "56cef988d0644f57675574218205393a195b42eedad8df43099b4b6a938963a1",
+      "bytes": 2174,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/with_skill/stderr.txt",
+      "source": "work/reuse-sqlite-onboarding-pair/with_skill/stderr.txt",
+      "source_sha256": "cbe7159f7fd243e8cafdca114ccd6896a6569f348375b57f3bddac355300b31b",
+      "sha256": "a8ef136fd37582375a12bf7462776ddf6eee037d8e49e9d633b8dd05810b6060",
+      "bytes": 874,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/with_skill/events.jsonl",
+      "source": "work/reuse-sqlite-onboarding-pair/with_skill/events.jsonl",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "sqlite/old_skill/metadata.json",
+      "source": "work/reuse-sqlite-onboarding-pair/old_skill/metadata.json",
+      "source_sha256": "ae3515af8bccc16201cad006953b75162bb12710a484aaf7044668e411ef5ed0",
+      "sha256": "00944c07334dc97e1d6992a70ca4cde5830118cb37c876c6dd4f29f1e72ffeb7",
+      "bytes": 36783,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/old_skill/prompt.txt",
+      "source": "work/reuse-sqlite-onboarding-pair/old_skill/prompt.txt",
+      "source_sha256": "e07383ed10412898bdc7ba9d32cfe290a47cb7bc2c97735b928c88dab820e7a6",
+      "sha256": "56cef988d0644f57675574218205393a195b42eedad8df43099b4b6a938963a1",
+      "bytes": 2174,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/old_skill/stderr.txt",
+      "source": "work/reuse-sqlite-onboarding-pair/old_skill/stderr.txt",
+      "source_sha256": "78ace86222cc5953c1ea639d9a4cee17d7c3b7434d537822d7e1f83003fb897a",
+      "sha256": "c54bed868ba305f0fbf92c2a4ab7b715abd882721b1a420a440ecaa347d738dd",
+      "bytes": 874,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "sqlite/old_skill/events.jsonl",
+      "source": "work/reuse-sqlite-onboarding-pair/old_skill/events.jsonl",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "sqlite/requirements.md",
+      "source": "work/reuse-sqlite-onboarding-requirements.md",
+      "source_sha256": "c5ac9e74c45fdd3972262646171dfe9608c92ae386c0436a6c2cc4e9dd141b8f",
+      "sha256": "c5ac9e74c45fdd3972262646171dfe9608c92ae386c0436a6c2cc4e9dd141b8f",
+      "bytes": 1717,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-baseline/SKILL.md",
+      "source": "work/functional-acceptance-ac8eda6/SKILL.md",
+      "source_sha256": "a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604",
+      "sha256": "a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604",
+      "bytes": 5872,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-baseline/agents/openai.yaml",
+      "source": "work/functional-acceptance-ac8eda6/agents/openai.yaml",
+      "source_sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+      "sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+      "bytes": 269,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-baseline/references/host-compatibility.md",
+      "source": "work/functional-acceptance-ac8eda6/references/host-compatibility.md",
+      "source_sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+      "sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+      "bytes": 3041,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-baseline/references/material-format.md",
+      "source": "work/functional-acceptance-ac8eda6/references/material-format.md",
+      "source_sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+      "sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+      "bytes": 8507,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-baseline/references/native-workflow.md",
+      "source": "work/functional-acceptance-ac8eda6/references/native-workflow.md",
+      "source_sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+      "sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+      "bytes": 4497,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-baseline/scripts/acceptance.py",
+      "source": "work/functional-acceptance-ac8eda6/scripts/acceptance.py",
+      "source_sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+      "sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+      "bytes": 24048,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-candidate/SKILL.md",
+      "source": "outputs/functional-acceptance/skills/functional-acceptance/SKILL.md",
+      "source_sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "bytes": 6107,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-candidate/agents/openai.yaml",
+      "source": "outputs/functional-acceptance/skills/functional-acceptance/agents/openai.yaml",
+      "source_sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+      "sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+      "bytes": 269,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-candidate/references/host-compatibility.md",
+      "source": "outputs/functional-acceptance/skills/functional-acceptance/references/host-compatibility.md",
+      "source_sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+      "sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+      "bytes": 3041,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-candidate/references/material-format.md",
+      "source": "outputs/functional-acceptance/skills/functional-acceptance/references/material-format.md",
+      "source_sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+      "sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+      "bytes": 8507,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-candidate/references/native-workflow.md",
+      "source": "outputs/functional-acceptance/skills/functional-acceptance/references/native-workflow.md",
+      "source_sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+      "sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+      "bytes": 4497,
+      "normalization": "none"
+    },
+    {
+      "path": "skill-candidate/scripts/acceptance.py",
+      "source": "outputs/functional-acceptance/skills/functional-acceptance/scripts/acceptance.py",
+      "source_sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+      "sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+      "bytes": 24048,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.10-export.stderr.txt",
+      "source": "work/reuse-final-checks/3.10-export.stderr.txt",
+      "source_sha256": "3a577dc63d80a50bce8d285bd7a16deb35bb974a4ac16bd7e90bd7c9c47f74f5",
+      "sha256": "3a577dc63d80a50bce8d285bd7a16deb35bb974a4ac16bd7e90bd7c9c47f74f5",
+      "bytes": 2235,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.10-export.stdout.txt",
+      "source": "work/reuse-final-checks/3.10-export.stdout.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.10-old-record.stderr.txt",
+      "source": "work/reuse-final-checks/3.10-old-record.stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.10-old-record.stdout.txt",
+      "source": "work/reuse-final-checks/3.10-old-record.stdout.txt",
+      "source_sha256": "7e9e3235e6ddecf6b88a1a4b8c9151ee2f24474e727e8a397f2dea7a8cdd0b98",
+      "sha256": "7e9e3235e6ddecf6b88a1a4b8c9151ee2f24474e727e8a397f2dea7a8cdd0b98",
+      "bytes": 204,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.10-suite.stderr.txt",
+      "source": "work/reuse-final-checks/3.10-suite.stderr.txt",
+      "source_sha256": "e74ca33a0430b4af8735c14f3d6fa1a2633a87e7bfcca6f3c490e71e068e8858",
+      "sha256": "e74ca33a0430b4af8735c14f3d6fa1a2633a87e7bfcca6f3c490e71e068e8858",
+      "bytes": 9713,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.10-suite.stdout.txt",
+      "source": "work/reuse-final-checks/3.10-suite.stdout.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.14-export.stderr.txt",
+      "source": "work/reuse-final-checks/3.14-export.stderr.txt",
+      "source_sha256": "5ac70abeba0c05db20ced464dd504946c41faf35f2e05fbe2ab58f4669edeb96",
+      "sha256": "5ac70abeba0c05db20ced464dd504946c41faf35f2e05fbe2ab58f4669edeb96",
+      "bytes": 3382,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.14-export.stdout.txt",
+      "source": "work/reuse-final-checks/3.14-export.stdout.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.14-old-record.stderr.txt",
+      "source": "work/reuse-final-checks/3.14-old-record.stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.14-old-record.stdout.txt",
+      "source": "work/reuse-final-checks/3.14-old-record.stdout.txt",
+      "source_sha256": "7e9e3235e6ddecf6b88a1a4b8c9151ee2f24474e727e8a397f2dea7a8cdd0b98",
+      "sha256": "7e9e3235e6ddecf6b88a1a4b8c9151ee2f24474e727e8a397f2dea7a8cdd0b98",
+      "bytes": 204,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.14-suite.stderr.txt",
+      "source": "work/reuse-final-checks/3.14-suite.stderr.txt",
+      "source_sha256": "294dca9be0ec2ccfcd8558523700df56c546dc11d73b90e33e9aa95d56f5efbe",
+      "sha256": "294dca9be0ec2ccfcd8558523700df56c546dc11d73b90e33e9aa95d56f5efbe",
+      "bytes": 15158,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/3.14-suite.stdout.txt",
+      "source": "work/reuse-final-checks/3.14-suite.stdout.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/installation.stderr.txt",
+      "source": "work/reuse-final-checks/installation.stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/installation.stdout.txt",
+      "source": "work/reuse-final-checks/installation.stdout.txt",
+      "source_sha256": "6ac68d6bf334c756e462677dec1bdaef2efc455184b95c5ed4cb300eb4d70d74",
+      "sha256": "6ac68d6bf334c756e462677dec1bdaef2efc455184b95c5ed4cb300eb4d70d74",
+      "bytes": 4066,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/results.json",
+      "source": "work/reuse-final-checks/results.json",
+      "source_sha256": "87136c9e1b38bef9591f500408cce5d09fe7c226dafaa74b83f2376d99be2e95",
+      "sha256": "f0b04699f79310c37079d5a9b167e1fc64cbe6a2aeb71edb0ac79c6d126e3e7f",
+      "bytes": 2104,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "upgrade/grade.json",
+      "source": "work/reuse-upgrade-review/grade.json",
+      "source_sha256": "15c5d427f652b27701b6ff370f2401c5d7113ee4b9eda53a81ecc6b848de39df",
+      "sha256": "15c5d427f652b27701b6ff370f2401c5d7113ee4b9eda53a81ecc6b848de39df",
+      "bytes": 6446,
+      "normalization": "none"
+    },
+    {
+      "path": "upgrade/grade.md",
+      "source": "work/reuse-upgrade-review/grade.md",
+      "source_sha256": "b094c6f2cb510cc913b0e5b237aeac9cd04ba04c0016a58aca80a06472f30ba3",
+      "sha256": "278663f3cc9b05a94242b7592f4966284480aa346181392957bc9d8ef09213cc",
+      "bytes": 4717,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "upgrade/recheck.json",
+      "source": "work/reuse-upgrade-review/recheck.json",
+      "source_sha256": "b104b7de364ab4f5470f4dbc5c08e00a46561c5f5a3b8ecf2489f7c8ad56c898",
+      "sha256": "b104b7de364ab4f5470f4dbc5c08e00a46561c5f5a3b8ecf2489f7c8ad56c898",
+      "bytes": 5089,
+      "normalization": "none"
+    },
+    {
+      "path": "upgrade/recheck.md",
+      "source": "work/reuse-upgrade-review/recheck.md",
+      "source_sha256": "5512a85db807c5d63ba132c99636c91a6dc0a96dca018b8a426dee56d0bdb4d3",
+      "sha256": "40c59e9381553774cdb3655961dbe349cc833e6f7f5e36d88fac9ecc14fa6875",
+      "bytes": 3222,
+      "normalization": "task-root and user-home path placeholders only"
+    },
+    {
+      "path": "upgrade/reviewed/integration/review-update.mjs",
+      "source": "outputs/functional-acceptance/integration/review-update.mjs",
+      "source_sha256": "6c1647218d7739e614b5d01b4a0d10ff1a8db0485fabaf5a800604a1cdcbd737",
+      "sha256": "6c1647218d7739e614b5d01b4a0d10ff1a8db0485fabaf5a800604a1cdcbd737",
+      "bytes": 4172,
+      "normalization": "none"
+    },
+    {
+      "path": "upgrade/reviewed/integration/test-upgrade.mjs",
+      "source": "outputs/functional-acceptance/integration/test-upgrade.mjs",
+      "source_sha256": "e3230932f7a117d5b1962481858d5a72ebc0bf970f1fddfe9b48418e627ec5f8",
+      "sha256": "e3230932f7a117d5b1962481858d5a72ebc0bf970f1fddfe9b48418e627ec5f8",
+      "bytes": 9050,
+      "normalization": "none"
+    },
+    {
+      "path": "upgrade/reviewed/integration/fixtures/interrupt-copy.mjs",
+      "source": "outputs/functional-acceptance/integration/fixtures/interrupt-copy.mjs",
+      "source_sha256": "47cb1aae69c21fefb563150a0c1b0c436d7b8a05c3eb219ea6e9ee2de9ff10a7",
+      "sha256": "47cb1aae69c21fefb563150a0c1b0c436d7b8a05c3eb219ea6e9ee2de9ff10a7",
+      "bytes": 1282,
+      "normalization": "none"
+    },
+    {
+      "path": "upgrade/reviewed/UPGRADING.md",
+      "source": "outputs/functional-acceptance/UPGRADING.md",
+      "source_sha256": "7fce4efa5ecbdf86176eee50c9a37a066f5c78a785aca2423412920b9218e32a",
+      "sha256": "7fce4efa5ecbdf86176eee50c9a37a066f5c78a785aca2423412920b9218e32a",
+      "bytes": 6478,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/post-review/installation.stdout.txt",
+      "source": "work/reuse-post-review-checks/installation.stdout.txt",
+      "source_sha256": "da37af9bac00b9f88d0e5de0a6e9e0e3dc539b2aa17ec7fc79b3f4135df5c0b9",
+      "sha256": "da37af9bac00b9f88d0e5de0a6e9e0e3dc539b2aa17ec7fc79b3f4135df5c0b9",
+      "bytes": 4301,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/post-review/installation.stderr.txt",
+      "source": "work/reuse-post-review-checks/installation.stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "checks/post-review/result.json",
+      "source": "work/reuse-post-review-checks/result.json",
+      "source_sha256": "a3e0bc817564bf2df7f2bf1ec16ee38ee98728a1310eb759f695c7818607c564",
+      "sha256": "a3e0bc817564bf2df7f2bf1ec16ee38ee98728a1310eb759f695c7818607c564",
+      "bytes": 208,
+      "normalization": "none"
+    }
+  ],
+  "excluded": "Credentials, databases, startup/private logs, screenshots and private process snapshots are not published. No original evidence is rewritten."
+}

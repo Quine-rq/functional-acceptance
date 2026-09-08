@@ -1,0 +1,87 @@
+{
+  "schema_version": "m1-compatibility-study/v1",
+  "source_commit": "edc295c285da4550ec2fadca1e2f455d5be06fef",
+  "source_sha256": {
+    "examples/paginated_export/accept.py": "b21efa345bcbadeb7a9a42c4edd0261a84f113ccd593349d53198360c48af6f3",
+    "examples/paginated_export/export.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+    "examples/paginated_export/fixtures/pages.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    "examples/paginated_export/fixtures/expected_records.json": "1c3e572673aba569d887528e45513d36851207f3d40e5440042a4c56a40fdd86",
+    "scripts/acceptance.py": "06c9f2d3a640aa078027a3191b4c17531633574f5d6c9386f2e9edc5013023a3"
+  },
+  "current_helper_sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+  "normalization": "Only execution argv[0] becomes python3; execution digest in run.json is rechained. Fixtures do not authenticate collection.",
+  "runs": [
+    {
+      "scenario": "healthy",
+      "started_at": "2026-09-08T07:22:33.116Z",
+      "old_collector_exit": 0,
+      "current_helper_exit": 0,
+      "business_verdict": "PASS",
+      "original_sha256": {
+        "contract.json": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+        "run.json": "ba34790d6affd9770deebf7a3af02a678e2401386f3a476aa91256dd5e823ce3",
+        "runtime.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+        "input.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "attempt-1/execution.json": "7778a334cf1e7903bba5fcafb0f8c12caef0ad8bd462930f7dcbdec358d87b23",
+        "attempt-1/output.csv": "3b3f5c98fe37fd754477520bc3ea4e095f5019286abb61235477fb224c59f972"
+      },
+      "published_sha256": {
+        "contract.json": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+        "run.json": "25fd727078b0eb8d31674a8f7629dd138e68e14f973b6e21d74e124beb0be3bf",
+        "runtime.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+        "input.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "attempt-1/execution.json": "c41feac6076de23cb9c7a93d0db371a2f5f7dd2c3e8dfc7b3cf01bb776da8e1b",
+        "attempt-1/output.csv": "3b3f5c98fe37fd754477520bc3ea4e095f5019286abb61235477fb224c59f972"
+      },
+      "original_unchanged": true
+    },
+    {
+      "scenario": "defect",
+      "started_at": "2026-09-08T07:22:33.431Z",
+      "old_collector_exit": 1,
+      "current_helper_exit": 1,
+      "business_verdict": "FAIL",
+      "original_sha256": {
+        "contract.json": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+        "run.json": "eb232712e90d3e53bf4b8239446ee01049a3e68cf6cb2cc9582b8e4230d720c3",
+        "runtime.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+        "input.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "attempt-1/execution.json": "eea46670e25216ae9e0a62937128a0a606c16e8d7680c84a4e88fdc3e5c0fe7d",
+        "attempt-1/output.csv": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21"
+      },
+      "published_sha256": {
+        "contract.json": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+        "run.json": "111bc69d1ef5502a333d6a54b50901a1f408139cb11cd896f9885c29df8b03f2",
+        "runtime.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+        "input.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "attempt-1/execution.json": "227d03555b89cdcfac7ee632fd5539e8111d49dae3ca806688c3ef17c631be47",
+        "attempt-1/output.csv": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21"
+      },
+      "original_unchanged": true
+    },
+    {
+      "scenario": "missing-observation",
+      "started_at": "2026-09-08T07:22:33.860Z",
+      "old_collector_exit": 2,
+      "current_helper_exit": 2,
+      "business_verdict": "UNVERIFIED",
+      "original_sha256": {
+        "contract.json": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+        "run.json": "cfdf275328f90e533c0f4e3918ab2083560a9e771c2f7e88012e9ec749685e52",
+        "runtime.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+        "input.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "attempt-1/execution.json": "168d5f223c0728b5846f2274631090423b81c0ca22c3e5fc75249d896cadeadd",
+        "attempt-1/output.csv": "3b3f5c98fe37fd754477520bc3ea4e095f5019286abb61235477fb224c59f972"
+      },
+      "published_sha256": {
+        "contract.json": "a2994821b3b12551b3274f2ef64fc9fbc6df8fcfcfa13ff3c07cd4d2bcd01a3d",
+        "run.json": "c85caab3b85220c3e3a1a824f5adc7bb4398f33b0d699980eeb1d4f655b358a5",
+        "runtime.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+        "input.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "attempt-1/execution.json": "8b56bad70676df104ef72cacfeffd13f13eff7bdde3084cf7e69d6361647ed2d",
+        "attempt-1/output.csv": "3b3f5c98fe37fd754477520bc3ea4e095f5019286abb61235477fb224c59f972"
+      },
+      "original_unchanged": true
+    }
+  ]
+}

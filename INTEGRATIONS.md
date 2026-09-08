@@ -73,7 +73,13 @@ The optional helper needs Python 3.10+ and a suitable POSIX filesystem. Its only
 
 Pin both the installer and the Skill source when recording a reproducible run. The owner/repository command above tracks the moving default branch. For a reviewed commit, use `https://github.com/Quine-rq/functional-acceptance/tree/FULL_COMMIT_SHA/skills/functional-acceptance` as the source, replacing `FULL_COMMIT_SHA` with the actual 40-character commit. Do not infer a source pin from the installer version or a folder hash alone.
 
-Before updating: inspect and back up the exact installed directory outside all Skill discovery directories, record the source commit, and compare your local edits. Do not place evidence inside the Skill. Test the chosen revision in a fresh project first. Reinstallation replaces the old copy; it does not merge edits or guarantee atomic recovery after interruption. If an install fails, inspect the named destination and restore the reviewed backup before relying on it. We have not fault-tested third-party installation or its update service.
+Before updating, follow the [staged update and recovery guide](UPGRADING.md).
+It includes a read-only local-change comparison tool, a tested backup/restore
+procedure, and explicit installer-lock and host-reload limitations. Install the
+candidate in a fresh temporary project first. Reinstallation replaces the old
+copy; it does not merge edits or guarantee atomic recovery after interruption.
+Controlled interruption of the pinned installer's copy step is now tested in
+disposable projects; interrupted remote downloads and its update service are not.
 
 From the same project, after identifying this installation and any local edits:
 
@@ -103,7 +109,7 @@ A separate installation from that exact GitHub commit into a temporary Claude Co
 
 The optional Codex probe initially timed out in the restricted environment, then exposed a startup permission error. The same probe passed with normal process permissions, without invoking a model or changing shared configuration. The failed attempts are not counted as successes.
 
-Reproduce package/helper tests with the two Python commands in the README. Reproduce the ten installer tests with:
+Reproduce package/helper tests with the two Python commands in the README. Reproduce the current installer and upgrade tests with:
 
 ```sh
 npm --prefix integration ci --ignore-scripts --no-audit --no-fund

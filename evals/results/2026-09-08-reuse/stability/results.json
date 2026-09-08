@@ -1,0 +1,1663 @@
+[
+  {
+    "id": "r1-healthy",
+    "round": 1,
+    "scenario": "healthy",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:20:15.695Z",
+    "finished_at": "2026-09-08T07:20:40.123Z",
+    "elapsed_ms": 24428,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "healthy"
+    ],
+    "native_run": [
+      "run-20260908T072015904082Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 23,
+      "control_id": 24,
+      "run": "run-20260908t072015904082z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 5687,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 5689,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 5796,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "healthy",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        16
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r1-expired-session",
+    "round": 1,
+    "scenario": "expired-session",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:20:40.188Z",
+    "finished_at": "2026-09-08T07:21:02.102Z",
+    "elapsed_ms": 21914,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "expired-session"
+    ],
+    "native_run": [
+      "run-20260908T072040362632Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "reauthenticated_same_object": "PASS",
+        "reauthenticated_same_object_database": "PASS",
+        "expired_session_recovered": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 25,
+      "control_id": 26,
+      "run": "run-20260908t072040362632z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 5972,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 5975,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 6057,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "expired-session",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        17
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r1-lost-response",
+    "round": 1,
+    "scenario": "lost-response",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:21:02.165Z",
+    "finished_at": "2026-09-08T07:21:22.613Z",
+    "elapsed_ms": 20448,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "lost-response"
+    ],
+    "native_run": [
+      "run-20260908T072102337273Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "uncertain_write_found_once": "PASS",
+        "lost_response_recovered_without_resubmit": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 27,
+      "control_id": 28,
+      "run": "run-20260908t072102337273z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 6256,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 6258,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 6361,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "lost-response",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        18
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r1-unicode-notes",
+    "round": 1,
+    "scenario": "unicode-notes",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:21:22.683Z",
+    "finished_at": "2026-09-08T07:21:51.106Z",
+    "elapsed_ms": 28423,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "unicode-notes"
+    ],
+    "native_run": [
+      "run-20260908T072122862947Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 29,
+      "control_id": 30,
+      "run": "run-20260908t072122862947z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 6566,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 6569,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 6697,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "unicode-notes",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        19
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r2-healthy",
+    "round": 2,
+    "scenario": "healthy",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:21:51.176Z",
+    "finished_at": "2026-09-08T07:22:16.660Z",
+    "elapsed_ms": 25484,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "healthy"
+    ],
+    "native_run": [
+      "run-20260908T072151341498Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 31,
+      "control_id": 32,
+      "run": "run-20260908t072151341498z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 6881,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 6883,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 7000,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "healthy",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        20
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r2-expired-session",
+    "round": 2,
+    "scenario": "expired-session",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:22:16.726Z",
+    "finished_at": "2026-09-08T07:22:46.255Z",
+    "elapsed_ms": 29529,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "expired-session"
+    ],
+    "native_run": [
+      "run-20260908T072216902598Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "reauthenticated_same_object": "PASS",
+        "reauthenticated_same_object_database": "PASS",
+        "expired_session_recovered": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 33,
+      "control_id": 34,
+      "run": "run-20260908t072216902598z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 7190,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 7193,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 7298,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "expired-session",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        21
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r2-lost-response",
+    "round": 2,
+    "scenario": "lost-response",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:22:46.333Z",
+    "finished_at": "2026-09-08T07:23:06.873Z",
+    "elapsed_ms": 20540,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "lost-response"
+    ],
+    "native_run": [
+      "run-20260908T072246514533Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "uncertain_write_found_once": "PASS",
+        "lost_response_recovered_without_resubmit": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 35,
+      "control_id": 36,
+      "run": "run-20260908t072246514533z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 7698,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 7701,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 7805,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "lost-response",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        22
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r2-unicode-notes",
+    "round": 2,
+    "scenario": "unicode-notes",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:23:06.944Z",
+    "finished_at": "2026-09-08T07:23:27.115Z",
+    "elapsed_ms": 20171,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "unicode-notes"
+    ],
+    "native_run": [
+      "run-20260908T072307123181Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 37,
+      "control_id": 38,
+      "run": "run-20260908t072307123181z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 7968,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 7971,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 8077,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "unicode-notes",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        23
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r3-healthy",
+    "round": 3,
+    "scenario": "healthy",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:23:27.187Z",
+    "finished_at": "2026-09-08T07:23:49.397Z",
+    "elapsed_ms": 22210,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "healthy"
+    ],
+    "native_run": [
+      "run-20260908T072327351146Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 39,
+      "control_id": 40,
+      "run": "run-20260908t072327351146z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 8229,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 8232,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 8342,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "healthy",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        24
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r3-expired-session",
+    "round": 3,
+    "scenario": "expired-session",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:23:49.463Z",
+    "finished_at": "2026-09-08T07:24:11.657Z",
+    "elapsed_ms": 22194,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "expired-session"
+    ],
+    "native_run": [
+      "run-20260908T072349656473Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "reauthenticated_same_object": "PASS",
+        "reauthenticated_same_object_database": "PASS",
+        "expired_session_recovered": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 41,
+      "control_id": 42,
+      "run": "run-20260908t072349656473z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 8503,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 8506,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 8629,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "expired-session",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        25
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r3-lost-response",
+    "round": 3,
+    "scenario": "lost-response",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:24:11.729Z",
+    "finished_at": "2026-09-08T07:24:33.253Z",
+    "elapsed_ms": 21524,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "lost-response"
+    ],
+    "native_run": [
+      "run-20260908T072411949987Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "uncertain_write_found_once": "PASS",
+        "lost_response_recovered_without_resubmit": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 43,
+      "control_id": 44,
+      "run": "run-20260908t072411949987z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 8911,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 8914,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 9035,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "lost-response",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        26
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "r3-unicode-notes",
+    "round": 3,
+    "scenario": "unicode-notes",
+    "expected_exit": 0,
+    "expected_verdict": "PASS",
+    "started_at": "2026-09-08T07:24:33.335Z",
+    "finished_at": "2026-09-08T07:24:54.410Z",
+    "elapsed_ms": 21075,
+    "termination": {
+      "code": 0,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "unicode-notes"
+    ],
+    "native_run": [
+      "run-20260908T072433512141Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 45,
+      "control_id": 46,
+      "run": "run-20260908t072433512141z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 9217,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 9219,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 9338,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "unicode-notes",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        27
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "control-note-loss",
+    "scenario": "note-loss",
+    "expected_exit": 1,
+    "expected_verdict": "FAIL",
+    "started_at": "2026-09-08T07:24:54.478Z",
+    "finished_at": "2026-09-08T07:25:01.775Z",
+    "elapsed_ms": 7297,
+    "termination": {
+      "code": 1,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "note-loss"
+    ],
+    "native_run": [
+      "run-20260908T072454667893Z"
+    ],
+    "result": {
+      "business_verdict": "FAIL",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": "business",
+      "exit_code": 1,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "FAIL",
+        "fresh_browser_retrieval": "UNVERIFIED",
+        "server_restart_retrieval": "UNVERIFIED",
+        "other_account_no_view": "UNVERIFIED",
+        "other_account_no_modify": "UNVERIFIED",
+        "edit_persisted": "UNVERIFIED",
+        "delete_target": "UNVERIFIED",
+        "unrelated_intact": "UNVERIFIED"
+      },
+      "phase_at_exit": "invalid URL and recovery",
+      "target_id": 47,
+      "control_id": null,
+      "run": "run-20260908t072454667893z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 9506,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 9509,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+      "case": "note-loss",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [
+        47
+      ],
+      "new_tag_ids": [
+        28
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "control-missing-observation",
+    "scenario": "missing-observation",
+    "expected_exit": 2,
+    "expected_verdict": "UNVERIFIED",
+    "started_at": "2026-09-08T07:25:01.841Z",
+    "finished_at": "2026-09-08T07:25:24.630Z",
+    "elapsed_ms": 22789,
+    "termination": {
+      "code": 2,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "missing-observation"
+    ],
+    "native_run": [
+      "run-20260908T072502011066Z"
+    ],
+    "result": {
+      "business_verdict": "UNVERIFIED",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": null,
+      "exit_code": 2,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "UNVERIFIED",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 48,
+      "control_id": 49,
+      "run": "run-20260908t072502011066z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 9593,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 9595,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 9682,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "missing-observation",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": [
+        29
+      ]
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "safety-interrupt",
+    "scenario": "interrupt",
+    "expected_exit": 2,
+    "expected_verdict": "UNVERIFIED",
+    "started_at": "2026-09-08T07:25:24.703Z",
+    "finished_at": "2026-09-08T07:25:29.582Z",
+    "elapsed_ms": 4879,
+    "termination": {
+      "code": 2,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": true,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "healthy"
+    ],
+    "native_run": [
+      "run-20260908T072524899021Z"
+    ],
+    "result": {
+      "business_verdict": "UNVERIFIED",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": "interrupted",
+      "exit_code": 2,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "UNVERIFIED",
+        "invalid_url_feedback": "UNVERIFIED",
+        "invalid_recovery": "UNVERIFIED",
+        "save_private_tags_notes": "UNVERIFIED",
+        "fresh_browser_retrieval": "UNVERIFIED",
+        "server_restart_retrieval": "UNVERIFIED",
+        "other_account_no_view": "UNVERIFIED",
+        "other_account_no_modify": "UNVERIFIED",
+        "edit_persisted": "UNVERIFIED",
+        "delete_target": "UNVERIFIED",
+        "unrelated_intact": "UNVERIFIED"
+      },
+      "phase_at_exit": "setup",
+      "target_id": null,
+      "control_id": null,
+      "run": "run-20260908t072524899021z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 9862,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 9865,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+      "case": "healthy",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": null,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": []
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": [
+      "152.0.7977.76"
+    ]
+  },
+  {
+    "id": "safety-occupied-port",
+    "scenario": "occupied-port",
+    "expected_exit": 2,
+    "expected_verdict": "UNVERIFIED",
+    "started_at": "2026-09-08T07:25:29.655Z",
+    "finished_at": "2026-09-08T07:25:30.216Z",
+    "elapsed_ms": 561,
+    "termination": {
+      "code": 2,
+      "signal": null
+    },
+    "timed_out": false,
+    "interruption_injected": false,
+    "argv": [
+      "<TASK_ROOT>/work/linkding-hardened/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-hardened",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "healthy"
+    ],
+    "native_run": [
+      "run-20260908T072529809818Z"
+    ],
+    "result": {
+      "business_verdict": "UNVERIFIED",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": "environment",
+      "exit_code": 2,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "UNVERIFIED",
+        "invalid_url_feedback": "UNVERIFIED",
+        "invalid_recovery": "UNVERIFIED",
+        "save_private_tags_notes": "UNVERIFIED",
+        "fresh_browser_retrieval": "UNVERIFIED",
+        "server_restart_retrieval": "UNVERIFIED",
+        "other_account_no_view": "UNVERIFIED",
+        "other_account_no_modify": "UNVERIFIED",
+        "edit_persisted": "UNVERIFIED",
+        "delete_target": "UNVERIFIED",
+        "unrelated_intact": "UNVERIFIED"
+      },
+      "phase_at_exit": "setup",
+      "target_id": null,
+      "control_id": null,
+      "run": "run-20260908t072529809818z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 9937,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+      "case": "healthy",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "expectation_met": true,
+    "independent_cleanup_known": true,
+    "remaining_owned_processes": [],
+    "process_observation_error": null,
+    "unowned_listener_preserved": true,
+    "preservation": {
+      "prior_bookmarks_unchanged": true,
+      "prior_tags_unchanged": true,
+      "new_bookmark_ids": [],
+      "new_tag_ids": []
+    },
+    "native_pack_unchanged": true,
+    "browser_versions": []
+  }
+]

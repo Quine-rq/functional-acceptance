@@ -1,0 +1,146 @@
+{
+  "planned_codex_trials": 12,
+  "completed_codex_trials": 1,
+  "not_run_codex_trials": 11,
+  "completed_pairs": 0,
+  "claude": {
+    "status": "not_run_approval_dependency",
+    "attempted": false,
+    "usage": null,
+    "reason": "Same unresolved external-service approval dependency; no credential or provider changes."
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "host": "codex",
+      "configuration": "with_skill",
+      "scenario": "coverage-explicit",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 1,
+      "host": "codex",
+      "configuration": "old_skill",
+      "scenario": "coverage-explicit",
+      "status": "completed_graded",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": "work/reuse-behavior-codex-coverage-explicit-old",
+      "notes": "Only approved native run; independent grading completed (6/6 assertions), no completed paired candidate."
+    },
+    {
+      "eval_id": 2,
+      "host": "codex",
+      "configuration": "with_skill",
+      "scenario": "coverage-natural-1",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 2,
+      "host": "codex",
+      "configuration": "old_skill",
+      "scenario": "coverage-natural-1",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 3,
+      "host": "codex",
+      "configuration": "with_skill",
+      "scenario": "coverage-natural-2",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 3,
+      "host": "codex",
+      "configuration": "old_skill",
+      "scenario": "coverage-natural-2",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 4,
+      "host": "codex",
+      "configuration": "with_skill",
+      "scenario": "plan",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 4,
+      "host": "codex",
+      "configuration": "old_skill",
+      "scenario": "plan",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 5,
+      "host": "codex",
+      "configuration": "with_skill",
+      "scenario": "historical",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 5,
+      "host": "codex",
+      "configuration": "old_skill",
+      "scenario": "historical",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 6,
+      "host": "codex",
+      "configuration": "with_skill",
+      "scenario": "near-miss",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    },
+    {
+      "eval_id": 6,
+      "host": "codex",
+      "configuration": "old_skill",
+      "scenario": "near-miss",
+      "status": "not_run_approval_dependency",
+      "actual_model": null,
+      "paired_comparison_eligible": false,
+      "raw_record": null,
+      "notes": "Native launch skipped after automatic approval twice rejected candidate invocation. Not an execution failure, model answer, or graded trial."
+    }
+  ]
+}

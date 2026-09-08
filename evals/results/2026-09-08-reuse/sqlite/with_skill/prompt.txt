@@ -1,0 +1,7 @@
+请使用本项目安装的 functional-acceptance Skill，实际验收 ONBOARDING-REQUIREMENTS.md 中的联系人导入、跨 CLI 进程读取、JSON 导出、重复 id 拒绝和无关数据保留这条用户链路。项目对你来说是一次新的接入；先依据随项目保留的文档、源码和测试确认可用的原生入口，再执行有界验收。请留下可脱离 Skill 和本次对话使用的项目原生 pytest 回归包、实际证据与 setup / 重跑 / 清理说明。不要修改应用来使结果通过，遇到失败保留原始尝试并如实报告。
+
+运行对象：本工作目录是公共 sqlite-utils 项目 4.2.1 在 85b1be10c81d9dd3567e36faf8dd411e4a8789bd 的原始 tracked 文件快照。原始取材路径 <TASK_ROOT>/work/sqlite-utils-onboarding-source 仅作版本来源记录；应用运行必须针对当前工作目录的这份源码。已准备好的依赖环境解释器是 <TASK_ROOT>/work/sqlite-utils-onboarding-env/bin/python（Python 3.14.4，sqlite-utils 4.2.1，pytest 9.1.1）；它可读取使用，不得修改。无需安装依赖。Skill 位于当前项目的 .agents/skills/functional-acceptance/SKILL.md。
+
+授权与边界：可读取当前项目、已安装 Skill 及上述依赖环境。可在当前项目 acceptance/ 新建 pytest 测试、合成 fixtures 和交接文档，可在当前项目 artifacts/ 新建数据库与所有运行材料。临时目录和 pytest 缓存也限定在这两个本次目录内。不得修改任何已提供的上游源码、上游测试、项目配置、需求文件或 Skill；不得读取其他实验、历史答案、私有数据、凭据或全局配置；不得网络访问、安装依赖、访问生产、发布、commit 或 push，也不得写当前项目之外的文件。现有宿主认证只供正常 Codex 调用。
+
+总执行预算为 8 分钟。正常实现和失败分支都按需求中的用户可观察结果核对，所有输入数据均须由你在本次目录构造为合成数据。保存实际运行身份、命令结果、失败尝试及材料路径；如预算或条件不足则保留缺口，不能把未执行写成通过。最后用中文简要报告。

@@ -1,0 +1,10 @@
+{
+  "host": "codex",
+  "configuration": "old_skill",
+  "scenario": "coverage-explicit",
+  "status": "completed_ungraded",
+  "actual_model": null,
+  "paired_comparison_eligible": false,
+  "raw_record": "work/reuse-behavior-codex-coverage-explicit-old",
+  "notes": "Only approved native run; no completed paired candidate."
+}

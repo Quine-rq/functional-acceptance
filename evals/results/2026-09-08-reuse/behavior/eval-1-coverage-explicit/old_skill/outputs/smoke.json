@@ -1,0 +1,13 @@
+{
+  "label": "smoke",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "test_smoke.py"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.052s\n\nOK\n"
+}

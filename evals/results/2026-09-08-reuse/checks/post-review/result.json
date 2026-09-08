@@ -1,0 +1,7 @@
+{
+  "command": "npm --prefix integration test",
+  "exit_code": 0,
+  "signal": null,
+  "scope": "Post owner-execute-bit fix; prior 18-test run retained separately",
+  "timestamp": "2026-09-08T07:32:54.198Z"
+}

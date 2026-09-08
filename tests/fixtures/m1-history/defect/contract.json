@@ -1,0 +1,78 @@
+{
+  "schema_version": "m1",
+  "journey": "Export all supplied pages to a new CSV and read back exactly the expected records and fields.",
+  "target": {
+    "id": "offline-paginated-export",
+    "sha256": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c"
+  },
+  "input_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "goals": [
+    {
+      "id": "all-pages",
+      "text": "Every record from every page appears once in the supplied order.",
+      "source": "examples/paginated_export/requirements.md requirement 2",
+      "obligations": [
+        "complete-readable-export"
+      ],
+      "gap": null,
+      "exclusion": null
+    },
+    {
+      "id": "field-integrity",
+      "text": "An independent CSV reader obtains the exact UTF-8 field values.",
+      "source": "examples/paginated_export/requirements.md requirement 3",
+      "obligations": [
+        "complete-readable-export"
+      ],
+      "gap": null,
+      "exclusion": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "complete-readable-export",
+      "expected": "Exact header and all five independently specified rows.",
+      "required": true,
+      "applicable": true,
+      "exclusion": null,
+      "mapping": "csv-exact/v1",
+      "columns": [
+        "id",
+        "title",
+        "notes"
+      ],
+      "rows": [
+        [
+          "r-001",
+          "示例, Hello",
+          "第一行\n第二行"
+        ],
+        [
+          "r-002",
+          "Quote \"double\"",
+          "café ☕"
+        ],
+        [
+          "r-003",
+          "雪 / snow",
+          ""
+        ],
+        [
+          "r-004",
+          "Emoji 🚀",
+          "CRLF\r\nnext"
+        ],
+        [
+          "r-005",
+          "最后一页",
+          "END, \"边界\"\n末尾"
+        ]
+      ]
+    }
+  ],
+  "scope": {
+    "environment": "isolated-local",
+    "upstream": "synthetic-pages",
+    "claim": "Normal offline CLI/file export only; synthetic upstream pages, no real API or UI. Other input/error cases run separately in native unittest."
+  }
+}

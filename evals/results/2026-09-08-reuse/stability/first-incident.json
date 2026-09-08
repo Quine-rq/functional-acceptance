@@ -1,0 +1,28 @@
+{
+  "type": "preserved-preflight-attempt-and-collector-failure",
+  "native_run": "run-20260908T071832206438Z",
+  "native_started_at": "2026-09-08T07:18:32.228528+00:00",
+  "native_finished_at": "2026-09-08T07:18:32.406780+00:00",
+  "native_verdict": "UNVERIFIED",
+  "native_exit_code_recorded_in_receipt": 2,
+  "native_obstacle": "environment",
+  "native_failure": "Article loopback bind failed: PermissionError [Errno 1] Operation not permitted.",
+  "collector_failure": "Independent process inspection failed: spawnSync /bin/ps EPERM. The collector exited 1 before writing its per-run aggregate or raw stdout capture.",
+  "limitation": "Native events and final receipt are retained; the collector did not persist independent native-process termination, so the receipt exit code is not represented as a separately observed subprocess exit record.",
+  "browser_started": false,
+  "target_id": null,
+  "control_id": null,
+  "native_article_pid": 5170,
+  "native_article_returncode": 1,
+  "cleanup_followup": "A subsequent normal-escalation read-only ps -p 5170 returned no process, and lsof reported no listener on 18741 or 18742. No process was terminated by followup.",
+  "retained_prior_bookmark_ids": [3, 12],
+  "retries": 0,
+  "native_hashes": {
+    "events.jsonl": "189cc325c91bfcd1983312434b8541d77ad17ab9d121a1e632121fe601a0cb6d",
+    "result.json": "353f0475ce4bf6525c1c0eb466ebffa71df53f1e1cb604d1def3269fe029d775",
+    "pack-identity.json": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+    "environment-identity.json": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+    "executed_regression.py": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+    "article.stderr.private.txt": "0b909081dc1bf85a6f0dea6198e6bf68784dfc1dba8b20c09dc6afa891c571ad"
+  }
+}

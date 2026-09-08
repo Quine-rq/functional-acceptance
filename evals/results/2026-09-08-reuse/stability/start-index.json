@@ -1,0 +1,11 @@
+{
+  "prior_attempt_record": "../reuse-stability-20260908T071702Z/incident.json",
+  "prior_native_run": "run-20260908T071832206438Z",
+  "prior_obstacles": ["sandbox denied loopback article bind", "sandbox denied independent ps observation"],
+  "prior_attempt_retained": true,
+  "prior_attempt_in_business_stability_denominator": false,
+  "permission_scope": "Normal require_escalated only for installed sandboxed Chrome, isolated synthetic database, loopback 18741/18742 and read-only ps observation.",
+  "authorization": "Parent explicitly authorized a new directory and batch retaining the original pack and schedule.",
+  "collector_change": "Only record directory string changed from reuse-stability-20260908T071702Z to reuse-stability-20260908T072300Z; no scenario, verdict, execution or cleanup logic changes.",
+  "prohibitions": ["no remote host", "no security setting changes", "no preparation", "no credentials changes", "no source or git changes", "no automatic journey retry", "no historical cleanup"]
+}

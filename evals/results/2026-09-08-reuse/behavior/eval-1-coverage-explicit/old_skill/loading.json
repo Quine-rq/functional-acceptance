@@ -1,0 +1,10 @@
+{
+  "actual_full_skill_read": true,
+  "read_event_ids": [
+    "item_2"
+  ],
+  "method": "Completed native command returned complete installed SKILL.md bytes; path inventory alone does not count.",
+  "commands": [
+    "/bin/zsh -lc 'cat .agents/skills/functional-acceptance/SKILL.md .agents/skills/functional-acceptance/references/host-compatibility.md .agents/skills/functional-acceptance/references/native-workflow.md'"
+  ]
+}

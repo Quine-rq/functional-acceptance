@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "skill_name": "functional-acceptance",
+    "skill_path": "skills/functional-acceptance",
+    "executor_model": "Existing Codex default; exact model identity unavailable",
+    "analyzer_model": "Independent agent grading; not human evaluation",
+    "timestamp": "2026-09-08T07:27:31Z",
+    "evals_run": [
+      1
+    ],
+    "runs_per_configuration": 1,
+    "completed_pairs": 0,
+    "planned_trials": 12,
+    "completed_trials": 1,
+    "unexecuted_trials": 11
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "old_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 56.003,
+        "tokens": 104992,
+        "tool_calls": 4,
+        "errors": 1
+      },
+      "expectations": [
+        {
+          "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+          "passed": true,
+          "evidence": "transcript.md command item_5 invokes python3 -B -m unittest test_smoke.py through subprocess.run; outputs/smoke.json records exit 0, Ran 1 test, OK. Command item_3 returned the supplied test body, which checks only exit code 0 and the id/title/notes header. The pre-execution commentary and outputs/final.md explicitly explain that the smoke does not check completeness, order, or field fidelity. The retained smoke log equals its entry in observations.json."
+        },
+        {
+          "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+          "passed": true,
+          "evidence": "Command item_5 creates a new run directory, exports through the supplied CLI, derives expected rows by flattening every page of fixtures/pages.json rather than calling the implementation's render path, and reopens the actual UTF-8 CSV with csv.DictReader(newline=''). The grader independently parsed the preserved source fixture and outputs/export.csv: five required records versus four actual records, with only r-005 missing; the first four rows and every id/title/notes value match exactly, including LF and CRLF. Final output identifies page 3's r-005 as the counterexample while the exporter exited 0. The delivered CSV equals the raw run CSV byte for byte, and its SHA-256 is 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21, matching observations.json and after.json."
+        },
+        {
+          "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+          "passed": true,
+          "evidence": "The supplied requirements cover exact once-only ordered records and fields, a new UTF-8 CSV, preservation of existing files, and a local synthetic scope. Actual-versus-expected comparison exposes the missing record, and final.md limits its order/field PASS to the four retained records instead of claiming full preservation. The fresh output is decoded as UTF-8. A second write to the same output returns 2 with 'output already exists; choose a new path'; the CSV digest is unchanged. Before/after inventories and observations compare the supplied files, including sentinel.txt and installed Skill files. Remote delivery is explicitly excluded based on the requirement. These observations cover this provided fixture and ordinary existing-file refusal; no claim is made about unrequested crash, concurrency, production, or remote behavior."
+        },
+        {
+          "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+          "passed": true,
+          "evidence": "Independently compared all 12 protected entries in before.json against after.json and the currently retained raw project bytes: no size/hash mismatches. All six installed.json Skill entries match their corresponding before.json records. Rehashed all 17 files listed by after.json in the raw project with no mismatches. The only five additions are run-owned export.csv and four JSON evidence files under artifacts/acceptance-20260908-151800-768442/. This verifies retained before/after state; the inventory explicitly excludes .git and does not audit host-global writes or transient edits that might later be restored."
+        },
+        {
+          "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+          "passed": true,
+          "evidence": "outputs/final.md states the local synthetic scope, leads with the concrete missing-record failure, explains what the green smoke omits, links the actual CSV and observations, and gives a project-root repeat command with a never-used output filename and the expected five-versus-four result. observations.json records runtime, source path/digest, execution outputs, and preservation checks. The handoff makes no release or independently replayed-regression claim. All requirements in this bounded fixture were observed, so no missing required observation is hidden. The command is a manual reproduction, not an independently exercised machine-checkable regression entrypoint; this passing assertion does not establish the latter."
+        },
+        {
+          "text": "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient.",
+          "passed": true,
+          "evidence": "transcript.md item_2 is a completed exit-0 cat of .agents/skills/functional-acceptance/SKILL.md plus two installed references. The grader checked the raw item_2 aggregated output contains the full current installed SKILL.md text, not merely its filename. Its installed SHA-256 a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604 matches installed.json, before.json, and after.json. loading.json's reported read event is thus corroborated independently."
+        }
+      ],
+      "notes": [
+        "No outputs/user_notes.md was supplied.",
+        "Actual native model identity is not retained; existing-host-default is a selection policy, not proof of a specific model.",
+        "Interpret this as one successful detection-and-handoff trial, not a candidate comparison, generalized Skill score, release qualification, or independently replayed regression pack.",
+        "The executor used direct attributed native CSV observation and did not invoke the optional CSV material helper; it made no helper-validation claim."
+      ],
+      "eval_name": "coverage-explicit (old Skill only)"
+    }
+  ],
+  "run_summary": {
+    "old_skill": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0,
+        "min": 1,
+        "max": 1
+      },
+      "time_seconds": {
+        "mean": 56.003,
+        "min": 56.003,
+        "max": 56.003,
+        "stddev": 0
+      },
+      "tokens": {
+        "mean": 104992,
+        "min": 104992,
+        "max": 104992,
+        "stddev": 0
+      }
+    }
+  },
+  "notes": [
+    "Only one old-Skill trial executed and graded. No candidate trial, zero completed pairs, no version-benefit conclusion.",
+    "Eleven planned trials and Claude were not run due to approval dependency. They have neither zero scores nor fabricated time/token data.",
+    "Actual native input+output token count is used, cached input is a subset. Global host defaults were inherited; model identity is unavailable.",
+    "6/6 assertions apply to this single supplied synthetic export task, not broad reliability or human savings.",
+    "Raw aggregator output is retained separately; its fallback delta against an absent configuration was removed."
+  ]
+}

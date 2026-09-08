@@ -1,0 +1,115 @@
+{
+  "created_at": "2026-09-08T07:20:15.561Z",
+  "schedule": [
+    {
+      "id": "r1-healthy",
+      "round": 1,
+      "scenario": "healthy",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r1-expired-session",
+      "round": 1,
+      "scenario": "expired-session",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r1-lost-response",
+      "round": 1,
+      "scenario": "lost-response",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r1-unicode-notes",
+      "round": 1,
+      "scenario": "unicode-notes",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r2-healthy",
+      "round": 2,
+      "scenario": "healthy",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r2-expired-session",
+      "round": 2,
+      "scenario": "expired-session",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r2-lost-response",
+      "round": 2,
+      "scenario": "lost-response",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r2-unicode-notes",
+      "round": 2,
+      "scenario": "unicode-notes",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r3-healthy",
+      "round": 3,
+      "scenario": "healthy",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r3-expired-session",
+      "round": 3,
+      "scenario": "expired-session",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r3-lost-response",
+      "round": 3,
+      "scenario": "lost-response",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "r3-unicode-notes",
+      "round": 3,
+      "scenario": "unicode-notes",
+      "expected_exit": 0,
+      "expected_verdict": "PASS"
+    },
+    {
+      "id": "control-note-loss",
+      "scenario": "note-loss",
+      "expected_exit": 1,
+      "expected_verdict": "FAIL"
+    },
+    {
+      "id": "control-missing-observation",
+      "scenario": "missing-observation",
+      "expected_exit": 2,
+      "expected_verdict": "UNVERIFIED"
+    },
+    {
+      "id": "safety-interrupt",
+      "scenario": "interrupt",
+      "expected_exit": 2,
+      "expected_verdict": "UNVERIFIED"
+    },
+    {
+      "id": "safety-occupied-port",
+      "scenario": "occupied-port",
+      "expected_exit": 2,
+      "expected_verdict": "UNVERIFIED"
+    }
+  ],
+  "retries": 0,
+  "stop_rule": "Stop only for unresolved process responsibility, changed prior data or changed native inputs; preserve unexpected independent attempt outcomes."
+}

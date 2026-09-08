@@ -1,0 +1,111 @@
+[
+  {
+    "name": "3.14-suite",
+    "command": "python3",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 9928
+  },
+  {
+    "name": "3.14-export",
+    "command": "python3",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/paginated_export",
+      "-p",
+      "test_export.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 1916
+  },
+  {
+    "name": "3.14-old-record",
+    "command": "python3",
+    "args": [
+      "-B",
+      "evals/results/2026-09-08-product-hardening/check_record.py"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 161
+  },
+  {
+    "name": "3.10-suite",
+    "command": "<TASK_ROOT>/work/acceptance-python/cpython-3.10.20-macos-aarch64-none/bin/python3.10",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 6723
+  },
+  {
+    "name": "3.10-export",
+    "command": "<TASK_ROOT>/work/acceptance-python/cpython-3.10.20-macos-aarch64-none/bin/python3.10",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/paginated_export",
+      "-p",
+      "test_export.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 1214
+  },
+  {
+    "name": "3.10-old-record",
+    "command": "<TASK_ROOT>/work/acceptance-python/cpython-3.10.20-macos-aarch64-none/bin/python3.10",
+    "args": [
+      "-B",
+      "evals/results/2026-09-08-product-hardening/check_record.py"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 100
+  },
+  {
+    "name": "installation",
+    "command": "npm",
+    "args": [
+      "--prefix",
+      "integration",
+      "test"
+    ],
+    "exit_code": 0,
+    "signal": null,
+    "error": null,
+    "elapsed_ms": 4690
+  }
+]

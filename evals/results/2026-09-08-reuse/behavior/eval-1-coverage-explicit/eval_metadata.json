@@ -1,0 +1,35 @@
+{
+  "eval_id": 1,
+  "eval_name": "coverage-explicit",
+  "prompt": "Use $functional-acceptance for this request. The export smoke test is green. Please check whether this feature really gives the user the result promised in requirements.md. Run the existing checks and whatever bounded native observation is necessary; retain the actual CSV you inspect under artifacts/. Do not fix the application. Explain any uncovered requirement and the smallest reproducible counterexample.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+  "assertions": [
+    "The existing smoke check is actually executed and its limited assertions are explained.",
+    "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+    "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+    "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+    "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+    "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient."
+  ],
+  "expectations": [
+    "The existing smoke check is actually executed and its limited assertions are explained.",
+    "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+    "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+    "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+    "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+    "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient."
+  ],
+  "expected_output": "Observed real missing final-page CSV failure with full requirement reconciliation and explicit Skill loading.",
+  "files": [
+    "export.py",
+    "fixtures/pages.json",
+    "requirements.md",
+    "test_smoke.py",
+    "README.md",
+    "sentinel.txt"
+  ],
+  "configuration_order": [
+    "with_skill",
+    "old_skill"
+  ],
+  "notes": "Planned launch order alternates; approval prevented completion. Expectations were not passed to native host."
+}

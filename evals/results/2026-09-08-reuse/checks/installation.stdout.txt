@@ -1,0 +1,122 @@
+
+> test
+> node --test test-install.mjs test-upgrade.mjs
+
+TAP version 13
+# Subtest: standard YAML parses without host-specific execution directives
+ok 1 - standard YAML parses without host-specific execution directives
+  ---
+  duration_ms: 5.573208
+  type: 'test'
+  ...
+# Subtest: codex: discover, install, reinstall and remove exact package bytes
+ok 2 - codex: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 571.555792
+  type: 'test'
+  ...
+# Subtest: claude-code: discover, install, reinstall and remove exact package bytes
+ok 3 - claude-code: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 567.364292
+  type: 'test'
+  ...
+# Subtest: cursor: discover, install, reinstall and remove exact package bytes
+ok 4 - cursor: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 557.372708
+  type: 'test'
+  ...
+# Subtest: github-copilot: discover, install, reinstall and remove exact package bytes
+ok 5 - github-copilot: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 535.992459
+  type: 'test'
+  ...
+# Subtest: opencode: discover, install, reinstall and remove exact package bytes
+ok 6 - opencode: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 529.343042
+  type: 'test'
+  ...
+# Subtest: reinstall replaces local edits; it is not a safe merge or backup
+ok 7 - reinstall replaces local edits; it is not a safe merge or backup
+  ---
+  duration_ms: 405.836875
+  type: 'test'
+  ...
+# Subtest: universal hosts share one copy, Claude uses its own copy
+ok 8 - universal hosts share one copy, Claude uses its own copy
+  ---
+  duration_ms: 830.616625
+  type: 'test'
+  ...
+# Subtest: an unknown host fails without modifying the project
+ok 9 - an unknown host fails without modifying the project
+  ---
+  duration_ms: 122.554791
+  type: 'test'
+  ...
+# Subtest: a missing Skill name fails without installing a substitute
+ok 10 - a missing Skill name fails without installing a substitute
+  ---
+  duration_ms: 124.419041
+  type: 'test'
+  ...
+# Subtest: read-only review distinguishes local changes from the proposed update
+ok 11 - read-only review distinguishes local changes from the proposed update
+  ---
+  duration_ms: 294.750375
+  type: 'test'
+  ...
+# Subtest: review detects removed files and executable-bit changes
+ok 12 - review detects removed files and executable-bit changes
+  ---
+  duration_ms: 160.863834
+  type: 'test'
+  ...
+# Subtest: review treats prototype-like filenames and empty directories as local changes
+ok 13 - review treats prototype-like filenames and empty directories as local changes
+  ---
+  duration_ms: 161.87625
+  type: 'test'
+  ...
+# Subtest: review refuses links, missing entrypoint, oversize files and excessive entries
+ok 14 - review refuses links, missing entrypoint, oversize files and excessive entries
+  ---
+  duration_ms: 47.016
+  type: 'test'
+  ...
+# Subtest: codex: interrupted direct reinstall loses local edits; reviewed backup restores them
+ok 15 - codex: interrupted direct reinstall loses local edits; reviewed backup restores them
+  ---
+  duration_ms: 289.092833
+  type: 'test'
+  ...
+# Subtest: codex: interrupted staging never touches the live copy; replace and rollback preserve backups
+ok 16 - codex: interrupted staging never touches the live copy; replace and rollback preserve backups
+  ---
+  duration_ms: 442.567041
+  type: 'test'
+  ...
+# Subtest: claude-code: interrupted direct reinstall loses local edits; reviewed backup restores them
+ok 17 - claude-code: interrupted direct reinstall loses local edits; reviewed backup restores them
+  ---
+  duration_ms: 290.264458
+  type: 'test'
+  ...
+# Subtest: claude-code: interrupted staging never touches the live copy; replace and rollback preserve backups
+ok 18 - claude-code: interrupted staging never touches the live copy; replace and rollback preserve backups
+  ---
+  duration_ms: 430.338334
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4400.6025

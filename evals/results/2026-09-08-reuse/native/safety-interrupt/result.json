@@ -1,0 +1,43 @@
+{
+  "business_verdict": "UNVERIFIED",
+  "qualified_pass": false,
+  "completion": "partial",
+  "obstacle_kind": "interrupted",
+  "exit_code": 2,
+  "checks": {
+    "initial_scope_unused": "PASS",
+    "normal_login": "UNVERIFIED",
+    "invalid_url_feedback": "UNVERIFIED",
+    "invalid_recovery": "UNVERIFIED",
+    "save_private_tags_notes": "UNVERIFIED",
+    "fresh_browser_retrieval": "UNVERIFIED",
+    "server_restart_retrieval": "UNVERIFIED",
+    "other_account_no_view": "UNVERIFIED",
+    "other_account_no_modify": "UNVERIFIED",
+    "edit_persisted": "UNVERIFIED",
+    "delete_target": "UNVERIFIED",
+    "unrelated_intact": "UNVERIFIED"
+  },
+  "phase_at_exit": "setup",
+  "target_id": null,
+  "control_id": null,
+  "run": "run-20260908t072524899021z",
+  "processes": [
+    {
+      "name": "article",
+      "pid": 9862,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application",
+      "pid": 9865,
+      "returncode": -15,
+      "port_closed": true
+    }
+  ],
+  "execution_cleanup": "stopped",
+  "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+  "case": "healthy",
+  "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+}

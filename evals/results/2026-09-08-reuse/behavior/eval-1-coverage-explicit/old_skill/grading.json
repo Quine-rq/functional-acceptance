@@ -1,0 +1,166 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "transcript.md command item_5 invokes python3 -B -m unittest test_smoke.py through subprocess.run; outputs/smoke.json records exit 0, Ran 1 test, OK. Command item_3 returned the supplied test body, which checks only exit code 0 and the id/title/notes header. The pre-execution commentary and outputs/final.md explicitly explain that the smoke does not check completeness, order, or field fidelity. The retained smoke log equals its entry in observations.json."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Command item_5 creates a new run directory, exports through the supplied CLI, derives expected rows by flattening every page of fixtures/pages.json rather than calling the implementation's render path, and reopens the actual UTF-8 CSV with csv.DictReader(newline=''). The grader independently parsed the preserved source fixture and outputs/export.csv: five required records versus four actual records, with only r-005 missing; the first four rows and every id/title/notes value match exactly, including LF and CRLF. Final output identifies page 3's r-005 as the counterexample while the exporter exited 0. The delivered CSV equals the raw run CSV byte for byte, and its SHA-256 is 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21, matching observations.json and after.json."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": true,
+      "evidence": "The supplied requirements cover exact once-only ordered records and fields, a new UTF-8 CSV, preservation of existing files, and a local synthetic scope. Actual-versus-expected comparison exposes the missing record, and final.md limits its order/field PASS to the four retained records instead of claiming full preservation. The fresh output is decoded as UTF-8. A second write to the same output returns 2 with 'output already exists; choose a new path'; the CSV digest is unchanged. Before/after inventories and observations compare the supplied files, including sentinel.txt and installed Skill files. Remote delivery is explicitly excluded based on the requirement. These observations cover this provided fixture and ordinary existing-file refusal; no claim is made about unrequested crash, concurrency, production, or remote behavior."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Independently compared all 12 protected entries in before.json against after.json and the currently retained raw project bytes: no size/hash mismatches. All six installed.json Skill entries match their corresponding before.json records. Rehashed all 17 files listed by after.json in the raw project with no mismatches. The only five additions are run-owned export.csv and four JSON evidence files under artifacts/acceptance-20260908-151800-768442/. This verifies retained before/after state; the inventory explicitly excludes .git and does not audit host-global writes or transient edits that might later be restored."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "outputs/final.md states the local synthetic scope, leads with the concrete missing-record failure, explains what the green smoke omits, links the actual CSV and observations, and gives a project-root repeat command with a never-used output filename and the expected five-versus-four result. observations.json records runtime, source path/digest, execution outputs, and preservation checks. The handoff makes no release or independently replayed-regression claim. All requirements in this bounded fixture were observed, so no missing required observation is hidden. The command is a manual reproduction, not an independently exercised machine-checkable regression entrypoint; this passing assertion does not establish the latter."
+    },
+    {
+      "text": "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient.",
+      "passed": true,
+      "evidence": "transcript.md item_2 is a completed exit-0 cat of .agents/skills/functional-acceptance/SKILL.md plus two installed references. The grader checked the raw item_2 aggregated output contains the full current installed SKILL.md text, not merely its filename. Its installed SHA-256 a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604 matches installed.json, before.json, and after.json. loading.json's reported read event is thus corroborated independently."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "source": "Counted from retained native JSONL and delivered files; no executor metrics.json was supplied.",
+    "tool_calls": {
+      "command_execution": 4
+    },
+    "total_tool_calls": 4,
+    "total_steps": 7,
+    "nested_target_subprocesses": 3,
+    "errors_encountered": 1,
+    "error_details": "Native command item_3 exited 1 because the trailing rg search found no AGENTS.md; its preceding cat returned the supplied requirement/source/test/fixture content. The existing-output target probe's exit 2 is the expected refusal under test, not an additional execution fault.",
+    "output_chars": 7080,
+    "transcript_chars": 28629,
+    "final_output_chars": 652,
+    "native_usage": {
+      "input_tokens": 103514,
+      "cached_input_tokens": 73728,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1478,
+      "reasoning_output_tokens": 31
+    },
+    "total_tokens": 104992
+  },
+  "timing": {
+    "executor_duration_seconds": 56.003,
+    "total_duration_seconds": 56.003,
+    "source": "Copied from timing.json; total here describes the native executor run only. Grader wall time was not independently timed and is not inferred."
+  },
+  "claims": [
+    {
+      "claim": "The CLI reports success while omitting the fifth record r-005 from the final page.",
+      "type": "factual",
+      "verified": true,
+      "evidence": "outputs/export.json reports exit 0. Independently parsed preserved fixture has r-001 through r-005; raw/delivered CSV has only r-001 through r-004. The four present records match the corresponding expected records."
+    },
+    {
+      "claim": "The default implementation excludes the last page via pages[:-1].",
+      "type": "factual",
+      "verified": true,
+      "evidence": "The complete supplied export.py shown in transcript item_3 assigns selected_pages = pages[:-1] before rendering. Its raw retained bytes match the before/after SHA-256 67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f. This establishes the cause for the observed supplied fixture, without claiming broader production behavior."
+    },
+    {
+      "claim": "The four retained rows preserve order, Unicode, quotes, empty text, LF and CRLF exactly.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Independent standard-library CSV parsing with newline='' produced the exact first four source dictionaries. r-001 notes retain LF, r-004 notes retain CRLF, r-002 title retains quotes and notes retain café/coffee Unicode, and r-003 notes remain the empty string. The final claim is explicitly scoped to those four rows."
+    },
+    {
+      "claim": "An existing output is refused without changing its contents or supplied files.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "existing-output.json records exit 2 and the explicit existing-path error. Command item_5 hashes output bytes before and after that same-path invocation; observations report equality. The retained output matches that digest, and all 12 protected before/after/current source digests agree."
+    },
+    {
+      "claim": "All invoked checks have terminated and no temporary files remain in this local run.",
+      "type": "process",
+      "verified": true,
+      "evidence": "The three sequential subprocess.run calls each returned, command item_5 completed with exit 0, and the native turn completed. The inspected target/test source creates no background child. The grader found the retained run tmp directory empty and the artifacts tree containing only the five declared evidence files. This is bounded to the local invoked checks and run directory, not a system-wide process or filesystem audit."
+    },
+    {
+      "claim": "The reproduced command alone is a reusable automated regression pack.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Not asserted by the executor and not established by these outputs: final.md's command creates a CSV, but does not itself assert the five-row expectation. The comparison code is retained in the transcript as a one-off inline observer, not a standalone native test. No independent replay was conducted. This limits how the passing handoff assertion may be interpreted."
+    },
+    {
+      "claim": "The actual runtime model can be identified, or this lone old-Skill trial demonstrates a candidate-versus-baseline advantage.",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Not claimed by the executor. status.json and evidence-index.json have null actual/model identity and mark paired_comparison_eligible false. Only this old_skill trial was graded; there is no completed matched candidate. No comparative or general reliability conclusion follows from 6/6 assertions on this single run."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No outputs/user_notes.md was supplied.",
+      "Actual native model identity is not retained; existing-host-default is a selection policy, not proof of a specific model."
+    ],
+    "needs_review": [
+      "Interpret this as one successful detection-and-handoff trial, not a candidate comparison, generalized Skill score, release qualification, or independently replayed regression pack."
+    ],
+    "workarounds": [
+      "The executor used direct attributed native CSV observation and did not invoke the optional CSV material helper; it made no helper-validation claim."
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+        "reason": "This assertion appropriately passes a useful manual reproduction, but it does not measure creation of a reusable automated regression pack: the supplied command exits 0 even for the known wrong output. If future reuse is an intended metric, assess a standalone native comparison/test and a fresh independent replay separately instead of treating this pass as that evidence."
+      },
+      {
+        "assertion": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+        "reason": "The concrete protected-file byte check is strong for this bounded trial, but its name must not be broadened into 'no writes outside the project': the inventory excludes .git, empty directories and host-global writes, and before/after hashes do not establish absence of transient modifications."
+      },
+      {
+        "assertion": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+        "reason": "Continue checking raw artifact contents rather than trusting observer booleans. The observer's retained_records_exact_and_ordered expression actual == expected[:len(actual)] would also be true for an empty export. Here exact_complete_match is separately false and the grader verified four actual rows against five required rows, so the current result is sound; the prefix flag alone is not a completeness or nonempty-success assertion."
+      }
+    ],
+    "overall": "All six stated expectations are substantiated for this one observed old-Skill trial. The raw trace, source, CSV, logs and hashes corroborate the result. The assessment is unpaired; the other 11 unexecuted trials are neither graded nor assigned zeros."
+  },
+  "grader_verification": {
+    "mode": "Independent review in the existing agent session; no new native Codex/Claude invocation, external-service transfer, network operation, product execution, or application mutation.",
+    "files_changed": [
+      "grading.json"
+    ],
+    "full_transcript_read": true,
+    "transcript_lines": 560,
+    "raw_trace_sha256": "ada05b122ae08ee2a8dfc691157c89f5f25437197ee3a490d83a48b1e611af74",
+    "trace_matches_evidence_index": true,
+    "protected_file_count": 12,
+    "after_inventory_file_count": 17,
+    "protected_hash_mismatches": [],
+    "raw_after_hash_mismatches": [],
+    "source_fixture_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    "csv_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "observer_attempts": [
+      {
+        "attempt": 1,
+        "outcome": "Grader's read-only inline verification snippet failed to parse with SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'. No target was executed and no artifact was written."
+      },
+      {
+        "attempt": 2,
+        "outcome": "Corrected read-only standard-library inspection completed: parsed retained CSV/source, compared actual fields, verified trace and protected-file hashes, corroborated full Skill loading, and counted metrics. It did not rerun the application or modify prior evidence."
+      }
+    ]
+  }
+}

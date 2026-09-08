@@ -1,0 +1,37 @@
+{
+  "scope": "Independent recheck using the original retained permission counterexample, plus current upgrade regression tests",
+  "original_case_preserved": true,
+  "original_grades_preserved": true,
+  "expectations": [
+    {"text": "Review does not write its baseline, installed or staged candidate inputs.", "passed": true, "evidence": "All original input contents and exact modes were compared before and after the new reviewer and direct-execution probes and remained identical."},
+    {"text": "Local additions, modifications and removals are distinguished from proposed changes.", "passed": true, "evidence": "Current upgrade tests 1 and 2 passed exact difference assertions for local additions/removals, changed execute bits and proposed SKILL.md bytes."},
+    {"text": "Execution-permission changes that affect the user are detected.", "passed": true, "evidence": "The unchanged original 0755/0655/0755 probe directories now produce reviewer exit 2, local-changes and changed=[probe.sh]. Baseline still executes with 0 and installed still fails EACCES. execute_bits values are 73/9/73."},
+    {"text": "Empty directories and prototype-like filenames are detected as local changes.", "passed": true, "evidence": "Current upgrade test 4 passed exact added-entry assertions for __proto__, constructor, toString and empty-local/."},
+    {"text": "Invalid package paths and unsupported package inputs do not produce green review.", "passed": true, "evidence": "Independent current CLI missing-path probe returned exit 1, empty stdout and unverified/ENOENT; current upgrade test 5 passed link, missing entrypoint, oversized file and excessive entry checks."},
+    {"text": "The real pinned installer is actually killed with SIGKILL and injection is restricted to exact synthetic targets.", "passed": true, "evidence": "Current upgrade tests 6-9 passed four actual interruption calls with signal SIGKILL and copied-entry marker assertions. Full reread confirms precise fresh project targets; the unchanged fault-hook SHA256 matches the original review."},
+    {"text": "Failed staged installation leaves live installation unchanged.", "passed": true, "evidence": "Current upgrade tests 7 and 9 passed live inventory equality after interrupted installation in separate staging projects."},
+    {"text": "Backups and rollback actually preserve previous bytes and unrelated files.", "passed": true, "evidence": "Current upgrade tests 6-9 passed local customization restoration, distinct old/candidate bytes, preserved backup, rollback equality and unrelated.txt preservation assertions."},
+    {"text": "Documentation does not claim atomic exchange, automatic lock merging or verified host reload.", "passed": true, "evidence": "UPGRADING.md and fault-hook digests are unchanged from the fully read initial review, preserving its explicit limitations; no new such claim appears in current reviewer or tests."}
+  ],
+  "summary": {"passed": 9, "failed": 0, "total": 9, "pass_rate": 1.0},
+  "original_counterexample_recheck": {
+    "directories": ["permission-baseline", "permission-installed", "permission-candidate"],
+    "probe_modes_octal": ["0755", "0655", "0755"],
+    "probe_sha256_all": "306c6ca7407560340797866e077e053627ad409277d1b9da58106fce4cf717cb",
+    "skill_modes_octal": ["0644", "0644", "0644"],
+    "skill_sha256_all": "c4d2e215bb1c022552e99dae3b283009ca7d85a36e9a65c824df811c50966e9e",
+    "inputs_unchanged": true,
+    "review_exit": 2,
+    "review_status": "local-changes",
+    "local_changes": {"added": [], "removed": [], "changed": ["probe.sh"]},
+    "proposed_changes": {"added": [], "removed": [], "changed": []},
+    "execute_bits_decimal": [73, 9, 73],
+    "baseline_exec": {"exit_code": 0},
+    "installed_exec": {"exit_code": null, "error": "EACCES"},
+    "missing_path": {"exit_code": 1, "stdout": "", "status": "unverified", "error": "ENOENT"}
+  },
+  "observed_test_run": {"command": "TMPDIR=<TASK>/work/reuse-upgrade-review/tmp NODE_DISABLE_COMPILE_CACHE=1 node --test outputs/functional-acceptance/integration/test-upgrade.mjs", "exit_code": 0, "tests": 9, "passed": 9, "failed": 0, "skipped": 0, "reported_duration_ms": 2913.546042},
+  "reviewed_sha256": {"integration/review-update.mjs": "6c1647218d7739e614b5d01b4a0d10ff1a8db0485fabaf5a800604a1cdcbd737", "integration/test-upgrade.mjs": "e3230932f7a117d5b1962481858d5a72ebc0bf970f1fddfe9b48418e627ec5f8", "integration/fixtures/interrupt-copy.mjs": "47cb1aae69c21fefb563150a0c1b0c436d7b8a05c3eb219ea6e9ee2de9ff10a7", "UPGRADING.md": "7fce4efa5ecbdf86176eee50c9a37a066f5c78a785aca2423412920b9218e32a"},
+  "original_grade_sha256": {"grade.md": "b094c6f2cb510cc913b0e5b237aeac9cd04ba04c0016a58aca80a06472f30ba3", "grade.json": "15c5d427f652b27701b6ff370f2401c5d7113ee4b9eda53a81ecc6b848de39df"},
+  "limitations": ["Tracks documented file content and exact execute bits, not every POSIX mode bit.", "No adversarial concurrent filesystem, power-loss, remote interruption, host reload or lock-merging guarantee.", "No external model invocation, product repository mutation, commit or push by this evaluator."]
+}

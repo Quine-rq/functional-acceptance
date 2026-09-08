@@ -1,0 +1,980 @@
+{
+  "created_at": "2026-09-08T07:27:02.624Z",
+  "entries": [
+    {
+      "id": "retained-permission-attempt",
+      "native_run": "run-20260908T071832206438Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "189cc325c91bfcd1983312434b8541d77ad17ab9d121a1e632121fe601a0cb6d",
+          "bytes": 2832
+        },
+        {
+          "path": "result.json",
+          "sha256": "353f0475ce4bf6525c1c0eb466ebffa71df53f1e1cb604d1def3269fe029d775",
+          "bytes": 1168
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included."
+    },
+    {
+      "id": "r1-healthy",
+      "native_run": "run-20260908T072015904082Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "05f4313d7fd8fc8fd33e81866f68fc0180b97aae5a152e1c58065a13bd495375",
+          "bytes": 29667
+        },
+        {
+          "path": "result.json",
+          "sha256": "f9e13681a0d7a540025294c9e2a1545a1d24247fa240f263968d93e2166305fa",
+          "bytes": 1794
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r1-expired-session",
+      "native_run": "run-20260908T072040362632Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "4a02b6dba510aa9a5e173f912d47bbc8861a1f96f9f61c9340c8e235e15d16bc",
+          "bytes": 32795
+        },
+        {
+          "path": "result.json",
+          "sha256": "28a68ca8fcf2c13d7daa3f3018529e0a403b115fe86eef85e15d1d5c9035a4ab",
+          "bytes": 1938
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r1-lost-response",
+      "native_run": "run-20260908T072102337273Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "971c696cda332d0096178138406b16546bff8ae1a88980dab83ac1a1394c34d1",
+          "bytes": 31173
+        },
+        {
+          "path": "result.json",
+          "sha256": "b681ae3b2af1cfc1d7859d88e25fcb6f82319d9be9b64dd49bd1d64aead00146",
+          "bytes": 1898
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r1-unicode-notes",
+      "native_run": "run-20260908T072122862947Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "67d362b1e780cc329e773644de2ac3a257f9263014a4b78e9657e67f1c0588c5",
+          "bytes": 31147
+        },
+        {
+          "path": "result.json",
+          "sha256": "7369c9a34da0c4c5a8366806d53117f5158aa34aaf4a3b242ee95054306291c2",
+          "bytes": 1800
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r2-healthy",
+      "native_run": "run-20260908T072151341498Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "8c620d1058ac8303240e1383abed8f4392f963a74a3d6ecd7d893cbb3e1362c8",
+          "bytes": 29667
+        },
+        {
+          "path": "result.json",
+          "sha256": "8d2e40d5f0073bc96af24289ba14de301a4ca283e74c6fa3e17bc73b39d85bab",
+          "bytes": 1794
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r2-expired-session",
+      "native_run": "run-20260908T072216902598Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "1e6a1e82c3f9a33823bda950fbe67df551be8db89d45d88b311dfcbb602063d7",
+          "bytes": 32795
+        },
+        {
+          "path": "result.json",
+          "sha256": "c4e52212141972351868d14248f40b735cb6c47ebd6f3a7519240e493cdec73a",
+          "bytes": 1938
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r2-lost-response",
+      "native_run": "run-20260908T072246514533Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "632ceb2fd59022c54d3dec2a9260cfb5740ee946fdfbf5017945a0c1f2caa04c",
+          "bytes": 31173
+        },
+        {
+          "path": "result.json",
+          "sha256": "9b20b58d62373a662d1149a731065abcebe667a42cb55f06e8e0f1fc19ce25eb",
+          "bytes": 1898
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r2-unicode-notes",
+      "native_run": "run-20260908T072307123181Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "21b6f1cfa2662dd69b0501e360d74a0b5bfb7b7e8c284a51317a3749962a3c45",
+          "bytes": 31147
+        },
+        {
+          "path": "result.json",
+          "sha256": "5f4caf731b9480fd44116c46d8089e85910150bb20fbd1569c0a89cc92818e0f",
+          "bytes": 1800
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r3-healthy",
+      "native_run": "run-20260908T072327351146Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "d2463b85ae1cf7b8e862452285336aef4bf46c22de66b54fccab8d2cd8a5fef3",
+          "bytes": 29667
+        },
+        {
+          "path": "result.json",
+          "sha256": "e4cafb55743b3556b164d3713da8faccb5e295df08e8610c8459a0d046d5ef44",
+          "bytes": 1794
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r3-expired-session",
+      "native_run": "run-20260908T072349656473Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "df0990f4a4163493db553d5aa79c929d880a6f796c3145f93932bb88665af57d",
+          "bytes": 32795
+        },
+        {
+          "path": "result.json",
+          "sha256": "23de7c7d4e3938d589fa7d3c5df2d97dd6c2be325500d8fa64a384070ad3bad5",
+          "bytes": 1938
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r3-lost-response",
+      "native_run": "run-20260908T072411949987Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "ed45c318c38f0517c5c7c277ff6bf3d92c96c354773578833a41ae44f7454710",
+          "bytes": 31173
+        },
+        {
+          "path": "result.json",
+          "sha256": "d3c1e853ad425ccd10996a612230cc53d1af7d26b4a35dc40dd17c4db63e4675",
+          "bytes": 1898
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "r3-unicode-notes",
+      "native_run": "run-20260908T072433512141Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "3a5626c8cf8eae6d15b71c559c4c48cd64fd340d86ea1d6d245fdae89e0641df",
+          "bytes": 31147
+        },
+        {
+          "path": "result.json",
+          "sha256": "54e13bccb5db5991fd6d801c895417f5552f7a7f7708900192511e90bd380719",
+          "bytes": 1800
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 0,
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "control-note-loss",
+      "native_run": "run-20260908T072454667893Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "d3ea7b0f9475ec90d31f8c71a3b5ca1c6734860d8526ee781b30c70abbf12882",
+          "bytes": 7091
+        },
+        {
+          "path": "result.json",
+          "sha256": "85613f84314108e4bd630ff1a213ad8025813737fe7a62523e11f0cc71efcd4c",
+          "bytes": 1343
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 1,
+      "business_verdict": "FAIL",
+      "completion": "partial",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write"
+    },
+    {
+      "id": "control-missing-observation",
+      "native_run": "run-20260908T072502011066Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "94009354b920a620b1f6bdc6d1a516840f2dca85fa22c2f89729cc06e40542e6",
+          "bytes": 30418
+        },
+        {
+          "path": "result.json",
+          "sha256": "83e034279c5659a1f5d95214c74b82925ee112db1c4c3fda4c62ca88fb97e51a",
+          "bytes": 1818
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 2,
+      "business_verdict": "UNVERIFIED",
+      "completion": "partial",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored"
+    },
+    {
+      "id": "safety-interrupt",
+      "native_run": "run-20260908T072524899021Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "5a5fc81aa0321bfd863223445f818c065e69d7750f3552da1543e0549e1c6bd2",
+          "bytes": 4449
+        },
+        {
+          "path": "result.json",
+          "sha256": "c082b43e3b7738c9ae3fd5bafadbf58ffcf3a41f7cd9fb29f583e8c699b161b1",
+          "bytes": 1282
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 2,
+      "business_verdict": "UNVERIFIED",
+      "completion": "partial",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write"
+    },
+    {
+      "id": "safety-occupied-port",
+      "native_run": "run-20260908T072529809818Z",
+      "public_candidates": [
+        {
+          "path": "events.jsonl",
+          "sha256": "3913b57cab3357c94cfe5582c59f8b0d5305c1d23d6af2485b80f26faa9416d8",
+          "bytes": 3202
+        },
+        {
+          "path": "result.json",
+          "sha256": "39df0bc6257bc17c3b748a6578f641f3720a581bb9b2f35a0f687a04b06e7b1e",
+          "bytes": 1170
+        },
+        {
+          "path": "pack-identity.json",
+          "sha256": "c68e2f04ca5499f09d2b902af2efde215a0e82f1a56abc6233a5d391dcb66e2e",
+          "bytes": 337
+        },
+        {
+          "path": "environment-identity.json",
+          "sha256": "a886a8aaee4dd3bd38f73b908c869bb7112fa77fa8dc5963091b49298b8630d6",
+          "bytes": 6446
+        },
+        {
+          "path": "executed_regression.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/accept.py",
+          "sha256": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+          "bytes": 25349
+        },
+        {
+          "path": "native-pack/support.py",
+          "sha256": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9",
+          "bytes": 10490
+        },
+        {
+          "path": "native-pack/server.py",
+          "sha256": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+          "bytes": 984
+        },
+        {
+          "path": "native-pack/prepare.py",
+          "sha256": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+          "bytes": 2830
+        }
+      ],
+      "publication_condition": "Review and normalize host-specific paths; retain original-byte SHA mapping. No credentials, database, startup logs, diagnostics or browser screenshots included.",
+      "exit_code": 2,
+      "business_verdict": "UNVERIFIED",
+      "completion": "partial",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write"
+    }
+  ],
+  "excluded": [
+    "private.json",
+    "db.sqlite3",
+    "auth/session table data",
+    "*.private.txt",
+    "*.private.json",
+    "*.private.jsonl",
+    "screenshots and browser body text unless separately reviewed",
+    "machine-specific aggregate argv/process records"
+  ],
+  "first_attempt_limitation": "Collector stdout/independent termination evidence missing for first sandbox-blocked attempt; native events/receipt retained."
+}
