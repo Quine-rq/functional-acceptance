@@ -44,10 +44,11 @@ import sys
 
 sys.argv = sys.argv[1:]
 destination = Path(sys.argv[sys.argv.index('--output') + 1]).resolve()
-real_unlink = os.unlink
 
-def fail_published_temporary_cleanup(path, *args, **kwargs):
-    candidate = Path(path).resolve()
+def fail_published_temporary_cleanup(event, arguments):
+    if event != 'os.remove':
+        return
+    candidate = Path(arguments[0]).resolve()
     if (candidate != destination and destination.is_file()
             and candidate.is_file() and os.path.samefile(candidate, destination)):
         # Observe real published bytes before the fault. Later report rewriting
@@ -59,9 +60,11 @@ def fail_published_temporary_cleanup(path, *args, **kwargs):
         }
         sys.stderr.write('PUBLICATION_PROBE ' + json.dumps(observation) + '\n')
         raise PermissionError(errno.EACCES, 'controlled report temporary unlink failure')
-    return real_unlink(path, *args, **kwargs)
 
-os.unlink = fail_published_temporary_cleanup
+# Older pathlib versions bind os.unlink during import. The public audit event
+# observes the actual removal attempt regardless of that cached callable.
+# Unmatched events proceed unchanged; this hook exists only in this child.
+sys.addaudithook(fail_published_temporary_cleanup)
 runpy.run_path(sys.argv[0], run_name='__main__')
 """
 

@@ -1,6 +1,6 @@
 # M2: report delivery and failure handoff
 
-Date: 2026-09-08. Scope: a bounded part of M2, not completion of the milestone or a release. Helper version: `0.1.1-dev`; contract/report schemas remain `m1`/`m1-report`. Local checks used macOS and Python 3.14.4.
+Date: 2026-09-08. Scope: a bounded part of M2, not completion of the milestone or a release. Helper version: `0.1.1-dev`; contract/report schemas remain `m1`/`m1-report`. Local checks used macOS and Python 3.14.4; the CI follow-up also ran the complete suite on an isolated Python 3.10.20.
 
 ## User problem and acceptance boundary
 
@@ -37,7 +37,11 @@ Fault probes use synthetic material and isolated process/file boundaries. They d
 
 ## Remote CI
 
-The initial M1 source at `1eb78de` passed both Ubuntu 24.04 jobs, Python 3.10 and 3.14, in [run #1](https://github.com/Quine-rq/functional-acceptance/actions/runs/34182582017). Both helper/collector checks and the standalone regression pack completed successfully. This establishes that specific hosted execution, not the later changes in this document; the M2 commit still needs its own CI result.
+The initial M1 source at `1eb78de` passed both Ubuntu 24.04 jobs, Python 3.10 and 3.14, in [run #1](https://github.com/Quine-rq/functional-acceptance/actions/runs/34182582017).
+
+The first M2 commit `f30f6ba` exposed a test portability defect in [run #2](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183395185): Python 3.14 passed; Python 3.10 failed both cleanup-probe subcases because the intended fault never fired. Its standalone job step was consequently skipped, not passed. Python 3.10's pathlib retains an earlier `os.unlink` binding, so replacing the module attribute after import did not intercept its removal calls.
+
+The same failure was reproduced locally on Python 3.10.20 before changing the test. The corrected child-only probe uses the documented [`os.remove` audit event](https://docs.python.org/3.10/library/os.html#os.unlink), with the same actual-file/same-inode guard and failure assertions. It does not change product code, patch private pathlib internals, or skip older Python. Both complete suites then passed locally on Python 3.10.20 and 3.14.4: 61 + 23 methods per interpreter. Hosted verification of this follow-up remains pending until its own CI completes.
 
 ## Delivery and recovery limits
 
