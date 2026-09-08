@@ -43,6 +43,8 @@ The clean-directory replay so far used an independent agent, not an external hum
 
 **Exit:** publish the actual sample sizes, outcomes, limitations, and cumulative human effort. Do not infer long-term savings or universal compatibility from a few examples.
 
+A [first paired plan-content probe](evals/results/2026-09-08-plan-only/README.md) retained three outputs per configuration and independent grades. Tool traces and usage were unavailable, and its only scoring difference depends on an ambiguous expectation. This does not complete the behavior/baseline gates above or establish practical benefit.
+
 ## M4 — Limited release
 
 - [ ] Provide a verified install/uninstall path and an explicit tested support matrix.

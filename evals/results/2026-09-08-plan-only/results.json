@@ -1,0 +1,523 @@
+{
+  "metadata": {
+    "skill_name": "functional-acceptance",
+    "skill_path": "SKILL.md",
+    "executor_model": "inherited parent model; exact identifier not exposed",
+    "analyzer_model": "independent inherited-model agent; exact identifier not exposed",
+    "timestamp": "2026-09-08 03:40:49 UTC",
+    "evals_run": [
+      1
+    ],
+    "runs_per_configuration": 3,
+    "source_commit": "c26a86f7728edd117f9516de4317733ab35091c2",
+    "skill_sha256": "f2f917da7568bd3b69808e9bdb313707a767304de415f84e6840250c86ed6c89",
+    "measurement_scope": "plan-output content only",
+    "prompt": "按这个项目 requirements.md 的要求，先给分页导出的验收方案。要说明怎样复用已有检查、确认 CSV 完整且字段没有变化，以及异常时如何保护原文件。现在只做方案，不运行导出、测试或材料工具，不改项目文件；运行机器的 Python 和文件系统条件还没确认。",
+    "inputs": [
+      {
+        "path": "requirements.md",
+        "sha256": "2f41bda455f0209f8418a6d3d147f7d56001bfffee5ccce2a1ffad3ae5221938"
+      },
+      {
+        "path": "export.py",
+        "sha256": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c"
+      },
+      {
+        "path": "test_export.py",
+        "sha256": "242455d50bd87d2983a5965c839603f42b86ef372ff98ab4b7ef7fd2fb31fbac"
+      },
+      {
+        "path": "README.md",
+        "sha256": "b99713826d398c8931703ba95fed4460f985154112b38a2697684dafb0099c49"
+      },
+      {
+        "path": "fixtures/pages.json",
+        "sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69"
+      },
+      {
+        "path": "fixtures/expected_records.json",
+        "sha256": "1c3e572673aba569d887528e45513d36851207f3d40e5440042a4c56a40fdd86"
+      },
+      {
+        "path": "fixtures/empty_pages.json",
+        "sha256": "e9552443a81c4dc31b1f645c4344ab9a07e57003e57fc84cdf639945caa4a3af"
+      }
+    ],
+    "normalization": "Only the task-local absolute input-directory prefix was replaced with examples/paginated_export in published plans. Line breaks, wording and findings were retained. Plans are historical outputs, not verified execution instructions.",
+    "complete_tool_trace_available": false,
+    "usage_metrics_available": false
+  },
+  "runs": [
+    {
+      "configuration": "with_skill",
+      "run_number": 1,
+      "plan": "with_skill-1.md",
+      "summary": {
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "pass_rate": 1
+      },
+      "expectations": [
+        {
+          "text": "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+          "passed": true,
+          "evidence": "outputs/plan.md「验收项目与独立判据」L42 写明“固定输入 3 页、5 条”“每条恰一次，末页 r-005 在内”及严格 ID 顺序；L44 将返回 0、只有 4 条的漏页导出判 FAIL；L52 要求读取落盘文件而非使用成功日志。与 requirements.md 第 2 项及 fixtures/pages.json 一致。"
+        },
+        {
+          "text": "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+          "passed": true,
+          "evidence": "outputs/plan.md「复用已有检查」L22 指定预先冻结的 fixtures/expected_records.json、encoding=\"utf-8\"、newline=\"\" 和 csv.DictReader；L38 禁止从新 CSV 反推期望；L43 要求固定表头、逐字符比较并列出中文、emoji、逗号、双引号、LF 与 CRLF。fixtures/expected_records.json 确实包含这些值。"
+        },
+        {
+          "text": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+          "passed": true,
+          "evidence": "outputs/plan.md「验收项目与独立判据」L45 对 pages: [] 和合法空记录页要求“实际存在仅含表头的 CSV”，并明确“缺文件不等于空结果成功”，复用 missing_artifact 检查；L38、L78 保留未执行/未验证状态。文本没有把缺产物视作已通过；此处只评价计划中的判定边界。"
+        },
+        {
+          "text": "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+          "passed": true,
+          "evidence": "outputs/plan.md 表格 L46 明确 2,097,152 字节接受、2,097,153 字节拒绝及普通文件/链接/FIFO 限制；L47 列根/页/记录结构、重复键、深嵌套、空/重复 ID、页序，映射原生测试并补原始非法 UTF-8 等变体；统一要求“友好非零失败，无最终 CSV”并检查 stderr、无 traceback。"
+        },
+        {
+          "text": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+          "passed": true,
+          "evidence": "outputs/plan.md 表格 L48 覆盖既存文件、目录、普通/悬空链接、源输出同路径、父目录，安排哨兵字节/类型/链接目标前后对照；L49 复用双进程测试、预期 [0,2] 并重读完整产物；L50、L58 要求硬链接失败明确报错并禁止覆盖降级。"
+        },
+        {
+          "text": "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+          "passed": true,
+          "evidence": "outputs/plan.md「复用已有检查」L24—30 提供指向输入目录的原生 unittest discover 命令；L42—50 对照实际测试名称/类别与补验项；L44 区分缺陷检出成功和业务导出 FAIL；L32、L38、L78 说明 skip、已删产物、未验证的证据限制。命令与 README.md L24—26 同源，未另造执行框架。"
+        },
+        {
+          "text": "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+          "passed": true,
+          "evidence": "outputs/plan.md「范围与执行前提」L13—18 要求 Python 3.8+、硬链接文件系统、专属目录和可控子进程，不索要账号；L32 处理自动清理后证据不可重读的问题；L62、L68、L76—78 指定执行者核实专属目录、保留尝试信息、确认进程终止后按完整路径仅清理本次产物。环境未知仍交付了完整方案。"
+        },
+        {
+          "text": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+          "passed": true,
+          "evidence": "outputs/plan.md L1、L3 将文档界定为“仅规划，未执行”，并明确不能作为验收通过或可上线结论；L9 将范围限定为本地合成分页、Python CLI、CSV 与落盘并排除远端能力；L80 列出尚不能确认的运行结果。本项通过仅代表文档措辞与范围正确，不验证作者实际未运行工具。"
+        }
+      ],
+      "eval_feedback": {
+        "suggestions": [
+          {
+            "assertion": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+            "reason": "冻结断言把“缺少必要 CSV 产物”统一要求标为未验证，却未区分：已执行且确认应生成的最终文件没有生成，是可观察的业务失败；没有取得必要文件或无法访问证据，才是观察不足。without_skill/run-3 L61 将缺产物一概判失败，因此本轮按冻结文本判该项失败，但该差异不能直接解释为验收质量更差。建议未来评测预先拆清两类情境；本次保持冻结断言不变。"
+          },
+          {
+            "assertion": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+            "reason": "该断言可核对文档是否标明未执行与边界，不能由此证明作者实际遵守未执行约束。若要报告零越界，应单独保留完整工具轨迹并审核；本轮只能报告方案文本质量。"
+          },
+          {
+            "reason": "前四份文本均满足 8 条公开要求，第三轮仅在缺产物分类上形成一项分差。公开真值与原生测试使本样本主要衡量计划覆盖及状态措辞，不能据此推断 Skill 在未知项目上的增益。后续若研究增益，应预先另设保留任务和覆盖缺口；本轮不改断言或分数。"
+          },
+          {
+            "assertion": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+            "reason": "原生并发用例仅连续启动两个 Popen，没有同步到发布步骤；一次 [0,2] 也可能由调度顺序执行得到。本断言允许复用该检查，因此计划层面可通过，但若要衡量实际竞争时序下的排他保证，后续执行评测应明确受控发布竞争证据。本次没有提高冻结标准或新增计分项。"
+          }
+        ],
+        "overall": "六份按同一冻结文本标准评分：with_skill 三次均为 8/8；without_skill 为 8/8、8/8、7/8。唯一扣分为第三轮缺产物状态分类未满足断言3的字面要求；该断言自身存在“已观察业务失败/未取得证据”的语义歧义，不能凭此宣称 Skill 有普遍增益。"
+      },
+      "process_claims_verified": false
+    },
+    {
+      "configuration": "with_skill",
+      "run_number": 2,
+      "plan": "with_skill-2.md",
+      "summary": {
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "pass_rate": 1
+      },
+      "expectations": [
+        {
+          "text": "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+          "passed": true,
+          "evidence": "outputs/plan.md「完整且字段没有变化的具体判据」L46 要求固定 3 页、5 条及完整 ID 顺序，“每个 ID 恰好一次”，明确末页 r-005；L48 进行完整记录比较；L54 写明缺陷退出 0 仍为业务完整性 FAIL。与固定要求及 fixture 一致。"
+        },
+        {
+          "text": "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+          "passed": true,
+          "evidence": "outputs/plan.md「依据与边界」L11 将 expected_records.json 定为预先冻结真值并禁止从本次 CSV 反推；L40 指定 UTF-8、newline=\"\"、csv.DictReader 及表头 id,title,notes；L48—50 要求逐项精确比较，列出中文、emoji、逗号、引号、LF/CRLF 和具体记录例子。例子与独立 fixture 相符。"
+        },
+        {
+          "text": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+          "passed": true,
+          "evidence": "outputs/plan.md L52 对空集合和合法空 records 页要求实际生成仅表头 CSV，指出“没有文件、零字节文件、只有成功日志”不满足；L79 明确“缺少产物…一律 UNVERIFIED”。空成功与证据不足被清楚区分。"
+        },
+        {
+          "text": "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+          "passed": true,
+          "evidence": "outputs/plan.md L41 映射原生输入检查并要求友好非零错误、无最终输出；L58 精确给出大小边界与普通文件/链接/FIFO 限制；L60、L64 列出逐层 JSON 结构、重复键、嵌套、字段、非空唯一 ID 与连续页序，并指出需要补齐的错误文字与变体观察。"
+        },
+        {
+          "text": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+          "passed": true,
+          "evidence": "outputs/plan.md L42 映射现有文件保护和并发检查；L65 要求目录哨兵、链接自身指向及目标、旧文件字节前后对比；L66 要求发布错误不降级覆盖；L69 覆盖父目录必须存在、所有既存目标拒绝、同名双进程 [0,2] 和最终完整 5 条。源输出同路径也明确核对。"
+        },
+        {
+          "text": "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+          "passed": true,
+          "evidence": "outputs/plan.md L29 给出原生 unittest discover 命令；L38—42 将现有 test_export.py 的真实测试映射到要求组；L54 分别判定缺陷检出 PASS 与业务完整性 FAIL；L32、L79 将 skip/缺证据标 UNVERIFIED；L13 明确优先复用原生检查，未另造执行框架。映射与 README 及原生测试相符。"
+        },
+        {
+          "text": "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+          "passed": true,
+          "evidence": "outputs/plan.md L18、L22 安排实际 Python 3.8+、文件系统、父目录与本次隔离目录确认，L20 不要求凭证；L32、L34、L75 记录命令和内容证据并区分被清理与保留产物；L77 要求执行者和使用方约定保留期，只在写入者终止后按完整路径清理本次文件。L81 在运行条件未知时完成方案交付。"
+        },
+        {
+          "text": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+          "passed": true,
+          "evidence": "outputs/plan.md L3 明确“以下均为拟执行检查，不是通过记录”；L14 将范围限定为本地合成分页、CLI、CSV 和落盘，排除网络及真实业务；L81 将要求 1—6 运行验收均标 UNVERIFIED。本项只确认文本边界，不从作者自述推断实际执行合规。"
+        }
+      ],
+      "eval_feedback": {
+        "suggestions": [
+          {
+            "assertion": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+            "reason": "冻结断言把“缺少必要 CSV 产物”统一要求标为未验证，却未区分：已执行且确认应生成的最终文件没有生成，是可观察的业务失败；没有取得必要文件或无法访问证据，才是观察不足。without_skill/run-3 L61 将缺产物一概判失败，因此本轮按冻结文本判该项失败，但该差异不能直接解释为验收质量更差。建议未来评测预先拆清两类情境；本次保持冻结断言不变。"
+          },
+          {
+            "assertion": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+            "reason": "该断言可核对文档是否标明未执行与边界，不能由此证明作者实际遵守未执行约束。若要报告零越界，应单独保留完整工具轨迹并审核；本轮只能报告方案文本质量。"
+          },
+          {
+            "reason": "前四份文本均满足 8 条公开要求，第三轮仅在缺产物分类上形成一项分差。公开真值与原生测试使本样本主要衡量计划覆盖及状态措辞，不能据此推断 Skill 在未知项目上的增益。后续若研究增益，应预先另设保留任务和覆盖缺口；本轮不改断言或分数。"
+          },
+          {
+            "assertion": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+            "reason": "原生并发用例仅连续启动两个 Popen，没有同步到发布步骤；一次 [0,2] 也可能由调度顺序执行得到。本断言允许复用该检查，因此计划层面可通过，但若要衡量实际竞争时序下的排他保证，后续执行评测应明确受控发布竞争证据。本次没有提高冻结标准或新增计分项。"
+          }
+        ],
+        "overall": "六份按同一冻结文本标准评分：with_skill 三次均为 8/8；without_skill 为 8/8、8/8、7/8。唯一扣分为第三轮缺产物状态分类未满足断言3的字面要求；该断言自身存在“已观察业务失败/未取得证据”的语义歧义，不能凭此宣称 Skill 有普遍增益。"
+      },
+      "process_claims_verified": false
+    },
+    {
+      "configuration": "with_skill",
+      "run_number": 3,
+      "plan": "with_skill-3.md",
+      "summary": {
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "pass_rate": 1
+      },
+      "expectations": [
+        {
+          "text": "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+          "passed": true,
+          "evidence": "outputs/plan.md「固定验收口径」L11 给出固定 3 页 5 条、完整 ID 顺序和“每条恰好一次”；矩阵 L46 特别核对末页 r-005、实际文件完整记录；L47 明确故障开关退出 0 但 4 条的导出业务结果 FAIL。与固定要求和 fixture 一致。"
+        },
+        {
+          "text": "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+          "passed": true,
+          "evidence": "outputs/plan.md L3、L56 将 expected_records.json 作为预先冻结独立真值并禁止从本次 CSV 或实现常量反推；L46 指定 UTF-8、newline=\"\"、csv.DictReader 和完整列表比较；L11、L56 覆盖表头、中文、emoji、逗号、双引号、LF/CRLF 及禁止清洗。"
+        },
+        {
+          "text": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+          "passed": true,
+          "evidence": "outputs/plan.md L13、L48 区分空集合/合法空 records 页的实际仅表头成功与缺 CSV；L74 明确“文件缺失…都保留未验证状态”。满足冻结断言的状态分类，未将缺产物判通过；此字面分类的适用边界见 eval_feedback。"
+        },
+        {
+          "text": "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+          "passed": true,
+          "evidence": "outputs/plan.md L49 精确安排 2,097,152 字节接受、2,097,153 拒绝与非法 JSON/深嵌套/重复键/UTF-8；L50 给出根页记录结构、页序、非空唯一 ID 及补验；L51 覆盖源普通文件限制、链接/FIFO、参数，映射原生检查并要求非零错误和无最终 CSV。"
+        },
+        {
+          "text": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+          "passed": true,
+          "evidence": "outputs/plan.md L13、L52 覆盖既存文件/目录/普通与悬空链接、源输出同路径及父目录；L62 要求原字节、链接目标和目录内容前后核对；L53 复用双进程 [0,2] 和最终完整内容；L54 明确“硬链接不支持时不得降级覆盖”。"
+        },
+        {
+          "text": "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+          "passed": true,
+          "evidence": "outputs/plan.md L23—30 提供 README 同源的原生 unittest discover 命令，并说明复用 sys.executable 子进程与现有超时；L44—54 把真实检查映射到需求，L47 分开检错成功和业务失败，L74 对缺文件/skip/未执行保留未验证。L32—40 仅提供原生保留产物命令模板，没有重造框架。"
+        },
+        {
+          "text": "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+          "passed": true,
+          "evidence": "outputs/plan.md L19—21 安排 Python 3.8+、硬链接文件系统、目录和系统能力确认，无需账号；L30、L32—40 限定独立目录并处理 suite 自动清理后的持久证据；L68、L72 明确进程终止后仅按完整文件名清理本次产物、保留证据至约定期限并记录观察。环境未确认仍形成完整方案。"
+        },
+        {
+          "text": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+          "passed": true,
+          "evidence": "outputs/plan.md L5 明确全部运行结果 UNVERIFIED；L15 限定本地合成分页、实际 Python CLI、CSV 与落盘，排除远端/真实数据；L76 明确不声称验收通过、可上线或独立复现。只验证文档陈述和边界，不把作者未执行自述当作实际合规证明。"
+        }
+      ],
+      "eval_feedback": {
+        "suggestions": [
+          {
+            "assertion": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+            "reason": "冻结断言把“缺少必要 CSV 产物”统一要求标为未验证，却未区分：已执行且确认应生成的最终文件没有生成，是可观察的业务失败；没有取得必要文件或无法访问证据，才是观察不足。without_skill/run-3 L61 将缺产物一概判失败，因此本轮按冻结文本判该项失败，但该差异不能直接解释为验收质量更差。建议未来评测预先拆清两类情境；本次保持冻结断言不变。"
+          },
+          {
+            "assertion": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+            "reason": "该断言可核对文档是否标明未执行与边界，不能由此证明作者实际遵守未执行约束。若要报告零越界，应单独保留完整工具轨迹并审核；本轮只能报告方案文本质量。"
+          },
+          {
+            "reason": "前四份文本均满足 8 条公开要求，第三轮仅在缺产物分类上形成一项分差。公开真值与原生测试使本样本主要衡量计划覆盖及状态措辞，不能据此推断 Skill 在未知项目上的增益。后续若研究增益，应预先另设保留任务和覆盖缺口；本轮不改断言或分数。"
+          },
+          {
+            "assertion": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+            "reason": "原生并发用例仅连续启动两个 Popen，没有同步到发布步骤；一次 [0,2] 也可能由调度顺序执行得到。本断言允许复用该检查，因此计划层面可通过，但若要衡量实际竞争时序下的排他保证，后续执行评测应明确受控发布竞争证据。本次没有提高冻结标准或新增计分项。"
+          }
+        ],
+        "overall": "六份按同一冻结文本标准评分：with_skill 三次均为 8/8；without_skill 为 8/8、8/8、7/8。唯一扣分为第三轮缺产物状态分类未满足断言3的字面要求；该断言自身存在“已观察业务失败/未取得证据”的语义歧义，不能凭此宣称 Skill 有普遍增益。"
+      },
+      "process_claims_verified": false
+    },
+    {
+      "configuration": "without_skill",
+      "run_number": 1,
+      "plan": "without_skill-1.md",
+      "summary": {
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "pass_rate": 1
+      },
+      "expectations": [
+        {
+          "text": "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+          "passed": true,
+          "evidence": "outputs/plan.md「验收依据与范围」L7 固定 3 页、5 条和 r-001 至 r-005 顺序；L29 要求最终文件存在可读、“每条只出现一次”、末页 r-005 和全字段一致；L31 明确退出 0 但缺末页的导出内容验收失败。固定数量与顺序均与 fixture 一致。"
+        },
+        {
+          "text": "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+          "passed": true,
+          "evidence": "outputs/plan.md L7 指定预先冻结的 expected_records.json，禁止由导出结果或动态源分页重建期望；L27 使用 encoding=\"utf-8\"、newline=\"\" 和 csv.DictReader，校验固定表头并比较完整列表；L29 覆盖中文、emoji、逗号、双引号、LF/CRLF，禁止排序、去重和统一换行。"
+        },
+        {
+          "text": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+          "passed": true,
+          "evidence": "outputs/plan.md L33 分别要求 pages: [] 与合法空记录页返回 0、实际文件只有表头且零记录；明确“缺少产物不能解释为空结果”“无法通过完整性检查”；L68、L70 将缺证据与未执行结果保留为未验证，而没有给缺文件通过结论。"
+        },
+        {
+          "text": "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+          "passed": true,
+          "evidence": "outputs/plan.md L13 说明 UTF-8 普通文件及含边界的 2,097,152 字节上限；L41—43 映射结构/重复键/ID/页序、大小边界、深嵌套与源链接/FIFO 测试并安排未覆盖变体；L48 对输入/文件错误统一要求非零、友好文字及校验失败无最终 CSV。"
+        },
+        {
+          "text": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+          "passed": true,
+          "evidence": "outputs/plan.md L43—45 覆盖源输出同路径、既存文件/目录/普通与悬空链接、父目录和双进程排他；L58 要求原字节、链接指向及目录哨兵前后对比；L59 明确硬链接不可用或目标被抢先创建应报错保留现有目标，“不能退回覆盖写入”。"
+        },
+        {
+          "text": "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+          "passed": true,
+          "evidence": "outputs/plan.md L17—23 提供 README 同源的 python3 -B -m unittest discover 原生命令，复用真实 CLI 子进程与 CSV 检查；L37—46 提供现有测试类别和补验映射；L31 区分故意缺陷与检测通过；L33、L68 将缺产物、跳过或未覆盖视作无法验收/未验证。没有另造执行框架。"
+        },
+        {
+          "text": "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+          "passed": true,
+          "evidence": "outputs/plan.md L13—15 安排 Python 3.8+、硬链接文件系统和专用隔离目录确认，并对系统能力跳过保留未验证；L23 说明无需依赖或联网；L62 规定保留证据后按明确路径仅清理本次产物；L66 记录环境、命令、退出、stderr、跳过与内容证据，并说明已清理测试路径不能作仍可读证据。未知环境没有阻断方案交付。"
+        },
+        {
+          "text": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+          "passed": true,
+          "evidence": "outputs/plan.md L1、L3、L9 明确仅方案与待验证，范围限定本地合成分页、Python CLI、CSV 和落盘，排除网络与真实数据；L70 列出全部未确认执行结果。本项评价文本没有夸大，不证明作者实际未执行导出、测试或工具。"
+        }
+      ],
+      "eval_feedback": {
+        "suggestions": [
+          {
+            "assertion": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+            "reason": "冻结断言把“缺少必要 CSV 产物”统一要求标为未验证，却未区分：已执行且确认应生成的最终文件没有生成，是可观察的业务失败；没有取得必要文件或无法访问证据，才是观察不足。without_skill/run-3 L61 将缺产物一概判失败，因此本轮按冻结文本判该项失败，但该差异不能直接解释为验收质量更差。建议未来评测预先拆清两类情境；本次保持冻结断言不变。"
+          },
+          {
+            "assertion": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+            "reason": "该断言可核对文档是否标明未执行与边界，不能由此证明作者实际遵守未执行约束。若要报告零越界，应单独保留完整工具轨迹并审核；本轮只能报告方案文本质量。"
+          },
+          {
+            "reason": "前四份文本均满足 8 条公开要求，第三轮仅在缺产物分类上形成一项分差。公开真值与原生测试使本样本主要衡量计划覆盖及状态措辞，不能据此推断 Skill 在未知项目上的增益。后续若研究增益，应预先另设保留任务和覆盖缺口；本轮不改断言或分数。"
+          },
+          {
+            "assertion": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+            "reason": "原生并发用例仅连续启动两个 Popen，没有同步到发布步骤；一次 [0,2] 也可能由调度顺序执行得到。本断言允许复用该检查，因此计划层面可通过，但若要衡量实际竞争时序下的排他保证，后续执行评测应明确受控发布竞争证据。本次没有提高冻结标准或新增计分项。"
+          }
+        ],
+        "overall": "六份按同一冻结文本标准评分：with_skill 三次均为 8/8；without_skill 为 8/8、8/8、7/8。唯一扣分为第三轮缺产物状态分类未满足断言3的字面要求；该断言自身存在“已观察业务失败/未取得证据”的语义歧义，不能凭此宣称 Skill 有普遍增益。"
+      },
+      "process_claims_verified": false
+    },
+    {
+      "configuration": "without_skill",
+      "run_number": 2,
+      "plan": "without_skill-2.md",
+      "summary": {
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "pass_rate": 1
+      },
+      "expectations": [
+        {
+          "text": "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+          "passed": true,
+          "evidence": "outputs/plan.md L45 明确固定 3 页、5 条、r-001 到 r-005 的完整序列，核对条数、唯一性、顺序及末页，并以完整记录列表与独立期望相等证明页遍历；L11 禁止仅凭退出码判断；L34、L49 将返回 0 的 4 条漏页 CSV 判为业务失败。"
+        },
+        {
+          "text": "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+          "passed": true,
+          "evidence": "outputs/plan.md L21 指定冻结 expected_records.json、UTF-8、newline=\"\"、csv.DictReader 和完整比较；L29 禁止测试更新期望；L47 严格校验表头 id,title,notes，逐字段核对中文、emoji、逗号、引号、LF/CRLF 并禁止 trim/归一化。依据与 fixture 及原生读取器一致。"
+        },
+        {
+          "text": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+          "passed": true,
+          "evidence": "outputs/plan.md L35、L49 对空页面集合/合法空记录页要求返回 0、产物实际存在且只有表头；“文件不存在、不可读、只有成功提示都不能算空结果通过”。L73 保留必要产物缺失、缺证据和未执行限制；计划未给缺产物任何通过结论。"
+        },
+        {
+          "text": "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+          "passed": true,
+          "evidence": "outputs/plan.md L36 映射结构、重复键、嵌套、源普通文件/链接/FIFO 和边界等原生检查；L55 明确 2,097,152 接受与 2,097,153 拒绝；L56 补充页序、非整数页号、重复 ID、多层重复键、原始非法 UTF-8，要求非零、有友好文字、不发布最终 CSV。"
+        },
+        {
+          "text": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+          "passed": true,
+          "evidence": "outputs/plan.md L37、L65 覆盖既存文件、目录、普通/悬空链接与源输出同路径并记录原字节和对象状态；L66 要求缺父目录报错且不自动创建；L38、L67 复用同名双进程、一成一败且产物完整；L57、L61 安排硬链接不支持的补验并明确不能降级覆盖写入。"
+        },
+        {
+          "text": "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+          "passed": true,
+          "evidence": "outputs/plan.md L21—29 明确复用 test_export.py 和 README 同源的 unittest discover 命令，L31—39 逐项映射真实检查；L34、L49 分开健康和显式漏页结果；L17、L29、L73 将能力不足、跳过、必要产物缺失与未执行保留为未验证。文本未新造执行框架。"
+        },
+        {
+          "text": "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+          "passed": true,
+          "evidence": "outputs/plan.md L15—17 安排解释器 Python 3.8+、硬链接/fsync 文件系统和本次独立目录；L21 说明无需第三方依赖；L29 保留测试输出并解释自动清理后的 CSV 无法作为现存证据；L65、L69 限定前后观察与仅清理已确认属于本次的完整路径，L73—75 列明报告与未确认项。方案交付未被环境未知阻断，未索要无关账号。"
+        },
+        {
+          "text": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+          "passed": true,
+          "evidence": "outputs/plan.md L3 明确后续通过条件并非已有测试结果；L9 只涵盖完整本地合成分页、Python CLI、CSV 和落盘；L75 明确不能作为已验收、已上线或真实业务链路通过证明。本项只确认文档范围和状态，不使用作者自报未执行作为零越界证据。"
+        }
+      ],
+      "eval_feedback": {
+        "suggestions": [
+          {
+            "assertion": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+            "reason": "冻结断言把“缺少必要 CSV 产物”统一要求标为未验证，却未区分：已执行且确认应生成的最终文件没有生成，是可观察的业务失败；没有取得必要文件或无法访问证据，才是观察不足。without_skill/run-3 L61 将缺产物一概判失败，因此本轮按冻结文本判该项失败，但该差异不能直接解释为验收质量更差。建议未来评测预先拆清两类情境；本次保持冻结断言不变。"
+          },
+          {
+            "assertion": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+            "reason": "该断言可核对文档是否标明未执行与边界，不能由此证明作者实际遵守未执行约束。若要报告零越界，应单独保留完整工具轨迹并审核；本轮只能报告方案文本质量。"
+          },
+          {
+            "reason": "前四份文本均满足 8 条公开要求，第三轮仅在缺产物分类上形成一项分差。公开真值与原生测试使本样本主要衡量计划覆盖及状态措辞，不能据此推断 Skill 在未知项目上的增益。后续若研究增益，应预先另设保留任务和覆盖缺口；本轮不改断言或分数。"
+          },
+          {
+            "assertion": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+            "reason": "原生并发用例仅连续启动两个 Popen，没有同步到发布步骤；一次 [0,2] 也可能由调度顺序执行得到。本断言允许复用该检查，因此计划层面可通过，但若要衡量实际竞争时序下的排他保证，后续执行评测应明确受控发布竞争证据。本次没有提高冻结标准或新增计分项。"
+          }
+        ],
+        "overall": "六份按同一冻结文本标准评分：with_skill 三次均为 8/8；without_skill 为 8/8、8/8、7/8。唯一扣分为第三轮缺产物状态分类未满足断言3的字面要求；该断言自身存在“已观察业务失败/未取得证据”的语义歧义，不能凭此宣称 Skill 有普遍增益。"
+      },
+      "process_claims_verified": false
+    },
+    {
+      "configuration": "without_skill",
+      "run_number": 3,
+      "plan": "without_skill-3.md",
+      "summary": {
+        "passed": 7,
+        "failed": 1,
+        "total": 8,
+        "pass_rate": 0.875
+      },
+      "expectations": [
+        {
+          "text": "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+          "passed": true,
+          "evidence": "outputs/plan.md L7 要求全部记录按原顺序一次；L9 明确固定 3 页、5 条及 r-001 至 r-005 顺序；L43 检查页及页内顺序、唯一性与末页遗漏；L32、L45 明确退出 0 的缺页 CSV 仍不通过。与 fixture 相符。"
+        },
+        {
+          "text": "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+          "passed": true,
+          "evidence": "outputs/plan.md L9 指定预先冻结 expected_records.json 并禁止从生成 CSV 反推；L41 使用 UTF-8、newline=\"\"、标准 CSV 读取器和准确表头；L43—45 顺序敏感逐字段比較并覆盖中文、emoji、逗号、双引号、LF/CRLF，禁止清洗。"
+        },
+        {
+          "text": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+          "passed": false,
+          "evidence": "outputs/plan.md L33 正确要求空分页/空记录页有合法表头 CSV，也没有给缺产物通过；但「判定与待确认事项」L61 明确“缺产物、缺页、字段改写、覆盖或并发破坏均判失败”，将缺产物一概并入 FAIL，没有冻结断言要求的缺少必要产物→未验证分类，因此按该字面标准不通过。这里不等于证明业务保护错误：已确认未生成文件与未取得证据本应区分，断言自身的歧义详见 eval_feedback。"
+        },
+        {
+          "text": "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+          "passed": true,
+          "evidence": "outputs/plan.md L34—35 映射 JSON/结构/类型/页序/ID/Unicode、源链接/FIFO、大小与嵌套检查，精确给出边界与超 1 字节；L55 补非法 UTF-8、根/页字段、跳号/重复页号、多层重复键；L53 要求友好非零且校验失败无最终 CSV。对普通文件/链接限制的计划可追溯原生检查。"
+        },
+        {
+          "text": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+          "passed": true,
+          "evidence": "outputs/plan.md L17 要求父目录事先存在、硬链接不可用时明确失败且不改覆盖写入；L36 映射既存文件/目录/链接、源输出同路径和父目录检查；L51 要求原字节、目录和链接前后核对；L37、L53 安排同名双进程一成一败且失败方不得覆盖成功方。"
+        },
+        {
+          "text": "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+          "passed": true,
+          "evidence": "outputs/plan.md L21—27 提供原生 unittest discover 命令与真实 CLI/隔离目录机制，明确不重写同义检查；L29—37 映射健康、漏页、空结果、输入、安全与并发原生测试；L27、L63 单列环境/skip/无执行证据，L32 分开检错成功与业务失败。缺产物标签的具体问题只计入断言3，不重复扣本项。"
+        },
+        {
+          "text": "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+          "passed": true,
+          "evidence": "outputs/plan.md L15—17 说明 Python 3.8+、解释器、权限、硬链接、专属目录和父目录前提；L27 要求保存命令、退出与跳过信息，L51 定义保护观察；L57 要求进程结束后按具体路径仅清理本次产物、需要保留的证据先归档。运行条件未知仍交付方案，也未索要账号。未具体说明 suite 的自动清理和额外保留 CSV 路径是证据交接的不足，但冻结断言并不要求特定保留格式，本项依同一最低要求通过。"
+        },
+        {
+          "text": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+          "passed": true,
+          "evidence": "outputs/plan.md L3 明确所有执行验证均属后续计划，不能宣称验收通过；L11 限定本地合成数据、Python CLI、CSV 和落盘，排除远端与其他平台；L63 明确没有可证明导出成功的执行证据。此项只评价文字边界，实际未运行行为不可核验。"
+        }
+      ],
+      "eval_feedback": {
+        "suggestions": [
+          {
+            "assertion": "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+            "reason": "冻结断言把“缺少必要 CSV 产物”统一要求标为未验证，却未区分：已执行且确认应生成的最终文件没有生成，是可观察的业务失败；没有取得必要文件或无法访问证据，才是观察不足。without_skill/run-3 L61 将缺产物一概判失败，因此本轮按冻结文本判该项失败，但该差异不能直接解释为验收质量更差。建议未来评测预先拆清两类情境；本次保持冻结断言不变。"
+          },
+          {
+            "assertion": "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。",
+            "reason": "该断言可核对文档是否标明未执行与边界，不能由此证明作者实际遵守未执行约束。若要报告零越界，应单独保留完整工具轨迹并审核；本轮只能报告方案文本质量。"
+          },
+          {
+            "reason": "前四份文本均满足 8 条公开要求，第三轮仅在缺产物分类上形成一项分差。公开真值与原生测试使本样本主要衡量计划覆盖及状态措辞，不能据此推断 Skill 在未知项目上的增益。后续若研究增益，应预先另设保留任务和覆盖缺口；本轮不改断言或分数。"
+          },
+          {
+            "assertion": "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+            "reason": "原生并发用例仅连续启动两个 Popen，没有同步到发布步骤；一次 [0,2] 也可能由调度顺序执行得到。本断言允许复用该检查，因此计划层面可通过，但若要衡量实际竞争时序下的排他保证，后续执行评测应明确受控发布竞争证据。本次没有提高冻结标准或新增计分项。"
+          }
+        ],
+        "overall": "六份按同一冻结文本标准评分：with_skill 三次均为 8/8；without_skill 为 8/8、8/8、7/8。唯一扣分为第三轮缺产物状态分类未满足断言3的字面要求；该断言自身存在“已观察业务失败/未取得证据”的语义歧义，不能凭此宣称 Skill 有普遍增益。"
+      },
+      "process_claims_verified": false
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1,
+        "stddev": 0,
+        "min": 1,
+        "max": 1
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.9583333333333334,
+        "stddev": 0.07216878364870323,
+        "min": 0.875,
+        "max": 1
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.0417"
+    }
+  },
+  "notes": [
+    "Output-quality development probe only. Six fresh contexts, one public well-specified sample, three repetitions per configuration; eight content expectations per output.",
+    "The only score difference concerns missing-artifact wording. The frozen expectation itself did not separate observed non-generation from unavailable evidence, so the score difference is not evidence of general Skill superiority.",
+    "Complete tool traces, execution compliance, exact model/version/effort identifiers, tokens and duration were not available. They are omitted, not reported as zero. Explicit loading does not measure natural discovery.",
+    "No exporter/product run was evaluated here, no second project or external human reuse was tested, and no time-saving conclusion is supported."
+  ]
+}

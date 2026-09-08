@@ -1,0 +1,29 @@
+{
+  "skill_name": "functional-acceptance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "按这个项目 requirements.md 的要求，先给分页导出的验收方案。要说明怎样复用已有检查、确认 CSV 完整且字段没有变化，以及异常时如何保护原文件。现在只做方案，不运行导出、测试或材料工具，不改项目文件；运行机器的 Python 和文件系统条件还没确认。",
+      "expected_output": "A grounded acceptance plan from existing requirements and native checks, with independent expected results and explicit execution prerequisites; not a claim that this run passed.",
+      "files": [
+        "examples/paginated_export/requirements.md",
+        "examples/paginated_export/export.py",
+        "examples/paginated_export/test_export.py",
+        "examples/paginated_export/README.md",
+        "examples/paginated_export/fixtures/pages.json",
+        "examples/paginated_export/fixtures/expected_records.json",
+        "examples/paginated_export/fixtures/empty_pages.json"
+      ],
+      "expectations": [
+        "完整导出计划明确核对全部页面、每条记录恰好一次及原始顺序；固定样本含末页 r-005，不把命令退出 0 当作完整性依据。",
+        "字段核对使用预先固定的 expected_records.json 与标准 CSV 读取器，覆盖表头/UTF-8 和中文、emoji、逗号、引号、LF/CRLF；不从本次产物推导期望。",
+        "区分合法空集合/空记录页的仅表头成功，与缺少必要 CSV 产物的未验证；不给缺产物通过结论。",
+        "对输入大小边界、普通文件/链接限制、JSON 结构/重复键/嵌套、ID 与页序的非法输入明确复用已有检查或安排检查，要求可见非零错误且不发布最终 CSV。",
+        "输出保护计划包含既存文件/目录/链接、源输出同路径和父目录前提，检查原有内容不变；并验证同名并发排他发布、失败不降级覆盖。",
+        "提供可追溯到现有 test_export.py/README 的原生命令与检查映射，包含健康、显式漏页缺陷和观察不足的不同预期；不为计划重新造执行框架。",
+        "运行条件未确认不阻断计划交付；明确未来运行所需的解释器/文件系统/隔离目录与证据观察、保留和仅清理本次产物的责任，不索要无关账号。",
+        "文档明确是未执行方案而非已通过验收，只声称本地合成分页→CLI→CSV 范围，不扩大到真实 API/Web/设备或生产可用。"
+      ]
+    }
+  ]
+}
