@@ -1,24 +1,30 @@
 # Functional Acceptance
 
-**Verify real user outcomes, not just successful tool calls.**
+[简体中文](README.zh-CN.md)
 
-A stack-independent acceptance Skill for existing coding agents, under active development. It uses project-native tools to check user journeys, distinguish evidence from assumptions, and leave reusable native checks.
+**The feature is built. Does it work for the user?**
 
-> **Status: experimental M1 source, not a release.** A Skill entrypoint, offline material helper, and controlled local CLI/CSV sample now exist. This does not establish cross-project usefulness, universal tool support, production readiness, or a verified installation channel. Design revision `v0.2` remains a historical document version.
+Functional Acceptance is a skill for coding agents to verify features through real user flows. It guides the agent to check the promised result, show the evidence, and leave tests that can be run again.
 
-[中文设计说明](DESIGN.md) · [Architecture](ARCHITECTURE.md) · [Evaluation plan](VALIDATION.md) · [Roadmap](ROADMAP.md)
+For example: an export command reports success, but the CSV is missing the final record. Acceptance means opening the file and checking its contents—not stopping at exit code `0`.
 
-## The problem
+> Early development: a working local CLI/CSV demo is available. This is experimental source, not a supported release.
 
-An upload can return success while its file cannot be retrieved. An export can exit with code `0` while omitting the last page. A UI can show saved state that disappears in a new process.
+## How it works
 
-The intended workflow starts with the user's promised result, identifies what existing tests do not prove, and obtains the missing observations using authorized project tools.
+Start with the feature's requirements and the project you want checked. The Skill guides your coding agent through three steps:
 
-## Try the controlled local workflow
+1. **Define success.** Identify what the user needs to accomplish and what would prove it worked. Keep unclear requirements and missing access visible.
+2. **Check the result.** Use the project's existing tools to run the flow and inspect the outcome. Focus on relevant failure and recovery cases as well as the happy path.
+3. **Hand over the findings.** Report what passed, what failed, and what remains unverified, with evidence and instructions for repeating the checks.
 
-Prerequisites: Python 3.10+ and a POSIX local filesystem supporting hard links and no-follow file access. The current observed combination is macOS + Python 3.14.4; other combinations are not yet claimed as tested. No package installation, account, network service, or Skill installation is needed for these commands.
+The Skill provides the workflow; the agent and project tools perform the checks. It does not replace your test framework or approve a release. The implemented demo below covers one local export flow; other workflows still need validation.
 
-From the repository root, each command creates its own unique directory under the repository's `.acceptance/runs/` (not the caller's current directory). Use `--run-dir NEW_DIRECTORY` to select another new dedicated location:
+## Try the demo
+
+The sample exports three pages of synthetic data into a real CSV file, then reads it back against five independently specified records. It includes a deliberate defect that drops the last page while still returning success.
+
+No third-party packages, account, network connection, or Skill installation are needed. Run from the repository root with Python 3.10+ on a POSIX local filesystem supporting hard links and no-follow file access. So far, the demo has been checked on macOS with Python 3.14.4.
 
 ```sh
 python3 -B examples/paginated_export/accept.py --case healthy
@@ -26,52 +32,38 @@ python3 -B examples/paginated_export/accept.py --case defect
 python3 -B examples/paginated_export/accept.py --case missing-observation
 ```
 
-| Controlled case | Export process | Acceptance result | Collector exit |
+| Case | What happened | Acceptance result | Exit code |
 | --- | --- | --- | --- |
-| Healthy | Writes all five records | PASS, complete | 0 |
-| Final-page defect | Exits 0 but writes only four records | FAIL with a content counterexample, complete | 1 |
-| Withheld observation | Writes a file but deliberately omits its required observation record | UNVERIFIED, partial | 2 |
+| `healthy` | All five records and their fields match | PASS | 0 |
+| `defect` | Export exits 0, but record `r-005` is missing | FAIL | 1 |
+| `missing-observation` | File exists, but its required observation record is deliberately withheld | UNVERIFIED | 2 |
 
-The last two exit codes are intentional; do not chain these demonstration commands with `&&`. Missing-observation is an explicit evidence-gap experiment, not a claim that the exporter failed. Each retained run contains the frozen contract, executed program/input snapshots, native process record, CSV, and JSON/Markdown reports. No prior run is reused or deleted. Inspect the printed run directory; when no longer needed, remove only that explicitly identified directory with your normal file manager. Deleting evidence removes its future qualification.
+The last two exit codes are intentional; run the commands separately, not joined with `&&`. UNVERIFIED means evidence is missing, not that the exporter has failed. The report also records coverage and cleanup separately from the verdict.
 
-Only the **offline synthetic pages → actual CLI process → actual local CSV file** boundary is exercised. There is no real upstream API, browser, database, or mobile device. The report's fixed scope covers normal all-page export and field integrity; input-error and file-safety behaviors have separate native tests.
+### Inspect the evidence
 
-## Workflow
+Each command prints a new run directory under this repository's `.acceptance/runs/`. Open `report.md` there for the findings or `report.json` for structured results. The same directory contains the fixed expectations, executed program and input snapshots, process record, and `attempt-1/output.csv`.
 
-1. Preserve the original request and its acceptance criteria before selecting tools.
-2. Choose a bounded plan using the execution and observation capabilities actually available.
-3. Run the relevant native checks and retain evidence tied to the correct target, identity, and attempt.
-4. Report **PASS**, **FAIL**, **UNVERIFIED**, or **NOT_APPLICABLE** within an explicit scope.
-5. Account for unfinished work and side effects, then hand over reusable native checks.
+Runs are kept separate and retained locally. To choose a location, add `--run-dir NEW_DIRECTORY`; existing run directories are refused. When you no longer need a run, remove only that identified directory with your file manager. Deleted evidence can no longer be rechecked.
 
-A completed acceptance run may find a real failure. Successful execution, complete coverage, business correctness, and safe cleanup are different facts.
+Want to inspect the exporter without the Skill or report helper? Follow the [standalone sample guide](examples/paginated_export/README.md) (Chinese).
 
-## Scope
+## Compatibility and current limits
 
-- The method is intended for Web, API, CLI, desktop, and mobile workflows; support will be claimed only for combinations actually tested.
-- Existing agents and project tools do the execution. This is not a new agent runtime, test language, device cloud, or deployment platform.
-- Mocked dependencies can prove the behavior actually tested, not the real storage or delivery they replace.
-- Missing tools or evidence stay visible. A narrower test must not silently replace the original request.
-- Test environments are the default. Installation or verification does not authorize production writes, code changes, pushes, or public comments.
+The workflow is designed to use tools already available in a project, rather than require a particular language or framework. Web, API, CLI, desktop, and mobile flows are intended applications—not a list of tested integrations.
 
-## Start here
+Today, the working example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests. No real upstream API, browser, database, mobile device, or second project has been validated.
 
-| Document | Purpose |
-| --- | --- |
-| [SKILL.md](SKILL.md) | Focused acceptance, recheck, and plan-only instructions |
-| [Material format](references/material-format.md) | The one supported CSV mapping, bounded references, report semantics, and trust limits |
-| [Native sample](examples/paginated_export/README.md) | Run and verify the sample without installing the Skill |
-| [M1 plan](M1-PLAN.md) | This implementation's explicit scope and acceptance gates |
-| [M1 results](M1-RESULTS.md) | Actual local checks, independent replay, corrected defects, source identities, and unverified scope |
-| [DESIGN.md](DESIGN.md) | Product definition, user experience, scope, and completion conditions |
-| [ARCHITECTURE.md](ARCHITECTURE.md) | Capability selection, evidence rules, budgets, recovery, and handoff |
-| [VALIDATION.md](VALIDATION.md) | Planned counterexamples, strong baselines, natural invocation, and real-user evaluation |
-| [CONTEXT.md](CONTEXT.md) | Shared domain terms |
-| [DECISIONS.md](DECISIONS.md) | Design choices, source references, and unresolved questions |
-| [ROADMAP.md](ROADMAP.md) | Small milestones with observable exit conditions |
-| [AGENTS.md](AGENTS.md) | Working rules for coding agents contributing to this repository |
+The [local validation record](M1-RESULTS.md) documents 77 passing test methods and an independent agent's replay of the standalone sample. It does not establish external-user usefulness, time savings, or production readiness. A verified installation path and a supported release are still pending; do not treat cloning the source as installing the Skill.
 
-The detailed design is currently in Chinese. Its 38 cases and nine additional scenario groups remain the larger evaluation plan, not a count of passing implementation tests.
+### Safety and evidence limits
+
+- Use authorized test environments. Acceptance does not grant permission to change product code, write to production, push commits, or publish comments.
+- Missing tools or observations remain gaps. A mock proves only the behavior tested against it; a narrower test must not silently replace the user's original request.
+- The helper directly compares the CSV with fixed expectations. It does not run commands from reports or accept a supplied PASS. File hashes detect changed evidence, not fabricated collection or requirements omitted from the start.
+- Reports stay local and are not automatically sanitized. Review them before sharing; keep credentials, private logs, and customer data out of public issues.
+
+See the [material format](references/material-format.md) for supported checks and trust boundaries.
 
 ## Development checks
 
@@ -80,18 +72,20 @@ python3 -B -m unittest discover -s tests -v
 python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
 ```
 
-The first command tests the helper and collector. The second is a standalone native regression pack; it does not import the Skill or helper. Passing a test that detects an injected defect is not a PASS for the defective export.
+The first command tests the helper and evidence collector. The second tests the exporter independently of the Skill and helper, including whether the deliberately broken export is caught. A passing defect-detection test does not make that export correct.
 
-[CI configuration](.github/workflows/checks.yml) uses read-only repository permissions and commit-pinned official checkout/Python actions to run these same checks on Ubuntu 24.04 with Python 3.10 and 3.14. A configured matrix is not itself a passed support claim; inspect the actual Actions result for the commit you use.
+[CI](.github/workflows/checks.yml) is configured to run these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Hosted CI has not yet been verified; configuration alone is not a support claim.
 
-The helper never executes recorded commands or accepts an arbitrary supplied PASS. It reads a qualified CSV and compares its header and rows with the frozen expectation. Digests detect changed evidence; they do not authenticate the collector, prove authorization, or detect goals omitted before contract creation. Reports stay local and are not automatically safe to publish.
+## Documentation and next steps
 
-## Next milestone
+- **Explore the Skill:** [instructions](SKILL.md), [sample guide](examples/paginated_export/README.md), [material format](references/material-format.md).
+- **See what is implemented:** [M1 scope](M1-PLAN.md), [local validation](M1-RESULTS.md), [roadmap](ROADMAP.md).
+- **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Continue the trust and independent-handoff checks in [ROADMAP.md](ROADMAP.md), then evaluate a second authorized project and fair with/without-Skill comparisons. A verified install/uninstall path, license decision, and release remain separate gates. Do not treat this source checkout as a supported installable release.
+Next: strengthen failure and handoff checks, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.
 
 ## Feedback and licensing
 
-Concrete user journeys, missing observations, and reproducible failure cases are useful feedback. Use synthetic data; do not post credentials, private logs, or customer information in public issues.
+Have a feature that looks successful but fails in actual use? Share its expected behavior and a small reproduction using synthetic data. Those cases are more useful at this stage than requests for broad platform support.
 
 License selection is pending. No open-source license has been applied to this repository yet.
