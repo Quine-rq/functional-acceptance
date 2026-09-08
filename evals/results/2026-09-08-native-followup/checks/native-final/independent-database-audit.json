@@ -1,0 +1,39 @@
+{
+  "records_exact": 3,
+  "actual_contacts": [
+    {
+      "id": 4,
+      "name": "Synthetic \"Ada\"",
+      "note": "She said \"hello\". \\ path",
+      "email": "",
+      "rank": -2,
+      "score": 0.0
+    },
+    {
+      "id": 17,
+      "name": "合成联系人·林 🌙",
+      "note": "第一行\n第二行",
+      "email": null,
+      "rank": 0,
+      "score": 1.25
+    },
+    {
+      "id": 93,
+      "name": "Élodie テスト",
+      "note": "",
+      "email": "synthetic@example.invalid",
+      "rank": 7,
+      "score": -3.5
+    }
+  ],
+  "actual_unrelated": [
+    {
+      "id": "unrelated-01",
+      "note": "合成保留数据 \"keep\"\n原样",
+      "optional": null
+    }
+  ],
+  "integrity": "ok",
+  "observation": "reopened actual database using mode=ro after final native run; connection explicitly closed",
+  "database_sha256": "4fdc1892464870508e58bb00d54c0168dc2a308d6b1c04d03bca357612b5c330"
+}

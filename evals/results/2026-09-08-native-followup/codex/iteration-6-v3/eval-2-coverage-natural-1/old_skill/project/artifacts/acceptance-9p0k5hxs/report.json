@@ -1,0 +1,119 @@
+{
+  "runtime": "3.14.4 (v3.14.4:23116f998f6, Apr  7 2026, 09:45:22) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "cwd": "<PROJECT>",
+  "started_utc": "2026-09-08T08:15:55.786550+00:00",
+  "source_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "attempts": [
+    {
+      "label": "smoke",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_smoke.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.047s\n\nOK\n"
+    },
+    {
+      "label": "export",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-9p0k5hxs/export.csv"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote CSV: artifacts/acceptance-9p0k5hxs/export.csv\n",
+      "stderr": ""
+    },
+    {
+      "label": "existing_destination",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-9p0k5hxs/export.csv"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "export: error: output already exists; choose a new path\n"
+    }
+  ],
+  "observation": {
+    "expected_rows": [
+      [
+        "r-001",
+        "示例, Hello",
+        "第一行\n第二行"
+      ],
+      [
+        "r-002",
+        "Quote \"double\"",
+        "café ☕"
+      ],
+      [
+        "r-003",
+        "雪 / snow",
+        ""
+      ],
+      [
+        "r-004",
+        "Emoji 🚀",
+        "CRLF\r\nnext"
+      ],
+      [
+        "r-005",
+        "最后一页",
+        "END, \"边界\"\n末尾"
+      ]
+    ],
+    "actual_header": [
+      "id",
+      "title",
+      "notes"
+    ],
+    "actual_rows": [
+      [
+        "r-001",
+        "示例, Hello",
+        "第一行\n第二行"
+      ],
+      [
+        "r-002",
+        "Quote \"double\"",
+        "café ☕"
+      ],
+      [
+        "r-003",
+        "雪 / snow",
+        ""
+      ],
+      [
+        "r-004",
+        "Emoji 🚀",
+        "CRLF\r\nnext"
+      ]
+    ],
+    "exact_full_match": false,
+    "expected_count": 5,
+    "actual_count": 4,
+    "missing_ids": [
+      "r-005"
+    ],
+    "utf8_decode": "PASS",
+    "present_records_exact_in_order": true,
+    "output_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21"
+  },
+  "existing_destination_unchanged": true,
+  "preexisting_files_changed": [],
+  "temporary_files_remaining": []
+}

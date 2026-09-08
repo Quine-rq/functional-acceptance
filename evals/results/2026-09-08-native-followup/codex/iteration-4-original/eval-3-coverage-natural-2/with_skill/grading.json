@@ -1,0 +1,73 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "Full transcript executes python3 -B -m unittest test_smoke.py through a bounded subprocess. Retained smoke.json records exit 0 and Ran 1 test / OK; final correctly says this asserts exit/header, not row content or completeness."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Grader independently parsed the actual retained CSV as UTF-8 with newline='' and flattened all source fixture pages. Expected five exact dictionaries; actual r-001...r-004 match the first four and omit page-3 r-005. Transcript shows fresh exporter invocation and actual CSV reopen; final reports this concrete failure."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": false,
+      "evidence": "All record/content/encoding checks ran, but only the new-file path was exercised. Final honestly says '目标已存在时的拒绝覆盖分支未实测'; observation.json says 'no overwrite/collision attempt'. No reason for skipping that branch is given, so the frozen requirement of an explicitly unverified check WITH A REASON is not satisfied. Unchanged hashes during new-file export do not verify collision preservation."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Grader independently compared every original before.json entry to after.json and rehashed actual files: no changes/deletions or digest mismatches, including implementation, tests, requirements, fixtures, sentinel and installed Skill. All added regular files are inside artifacts."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "Final plus linked report provide local synthetic-input scope, actual CSV and logs, project-root repeat command requiring an unused output name, missing r-005 and smoke gaps. No release or independent-handoff claim. The untested collision branch is explicitly disclosed, though its missing reason is separately failed above."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 1,
+    "total": 5,
+    "pass_rate": 0.8
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 4
+    },
+    "total_tool_calls": 4,
+    "errors_encountered": 1
+  },
+  "timing": {
+    "executor_duration_seconds": 49.671
+  },
+  "claims": [
+    {
+      "claim": "Native natural request actually loaded the installed functional-acceptance Skill.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Completed item_2 cats .agents/skills/functional-acceptance/SKILL.md and returns the full body, independently observed in each record."
+    },
+    {
+      "claim": "Fresh output has four exact records, omitting r-005 from the final source page.",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Independent CSV/fixture parse; retained CSV SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Existing-destination rejection/preservation branch not exercised; no reason stated."
+    ],
+    "needs_review": [
+      "Do not infer full preservation coverage from unchanged hashes on a new destination."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen reconciliation assertion distinguishes disclosure alone from a justified coverage gap. Other checks pass; the gap is disclosed, not concealed."
+  },
+  "scope": "Completed native Codex record; complete event data read (identical started commands matched to completed commands), artifacts independently inspected; no target rerun by grader."
+}

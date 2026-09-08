@@ -1,0 +1,1 @@
+Retained consistency checks passed: 265 files, 17 native attempts, 1 unpaired host trial. Not live execution or authenticity proof.

@@ -1,0 +1,14 @@
+[
+  {
+    "version": "310",
+    "name": "orphan",
+    "args": [
+      "-B",
+      "examples/sqlite_utils/acceptance/test_lifecycle.py",
+      "LifecycleTests.test_normal_parent_exit_with_live_writer_fails_closed"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 937
+  }
+]

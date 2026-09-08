@@ -1,0 +1,42 @@
+{
+  "project": "WORKSPACE_ROOT/work/sqlite-pack-hardening/project",
+  "scenario": "pytest total timeout interrupts active CLI wait",
+  "instrumentation": {
+    "outer_180s_scaled_to": 0.4,
+    "inner_20s_scaled_to": 1,
+    "writer_self_exit_seconds": 6
+  },
+  "command": [
+    "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "WORKSPACE_ROOT/work/sqlite-pack-hardening/debug/lifecycle_fault.py",
+    "--mode",
+    "runner",
+    "--project",
+    "WORKSPACE_ROOT/work/sqlite-pack-hardening/project",
+    "--evidence",
+    "WORKSPACE_ROOT/work/sqlite-pack-hardening/debug/evidence/red-1-f0ed0100"
+  ],
+  "runner_pid": 29768,
+  "runner_returncode": 124,
+  "supervisor": {
+    "pid": 29769,
+    "pgid": 29768
+  },
+  "writer": {
+    "pid": 29770,
+    "ppid": 29769,
+    "pgid": 29768
+  },
+  "run": "WORKSPACE_ROOT/work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T080349Z-513daf50",
+  "writer_alive_when_runner_returned": true,
+  "heartbeat_bytes_at_return": 45,
+  "heartbeat_bytes_after_inner_deadline": 155,
+  "writer_alive_after_inner_deadline": true,
+  "active_pid_recorded": false,
+  "no_post_return_writes": false,
+  "passed": false,
+  "safety_cleanup_groups": [
+    29768
+  ]
+}

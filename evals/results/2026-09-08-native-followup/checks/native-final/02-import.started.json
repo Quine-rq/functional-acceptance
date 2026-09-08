@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "insert",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/contacts.db",
+    "contacts",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/contacts.input.json",
+    "--pk",
+    "id"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42936,
+  "pgid": 42866,
+  "started_unix": 1788856676.0866518,
+  "stdout": "02-import.stdout",
+  "stderr": "02-import.stderr",
+  "terminal": false
+}

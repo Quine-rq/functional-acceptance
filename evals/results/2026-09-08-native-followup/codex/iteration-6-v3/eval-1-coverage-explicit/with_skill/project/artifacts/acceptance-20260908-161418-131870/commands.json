@@ -1,0 +1,48 @@
+[
+  {
+    "label": "existing smoke",
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "test_smoke.py"
+    ],
+    "cwd": "<PROJECT>",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.056s\n\nOK\n"
+  },
+  {
+    "label": "provided fixture export",
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-B",
+      "export.py",
+      "--source",
+      "fixtures/pages.json",
+      "--output",
+      "artifacts/acceptance-20260908-161418-131870/actual.csv"
+    ],
+    "cwd": "<PROJECT>",
+    "exit_code": 0,
+    "stdout": "Wrote CSV: artifacts/acceptance-20260908-161418-131870/actual.csv\n",
+    "stderr": ""
+  },
+  {
+    "label": "existing destination refusal",
+    "argv": [
+      "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+      "-B",
+      "export.py",
+      "--source",
+      "fixtures/pages.json",
+      "--output",
+      "artifacts/acceptance-20260908-161418-131870/existing.csv"
+    ],
+    "cwd": "<PROJECT>",
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "export: error: output already exists; choose a new path\n"
+  }
+]

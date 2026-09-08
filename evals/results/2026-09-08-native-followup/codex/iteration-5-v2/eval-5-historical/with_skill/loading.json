@@ -1,0 +1,7 @@
+{
+  "actual_full_skill_read": true,
+  "read_event_ids": [
+    "item_6"
+  ],
+  "criterion": "A completed native command returned the complete installed SKILL.md bytes. Inventory or announced use alone is insufficient."
+}

@@ -1,0 +1,5 @@
+{
+  "command": "python3 -B export.py --source fixtures/pages.json --output historical.csv",
+  "exit_code": 0,
+  "stdout": "CSV written; output artifact was not retained in this review bundle."
+}

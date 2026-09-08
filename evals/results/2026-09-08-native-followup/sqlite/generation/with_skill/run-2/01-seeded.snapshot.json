@@ -1,0 +1,27 @@
+{
+  "schema": [
+    {
+      "type": "index",
+      "name": "sqlite_autoindex_unrelated_1",
+      "tbl_name": "unrelated",
+      "sql": null
+    },
+    {
+      "type": "table",
+      "name": "unrelated",
+      "tbl_name": "unrelated",
+      "sql": "CREATE TABLE \"unrelated\" (\n   \"id\" TEXT PRIMARY KEY,\n   \"note\" TEXT,\n   \"optional\" TEXT\n)"
+    }
+  ],
+  "unrelated": [
+    {
+      "id": "unrelated-01",
+      "note": "合成保留数据 \"keep\"\n原样",
+      "optional": null
+    }
+  ],
+  "tables": [
+    "unrelated"
+  ],
+  "contacts": null
+}

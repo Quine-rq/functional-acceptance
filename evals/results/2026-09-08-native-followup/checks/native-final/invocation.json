@@ -1,0 +1,32 @@
+{
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "acceptance/test_onboarding.py",
+    "-v",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/pytest-tmp",
+    "--junitxml",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/pytest.xml"
+  ],
+  "environment": {
+    "PATH": "<TASK>/work/sqlite-utils-onboarding-env/bin:/usr/bin:/bin",
+    "HOME": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/home",
+    "XDG_CONFIG_HOME": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/config",
+    "XDG_CACHE_HOME": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/cache",
+    "TMPDIR": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/tmp",
+    "TMP": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/tmp",
+    "TEMP": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/tmp",
+    "PYTHONPATH": "<TASK>/work/sqlite-pack-final-check",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "ACCEPTANCE_RUN_DIR": "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738",
+    "LC_ALL": "en_US.UTF-8"
+  }
+}

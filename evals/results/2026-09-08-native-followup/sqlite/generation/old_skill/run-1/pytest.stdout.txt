@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python
+cachedir: WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074531Z-a91d4862/pytest-cache
+rootdir: WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/acceptance
+configfile: pytest.ini
+collecting ... collected 1 item
+
+acceptance/test_onboarding.py::test_contact_journey PASSED               [100%]
+
+- generated xml file: WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074531Z-a91d4862/pytest.xml -
+============================== 1 passed in 2.76s ===============================

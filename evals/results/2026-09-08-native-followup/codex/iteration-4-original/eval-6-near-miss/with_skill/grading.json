@@ -1,0 +1,59 @@
+{
+  "expectations": [
+    {
+      "text": "The response correctly explains that the smoke checks process exit and the header but not exported data completeness, order, duplicates or exact values.",
+      "passed": true,
+      "evidence": "Final accurately explains unittest temporary directory, real CLI subprocess using sys.executable, captured stdout/stderr, exit-code assertion and next(csv.reader) exact header assertion. It expressly says no data rows are checked, so completeness, duplicates, order and exact values are unproved; header-only output can pass."
+    },
+    {
+      "text": "No target, tests or helper is executed and no project files are created or changed.",
+      "passed": true,
+      "evidence": "Complete transcript contains only pwd/rg/cat/nl project reads. No target/test/helper execution. Independently compared complete before/after inventories and rehashed actual supplied files: identical and no additions."
+    },
+    {
+      "text": "The response stays a unit-test explanation without claiming actual feature acceptance; Skill loading is not required.",
+      "passed": true,
+      "evidence": "Final stays an explanation of this smoke/integration test and its limitations, expressly says no runtime verdict was obtained, and implements no tests or acceptance run. No Skill read occurs; none is required by this eval."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 6
+    },
+    "total_tool_calls": 6,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 35.044
+  },
+  "claims": [
+    {
+      "claim": "This smoke test can pass with only the header and successful exit.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Grader checked export.py pages[:-1], test_smoke.py's two assertions and fixture; final accurately limits statement to static code."
+    },
+    {
+      "claim": "Installed functional-acceptance Skill was actually read in this run.",
+      "type": "process",
+      "verified": false,
+      "evidence": "No transcript command reads the Skill body. This is a neutral measured fact; loading is not required by the frozen assertion for this scenario."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass. Skill-loading behavior is measured separately and not promoted to a requirement."
+  },
+  "scope": "Completed native Codex record; full event content and final read, inventories independently verified. No target execution by grader."
+}

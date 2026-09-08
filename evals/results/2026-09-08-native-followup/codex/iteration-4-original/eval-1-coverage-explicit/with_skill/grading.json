@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "events.jsonl completed item_6 (with) / item_5 (old) invokes python3 -B -m unittest test_smoke.py; retained smoke output says Ran 1 test and OK, exit 0. test_smoke.py only asserts process return code and first CSV row; final explicitly names missing content, order, fidelity and preservation coverage."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Grader independently parsed the retained UTF-8 CSV with newline='' and flattened all fixture pages: expected five exact records, actual r-001 through r-004 only. Fields and order of the present four rows match exactly; r-005 (page 3, title 最后一页) is missing. Transcript shows fresh export and reopen, not only source inference."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": true,
+      "evidence": "Native observer compares all rows and fields to independently flattened fixture, checks UTF-8/header, reruns against the same run-owned destination and compares original bytes after exit 2. Final qualifies fidelity/order PASS as applying to present rows and reports completeness FAIL; no requirement is silently skipped."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Independently compared before.json against after.json for every original project file, including sentinel and installed Skill; no changed or deleted original entries. Rehashed actual files against after.json; no mismatches. Created files are solely run-owned artifacts. Inventory cannot establish host-global writes, but the full transcript directs temporary writes inside project."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "Final states local synthetic-data scope, actual CSV/report locations, a native repeat command using a new unused artifacts path, missing r-005 and current smoke gaps. No release, production, or independent-handoff success claim. All observed subprocess commands completed."
+    },
+    {
+      "text": "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient.",
+      "passed": true,
+      "evidence": "Completed item_2 actually cats .agents/skills/functional-acceptance/SKILL.md plus host-compatibility.md and native-workflow.md; output contains the installed Skill body. This is an actual read, not catalog/path discovery."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 5
+    },
+    "total_tool_calls": 5,
+    "errors_encountered": 2
+  },
+  "timing": {
+    "executor_duration_seconds": 68.709
+  },
+  "claims": [
+    {
+      "claim": "Retained CSV omits final page r-005 while preserving present rows exactly.",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Independent CSV parse: r-001...r-004 match expected first four dictionaries; no r-005; raw CSV SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21."
+    },
+    {
+      "claim": "Existing destination is rejected without changing its bytes.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Observed second exporter invocation returns 2 and byte comparison is true; code path and retained error agree."
+    },
+    {
+      "claim": "Installed Skill actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "events.jsonl completed item_2 contains cat command and full SKILL.md body."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": [
+      "Observer attempt 1 failed to parse before any execution; attempt 2 corrected the extra parenthesis, retained this failure and completed the requested checks."
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All frozen assertions pass. Both old and revised Skill perform these behaviors; this pair does not establish a revised-Skill advantage."
+  },
+  "scope": "Independent grading of completed native Codex record only; no application/test/helper reruns by grader."
+}

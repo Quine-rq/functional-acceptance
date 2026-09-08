@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "rows",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/contacts.db",
+    "contacts"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42965,
+  "returncode": 0,
+  "timed_out": false,
+  "started_unix": 1788856677.206767,
+  "ended_unix": 1788856677.471471,
+  "stdout": "06-read-after-rejection.stdout",
+  "stderr": "06-read-after-rejection.stderr",
+  "terminal": true
+}

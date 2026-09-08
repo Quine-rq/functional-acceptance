@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+    "-B",
+    "export.py",
+    "--source",
+    "fixtures/pages.json",
+    "--output",
+    "artifacts/acceptance-20260908-160646-462633/actual.csv"
+  ],
+  "exit_code": 0,
+  "stdout": "Wrote CSV: artifacts/acceptance-20260908-160646-462633/actual.csv\n",
+  "stderr": ""
+}

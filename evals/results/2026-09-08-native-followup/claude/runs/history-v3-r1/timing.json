@@ -1,0 +1,14 @@
+{
+  "total_duration_seconds": 35.107,
+  "duration_ms": 35107,
+  "native_reported_duration_seconds": 34.469,
+  "total_tokens": 9035,
+  "token_accounting": "input + cache creation + cache read + output; cache-inclusive, not unique billed tokens",
+  "input_tokens": 4,
+  "cache_creation_input_tokens": 4908,
+  "cache_read_input_tokens": 2576,
+  "output_tokens": 1547,
+  "client_estimated_cost_usd": 0.042394799999999996,
+  "invoice_verified": false,
+  "excluded": "coordinator/grader/collector effort, prior native Codex calls, any other host calls; no new API invocation in collection"
+}

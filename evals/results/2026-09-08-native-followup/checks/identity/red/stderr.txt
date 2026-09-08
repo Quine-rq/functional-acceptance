@@ -1,0 +1,18 @@
+test_unexpected_plugin_is_refused_before_application_import (test_identity.IdentityTests.test_unexpected_plugin_is_refused_before_application_import) ... FAIL
+
+======================================================================
+FAIL: test_unexpected_plugin_is_refused_before_application_import (test_identity.IdentityTests.test_unexpected_plugin_is_refused_before_application_import)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<TASK>/outputs/functional-acceptance/examples/sqlite_utils/acceptance/test_identity.py", line 65, in test_unexpected_plugin_is_refused_before_application_import
+    self.assertEqual(imports, '', 'Application import ran before the plugin safety decision')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'application\ncli\n' != ''
+- application
+- cli
+ : Application import ran before the plugin safety decision
+
+----------------------------------------------------------------------
+Ran 1 test in 0.042s
+
+FAILED (failures=1)

@@ -1,0 +1,22 @@
+[
+  {
+    "revision": "baseline-7d94bb6",
+    "sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+    "file": "versions/baseline-7d94bb6/SKILL.md"
+  },
+  {
+    "revision": "history-v1",
+    "sha256": "19361bab20b7f9f4aea2172907226e7ba47ac6eeb500f7f2a9fd7dc75ce91660",
+    "file": "versions/history-v1/SKILL.md"
+  },
+  {
+    "revision": "history-v2",
+    "sha256": "4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9",
+    "file": "versions/history-v2/SKILL.md"
+  },
+  {
+    "revision": "history-v3",
+    "sha256": "f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d",
+    "file": "versions/history-v3/SKILL.md"
+  }
+]

@@ -1,0 +1,4 @@
+Error: UNIQUE constraint failed: contacts.id
+
+sql = INSERT INTO "contacts" ("age", "email", "id", "name", "note", "phone") VALUES (?, ?, ?, ?, ?, ?)
+parameters = [0, 'changed@example.invalid', 103, '不应覆盖', 'duplicate attempt', '00123']

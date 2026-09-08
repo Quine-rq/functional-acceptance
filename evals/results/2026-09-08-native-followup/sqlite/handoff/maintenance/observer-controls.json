@@ -1,0 +1,37 @@
+[
+  {
+    "id": 17,
+    "field": "postal_code",
+    "injected_value": 123,
+    "state": "expected assertion rejection",
+    "traceback": "Traceback (most recent call last):\n  File \"WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/verify.py\", line 48, in <module>\n    compare(rows)\n    ~~~~~~~^^^^^^\n  File \"acceptance/test_onboarding.py\", line 35, in same_contacts\n    assert type(row[field]) is type(expected), (row['id'], field, row[field], expected)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (17, 'postal_code', 123, '00123')\n"
+  },
+  {
+    "id": 17,
+    "field": "postal_code",
+    "injected_value": "123",
+    "state": "expected assertion rejection",
+    "traceback": "Traceback (most recent call last):\n  File \"WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/verify.py\", line 48, in <module>\n    compare(rows)\n    ~~~~~~~^^^^^^\n  File \"acceptance/test_onboarding.py\", line 36, in same_contacts\n    assert row[field] == expected, (row['id'], field, row[field], expected)\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (17, 'postal_code', '123', '00123')\n"
+  },
+  {
+    "id": 17,
+    "field": "preferred_name",
+    "injected_value": "",
+    "state": "expected assertion rejection",
+    "traceback": "Traceback (most recent call last):\n  File \"WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/verify.py\", line 48, in <module>\n    compare(rows)\n    ~~~~~~~^^^^^^\n  File \"acceptance/test_onboarding.py\", line 35, in same_contacts\n    assert type(row[field]) is type(expected), (row['id'], field, row[field], expected)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (17, 'preferred_name', '', None)\n"
+  },
+  {
+    "id": 4,
+    "field": "preferred_name",
+    "injected_value": null,
+    "state": "expected assertion rejection",
+    "traceback": "Traceback (most recent call last):\n  File \"WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/verify.py\", line 48, in <module>\n    compare(rows)\n    ~~~~~~~^^^^^^\n  File \"acceptance/test_onboarding.py\", line 35, in same_contacts\n    assert type(row[field]) is type(expected), (row['id'], field, row[field], expected)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (4, 'preferred_name', None, '')\n"
+  },
+  {
+    "id": 17,
+    "field": "note",
+    "injected_value": "lost old multiline value",
+    "state": "expected assertion rejection",
+    "traceback": "Traceback (most recent call last):\n  File \"WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/verify.py\", line 48, in <module>\n    compare(rows)\n    ~~~~~~~^^^^^^\n  File \"acceptance/test_onboarding.py\", line 39, in same_contacts\n    assert canonical(actual) == canonical(CONTACTS)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  }
+]

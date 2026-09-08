@@ -1,0 +1,16 @@
+{
+  "label": "existing-output",
+  "command": [
+    "python3",
+    "-B",
+    "export.py",
+    "--source",
+    "fixtures/pages.json",
+    "--output",
+    "artifacts/acceptance-20260908T074246260378Z/actual.csv"
+  ],
+  "returncode": 2,
+  "stdout": "",
+  "stderr": "export: error: output already exists; choose a new path\n",
+  "terminal": true
+}

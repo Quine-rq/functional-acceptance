@@ -1,0 +1,14 @@
+test_cli_timeout_stops_fixture_before_further_observations (test_lifecycle.LifecycleTests.test_cli_timeout_stops_fixture_before_further_observations) ... ok
+test_interrupted_launch_without_handle_is_unknown (test_lifecycle.LifecycleTests.test_interrupted_launch_without_handle_is_unknown) ... ok
+test_normal_parent_exit_with_live_writer_fails_closed (test_lifecycle.LifecycleTests.test_normal_parent_exit_with_live_writer_fails_closed) ... ok
+test_record_failure_after_spawn_still_reaps_group (test_lifecycle.LifecycleTests.test_record_failure_after_spawn_still_reaps_group) ... ok
+test_sigint_is_cleaned_before_return (test_lifecycle.LifecycleTests.test_sigint_is_cleaned_before_return) ... ok
+test_sigterm_ignoring_writer_is_escalated (test_lifecycle.LifecycleTests.test_sigterm_ignoring_writer_is_escalated) ... ok
+test_sigterm_is_cleaned_before_return (test_lifecycle.LifecycleTests.test_sigterm_is_cleaned_before_return) ... ok
+test_total_timeout_stops_descendant_writes (test_lifecycle.LifecycleTests.test_total_timeout_stops_descendant_writes) ... ok
+test_unknown_observation_cannot_be_reported_terminal (test_lifecycle.LifecycleTests.test_unknown_observation_cannot_be_reported_terminal) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.866s
+
+OK

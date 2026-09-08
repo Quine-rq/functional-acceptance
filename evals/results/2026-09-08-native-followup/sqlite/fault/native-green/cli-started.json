@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-c",
+    "import sys,os,json,sqlite3,sqlite_utils,sqlite_utils.cli,importlib.metadata as m; print(json.dumps({'executable':sys.executable,'python':sys.version,'cwd':os.getcwd(),'uid':os.getuid(),'sqlite':sqlite3.sqlite_version,'package':sqlite_utils.__file__,'cli':sqlite_utils.cli.__file__,'version':m.version('sqlite-utils'),'pytest':m.version('pytest'),'plugins':[e.name for e in m.entry_points(group='sqlite_utils')]}))"
+  ],
+  "cwd": "WORKSPACE_ROOT/work/sqlite-pack-hardening/project",
+  "pid": 35060,
+  "pgid": 35059,
+  "started_unix": 1788855367.521343,
+  "stdout": "00-identity.stdout",
+  "stderr": "00-identity.stderr",
+  "terminal": false
+}

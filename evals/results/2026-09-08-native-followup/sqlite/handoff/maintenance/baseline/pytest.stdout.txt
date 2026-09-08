@@ -1,0 +1,14 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python
+rootdir: WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project
+configfile: pyproject.toml
+collecting ... collected 5 items
+
+acceptance/test_onboarding.py::test_import_persists_exact_values PASSED  [ 20%]
+acceptance/test_onboarding.py::test_new_cli_process_reads_all_contacts PASSED [ 40%]
+acceptance/test_onboarding.py::test_retained_json_export_roundtrips PASSED [ 60%]
+acceptance/test_onboarding.py::test_duplicate_id_is_visible_and_preserves_every_contact PASSED [ 80%]
+acceptance/test_onboarding.py::test_unrelated_table_schema_and_row_preserved_at_every_boundary PASSED [100%]
+
+- generated xml file: WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/pytest.xml -
+============================== 5 passed in 3.12s ===============================

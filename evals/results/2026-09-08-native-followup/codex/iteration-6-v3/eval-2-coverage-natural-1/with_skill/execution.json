@@ -1,0 +1,63 @@
+{
+  "host": "codex",
+  "configuration": "with_skill",
+  "scenario": "coverage-natural-1",
+  "candidate_version": "V3 with an explicit retained-history branch",
+  "baseline_version": "7d94bb6",
+  "actual_model": null,
+  "model_selection": "existing host default, no override",
+  "runtime_version": "codex-cli 0.153.4",
+  "started_at": "2026-09-08T08:15:09.177Z",
+  "ended_at": "2026-09-08T08:16:20.085Z",
+  "duration_ms": 70908,
+  "exit_code": 0,
+  "signal": null,
+  "forced": false,
+  "configured_budget_seconds": 120,
+  "outer_timeout_seconds": 180,
+  "protected_changes": [],
+  "created_files": [
+    "artifacts/acceptance-20260908/actual.csv",
+    "artifacts/acceptance-20260908/after-originals-sha256.json",
+    "artifacts/acceptance-20260908/before-sha256.json",
+    "artifacts/acceptance-20260908/expected-source.json",
+    "artifacts/acceptance-20260908/export.json",
+    "artifacts/acceptance-20260908/observation.json",
+    "artifacts/acceptance-20260908/smoke.json"
+  ],
+  "usage": {
+    "input_tokens": 98456,
+    "cached_input_tokens": 74496,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1472,
+    "reasoning_output_tokens": 138
+  },
+  "environment": "ANTHROPIC_* keys removed from child environment without inspecting or logging values; global configuration unchanged.",
+  "inventory_limit": "Regular files and symlink targets under project, excluding .git; empty directories and host-global writes not measured. Permission modes are not measured.",
+  "raw_trace_sha256": "cdaa123af97f9edfe1d9fb4e748c129ef49d4b5c36f2907dbfd0708b77d7d5b8",
+  "public_trace_sha256": "fe703c8dbebfc9d3b90a88964ed2e21c5be9ee029a6ecccfb44ecaa382631a62",
+  "raw_grading_sha256": "edca0b362b278a58e49253b5b3bcf2a38c608a0e3b3f044d1f00668fc58bf839",
+  "excluded_from_public_export": [
+    "hidden reasoning items",
+    "host stderr diagnostics",
+    "private absolute paths"
+  ],
+  "normalization": "Public assistant text, tool commands and tool results retain substantive content; only private machine paths are replaced. In final.md only, project-relative artifact links are mechanically rebased to project/artifacts/ for public navigation.",
+  "native_executable": "<CODEX_NATIVE_EXECUTABLE>",
+  "native_launch_args": [
+    "-a",
+    "never",
+    "-c",
+    "web_search=\"disabled\"",
+    "exec",
+    "--sandbox",
+    "workspace-write",
+    "--ephemeral",
+    "--json",
+    "-C",
+    "<PROJECT>",
+    "-o",
+    "<RECORD>/final.md",
+    "-"
+  ]
+}

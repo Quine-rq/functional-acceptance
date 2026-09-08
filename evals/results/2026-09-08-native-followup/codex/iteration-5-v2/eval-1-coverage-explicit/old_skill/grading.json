@@ -1,0 +1,89 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "Native item_5 executes python3 -B -m unittest test_smoke.py; retained smoke.stderr.txt reports Ran 1 test / OK. Final correctly explains exit/header-only assertions and missing data assertions."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Grader independently parsed retained artifacts/acceptance-20260908T160250944749 CSV with UTF-8/newline='' and compared every row/field to all source pages: exact r-001...r-004 prefix; r-005 absent. Native transcript creates and reopens that artifact and final reports the concrete final-page omission. SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": true,
+      "evidence": "Full row/field/order/new-UTF8 checks and original-file comparison executed. item_5 reruns export to the just-created actual.csv, gets exit 2 with output-already-exists diagnostic and verifies the original output bytes unchanged. This is a real collision check on this run's CSV, but no separate disposable copy protects that primary evidence against a broken overwrite branch. Final appropriately limits PASS to retained four rows and labels full completeness FAIL."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Independent original before/after inventory comparison and actual-file rehash found zero changes/deletions/mismatches for protected implementation, smoke, requirements, fixture, sentinel and installed Skill; new files only artifacts."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "Final and retained report state local synthetic-data scope, concrete missing r-005, project-root native repeat command with unused output, evidence location, terminated subprocesses and retained evidence. No release or independent executor claim."
+    },
+    {
+      "text": "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient.",
+      "passed": true,
+      "evidence": "Completed item_2 returns the full installed SKILL.md body plus references. Grader independently matched entire body to actual installed bytes, SHA-256 878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 4
+    },
+    "total_tool_calls": 4,
+    "errors_encountered": 1
+  },
+  "timing": {
+    "executor_duration_seconds": 75.722
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body was actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Completed item_2 returns the full installed SKILL.md body plus references. Grader independently matched entire body to actual installed bytes, SHA-256 878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe."
+    },
+    {
+      "claim": "Existing-destination refusal and preservation actually executed.",
+      "type": "process",
+      "verified": true,
+      "evidence": "item_5 reruns export to the just-created actual.csv, gets exit 2 with output-already-exists diagnostic and verifies the original output bytes unchanged. This is a real collision check on this run's CSV, but no separate disposable copy protects that primary evidence against a broken overwrite branch."
+    }
+  ],
+  "coverage_observations": {
+    "collision_executed": true,
+    "collision_target_run_owned": true,
+    "collision_separate_from_primary_csv": false,
+    "primary_csv_unchanged_after_collision": true,
+    "existing_files_hash_preservation_observed": true
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [
+      "Collision check uses the sole primary CSV; independent disposable copy would preserve original evidence even if overwrite protection failed."
+    ],
+    "workarounds": [
+      "Read/discovery item_3 exits 1 from final rg finding no AGENTS; file contents were returned and execution proceeded successfully."
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Record separately whether collision checks preserve primary evidence with a disposable copy. This trial genuinely passed the frozen assertions but tested against its only primary CSV."
+      }
+    ],
+    "overall": "Frozen assertions pass; actual branch execution recorded separately from safe evidence-object isolation."
+  },
+  "scope": "Completed V2 native Codex record; full semantic event payloads read, started commands matched byte-for-byte to completions; actual retained CSV and protected file bytes independently inspected; no grader target rerun."
+}

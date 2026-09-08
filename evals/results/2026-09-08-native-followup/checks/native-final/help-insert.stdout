@@ -1,0 +1,91 @@
+Usage: python -m sqlite_utils insert [OPTIONS] PATH TABLE [FILE]
+
+  Insert records from FILE into a table, creating the table if it does not
+  already exist.
+
+  Example:
+
+      echo '{"name": "Lila"}' | sqlite-utils insert data.db chickens -
+
+  By default the input is expected to be a JSON object or array of objects.
+
+  - Use --nl for newline-delimited JSON objects
+  - Use --csv or --tsv for comma-separated or tab-separated input
+  - Use --lines to write each incoming line to a column called "line"
+  - Use --text to write the entire input to a column called "text"
+
+  Use --type column-name type to override the type automatically chosen when
+  the table is created.
+
+  You can also use --convert to pass a fragment of Python code that will be
+  used to convert each input.
+
+  Your Python code will be passed a "row" variable representing the imported
+  row, and can return a modified row.
+
+  This example uses just the name, latitude and longitude columns from a CSV
+  file, converting name to upper case and latitude and longitude to floating
+  point numbers:
+
+      sqlite-utils insert plants.db plants plants.csv --csv --convert '
+        return {
+          "name": row["name"].upper(),
+          "latitude": float(row["latitude"]),
+          "longitude": float(row["longitude"]),
+        }'
+
+  If you are using --lines your code will be passed a "line" variable, and for
+  --text a "text" variable.
+
+  When using --text your function can return an iterator of rows to insert.
+  This example inserts one record per word in the input:
+
+      echo 'A bunch of words' | sqlite-utils insert words.db words - \
+        --text --convert '({"word": w} for w in text.split())'
+
+  Instead of a FILE you can use --code to provide a block of Python code that
+  defines the rows to insert, as either a rows() function that yields
+  dictionaries or a "rows" iterable. --code can also be a path to a .py file:
+
+      sqlite-utils insert data.db creatures --code '
+      def rows():
+          yield {"id": 1, "name": "Cleo"}
+          yield {"id": 2, "name": "Suna"}
+      ' --pk id
+
+Options:
+  --pk TEXT                 Columns to use as the primary key, e.g. id
+  --code TEXT               Python code defining a rows() function or iterable
+                            of rows to insert
+  --flatten                 Flatten nested JSON objects, so {"a": {"b": 1}}
+                            becomes {"a_b": 1}
+  --nl                      Expect newline-delimited JSON
+  -c, --csv                 Expect CSV input
+  --tsv                     Expect TSV input
+  --empty-null              Treat empty strings as NULL
+  --lines                   Treat each line as a single value called 'line'
+  --text                    Treat input as a single value called 'text'
+  --convert TEXT            Python code to convert each item
+  --import TEXT             Python modules to import
+  --delimiter TEXT          Delimiter to use for CSV files
+  --quotechar TEXT          Quote character to use for CSV/TSV
+  --sniff                   Detect delimiter and quote character
+  --no-headers              CSV file has no header row
+  --encoding TEXT           Character encoding for input, defaults to utf-8
+  --batch-size INTEGER      Commit every X records
+  --stop-after INTEGER      Stop after X records
+  --alter                   Alter existing table to add any missing columns
+  --not-null TEXT           Columns that should be created as NOT NULL
+  --default <TEXT TEXT>...  Default value that should be set for a column
+  --type <TEXT CHOICE>...   Column types to use when creating the table
+  --no-detect-types         Treat all CSV/TSV columns as TEXT
+  --analyze                 Run ANALYZE at the end of this operation
+  --load-extension TEXT     Path to SQLite extension, with optional
+                            :entrypoint
+  --silent                  Do not show progress bar
+  --strict                  Apply STRICT mode to created table
+  --ignore                  Ignore records if pk already exists
+  --replace                 Replace records if pk already exists
+  --truncate                Truncate table before inserting records, if table
+                            already exists
+  -h, --help                Show this message and exit.

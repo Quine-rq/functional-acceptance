@@ -142,3 +142,19 @@ Cursor, Copilot and OpenCode still have installer checks only.
 
 Current local checks and release gates are in [the results](PRODUCT-HARDENING-RESULTS.md).
 No new remote CI or release success is implied by historical green jobs.
+
+## Authorized native follow-up
+
+The [subsequent record](NATIVE-FOLLOWUP-RESULTS.md) supersedes the authentication
+blocker **only for the recorded isolated Claude Code 2.1.220 runs** using Sonnet 4.6
+at the official Anthropic endpoint. Explicit full Skill reads are observable in
+eight trials; the first two slash-command trials have insufficient loading proof.
+Slash commands may be expanded by the host, so absence of a Read event is not proof
+that a Skill was not loaded. No global provider configuration was changed.
+
+The latest two targeted history reviews met their narrow assertions. All ten
+attempts, earlier failures and client-estimated costs are retained; natural loading,
+healthy-history discrimination and a complete executing Claude journey remain
+unverified. Codex old/new comparisons and sqlite-utils native handoffs now also ran,
+but a final candidate trial still omitted a requested safety branch. Cursor,
+Copilot and OpenCode remain filesystem-installation checks only.

@@ -1,0 +1,25 @@
+{
+  "stage": "green",
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-S",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "<TASK>/outputs/functional-acceptance/examples/sqlite_utils/acceptance",
+    "-p",
+    "test_identity.py",
+    "-v"
+  ],
+  "source_sha256": {
+    "test_onboarding.py": "8ae56584bb7ab47af09494e6fe0167176ce96a4e0aaa5abdf6c5afafc48d51e5",
+    "test_identity.py": "df43d1a6d2fb1c6bf7d9787cbf79bfc00da038e4beaf4811faaa401866e46306"
+  },
+  "code": 0,
+  "signal": null,
+  "elapsed_ms": 111,
+  "error": null,
+  "test_scope": "AST-extracted actual probe, synthetic module import markers and external metadata stub; not real SQLite business behavior"
+}

@@ -1,0 +1,70 @@
+{
+  "expected": [
+    {
+      "id": "r-001",
+      "title": "示例, Hello",
+      "notes": "第一行\n第二行"
+    },
+    {
+      "id": "r-002",
+      "title": "Quote \"double\"",
+      "notes": "café ☕"
+    },
+    {
+      "id": "r-003",
+      "title": "雪 / snow",
+      "notes": ""
+    },
+    {
+      "id": "r-004",
+      "title": "Emoji 🚀",
+      "notes": "CRLF\r\nnext"
+    },
+    {
+      "id": "r-005",
+      "title": "最后一页",
+      "notes": "END, \"边界\"\n末尾"
+    }
+  ],
+  "actual": [
+    {
+      "id": "r-001",
+      "title": "示例, Hello",
+      "notes": "第一行\n第二行"
+    },
+    {
+      "id": "r-002",
+      "title": "Quote \"double\"",
+      "notes": "café ☕"
+    },
+    {
+      "id": "r-003",
+      "title": "雪 / snow",
+      "notes": ""
+    },
+    {
+      "id": "r-004",
+      "title": "Emoji 🚀",
+      "notes": "CRLF\r\nnext"
+    }
+  ],
+  "expected_count": 5,
+  "actual_count": 4,
+  "missing_ids": [
+    "r-005"
+  ],
+  "complete_ordered_exact_match": false,
+  "present_records_exact_ordered_prefix": true,
+  "unique_output_ids": true,
+  "header": [
+    "id",
+    "title",
+    "notes"
+  ],
+  "utf8_decode": "PASS",
+  "existing_output_refused": true,
+  "existing_output_bytes_unchanged": true,
+  "supplied_files_unchanged": true,
+  "remaining_temp_files": [],
+  "csv_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21"
+}

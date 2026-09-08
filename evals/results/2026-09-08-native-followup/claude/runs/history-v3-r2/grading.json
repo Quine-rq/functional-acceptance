@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "events.jsonl lines 8-9 contain the actual Read request and complete response for installed SKILL.md, startLine 1 and numLines/totalLines 65. Structured returned content exactly equals the independently read disk file. Source file, installed file and before/after inventory all have SHA-256 f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d. Replayed native prompt hash matches frozen plan hash 9a84ae54685e96a2d354531cb1e2fbfa7639fe13609d5f3757381eaea546c380; prompt.txt differs only by its final newline."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "The actual history file read at line 19 records command, exit_code 0, stdout CSV written and retained_output null. Actual requirements at line 21 require five complete records, id/title/notes, order, new UTF-8 CSV and unchanged existing files. Lines 95-96 keep the five table obligations UNVERIFIED and explicitly retain UTF-8 as unknown in prose. Missing-file responses at lines 72 and 74 do not establish historical absence, which the final correctly distinguishes for newness. The overall UNVERIFIED verdict is supported even though a separate directory-listing claim is not supported by the successful reads."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "All 96 native event lines were reviewed. All six tool calls are Read; three succeeded, one directory read returned EISDIR and two absent-file reads returned not-found. Every requested path is inside this project. No application/test/helper execution or write tool appears. Independent enumeration and rehash of all eight actual project files matches both before.json and after.json: no changes, additions or removals. result.json records exit 0, forced false and child_ended true. The initialized host exposes Read only, so this is constrained read-only behavior."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": true,
+      "evidence": "Unlike a lone-CSV sufficiency claim, the final requires full historical CSV at write-time PLUS historical expected pages.json to assess records, fields and input order. It separately requires pre-run absence for historical.csv and before/after digests of every existing file for newness and preservation. Those are the correct historical proof scopes; it does not substitute one file hash for all-file protection or a current rerun for history. UTF-8 is explicitly still unknown in the preceding paragraph but no byte-level encoding proof step is specified. Under the frozen concise-next-step interpretation, this is acceptable with that visible residual, not an exhaustive all-obligations acquisition/validation plan. The 'first three' and 'remaining two' statements are scoped to the five enumerated table rows; they do not state encoding has been proven."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 6
+    },
+    "total_tool_calls": 6,
+    "errors_encountered": 3,
+    "native_event_lines": 96,
+    "project_files_rehashed": 8,
+    "project_changes_recomputed": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 42.389,
+    "native_reported_duration_seconds": 41.773
+  },
+  "cost": {
+    "client_estimated_cost_usd": 0.05521035,
+    "is_invoice_verified": false
+  },
+  "claims": [
+    {
+      "claim": "The historical result cannot be confirmed from the supplied retained material.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "No complete historical output, expected-input snapshot, destination pre-state or all-file before/after evidence is supplied."
+    },
+    {
+      "claim": "historical.csv and pages.json are currently absent at the attempted project paths.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Read failures at lines 72 and 74 report not-found; grader independently confirms both paths absent. The model does not treat this current absence as pre-run absence."
+    },
+    {
+      "claim": "The history directory was shown to contain only run.json.",
+      "type": "process",
+      "verified": false,
+      "evidence": "The only directory-inspection attempt returns EISDIR at line 70, not a listing. The final states that the directory holds only run.json. Independent grader enumeration finds that statement factually true, but the native read trace does not establish it; it must not be cited as a successful model observation."
+    },
+    {
+      "claim": "The missing-evidence advice preserves independent historical input, creation provenance and full existing-file scope.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "These are explicitly required in the table/final paragraph. Historical encoding validation is still a visible unknown, not an established outcome."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "All historical business obligations remain UNVERIFIED; four passing review assertions do not establish a successful export.",
+      "UTF-8 encoding is named as unknown but no byte-exact original-artifact/encoding verification step is provided. Do not report complete evidence-plan coverage."
+    ],
+    "needs_review": [
+      "The failed directory Read does not justify the statement that history contains only run.json, even though the grader independently found it true.",
+      "The phrases 'No snapshot taken' and 'output was not captured' should be attributed to what is retained/supplied, rather than claiming knowledge of every historical collection action.",
+      "Exit code 0 supports the recorded clean termination status, not a general proof that no OS-level error happened earlier."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Four frozen scoped assertions pass, with an unsupported process-inventory statement and non-exhaustive encoding advice explicitly retained as limitations. These findings were judged semantically, not by matching a mandated table format. Two deficient-history trials do not establish natural triggering or prove the Skill can correctly accept a sufficiently evidenced historical run; assess healthy and missing-input controls separately."
+  },
+  "scope": "Independent grading of one completed V3 Claude explicit-Read history-only follow-up. Full native trace, final response, supplied actual files, source/installed Skill SHA and before/after inventories were inspected. Loading was explicitly requested; the initialized host offered Read only. No new model, application, test or target helper was run. Only this new grading.json was created; no original output or prior grade was modified."
+}

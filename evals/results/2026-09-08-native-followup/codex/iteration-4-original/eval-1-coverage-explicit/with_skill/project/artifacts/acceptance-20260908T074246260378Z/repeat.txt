@@ -1,0 +1,7 @@
+From project root, Python 3 standard library only.
+Set TMPDIR, TMP and TEMP to a new project-local artifacts directory and PYTHONDONTWRITEBYTECODE=1.
+python3 -B -m unittest test_smoke.py
+python3 -B export.py --source fixtures/pages.json --output artifacts/NEW-UNUSED.csv
+Reopen with csv.DictReader using encoding=utf-8 and newline="". Expect IDs r-001 through r-005 and exact fields from fixture in page/record order. Actual export omits r-005.
+To check overwrite refusal, invoke again for this run-owned output: expect exit 2 and identical bytes. Never use a supplied file as the output.
+Author-executed; no independent executor replay.

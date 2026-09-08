@@ -1,0 +1,84 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "events.jsonl lines 10-11 contain the actual Read request and complete response for the installed SKILL.md, startLine 1 and numLines/totalLines 65. Structured returned content exactly equals the independently read disk file. Source file, installed file and before/after inventory all have SHA-256 f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d. The native replayed prompt hash matches the frozen plan hash 9a84ae54685e96a2d354531cb1e2fbfa7639fe13609d5f3757381eaea546c380; prompt.txt adds only a final newline."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "Actual history/run.json at line 13 has only a recorded command, exit_code 0, stdout CSV written and retained_output null. Actual requirements at line 15 require five records and id/title/notes, input order, a new UTF-8 CSV and unchanged existing files. Final response at lines 38-39 groups these into three obligations and keeps every group UNVERIFIED; neither historical output, expected inputs, pre-run destination absence nor all-file pre/post evidence is supplied. It does not promote the status string to business success."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "All 39 native event lines were reviewed. Exactly three tool uses occur, all Read, for the installed Skill, history/run.json and requirements.md. No command/helper execution or write tool appears. The grader independently enumerated and hashed all eight actual project files: their paths and hashes match both before.json and after.json, with no additions, removals or changes. result.json records exit 0, forced false and child_ended true. This observes a constrained host whose initialized tool list is Read only."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": true,
+      "evidence": "The response correctly pairs complete historical CSV output with independently retained pages.json for data/order preservation. Its table separately requires pre-run destination absence linked to the run and before/after contents or digests for every in-scope file. The final paragraph deliberately offers the 'single highest-value gap', says output plus input could assess obligation 1 and only partially obligation 2, and does not claim that they establish newness or protect every existing file. Read in the requested concise partial-next-step sense, the residual gaps stay visible and the advice passes. The table does not spell out byte-level UTF-8 proof, so this is not evidence of an exhaustive collection/validation plan. A current rerun is correctly rejected as proof of the past."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 3
+    },
+    "total_tool_calls": 3,
+    "errors_encountered": 0,
+    "native_event_lines": 39,
+    "project_files_rehashed": 8,
+    "project_changes_recomputed": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 35.107,
+    "native_reported_duration_seconds": 34.469
+  },
+  "cost": {
+    "client_estimated_cost_usd": 0.0423948,
+    "is_invoice_verified": false
+  },
+  "claims": [
+    {
+      "claim": "The historical business result remains UNVERIFIED.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The retained material contains neither the output/input comparison nor destination pre-state or full-scope pre/post preservation evidence; the final does not invent them."
+    },
+    {
+      "claim": "Complete historical output plus independent historical input is a useful partial next step, not proof of all obligations.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The table separately preserves newness and every-file preservation; the final expressly calls the second obligation only partially assessable after the proposed step."
+    },
+    {
+      "claim": "A clean process exit is necessary for each business obligation.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "The final calls exit 0 a necessary but insufficient condition. That is too broad: a process could produce correct output or preserve files and then fail. This wording does not change the justified UNVERIFIED verdict, but should not be reused as a universal proof rule."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Passing the review assertions is not a passing historical export. All requested business outcomes are still UNVERIFIED.",
+      "The proposed next step is intentionally partial; original encoding/provenance, destination pre-state and every-file preservation still need appropriate historical observations."
+    ],
+    "needs_review": [
+      "The 'necessary' exit-code wording is logically too strong.",
+      "The statement that no current-filesystem inspection can establish a past result should be scoped to inspecting current state without retained historical provenance; genuinely retained historical evidence could be stored in today's filesystem."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Four scoped assertions pass under the frozen concise-partial-step interpretation. This is neither evidence of natural Skill discovery nor of autonomous execution, product correctness, a comprehensive byte-level historical proof plan, or reliable distinction between sufficient and insufficient historical materials. A separate healthy-history control remains necessary for that last claim."
+  },
+  "scope": "Independent grading of one completed V3 Claude explicit-Read history-only follow-up. Full native trace, final response, supplied actual files, source/installed Skill SHA and before/after file inventories were inspected. Skill loading was explicitly requested, and the host actually exposed only Read. Grader ran no model, application, test or target helper and created only this new grading.json; prior trial outputs and grades remain unchanged."
+}

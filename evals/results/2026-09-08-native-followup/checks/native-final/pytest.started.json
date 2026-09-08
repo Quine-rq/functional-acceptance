@@ -1,0 +1,20 @@
+{
+  "pid": 42866,
+  "pgid": 42866,
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "acceptance/test_onboarding.py",
+    "-v",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/pytest-tmp",
+    "--junitxml",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/pytest.xml"
+  ],
+  "started_unix": 1788856674.056695,
+  "terminal": false
+}

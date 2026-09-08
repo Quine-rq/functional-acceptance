@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-c",
+    "import sys\nimport importlib.metadata as m\nplugins = [entry.name for entry in m.entry_points(group='sqlite_utils')]\nif plugins:\n    print('Unexpected sqlite-utils plugins; refusing application import: ' + ', '.join(plugins), file=sys.stderr)\n    raise SystemExit(2)\nversions = {name: m.version(name) for name in ('sqlite-utils', 'pytest')}\nimport os, json, sqlite3, sqlite_utils, sqlite_utils.cli\nprint(json.dumps({'executable':sys.executable,'python':sys.version,'cwd':os.getcwd(),'uid':os.getuid(),'sqlite':sqlite3.sqlite_version,'package':sqlite_utils.__file__,'cli':sqlite_utils.cli.__file__,'version':versions['sqlite-utils'],'pytest':versions['pytest'],'plugins':plugins}))\n"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42881,
+  "pgid": 42866,
+  "started_unix": 1788856674.512954,
+  "stdout": "00-identity.stdout",
+  "stderr": "00-identity.stderr",
+  "terminal": false
+}

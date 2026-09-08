@@ -1,0 +1,196 @@
+[
+  {
+    "version": "310",
+    "name": "core",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 6955
+  },
+  {
+    "version": "310",
+    "name": "export",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/paginated_export",
+      "-p",
+      "test_export.py",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 1174
+  },
+  {
+    "version": "310",
+    "name": "lifecycle",
+    "args": [
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/sqlite_utils/acceptance",
+      "-p",
+      "test_lifecycle.py",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 10913
+  },
+  {
+    "version": "310",
+    "name": "identity",
+    "args": [
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/sqlite_utils/acceptance",
+      "-p",
+      "test_identity.py",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 182
+  },
+  {
+    "version": "310",
+    "name": "hardening-record",
+    "args": [
+      "-B",
+      "evals/results/2026-09-08-product-hardening/check_record.py"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 144
+  },
+  {
+    "version": "310",
+    "name": "reuse-record",
+    "args": [
+      "-B",
+      "evals/results/2026-09-08-reuse/check_record.py"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 85
+  },
+  {
+    "version": "314",
+    "name": "core",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 9796
+  },
+  {
+    "version": "314",
+    "name": "export",
+    "args": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/paginated_export",
+      "-p",
+      "test_export.py",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 1880
+  },
+  {
+    "version": "314",
+    "name": "lifecycle",
+    "args": [
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/sqlite_utils/acceptance",
+      "-p",
+      "test_lifecycle.py",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 8810
+  },
+  {
+    "version": "314",
+    "name": "identity",
+    "args": [
+      "-B",
+      "-S",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "examples/sqlite_utils/acceptance",
+      "-p",
+      "test_identity.py",
+      "-v"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 200
+  },
+  {
+    "version": "314",
+    "name": "hardening-record",
+    "args": [
+      "-B",
+      "evals/results/2026-09-08-product-hardening/check_record.py"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 138
+  },
+  {
+    "version": "314",
+    "name": "reuse-record",
+    "args": [
+      "-B",
+      "evals/results/2026-09-08-reuse/check_record.py"
+    ],
+    "code": 0,
+    "signal": null,
+    "duration_ms": 93
+  },
+  {
+    "name": "npm",
+    "code": 0,
+    "signal": null,
+    "duration_ms": 4514
+  }
+]

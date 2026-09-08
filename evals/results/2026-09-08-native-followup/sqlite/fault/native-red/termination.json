@@ -1,0 +1,5 @@
+{
+  "pid": 35041,
+  "returncode": 124,
+  "state": "pytest timeout; inspect child command logs before cleanup"
+}

@@ -1,0 +1,62 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "Actual Read returns complete installed SKILL.md, lines 1–53; structured file content exactly matches disk, SHA-256 19361bab20b7f9f4aea2172907226e7ba47ac6eeb500f7f2a9fd7dc75ce91660."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "Actual history JSON has exit 0, success stdout and retained_output null. All substantive historical obligations stay UNVERIFIED."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "Complete native events show only three Read calls; before/after inventories identical and eight actual files rehashed with no mismatch or additions. Native process ended normally."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": false,
+      "evidence": "The answer improves by mentioning retained-at-run-time output or a checksum against known-good expected output, and explicitly says a fresh run answers a new question. Nevertheless, its missing-evidence advice says pages.json checksum alone closes unchanged EXISTING FILES, omitting all other in-scope originals. Actual CSV rows alone also lack historical input comparison and new-file provenance; the table drops the 'new' part."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 3
+    },
+    "total_tool_calls": 3,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 32.542
+  },
+  "claims": [
+    {
+      "claim": "Suggested minimal evidence proves preservation of all existing files.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "The answer improves by mentioning retained-at-run-time output or a checksum against known-good expected output, and explicitly says a fresh run answers a new question. Nevertheless, its missing-evidence advice says pages.json checksum alone closes unchanged EXISTING FILES, omitting all other in-scope originals. Actual CSV rows alone also lack historical input comparison and new-file provenance; the table drops the 'new' part."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Historical output and whole-scope original-file preservation remain unverified."
+    ],
+    "needs_review": [
+      "Smallest-evidence advice still narrows 'existing files' to pages.json."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Same explicit-read prompt and host/model used; this single pair does not establish stable causality or savings. Prior partial/wrong results remain preserved."
+  },
+  "scope": "Separate completed Claude native read-only follow-up, not Codex iteration benchmark. No model/target execution by grader."
+}

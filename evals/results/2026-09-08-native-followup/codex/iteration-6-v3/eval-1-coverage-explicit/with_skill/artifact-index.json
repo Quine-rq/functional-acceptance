@@ -1,0 +1,50 @@
+[
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/actual.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/before.json",
+    "raw_sha256": "ab7b625d6dadf553a172821d96dfd799ddd2d9bceddff82397f94789f6c37b66",
+    "public_sha256": "ab7b625d6dadf553a172821d96dfd799ddd2d9bceddff82397f94789f6c37b66",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/commands.json",
+    "raw_sha256": "53d0d5c34e8e48ccdf6c8957f8a7eb0213a68ddd7b812ad2276df6fcf958ca3e",
+    "public_sha256": "e3747122a41f93cb67f0ecc4b55dad9fad631d4de7ad4dbbcbe4ab61fe872348",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/existing.csv",
+    "raw_sha256": "0c28b91faeaa2ddebd1352525114b4349259712ac18cb7f24f840ca83285d80b",
+    "public_sha256": "0c28b91faeaa2ddebd1352525114b4349259712ac18cb7f24f840ca83285d80b",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/expected.json",
+    "raw_sha256": "9634457570bb365f1af196425f8dc82d934d315941148cb5f8857dfd5deab6e5",
+    "public_sha256": "9634457570bb365f1af196425f8dc82d934d315941148cb5f8857dfd5deab6e5",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/integrity.json",
+    "raw_sha256": "1eb27fb2ff77fa6aac3ce3cea2b7f2e40c783e0d2bed8ed5fdab3760c0f4d4fd",
+    "public_sha256": "1eb27fb2ff77fa6aac3ce3cea2b7f2e40c783e0d2bed8ed5fdab3760c0f4d4fd",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/observed.json",
+    "raw_sha256": "bbd6348f6069d2dec35e6d2e1b4faaecf47a1020f3f678749557be8c97b7c96d",
+    "public_sha256": "bbd6348f6069d2dec35e6d2e1b4faaecf47a1020f3f678749557be8c97b7c96d",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161418-131870/runtime.json",
+    "raw_sha256": "0e8d8299276a98d73713461dcf1e101cff4c30884c4736a9e5e58d9238005726",
+    "public_sha256": "4636fda00fd2a69ef7fb73173a9140c30833fc05ad113dd7bf0c09dc77da45df",
+    "normalization": "private machine paths only"
+  }
+]

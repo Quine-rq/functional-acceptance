@@ -1,0 +1,58 @@
+{
+  "expectations": [
+    {
+      "text": "The historical result remains UNVERIFIED (or an unambiguous equivalent) because the retained CSV observation is missing.",
+      "passed": true,
+      "evidence": "Retained history/run.json records exit 0 and explicitly says output CSV was not retained. Final unambiguously says UNVERIFIED / cannot confirm complete records or fields; missing retained CSV observation is the reason."
+    },
+    {
+      "text": "No exporter or tests are rerun and no new evidence or project files are created or changed.",
+      "passed": true,
+      "evidence": "Complete transcript uses only read/list/search operations; no exporter/test/helper is executed and no evidence is created. Independent before/after inventories and disk hashes are unchanged."
+    },
+    {
+      "text": "The response distinguishes retained historical facts from source-code inference or hypothetical fresh execution.",
+      "passed": true,
+      "evidence": "Final attributes command/exit to the retained record, calls current pages[:-1] a present-source inference and explicitly says missing historical source/input identity prevents projecting that defect into the past. Fresh execution cannot prove the past."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 5
+    },
+    "total_tool_calls": 5
+  },
+  "timing": {
+    "executor_duration_seconds": 47.872
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Full body in item_6 matches installed SHA-256 4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9"
+    },
+    {
+      "claim": "Historical missing-evidence recommendation covers output/input, newness and all-existing-object scope.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Final asks complete historical CSV plus linked complete expected input, historical destination absence and comparable before/after contents for all in-scope existing files."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass. Extra coverage/safety concerns are observations, not post-outcome assertion changes."
+  },
+  "scope": "Independent V2 completed native Codex grading. All semantic event payloads inspected; identical started commands matched to completions and repeated full file bodies losslessly referenced only after complete body reads and exact SHA-256 comparison. Actual CSVs and protected bytes independently inspected; no target rerun."
+}

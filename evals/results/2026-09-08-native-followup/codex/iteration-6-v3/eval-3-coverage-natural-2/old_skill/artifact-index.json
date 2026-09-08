@@ -1,0 +1,32 @@
+[
+  {
+    "path": "artifacts/acceptance-20260908-161735-194784/actual.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161735-194784/existing-output.log",
+    "raw_sha256": "0efdb260835026910d2f1914e7278613e09671ae606b1e68f560cd0725ef2558",
+    "public_sha256": "0efdb260835026910d2f1914e7278613e09671ae606b1e68f560cd0725ef2558",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161735-194784/export.log",
+    "raw_sha256": "8a843acb337199e5e71aa085f9805f4ccde7fe05f19d9daf4a8b12e45929462c",
+    "public_sha256": "8a843acb337199e5e71aa085f9805f4ccde7fe05f19d9daf4a8b12e45929462c",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161735-194784/report.json",
+    "raw_sha256": "88db748499aab19423b6ba1c0b70890da7a242a1a76a7af9c3134767cdc97ac5",
+    "public_sha256": "ae94eb2017733266f220207123eabb75ad92a7ebac30d65e7f4a00d2621fb46d",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161735-194784/smoke.log",
+    "raw_sha256": "d29ebe8b1a4c5f502ad9f7fdcfb930b344b593bd0bd8762df5815b6f3771f24e",
+    "public_sha256": "d29ebe8b1a4c5f502ad9f7fdcfb930b344b593bd0bd8762df5815b6f3771f24e",
+    "normalization": "private machine paths only"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "expectations": [
+    {
+      "text": "The response correctly explains that the smoke checks process exit and the header but not exported data completeness, order, duplicates or exact values.",
+      "passed": true,
+      "evidence": "Final accurately explains subprocess CLI invocation and two assertions: return code 0 and first CSV header only. It explicitly leaves record count/content/order/duplicates outside coverage and uses pages[:-1] solely as a static example the assertions miss."
+    },
+    {
+      "text": "No target, tests or helper is executed and no project files are created or changed.",
+      "passed": true,
+      "evidence": "Full transcript contains only project file listing and static reads; no target/test/helper execution. Independent before/after file inventory and rehash show no creations or changes."
+    },
+    {
+      "text": "The response stays a unit-test explanation without claiming actual feature acceptance; Skill loading is not required.",
+      "passed": true,
+      "evidence": "Final remains a test explanation, explicitly says not executed and does not claim actual test/feature acceptance results. Installed Skill was not loaded; this is not required for this near-miss request."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 3
+    },
+    "total_tool_calls": 3
+  },
+  "timing": {
+    "executor_duration_seconds": 52.169
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body actually read.",
+      "type": "process",
+      "verified": false,
+      "evidence": "No complete Skill body read appears; loading is not required for this request."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass. Extra coverage/safety concerns are observations, not post-outcome assertion changes."
+  },
+  "scope": "Independent V2 completed native Codex grading. All semantic event payloads inspected; identical started commands matched to completions and repeated full file bodies losslessly referenced only after complete body reads and exact SHA-256 comparison. Actual CSVs and protected bytes independently inspected; no target rerun."
+}

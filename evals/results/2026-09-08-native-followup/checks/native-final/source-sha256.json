@@ -1,0 +1,18 @@
+{
+  "sqlite_utils/plugins.py": "8907f645cf291055fe1bb5a39efe5a750e6fbfd9bcc17df19a8bfadb5186a530",
+  "sqlite_utils/db.py": "9fcf5430c0ad6ad3ebe25afc170b1e077a5fabd73353e0eb661b2c9e6c4ae715",
+  "sqlite_utils/hookspecs.py": "a97f1cadce80f2d7264843dad5e6dc8a114b80492defd530a96764f470eb8a99",
+  "sqlite_utils/__init__.py": "c6820e8bdff2f648adac5bd29410b7541969f43fc7203931fb4264d6c36a89cf",
+  "sqlite_utils/create_table_parser.py": "810b3b0a39b8660e0aedc9d40d453703e755e9918c8bff871c62bd9f1e4c2f4b",
+  "sqlite_utils/cli.py": "251464a94fab02624a649d69e1ee9c17d6203a5d63e77c874945dd1a60173826",
+  "sqlite_utils/utils.py": "7d8a00c696bd5ea1128e135745ccbba2615c1bbb110c29454ad73f169798a64d",
+  "sqlite_utils/recipes.py": "048c6656409d3df485e9bbbcafc478d2a3d90632ecadef721138ed16780f90db",
+  "sqlite_utils/migrations.py": "054ee224a7aee68131ecd7ae3cb0809ff7403144db45c604cbd920c91fe4ea1f",
+  "sqlite_utils/__main__.py": "f210ed5a568564adb82a17cdabf64a82d5ea607b034037adba4382325b1b5b44",
+  "pyproject.toml": "ec133707085153fae34f663ec8934ec95a731575a2b3b7577347ec2de0ac432c",
+  "ONBOARDING-REQUIREMENTS.md": "c5ac9e74c45fdd3972262646171dfe9608c92ae386c0436a6c2cc4e9dd141b8f",
+  "acceptance/__init__.py": "66502266cfe771d34064d8679fa617fa4cee771587c44fb0ce453245f32384fb",
+  "acceptance/test_onboarding.py": "9cd7299fa1983a4b43781a15c35c29ad2fa2be02eef5f4814f5f095439bcc96e",
+  "acceptance/run.py": "a57cf731787d281229014707ca8ff15829367c120f8c6a45a0406add72fe9478",
+  "acceptance/lifecycle.py": "672ba650cc6d6b17b8dee3ae126fa0f7aa950da46d36d0436da3d34ccd349837"
+}

@@ -1,0 +1,34 @@
+{
+  "mode": "maintenance",
+  "configuration": null,
+  "source_head": "85b1be10c81d9dd3567e36faf8dd411e4a8789bd",
+  "source_sha256": null,
+  "skill_installed": false,
+  "installed_skill_sha256": null,
+  "prompt_sha256": "3575a7270b367b30244a1c9df558fdd30c9656963e5ca609804d49378a1b77d8",
+  "requirement_sha256": null,
+  "started_at": "2026-09-08T07:50:29.725Z",
+  "ended_at": "2026-09-08T07:54:29.092Z",
+  "duration_ms": 239367,
+  "exit_code": 0,
+  "signal": null,
+  "forced": false,
+  "usage": {
+    "input_tokens": 630122,
+    "cached_input_tokens": 580224,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10168,
+    "reasoning_output_tokens": 1051
+  },
+  "protected_changes": [],
+  "all_input_changes": [
+    "acceptance/README.md",
+    "acceptance/test_onboarding.py"
+  ],
+  "source_tracked_changes": [],
+  "time_budget_seconds": 480,
+  "outer_kill_seconds": 600,
+  "model_selection": "existing default, no override",
+  "assistance_during_invocation": null,
+  "created_file_count": 120
+}

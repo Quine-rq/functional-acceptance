@@ -1,0 +1,69 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "Full transcript executes python3 -B -m unittest test_smoke.py through a bounded subprocess. Retained smoke.json records exit 0 and Ran 1 test / OK; final correctly says this asserts exit/header, not row content or completeness."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Grader independently parsed the actual retained CSV as UTF-8 with newline='' and flattened all source fixture pages. Expected five exact dictionaries; actual r-001...r-004 match the first four and omit page-3 r-005. Transcript shows fresh exporter invocation and actual CSV reopen; final reports this concrete failure."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": true,
+      "evidence": "Observer compares all exact expected rows, order and values, UTF-8/header, then reuses its own destination and verifies exit 2 and unchanged bytes. Final limits fidelity/order PASS to the present records and reports the full-data FAIL. Existing project hashes are also checked."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Grader independently compared every original before.json entry to after.json and rehashed actual files: no changes/deletions or digest mismatches, including implementation, tests, requirements, fixtures, sentinel and installed Skill. All added regular files are inside artifacts."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "Final plus linked report provide local synthetic-input scope, actual CSV and logs, project-root repeat command requiring an unused output name, missing r-005 and smoke gaps. No release or independent-handoff claim. Observed required checks are accounted for."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 5
+    },
+    "total_tool_calls": 5,
+    "errors_encountered": 1
+  },
+  "timing": {
+    "executor_duration_seconds": 48.868
+  },
+  "claims": [
+    {
+      "claim": "Native natural request actually loaded the installed functional-acceptance Skill.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Completed item_2 cats .agents/skills/functional-acceptance/SKILL.md and returns the full body, independently observed in each record."
+    },
+    {
+      "claim": "Fresh output has four exact records, omitting r-005 from the final source page.",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Independent CSV/fixture parse; retained CSV SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass; compare with paired configuration without attributing causation from one run."
+  },
+  "scope": "Completed native Codex record; complete event data read (identical started commands matched to completed commands), artifacts independently inspected; no target rerun by grader."
+}

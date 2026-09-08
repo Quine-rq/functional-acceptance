@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "query",
+    "--help"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42903,
+  "pgid": 42866,
+  "started_unix": 1788856675.1405709,
+  "stdout": "help-query.stdout",
+  "stderr": "help-query.stderr",
+  "terminal": false
+}

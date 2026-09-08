@@ -1,0 +1,8 @@
+test_metadata_failure_stops_before_application_import (test_identity.IdentityTests) ... ok
+test_no_plugins_allows_import_and_records_identity (test_identity.IdentityTests) ... ok
+test_unexpected_plugin_is_refused_before_application_import (test_identity.IdentityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.087s
+
+OK

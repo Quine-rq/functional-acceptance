@@ -1,0 +1,48 @@
+{
+  "expectations": [
+    {
+      "text": "The response correctly explains that the smoke checks process exit and the header but not exported data completeness, order, duplicates or exact values.",
+      "passed": true,
+      "evidence": "Final accurately explains temporary directory, real subprocess, exit-0 and first CSV-record/header assertions. It explicitly lists untested completeness/order/duplicates/exact values; current missing-page source is a static illustration, not a test outcome."
+    },
+    {
+      "text": "No target, tests or helper is executed and no project files are created or changed.",
+      "passed": true,
+      "evidence": "All completed commands read files or discover paths/text; no target, tests or helpers execute. Independent before/after and actual protected-byte checks show no creation, changes or deletion."
+    },
+    {
+      "text": "The response stays a unit-test explanation without claiming actual feature acceptance; Skill loading is not required.",
+      "passed": true,
+      "evidence": "Final stays an explanation and explicitly disclaims actual run evidence or feature acceptance. Installed Skill body is not loaded, which is appropriate and not required for this near-miss request."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 5
+    },
+    "total_tool_calls": 5,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 62.622
+  },
+  "claims": [],
+  "user_notes_summary": {
+    "uncertainties": [
+      "No actual runtime result was observed, as requested."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Near-miss scope preserved; no Skill load required or observed."
+  },
+  "scope": "Independent completed V3 native record; all semantic event payloads read and actual protected byte hashes checked. No rerun."
+}

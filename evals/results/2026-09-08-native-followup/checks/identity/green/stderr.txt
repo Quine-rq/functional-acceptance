@@ -1,0 +1,6 @@
+test_unexpected_plugin_is_refused_before_application_import (test_identity.IdentityTests.test_unexpected_plugin_is_refused_before_application_import) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.026s
+
+OK

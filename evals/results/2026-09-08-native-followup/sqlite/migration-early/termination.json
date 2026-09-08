@@ -1,0 +1,17 @@
+{
+  "started_unix": 1788855611.259265,
+  "timeout_seconds": 180,
+  "pid": 36500,
+  "returncode": 0,
+  "state": "exited",
+  "cleanup": {
+    "pgid": 36500,
+    "group_at_cleanup": "absent",
+    "group_after_cleanup": "absent",
+    "leader_waited": true,
+    "leader_returncode": 0,
+    "terminal": true,
+    "errors": []
+  },
+  "ended_unix": 1788855615.3915038
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "path": "artifacts/acceptance-20260908-161420/actual.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161420/expected.json",
+    "raw_sha256": "87f36f5441cfba843d9081a61b5a0bf6316765a58cfa61cf698ee731cb34d384",
+    "public_sha256": "87f36f5441cfba843d9081a61b5a0bf6316765a58cfa61cf698ee731cb34d384",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161420/export.stderr.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161420/export.stdout.txt",
+    "raw_sha256": "42e317fe44257a1ab3ea8896165624b1eba1e83dfd6d0115ee19731e0d4b33c0",
+    "public_sha256": "42e317fe44257a1ab3ea8896165624b1eba1e83dfd6d0115ee19731e0d4b33c0",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161420/observations.json",
+    "raw_sha256": "5437c7193750d4b446b22950eca42ffeeeef74ab3616e1366dfc3480a4b6478a",
+    "public_sha256": "ae716e11f8addc0a17bc8c046ada45672927d16f9673c6809b30e736f7affe9c",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161420/smoke.stderr.txt",
+    "raw_sha256": "4ce4b259b27650df250c38fd5fede04ece05e638aa348014a22d256979f7fd63",
+    "public_sha256": "4ce4b259b27650df250c38fd5fede04ece05e638aa348014a22d256979f7fd63",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908-161420/smoke.stdout.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  }
+]

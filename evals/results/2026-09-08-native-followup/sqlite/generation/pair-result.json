@@ -1,0 +1,42 @@
+{
+  "completed_at": "2026-09-08T07:47:58.011Z",
+  "results": [
+    {
+      "configuration": "with_skill",
+      "record": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill",
+      "exit_code": 0,
+      "signal": null,
+      "forced": false,
+      "duration_ms": 174389,
+      "usage": {
+        "input_tokens": 299517,
+        "cached_input_tokens": 263680,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7720,
+        "reasoning_output_tokens": 496
+      },
+      "protected_changes": []
+    },
+    {
+      "configuration": "old_skill",
+      "record": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill",
+      "exit_code": 0,
+      "signal": null,
+      "forced": false,
+      "duration_ms": 256507,
+      "usage": {
+        "input_tokens": 499689,
+        "cached_input_tokens": 452352,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11601,
+        "reasoning_output_tokens": 1219
+      },
+      "protected_changes": []
+    }
+  ],
+  "original_source_changes": [],
+  "grading": "Not graded by preparer/executor. Independent grading and no-Skill replay remain for coordinator.",
+  "assisted": false,
+  "invocation_count": 2,
+  "reruns": 0
+}

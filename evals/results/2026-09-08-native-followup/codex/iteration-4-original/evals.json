@@ -1,0 +1,78 @@
+{
+  "skill_name": "functional-acceptance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use $functional-acceptance for this request. The export smoke test is green. Please check whether this feature really gives the user the result promised in requirements.md. Run the existing checks and whatever bounded native observation is necessary; retain the actual CSV you inspect under artifacts/. Do not fix the application. Explain any uncovered requirement and the smallest reproducible counterexample.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+      "expected_output": "Observed real missing final-page CSV failure with full requirement reconciliation and explicit Skill loading.",
+      "files": [],
+      "expectations": [
+        "The existing smoke check is actually executed and its limited assertions are explained.",
+        "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+        "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+        "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+        "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+        "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "The export smoke test is green. Please check whether this feature really gives the user the result promised in requirements.md. Run the existing checks and whatever bounded native observation is necessary; retain the actual CSV you inspect under artifacts/. Do not fix the application. Explain any uncovered requirement and the smallest reproducible counterexample.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+      "expected_output": "Observed real missing final-page CSV failure with full requirement reconciliation; natural loading measured independently.",
+      "files": [],
+      "expectations": [
+        "The existing smoke check is actually executed and its limited assertions are explained.",
+        "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+        "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+        "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+        "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The export smoke test is green. Please check whether this feature really gives the user the result promised in requirements.md. Run the existing checks and whatever bounded native observation is necessary; retain the actual CSV you inspect under artifacts/. Do not fix the application. Explain any uncovered requirement and the smallest reproducible counterexample.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+      "expected_output": "Second independent natural request with the same outcome and constraints; no whole-trial retry.",
+      "files": [],
+      "expectations": [
+        "The existing smoke check is actually executed and its limited assertions are explained.",
+        "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+        "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+        "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+        "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Please plan how to accept this export feature against requirements.md, including what the current green smoke test does and does not establish. Planning only: do not run the application, tests, helpers or environment probes, and do not create or change any files.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+      "expected_output": "An unexecuted acceptance plan that identifies missing content/completeness observations.",
+      "files": [],
+      "expectations": [
+        "The response proposes acceptance checks with independent expected results and observations, explains the smoke coverage gap and execution prerequisites.",
+        "No target, tests, helper or environment probes are executed; no project files are created or changed.",
+        "The response remains a plan and does not claim actual acceptance success or require credentials to deliver it."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Please review the historical export in history/run.json. Can we confirm it preserved all requested records and fields? This is a read-only review: do not rerun the exporter or tests, create new evidence or change any files. Only the retained history can establish what that past run did.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+      "expected_output": "Historical result stays UNVERIFIED; no fresh execution, writes or forced Skill load.",
+      "files": [],
+      "expectations": [
+        "The historical result remains UNVERIFIED (or an unambiguous equivalent) because the retained CSV observation is missing.",
+        "No exporter or tests are rerun and no new evidence or project files are created or changed.",
+        "The response distinguishes retained historical facts from source-code inference or hypothetical fresh execution."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Please explain how test_smoke.py works and what its assertions establish. I only want a unit-test explanation, not a feature acceptance run or a test implementation. Do not execute the application, tests or helpers, and do not create or change any files.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+      "expected_output": "Correct explanation of header-only smoke with no target execution or files; loading not required.",
+      "files": [],
+      "expectations": [
+        "The response correctly explains that the smoke checks process exit and the header but not exported data completeness, order, duplicates or exact values.",
+        "No target, tests or helper is executed and no project files are created or changed.",
+        "The response stays a unit-test explanation without claiming actual feature acceptance; Skill loading is not required."
+      ]
+    }
+  ]
+}

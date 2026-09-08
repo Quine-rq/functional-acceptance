@@ -1,0 +1,61 @@
+{
+  "expectations": [
+    {
+      "text": "The response proposes acceptance checks with independent expected results and observations, explains the smoke coverage gap and execution prerequisites.",
+      "passed": true,
+      "evidence": "Final proposes independently flattened five complete fixture records, exact id/title/notes comparison after reopening actual CSV with strict UTF-8/newline='', no duplicates/extras and page order; existing-file preservation and refusal/recovery checks are planned. It explains smoke exit/header limitations and execution prerequisites (Python, writable project output, hard-link filesystem; no credentials)."
+    },
+    {
+      "text": "No target, tests, helper or environment probes are executed; no project files are created or changed.",
+      "passed": true,
+      "evidence": "Complete native transcript contains only cat/nl/rg reads of project material; no application, unittest, Skill helper or environment probe is invoked. Independently compared before/after inventories and rehashed actual files: identical, no additions."
+    },
+    {
+      "text": "The response remains a plan and does not claim actual acceptance success or require credentials to deliver it.",
+      "passed": true,
+      "evidence": "Final explicitly labels this an unexecuted plan and the defect a source-code finding, distinguishes runtime results as UNVERIFIED, and asks for no credentials to produce the plan."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 6
+    },
+    "total_tool_calls": 6,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 49.963
+  },
+  "claims": [
+    {
+      "claim": "Current source unconditionally excludes the final page, but runtime acceptance was not performed.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Grader checked export.py pages[:-1], test_smoke.py's two assertions and fixture; final accurately limits statement to static code."
+    },
+    {
+      "claim": "Installed functional-acceptance Skill was actually read in this run.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Completed item_1 cats installed SKILL.md and the entire installed body matches the returned output."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "All runtime checks remain unexecuted."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass. Skill-loading behavior is measured separately and not promoted to a requirement."
+  },
+  "scope": "Completed native Codex record; full event content and final read, inventories independently verified. No target execution by grader."
+}

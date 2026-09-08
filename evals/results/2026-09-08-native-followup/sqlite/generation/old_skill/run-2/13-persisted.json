@@ -1,0 +1,26 @@
+[
+  {
+    "id": 7,
+    "name": "Zoë O'Neil",
+    "note": "",
+    "email": "",
+    "phone": null,
+    "age": 42
+  },
+  {
+    "id": 51,
+    "name": "علي",
+    "note": "quotes: \"yes\"; slash \\",
+    "email": "synthetic@example.invalid",
+    "phone": "",
+    "age": null
+  },
+  {
+    "id": 103,
+    "name": "林晓 🌟",
+    "note": "第一行\n第二行说：\"你好\"",
+    "email": null,
+    "phone": "00123",
+    "age": 0
+  }
+]

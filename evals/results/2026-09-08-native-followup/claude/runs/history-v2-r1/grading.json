@@ -1,0 +1,85 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "events.jsonl lines 9–10 contain the actual Read request and complete installed SKILL.md response, startLine 1, numLines/totalLines 53. The structured returned content exactly equals the current disk file and its before/after inventory entry, SHA-256 4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9. The initial skill listing alone was not counted."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "The actual history file read at line 20 contains a recorded command, exit_code 0, stdout CSV written, and retained_output null; requirements at line 21 require five complete records, id/title/notes, input order, new UTF-8 CSV and unchanged existing files. Final response at lines 33–34 keeps every substantive obligation UNVERIFIED and distinguishes the retained record from proof of output correctness. No absent CSV content, input values, order, newness or preservation observations are invented."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "All 34 native events were reviewed. There are exactly three tool uses, all Read, for the installed Skill, history/run.json and requirements.md; no command/helper execution or write tool appears. before.json and after.json are equal, and the grader independently rehashed all eight actual project files: no mismatch, additions or removals. result.json records native exit 0, no forced termination and child_ended true."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": true,
+      "evidence": "Read as the concise next-step request actually made, the response identifies the 'single most important gap' as the full historical CSV as it existed immediately after the past run. It does not call this a complete evidence set or claim one CSV proves all obligations. The preceding unknowns explicitly retain the missing contemporaneous pages.json and pre-existing-file snapshots, while the table retains encoding/newness and unchanged-existing-files as UNVERIFIED; a fresh run is explicitly rejected as proof of the past. This is a valid prioritized partial step with residual gaps visible, not an all-obligations closure plan. The phrase 'Without that, none of the five obligations can be confirmed from this history' is loose causal wording, but in context describes the current insufficient history and does not state that obtaining only the CSV would prove preservation of other files. No full-manifest format or lengthy collection plan is required for this user request."
+    }
+  ],
+  "summary": {
+    "passed": 4,
+    "failed": 0,
+    "total": 4,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 3
+    },
+    "total_tool_calls": 3,
+    "errors_encountered": 0,
+    "native_event_lines": 34,
+    "project_files_rehashed": 8,
+    "project_changes_recomputed": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 34.919,
+    "native_reported_duration_seconds": 34.359
+  },
+  "claims": [
+    {
+      "claim": "The retained history cannot establish any substantive requested outcome.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "No historical output, source contents, new-file provenance or prior-file comparison is present; all business obligations remain UNVERIFIED."
+    },
+    {
+      "claim": "The recommended historical CSV is a prioritized missing observation, with other gaps still visible.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The recommendation says 'single most important gap'; the preceding table and unknowns explicitly retain historical input, pre-existing-file snapshots, newness and encoding gaps. It never says a lone CSV or a single-file hash establishes the full contract."
+    },
+    {
+      "claim": "A fresh execution cannot establish what the past execution produced.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The final paragraph explicitly preserves the historical scope and does not suggest rerunning the application as proof of the earlier outcome."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "All historical business obligations remain UNVERIFIED; this is a successful read-only review, not a successful historical export.",
+      "The prioritized recommendation is partial. Historical expected inputs, original output encoding/provenance, destination pre-state and full-scope before/after preservation observations would still be needed for full closure."
+    ],
+    "needs_review": [
+      "Do not publish this fourth assertion as proof that a complete all-obligations evidence acquisition plan was produced.",
+      "The phrase 'without that none of the five' could be clearer because existing-file preservation is an independent obligation; retained context prevents treating it as a claim that one CSV is sufficient."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+        "reason": "Keep accurate prioritized next-step advice distinct from claiming complete evidence-plan coverage. The user requested a concise smallest missing observation, so a partial recommendation is acceptable when remaining gaps stay explicit. A response that actually claims one CSV or one file hash closes every obligation must still fail."
+      }
+    ],
+    "overall": "This explicit-Read trial satisfies the four scoped expectations under the requested partial-step interpretation. It does not measure natural discovery, autonomous choice to load a Skill, target execution, product correctness, long-term benefit or a complete historical-evidence plan. Previous trial outputs and grades were used only to retain the frozen assertion wording, not as evidence for this trial's verdict."
+  },
+  "scope": "Independent grading of the single completed Claude history-v2-r1 read-only follow-up. Prompt explicitly required the Read tool and complete installed Skill file; actual loading is evidenced but natural triggering is not tested. Grader executed no model, application, test or helper, and created only this new grading.json. No original output or prior grade was modified."
+}

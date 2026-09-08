@@ -1,0 +1,32 @@
+[
+  {
+    "timeout": 0.5,
+    "returncode": 124,
+    "state": "pytest timeout",
+    "writer_started": false,
+    "cleanup": {
+      "pgid": 37721,
+      "group_at_cleanup": "present",
+      "group_after_cleanup": "absent",
+      "leader_waited": true,
+      "leader_returncode": -15,
+      "terminal": true,
+      "errors": []
+    }
+  },
+  {
+    "timeout": 4,
+    "returncode": 70,
+    "state": "pytest exited with surviving descendants; group stopped",
+    "writer_started": true,
+    "cleanup": {
+      "pgid": 37724,
+      "group_at_cleanup": "present",
+      "group_after_cleanup": "absent",
+      "leader_waited": true,
+      "leader_returncode": 0,
+      "terminal": true,
+      "errors": []
+    }
+  }
+]

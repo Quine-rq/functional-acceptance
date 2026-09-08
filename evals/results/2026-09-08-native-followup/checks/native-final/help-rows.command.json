@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "rows",
+    "--help"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42912,
+  "returncode": 0,
+  "timed_out": false,
+  "started_unix": 1788856675.4409049,
+  "ended_unix": 1788856675.751529,
+  "stdout": "help-rows.stdout",
+  "stderr": "help-rows.stderr",
+  "terminal": true
+}

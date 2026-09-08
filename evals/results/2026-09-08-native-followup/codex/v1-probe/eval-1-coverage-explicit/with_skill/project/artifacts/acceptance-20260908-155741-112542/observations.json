@@ -1,0 +1,139 @@
+{
+  "cwd": "<PROJECT>",
+  "runtime": "3.14.4 (v3.14.4:23116f998f6, Apr  7 2026, 09:45:22) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+  "source": "fixtures/pages.json",
+  "source_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "attempts": [
+    {
+      "name": "smoke",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_smoke.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.048s\n\nOK\n"
+    },
+    {
+      "name": "export",
+      "command": [
+        "python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-20260908-155741-112542/actual.csv"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote CSV: artifacts/acceptance-20260908-155741-112542/actual.csv\n",
+      "stderr": ""
+    },
+    {
+      "name": "existing-output",
+      "command": [
+        "python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-20260908-155741-112542/existing.csv"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "export: error: output already exists; choose a new path\n"
+    }
+  ],
+  "expected": [
+    {
+      "id": "r-001",
+      "title": "示例, Hello",
+      "notes": "第一行\n第二行"
+    },
+    {
+      "id": "r-002",
+      "title": "Quote \"double\"",
+      "notes": "café ☕"
+    },
+    {
+      "id": "r-003",
+      "title": "雪 / snow",
+      "notes": ""
+    },
+    {
+      "id": "r-004",
+      "title": "Emoji 🚀",
+      "notes": "CRLF\r\nnext"
+    },
+    {
+      "id": "r-005",
+      "title": "最后一页",
+      "notes": "END, \"边界\"\n末尾"
+    }
+  ],
+  "actual": [
+    {
+      "id": "r-001",
+      "title": "示例, Hello",
+      "notes": "第一行\n第二行"
+    },
+    {
+      "id": "r-002",
+      "title": "Quote \"double\"",
+      "notes": "café ☕"
+    },
+    {
+      "id": "r-003",
+      "title": "雪 / snow",
+      "notes": ""
+    },
+    {
+      "id": "r-004",
+      "title": "Emoji 🚀",
+      "notes": "CRLF\r\nnext"
+    }
+  ],
+  "header": [
+    "id",
+    "title",
+    "notes"
+  ],
+  "utf8": "PASS",
+  "exact_all_records": false,
+  "expected_ids": [
+    "r-001",
+    "r-002",
+    "r-003",
+    "r-004",
+    "r-005"
+  ],
+  "actual_ids": [
+    "r-001",
+    "r-002",
+    "r-003",
+    "r-004"
+  ],
+  "retained_records_exact": true,
+  "missing": [
+    {
+      "id": "r-005",
+      "title": "最后一页",
+      "notes": "END, \"边界\"\n末尾"
+    }
+  ],
+  "existing_output_protection": {
+    "returncode": 2,
+    "bytes_unchanged": true
+  },
+  "preexisting_files": {
+    "count": 30,
+    "changed_or_removed": []
+  },
+  "temporary_files_remaining": [],
+  "execution": "All three subprocesses terminated; no retries; supplied files unchanged if changed_or_removed is empty. All evidence retained."
+}

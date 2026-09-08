@@ -1,0 +1,44 @@
+[
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/actual.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/existing-output.json",
+    "raw_sha256": "32f133823e72370d666096a013ad1e5d9823414b50c39450c66dfc6277341f12",
+    "public_sha256": "32f133823e72370d666096a013ad1e5d9823414b50c39450c66dfc6277341f12",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/export.json",
+    "raw_sha256": "a0629be10bd0914372f9e20714f97ff3d56e5753db56331b55c664126e3f6f69",
+    "public_sha256": "a0629be10bd0914372f9e20714f97ff3d56e5753db56331b55c664126e3f6f69",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/observer-attempt-1.txt",
+    "raw_sha256": "98e828367c83c6c2b8039e31b54947237cd4c83998c4de8f0dcd632a52b7b9da",
+    "public_sha256": "98e828367c83c6c2b8039e31b54947237cd4c83998c4de8f0dcd632a52b7b9da",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/repeat.txt",
+    "raw_sha256": "e2b45287bb893e94f7d871e30cffde0aa2442dd8c5a9bc30adea5744f83d5034",
+    "public_sha256": "e2b45287bb893e94f7d871e30cffde0aa2442dd8c5a9bc30adea5744f83d5034",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/report.json",
+    "raw_sha256": "54d5abe409c39663ee8e7287a231c4c899c17a0ada4d5f5938ff6cdd89138eed",
+    "public_sha256": "7a235eb1e4eaa1999fb30b3790c6bd97febdd00778e77ac04575c78d64e2a67a",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T074246260378Z/smoke.json",
+    "raw_sha256": "fec27cc455cbaa97c6c36ec1d26479025c285e0c84f51a305bff6bc96dbe010d",
+    "public_sha256": "fec27cc455cbaa97c6c36ec1d26479025c285e0c84f51a305bff6bc96dbe010d",
+    "normalization": "private machine paths only"
+  }
+]

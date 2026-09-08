@@ -1,0 +1,74 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "Native observer actually executes python3 -B -m unittest test_smoke.py and retained output reports one test / OK. Final correctly limits its assertions to subprocess exit and header, not data completeness."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Grader independently parsed artifacts/acceptance-20260908-161738-518287/actual.csv as UTF-8 with newline='' and compared each row/field to all fixture pages: r-001...r-004 exact in source order, r-005 missing. Native transcript creates and reopens this fresh artifact; final reports concrete failure. CSV SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": true,
+      "evidence": "Full fixture row/value/order, new UTF-8 output, and original file preservation were reconciled. item_5 repeats export to primary actual.csv; existing-output.json shows exit 2; before/retry/after comparisons show no existing file changed. Final labels complete export FAIL and does not turn four exact rows into full coverage."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Independent before.json/after.json comparison plus current protected-file rehash found no changes, deletions or mismatches for implementation, smoke, requirements, fixtures, sentinel and installed Skill. All created files are artifacts."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "Final states local synthetic fixture scope, artifact paths, project-root native repeat command requiring an unused destination, concrete missing final-page row and remaining limits. It does not claim release or independent handoff."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 4
+    },
+    "total_tool_calls": 4,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 79.738
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body was actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Completed item_2 contains the entire installed SKILL.md body, independently matched to actual bytes SHA-256 f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d."
+    }
+  ],
+  "coverage_observations": {
+    "collision_executed": true,
+    "collision_target_run_owned": true,
+    "collision_separate_from_primary_csv": false,
+    "primary_csv_unchanged_after_collision": true,
+    "existing_files_hash_preservation_observed": true,
+    "collision_gap_disclosed": false,
+    "collision_reason": null
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [
+      "Only primary CSV used as collision target; a separate disposable target would protect original evidence if the branch were broken."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass; actual collision observed, but the primary CSV was not isolated from the mutation-capable test."
+  },
+  "scope": "Independent completed V3 native record; full semantic event payloads read, duplicate starts matched to completions, actual CSV/retained observations and protected bytes inspected. No target rerun."
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "artifacts/acceptance-f86725d5f3/existing-output-rejection.stderr.txt",
+    "raw_sha256": "8b1b3ec3c2fde6816f3886225a1af16d3f42291025396db283172e4dcc8429b7",
+    "public_sha256": "8b1b3ec3c2fde6816f3886225a1af16d3f42291025396db283172e4dcc8429b7",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/existing-output-rejection.stdout.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/export.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/export.stderr.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/export.stdout.txt",
+    "raw_sha256": "8cffce3e83d4bcc3d07a28d36ca30565aaaa41258d465a11d201fa26ad5f5140",
+    "public_sha256": "8cffce3e83d4bcc3d07a28d36ca30565aaaa41258d465a11d201fa26ad5f5140",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/observations.json",
+    "raw_sha256": "468e75049edb3579f2df351fcc11660635fcacae82069c734a1e3a6b37719ab1",
+    "public_sha256": "2d9a714590d1fbb36e57e9ae42e8e951bc1b26c9dd8dfab9bba659fd1293fff9",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/smoke.stderr.txt",
+    "raw_sha256": "d0f1e19a9fc2c6be1d6fe29c0bad01f1e99e75f01cc9cf013d7dc82a760babb7",
+    "public_sha256": "d0f1e19a9fc2c6be1d6fe29c0bad01f1e99e75f01cc9cf013d7dc82a760babb7",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-f86725d5f3/smoke.stdout.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  }
+]

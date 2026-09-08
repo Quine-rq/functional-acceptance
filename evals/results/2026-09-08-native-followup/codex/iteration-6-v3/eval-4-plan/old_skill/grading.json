@@ -1,0 +1,57 @@
+{
+  "expectations": [
+    {
+      "text": "The response proposes acceptance checks with independent expected results and observations, explains the smoke coverage gap and execution prerequisites.",
+      "passed": true,
+      "evidence": "Final gives independent expected results from all fixture pages, exact Unicode/newline/field/order comparisons, fresh UTF-8 output and existing-file protection checks; explains header-only smoke gap and execution authorization/environment prerequisites. Source defect is explicitly a static observation, not historical or runtime proof."
+    },
+    {
+      "text": "No target, tests, helper or environment probes are executed; no project files are created or changed.",
+      "passed": true,
+      "evidence": "Every completed command is a file read or file discovery; no exporter, tests, helper or environment probe is executed. Independent before/after inventory and actual protected byte hashes show no files created, changed or deleted."
+    },
+    {
+      "text": "The response remains a plan and does not claim actual acceptance success or require credentials to deliver it.",
+      "passed": true,
+      "evidence": "Final consistently labels this an unexecuted plan with proposed observations, not acceptance PASS. It does not require credentials to produce the plan."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 7
+    },
+    "total_tool_calls": 7,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 75.058
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body was actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "item_1 returned full installed body SHA-256 878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "All runtime acceptance checks remain unexecuted by request."
+    ],
+    "needs_review": [
+      "Proposed collision repeats the original artifact path; a separate disposable target would better protect primary evidence."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen planning assertions pass; future target isolation is recorded separately."
+  },
+  "scope": "Independent completed V3 record. Full semantic transcript and actual protected file bytes inspected; no target rerun."
+}

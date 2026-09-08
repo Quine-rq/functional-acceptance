@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "insert",
+    "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/contacts.db",
+    "contacts",
+    "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/duplicate.input.json",
+    "--pk",
+    "id"
+  ],
+  "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/replay/project",
+  "pid": 24883,
+  "returncode": 1,
+  "timed_out": false,
+  "started_unix": 1788853738.5980108,
+  "ended_unix": 1788853739.1070971,
+  "stdout": "05-duplicate.stdout",
+  "stderr": "05-duplicate.stderr",
+  "terminal": true
+}

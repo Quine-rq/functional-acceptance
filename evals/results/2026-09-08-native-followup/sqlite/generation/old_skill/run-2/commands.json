@@ -1,0 +1,173 @@
+[
+  {
+    "label": "00-identity",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-c",
+      "import json,sys,sqlite3,sqlite_utils,sqlite_utils.cli,sqlite_utils.utils,importlib.metadata as m; print(json.dumps({'executable':sys.executable,'prefix':sys.prefix,'python':sys.version,'sqlite':sqlite3.sqlite_version,'application_sqlite':sqlite_utils.utils.sqlite3.sqlite_version,'application_sqlite_module':sqlite_utils.utils.sqlite3.__file__,'module':sqlite_utils.__file__,'cli':sqlite_utils.cli.__file__,'distribution_version':m.version('sqlite-utils'),'pytest':m.version('pytest'),'plugins':[e.name for e in m.entry_points(group='sqlite_utils')]}))"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853612201408000,
+    "pid": 23088,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853612549979000,
+    "terminal": true
+  },
+  {
+    "label": "01-help-insert",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "insert",
+      "--help"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853612551415000,
+    "pid": 23089,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853612844020000,
+    "terminal": true
+  },
+  {
+    "label": "02-help-query",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "query",
+      "--help"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853612844737000,
+    "pid": 23090,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853613130033000,
+    "terminal": true
+  },
+  {
+    "label": "03-help-rows",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "rows",
+      "--help"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853613130787000,
+    "pid": 23091,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853613424900000,
+    "terminal": true
+  },
+  {
+    "label": "11-import",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "insert",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.db",
+      "contacts",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.input.json",
+      "--pk",
+      "id"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853613439890000,
+    "pid": 23092,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853613783341000,
+    "terminal": true
+  },
+  {
+    "label": "14-fresh-read",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "query",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.db",
+      "select * from contacts order by id"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853613785776000,
+    "pid": 23100,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853614066656000,
+    "terminal": true
+  },
+  {
+    "label": "16-export",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "rows",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.db",
+      "contacts"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853614068745000,
+    "pid": 23102,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853614406684000,
+    "terminal": true
+  },
+  {
+    "label": "18-duplicate",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "insert",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.db",
+      "contacts",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/duplicate.input.json",
+      "--pk",
+      "id"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853614409063000,
+    "pid": 23106,
+    "timed_out": false,
+    "returncode": 1,
+    "finished_ns": 1788853614698995000,
+    "terminal": true
+  },
+  {
+    "label": "19-after-duplicate-read",
+    "argv": [
+      "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+      "-B",
+      "-m",
+      "sqlite_utils",
+      "rows",
+      "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.db",
+      "contacts"
+    ],
+    "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "started_ns": 1788853614700174000,
+    "pid": 23109,
+    "timed_out": false,
+    "returncode": 0,
+    "finished_ns": 1788853614988203000,
+    "terminal": true
+  }
+]

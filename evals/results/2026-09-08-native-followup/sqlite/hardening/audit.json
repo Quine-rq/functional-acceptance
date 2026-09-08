@@ -1,0 +1,58 @@
+{
+  "original_acceptance_still_matches_before_copy_snapshot": true,
+  "original_acceptance_sha256": {
+    "README.md": "7cd7a80e90af16d4e8607a5995d5bffaff422821f766039c996de29431321fe4",
+    "REPORT.md": "1ac6efd3ff2cf7492dcdfe1bc2ff2de51d180d556e18fc65149f357ef1ab4773",
+    "run.py": "33a0e31c5aa6c21725f1fa0f1b582578377c30f7300b927b84c1b4e829a313f1",
+    "test_onboarding.py": "2a03ed4523346b7e78d062dc4a09fdab78609fddba7416a0cae53755ed111d73"
+  },
+  "application_files_identical_to_frozen_source": true,
+  "business_test_asts_unchanged": true,
+  "changed_original_pack_files": [
+    "README.md",
+    "run.py",
+    "test_onboarding.py"
+  ],
+  "new_pack_files": [
+    "lifecycle.py",
+    "test_lifecycle.py"
+  ],
+  "hardened_acceptance_sha256": {
+    "README.md": "801f6f4b75a190c6475203534358721b8eab77c745648b1920b93deec199d769",
+    "REPORT.md": "1ac6efd3ff2cf7492dcdfe1bc2ff2de51d180d556e18fc65149f357ef1ab4773",
+    "lifecycle.py": "672ba650cc6d6b17b8dee3ae126fa0f7aa950da46d36d0436da3d34ccd349837",
+    "run.py": "a57cf731787d281229014707ca8ff15829367c120f8c6a45a0406add72fe9478",
+    "test_lifecycle.py": "e77441cf12e1bfecd8ef1cbbdb98835faa89cc08bf7a7645a20b029909ed092e",
+    "test_onboarding.py": "697863d2814b81067a5ad0d533b423b01bba244f6f1f178d2a7e17428156c6f5"
+  },
+  "healthy_native_run": "WORKSPACE_ROOT/work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T081329Z-22be99ed",
+  "native_junit": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "5",
+      "time": "2.989",
+      "timestamp": "2026-09-08T16:13:29.943944+08:00",
+      "hostname": "LOCAL_HOST"
+    }
+  ],
+  "native_command_count": 10,
+  "native_started_count": 10,
+  "every_cli_started_pid_has_matching_terminal_record": true,
+  "native_group_terminal": {
+    "pgid": 33889,
+    "group_at_cleanup": "absent",
+    "group_after_cleanup": "absent",
+    "leader_waited": true,
+    "leader_returncode": 0,
+    "terminal": true,
+    "errors": []
+  },
+  "export_matches_independent_frozen_input": true,
+  "database_matches_independent_frozen_input": true,
+  "unrelated_matches_independent_frozen_input": true,
+  "owned_fault_processes_still_present_at_audit": [],
+  "scope": "No global process inventory; checked only PIDs captured from this task-owned fault harness. Historical PID absence is observation at audit, not permission for later signalling."
+}

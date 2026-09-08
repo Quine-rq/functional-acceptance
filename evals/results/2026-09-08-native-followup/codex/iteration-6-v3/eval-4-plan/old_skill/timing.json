@@ -1,0 +1,13 @@
+{
+  "total_tokens": 98635,
+  "duration_ms": 75058,
+  "total_duration_seconds": 75.058,
+  "usage": {
+    "input_tokens": 97050,
+    "cached_input_tokens": 77184,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1585,
+    "reasoning_output_tokens": 19
+  },
+  "token_accounting": "Native input_tokens + output_tokens; cached_input_tokens is a subset of input_tokens."
+}

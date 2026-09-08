@@ -1,0 +1,13 @@
+{
+  "source": "Manually transcribed from the coordinator's completed local command response; not a fabricated raw logfile",
+  "python": "3.10.20",
+  "command": "python3 -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_lifecycle.py -v",
+  "tests": 9,
+  "failures": 1,
+  "duration_seconds": 7.042,
+  "test": "test_normal_parent_exit_with_live_writer_fails_closed",
+  "observed_exception": "AssertionError: 124 != 70",
+  "next_isolated_recheck_passed": true,
+  "diagnosis_limit": "The initial temporary directory was removed by the test. The exact startup chronology of that occurrence is not retained. The separate bounded startup-delay probe demonstrates the deadline confound, not a reconstructed trace of that occurrence.",
+  "correction": "Test-only readiness barrier and bounded orphan-startup allowance; add slow-startup regression. Business runtime and assertions unchanged."
+}

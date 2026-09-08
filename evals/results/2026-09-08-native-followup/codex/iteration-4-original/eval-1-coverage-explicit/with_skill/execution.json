@@ -1,0 +1,63 @@
+{
+  "host": "codex",
+  "configuration": "with_skill",
+  "scenario": "coverage-explicit",
+  "candidate_version": "7d94bb6",
+  "baseline_version": "ac8eda6",
+  "actual_model": null,
+  "model_selection": "existing host default, no override",
+  "runtime_version": "codex-cli 0.153.4",
+  "started_at": "2026-09-08T07:41:53.268Z",
+  "ended_at": "2026-09-08T07:43:01.977Z",
+  "duration_ms": 68709,
+  "exit_code": 0,
+  "signal": null,
+  "forced": false,
+  "configured_budget_seconds": 120,
+  "outer_timeout_seconds": 180,
+  "protected_changes": [],
+  "created_files": [
+    "artifacts/acceptance-20260908T074246260378Z/actual.csv",
+    "artifacts/acceptance-20260908T074246260378Z/existing-output.json",
+    "artifacts/acceptance-20260908T074246260378Z/export.json",
+    "artifacts/acceptance-20260908T074246260378Z/observer-attempt-1.txt",
+    "artifacts/acceptance-20260908T074246260378Z/repeat.txt",
+    "artifacts/acceptance-20260908T074246260378Z/report.json",
+    "artifacts/acceptance-20260908T074246260378Z/smoke.json"
+  ],
+  "usage": {
+    "input_tokens": 132464,
+    "cached_input_tokens": 111872,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2423,
+    "reasoning_output_tokens": 122
+  },
+  "environment": "Original runner inherited parent environment. Nonessential ANTHROPIC_* keys were subsequently identified by name; values were not inspected. Inheritance alone is not evidence of disclosure.",
+  "inventory_limit": "Regular files and symlink targets under project, excluding .git; empty directories and host-global writes not measured. Permission modes are not measured.",
+  "raw_trace_sha256": "3dcbf758d917b3afd182cf8622d94583c2b72fc3adf10f026ebb0cdd19ba8b1e",
+  "public_trace_sha256": "91cd86424a0d5693dd612c5e68dce13f163dfc5c22da8adc90deafaad9f61de0",
+  "raw_grading_sha256": "85fba2c545d6640a4baab85da949912cd0a2475b7c8fd5e09b74431c92177d72",
+  "excluded_from_public_export": [
+    "hidden reasoning items",
+    "host stderr diagnostics",
+    "private absolute paths"
+  ],
+  "normalization": "Public assistant text, tool commands and tool results retain substantive content; only private machine paths are replaced. In final.md only, project-relative artifact links are mechanically rebased to project/artifacts/ for public navigation.",
+  "native_executable": "<CODEX_NATIVE_EXECUTABLE>",
+  "native_launch_args": [
+    "-a",
+    "never",
+    "-c",
+    "web_search=\"disabled\"",
+    "exec",
+    "--sandbox",
+    "workspace-write",
+    "--ephemeral",
+    "--json",
+    "-C",
+    "<PROJECT>",
+    "-o",
+    "<RECORD>/final.md",
+    "-"
+  ]
+}

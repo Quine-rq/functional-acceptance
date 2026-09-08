@@ -1,0 +1,27 @@
+[
+  {
+    "case": "modified",
+    "rejected": true,
+    "reason": "Evidence changed: claude/inputs/requirements.md"
+  },
+  {
+    "case": "missing",
+    "rejected": true,
+    "reason": "Ordinary bounded evidence file"
+  },
+  {
+    "case": "unregistered",
+    "rejected": true,
+    "reason": "Exact registered file inventory"
+  },
+  {
+    "case": "traversal",
+    "rejected": true,
+    "reason": "Bounded canonical path"
+  },
+  {
+    "case": "duplicate",
+    "rejected": true,
+    "reason": "Unique evidence path"
+  }
+]

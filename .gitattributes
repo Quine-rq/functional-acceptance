@@ -6,3 +6,6 @@ evals/results/2026-09-08-product-hardening/diagnostics/raf-render-wait-recheck/r
 evals/results/2026-09-08-product-hardening/independent/readiness-final-report.md whitespace=cr-at-eol,-blank-at-eof
 tests/fixtures/m1-history/** -text whitespace=cr-at-eol
 evals/results/2026-09-08-reuse/** -text whitespace=cr-at-eol
+# Numbered native transcripts and interrupted stdout retain original whitespace.
+# This exception applies to the historical record, not the shipped source/tests.
+evals/results/2026-09-08-native-followup/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

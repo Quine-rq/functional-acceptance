@@ -1,0 +1,66 @@
+{
+  "version": "v1-probe",
+  "candidate": "First execution/history revision (superseded)",
+  "baseline": "7d94bb6",
+  "completed_trials": 2,
+  "completed_pairs": 1,
+  "originally_planned_trials": 12,
+  "not_run_after_revision_changed": 10,
+  "by_configuration": {
+    "with_skill": {
+      "trials": 1,
+      "passed_assertions": 6,
+      "total_assertions": 6,
+      "native_total_tokens": 106742,
+      "mean_duration_seconds": 75.305
+    },
+    "old_skill": {
+      "trials": 1,
+      "passed_assertions": 6,
+      "total_assertions": 6,
+      "native_total_tokens": 105380,
+      "mean_duration_seconds": 90.319
+    }
+  },
+  "trials": [
+    {
+      "eval_id": 1,
+      "scenario": "coverage-explicit",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 9,
+      "grade_summary": {
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "pass_rate": 1
+      },
+      "total_tokens": 106742,
+      "duration_seconds": 75.305
+    },
+    {
+      "eval_id": 1,
+      "scenario": "coverage-explicit",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 9,
+      "grade_summary": {
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "pass_rate": 1
+      },
+      "total_tokens": 105380,
+      "duration_seconds": 90.319
+    }
+  ],
+  "limitations": "This version stands alone. Do not pool pass rates or pick successful cases across revisions. Native model identity remains unverified; synthetic local CLI evidence is not production or independent-human proof."
+}

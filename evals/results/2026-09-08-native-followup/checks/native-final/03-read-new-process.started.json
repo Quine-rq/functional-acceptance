@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "query",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/contacts.db",
+    "select * from contacts order by id"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42942,
+  "pgid": 42866,
+  "started_unix": 1788856676.405271,
+  "stdout": "03-read-new-process.stdout",
+  "stderr": "03-read-new-process.stderr",
+  "terminal": false
+}

@@ -74,3 +74,20 @@ compatibility and twelve repeated browser recovery journeys. These cover only
 the documented local boundaries. The new host matrix is incomplete after approval
 rejection, and sqlite-utils stopped during host initialization; cold onboarding,
 its maintenance handoff, second-host execution and external-human gates remain open.
+
+## Native follow-up — 2026-09-08
+
+[Subsequent authorized work](NATIVE-FOLLOWUP-RESULTS.md) completed the previously
+blocked Codex pairs and sqlite-utils onboarding. Separate native executors replayed
+and maintained a generated pack without the Skill. Review found a real orphaned
+writer on timeout; the reusable pack now includes the verified process-group fix.
+Setup dependencies were supplied, and the maintenance request was synthetic—not
+external feedback or human effort measurement.
+
+Claude Code now has actual read-only execution through its official endpoint.
+Two latest explicitly loaded historical reviews met the frozen narrow assertions;
+earlier insufficient-evidence advice failed and is retained. This does not complete
+natural discovery, healthy-history discrimination or full-flow second-host testing.
+The final Codex candidate still has an omitted overwrite-rejection check. Therefore
+the broad behavior/benefit and M3/M4 release gates remain open; no checkbox above
+is promoted by a successful process exit or a small targeted score.

@@ -1,0 +1,104 @@
+{
+  "cwd": "<PROJECT>",
+  "python": "3.14.4 (v3.14.4:23116f998f6, Apr  7 2026, 09:45:22) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "source_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "output_absent_before": true,
+  "output_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+  "smoke_exit": 0,
+  "export_exit": 0,
+  "header": [
+    "id",
+    "title",
+    "notes"
+  ],
+  "expected_records": [
+    [
+      "r-001",
+      "示例, Hello",
+      "第一行\n第二行"
+    ],
+    [
+      "r-002",
+      "Quote \"double\"",
+      "café ☕"
+    ],
+    [
+      "r-003",
+      "雪 / snow",
+      ""
+    ],
+    [
+      "r-004",
+      "Emoji 🚀",
+      "CRLF\r\nnext"
+    ],
+    [
+      "r-005",
+      "最后一页",
+      "END, \"边界\"\n末尾"
+    ]
+  ],
+  "actual_records": [
+    [
+      "r-001",
+      "示例, Hello",
+      "第一行\n第二行"
+    ],
+    [
+      "r-002",
+      "Quote \"double\"",
+      "café ☕"
+    ],
+    [
+      "r-003",
+      "雪 / snow",
+      ""
+    ],
+    [
+      "r-004",
+      "Emoji 🚀",
+      "CRLF\r\nnext"
+    ]
+  ],
+  "exact_records_match": false,
+  "missing_records": [
+    [
+      "r-005",
+      "最后一页",
+      "END, \"边界\"\n末尾"
+    ]
+  ],
+  "present_records_are_exact_ordered_prefix": true,
+  "utf8_decoding": "PASS",
+  "existing_files_checked": 30,
+  "existing_files_changed_or_missing": [],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_smoke.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.052s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "export.py",
+        "--source",
+        "fixtures/pages.json",
+        "--output",
+        "artifacts/acceptance-20260908/actual.csv"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote CSV: artifacts/acceptance-20260908/actual.csv\n",
+      "stderr": ""
+    }
+  ],
+  "temporary_directory_remaining": []
+}

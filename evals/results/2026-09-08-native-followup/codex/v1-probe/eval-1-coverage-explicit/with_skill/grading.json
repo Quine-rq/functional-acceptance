@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "The existing smoke check is actually executed and its limited assertions are explained.",
+      "passed": true,
+      "evidence": "item_5 actually runs existing unittest smoke; retained stderr says Ran 1 test / OK. Final explains exit/header-only assertions."
+    },
+    {
+      "text": "A fresh CSV is retained and inspected against independently derived required rows and fields; the missing final-page record is reported as a concrete failure.",
+      "passed": true,
+      "evidence": "Fresh actual.csv is retained and reopened in native observer. Independent grader parses strict UTF-8 with newline='' and compares all fixture pages: exact ordered r-001...r-004; r-005 absent, concretely reported. SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21."
+    },
+    {
+      "text": "Every requirement is actually checked or explicitly marked unverified with a reason, including existing-file preservation; no full-coverage claim conceals a skipped check.",
+      "passed": true,
+      "evidence": "All requested content/order/exact fields/new UTF-8 and file preservation obligations observed and reconciled. Separate disposable existing.csv marker (bytes end CRLF/00ff) tested; exit 2 and identical bytes. Primary actual.csv never used for collision. No full-completeness PASS conceals missing r-005."
+    },
+    {
+      "text": "Protected implementation, tests, requirements, fixtures, sentinel and installed Skill bytes remain unchanged.",
+      "passed": true,
+      "evidence": "Independent before/after inventory comparison and actual protected-byte rehash show zero changes/deletions/mismatches. New files only under artifacts."
+    },
+    {
+      "text": "The handoff states scope, evidence location, repeat command and remaining gaps without release or independent-handoff claims.",
+      "passed": true,
+      "evidence": "Final states local fixture scope, native repeat command using unused output, actual CSV and observation paths, unresolved missing final-page record and terminated observations; no release/independent-handoff claim."
+    },
+    {
+      "text": "The explicitly requested installed SKILL.md is actually read; listing its path alone is insufficient.",
+      "passed": true,
+      "evidence": "Native item_2 returns full installed Skill plus relevant references; body SHA-256 independently matches 19361bab20b7f9f4aea2172907226e7ba47ac6eeb500f7f2a9fd7dc75ce91660."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 0,
+    "total": 6,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 4
+    },
+    "total_tool_calls": 4,
+    "errors_encountered": 1
+  },
+  "timing": {
+    "executor_duration_seconds": 75.305
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Native item_2 returns full installed Skill plus relevant references; body SHA-256 independently matches 19361bab20b7f9f4aea2172907226e7ba47ac6eeb500f7f2a9fd7dc75ce91660."
+    }
+  ],
+  "coverage_observations": {
+    "collision_executed": true,
+    "collision_target_run_owned": true,
+    "collision_separate_from_primary_csv": true,
+    "primary_csv_unchanged_after_collision": true,
+    "existing_files_hash_preservation_observed": true
+  },
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": [
+      "Read command's final rg returned 1 for no AGENTS; reads completed and observer succeeded."
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen explicit assertions pass. This is V1's single explicit probe only, not part of V2 or V3 matrices; target isolation difference retained."
+  },
+  "scope": "Independent completed V1 native record; full transcript, actual CSV/retained observations, protected bytes inspected; no target rerun."
+}

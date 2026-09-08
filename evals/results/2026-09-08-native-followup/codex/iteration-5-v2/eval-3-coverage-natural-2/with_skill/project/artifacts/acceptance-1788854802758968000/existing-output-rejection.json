@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+    "-B",
+    "export.py",
+    "--source",
+    "fixtures/pages.json",
+    "--output",
+    "artifacts/acceptance-1788854802758968000/export.csv"
+  ],
+  "exit_code": 2,
+  "stdout": "",
+  "stderr": "export: error: output already exists; choose a new path\n"
+}

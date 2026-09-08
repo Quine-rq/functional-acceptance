@@ -1,0 +1,94 @@
+[
+  {
+    "version": "iteration-4-original",
+    "candidate": "7d94bb6",
+    "baseline": "ac8eda6",
+    "completed_trials": 12,
+    "completed_pairs": 6,
+    "by_configuration": {
+      "with_skill": {
+        "trials": 6,
+        "passed_assertions": 24,
+        "total_assertions": 25,
+        "native_total_tokens": 602439,
+        "mean_duration_seconds": 50.522833333333324
+      },
+      "old_skill": {
+        "trials": 6,
+        "passed_assertions": 25,
+        "total_assertions": 25,
+        "native_total_tokens": 656082,
+        "mean_duration_seconds": 49.36783333333333
+      }
+    }
+  },
+  {
+    "version": "v1-probe",
+    "candidate": "First execution/history revision (superseded)",
+    "baseline": "7d94bb6",
+    "completed_trials": 2,
+    "completed_pairs": 1,
+    "by_configuration": {
+      "with_skill": {
+        "trials": 1,
+        "passed_assertions": 6,
+        "total_assertions": 6,
+        "native_total_tokens": 106742,
+        "mean_duration_seconds": 75.305
+      },
+      "old_skill": {
+        "trials": 1,
+        "passed_assertions": 6,
+        "total_assertions": 6,
+        "native_total_tokens": 105380,
+        "mean_duration_seconds": 90.319
+      }
+    }
+  },
+  {
+    "version": "iteration-5-v2",
+    "candidate": "V2 intermediate history revision (superseded)",
+    "baseline": "7d94bb6",
+    "completed_trials": 12,
+    "completed_pairs": 6,
+    "by_configuration": {
+      "with_skill": {
+        "trials": 6,
+        "passed_assertions": 25,
+        "total_assertions": 25,
+        "native_total_tokens": 584929,
+        "mean_duration_seconds": 65.8445
+      },
+      "old_skill": {
+        "trials": 6,
+        "passed_assertions": 25,
+        "total_assertions": 25,
+        "native_total_tokens": 576767,
+        "mean_duration_seconds": 62.9865
+      }
+    }
+  },
+  {
+    "version": "iteration-6-v3",
+    "candidate": "V3 with an explicit retained-history branch",
+    "baseline": "7d94bb6",
+    "completed_trials": 12,
+    "completed_pairs": 6,
+    "by_configuration": {
+      "with_skill": {
+        "trials": 6,
+        "passed_assertions": 24,
+        "total_assertions": 25,
+        "native_total_tokens": 628600,
+        "mean_duration_seconds": 70.75816666666667
+      },
+      "old_skill": {
+        "trials": 6,
+        "passed_assertions": 25,
+        "total_assertions": 25,
+        "native_total_tokens": 581957,
+        "mean_duration_seconds": 65.036
+      }
+    }
+  }
+]

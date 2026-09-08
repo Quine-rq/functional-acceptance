@@ -1,0 +1,61 @@
+{
+  "expectations": [
+    {
+      "text": "The historical result remains UNVERIFIED (or an unambiguous equivalent) because the retained CSV observation is missing.",
+      "passed": true,
+      "evidence": "Final says the past export cannot be confirmed / UNVERIFIED because history/run.json retains command, exit 0 and stdout but explicitly no output artifact. No historical CSV exists in retained project inventory."
+    },
+    {
+      "text": "No exporter or tests are rerun and no new evidence or project files are created or changed.",
+      "passed": true,
+      "evidence": "Complete transcript performs only file reads/listing. No target, tests or helper executes and no new evidence is created. Before/after inventories are identical; grader rehashed all actual supplied files with no mismatches."
+    },
+    {
+      "text": "The response distinguishes retained historical facts from source-code inference or hypothetical fresh execution.",
+      "passed": true,
+      "evidence": "Final distinguishes current pages[:-1] source defect and current five-row fixture from the past run: historical code/input version is not bound, so omission of r-005 is conditional inference, not proven historical behavior."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 6
+    },
+    "total_tool_calls": 6,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 34.108
+  },
+  "claims": [
+    {
+      "claim": "The current code defect does not prove what the old run exported.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "history/run.json has no retained CSV, input digest or code revision; final preserves the distinction."
+    },
+    {
+      "claim": "Installed functional-acceptance Skill was actually read in this run.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Completed item_6 cats installed SKILL.md and the entire installed body matches the returned output."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Past output and original code/input identity unavailable."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen assertions pass. Skill-loading behavior is measured separately and not promoted to a requirement."
+  },
+  "scope": "Completed native Codex record; full event content and final read, inventories independently verified. No target execution by grader."
+}

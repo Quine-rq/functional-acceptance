@@ -1,0 +1,9 @@
+Evidence: WORKSPACE_ROOT/work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T081607Z-c045e819
+============================= test session starts ==============================
+platform darwin -- Python 3.14.4, pytest-9.1.1, pluggy-1.6.0 -- WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python
+rootdir: WORKSPACE_ROOT/work/sqlite-pack-hardening/project
+configfile: pyproject.toml
+collecting ... collected 5 items
+
+acceptance/test_onboarding.py::test_import_persists_exact_values 
+

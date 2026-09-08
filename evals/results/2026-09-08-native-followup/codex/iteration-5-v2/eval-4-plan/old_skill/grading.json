@@ -1,0 +1,56 @@
+{
+  "expectations": [
+    {
+      "text": "The response proposes acceptance checks with independent expected results and observations, explains the smoke coverage gap and execution prerequisites.",
+      "passed": true,
+      "evidence": "Final derives independent five-record ordered/field-exact expectations from requirements and fixture, proposes reopening complete UTF-8 CSV, pre-run absence and existing-file comparisons, explains header/exit-only smoke and Python/project-local temporary paths/hard-link prerequisites."
+    },
+    {
+      "text": "No target, tests, helper or environment probes are executed; no project files are created or changed.",
+      "passed": true,
+      "evidence": "Complete transcript contains only read/list/search commands; no exporter, test, helper or runtime/environment probe invocation. Independent before/after inventory and actual rehash show no created/changed/deleted project files."
+    },
+    {
+      "text": "The response remains a plan and does not claim actual acceptance success or require credentials to deliver it.",
+      "passed": true,
+      "evidence": "Final explicitly calls findings static/unexecuted and runtime results UNVERIFIED due plan-only authority. Commands are proposals, no acceptance-success, credential or release requirement is introduced."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 5
+    },
+    "total_tool_calls": 5
+  },
+  "timing": {
+    "executor_duration_seconds": 65.207
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "Full body in item_2 matches installed SHA-256 878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe"
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Plan proposes reusing the generated primary CSV for overwrite refusal; use a disposable run-owned copy before eventual execution to retain pristine evidence on a protection failure."
+      }
+    ],
+    "overall": "Frozen assertions pass. Extra coverage/safety concerns are observations, not post-outcome assertion changes."
+  },
+  "scope": "Independent V2 completed native Codex grading. All semantic event payloads inspected; identical started commands matched to completions and repeated full file bodies losslessly referenced only after complete body reads and exact SHA-256 comparison. Actual CSVs and protected bytes independently inspected; no target rerun."
+}

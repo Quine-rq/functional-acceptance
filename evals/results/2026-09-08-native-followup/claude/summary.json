@@ -1,0 +1,221 @@
+{
+  "scope": [
+    "Ten completed native Claude calls, one deficient synthetic historical export input. This is not a fresh export, healthy-history control, natural-loading trial, external-human test or final Codex matrix.",
+    "All ten retain justified historical UNVERIFIED and observed read-only behavior; these assertions do not distinguish the tested revisions, and the native tool inventory itself was Read only.",
+    "Two slash-command trials have actual Skill loading UNVERIFIED, not proven absent. Eight explicit-Read trials visibly load the installed Skill.",
+    "Seven calls fail the frozen missing-evidence advice assertion. Preserve all failures: intermediate history-v2 has one pass and one failure; history-v3 has only two passing trials, with documented encoding/inventory wording limitations.",
+    "A passing fourth assertion permits a concise partial next step with explicit residual gaps. It is not proof of an exhaustive historical evidence acquisition plan.",
+    "All configurations installed a Skill, including the old-Skill baselines. The viewer with_skill bucket is only a compatibility label; no without_skill bucket or causal delta is presented.",
+    "Costs are native CLI estimates, not invoice validation. Timings exclude setup, coordination, grading and normalization. Sequential exploratory revisions and different slash/Read prompts are not a randomized causal comparison."
+  ],
+  "totals": {
+    "calls": 10,
+    "completed_calls": 10,
+    "duration_seconds": 342.45399999999995,
+    "client_estimated_cost_usd": 0.4295049,
+    "cache_inclusive_tokens": 137455,
+    "passed_assertions": 31,
+    "total_assertions": 40,
+    "fully_passing_review_runs": 3,
+    "loading_unverified_runs": 2,
+    "explicit_read_runs": 8
+  },
+  "records": [
+    {
+      "id": "initial-slash",
+      "revision": "baseline-7d94bb6",
+      "mode": "slash",
+      "installed_skill_sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "loading": "UNVERIFIED",
+      "score": {
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "pass_rate": 0.5
+      },
+      "tool_calls": 4,
+      "read_errors": 2,
+      "duration_seconds": 27.138,
+      "native_duration_seconds": 26.529,
+      "cache_inclusive_tokens": 14451,
+      "client_estimated_cost_usd": 0.03961964999999999
+    },
+    {
+      "id": "slash-replay",
+      "revision": "baseline-7d94bb6",
+      "mode": "slash-replay",
+      "installed_skill_sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "loading": "UNVERIFIED",
+      "score": {
+        "passed": 2,
+        "failed": 2,
+        "total": 4,
+        "pass_rate": 0.5
+      },
+      "tool_calls": 6,
+      "read_errors": 4,
+      "duration_seconds": 34.675,
+      "native_duration_seconds": 33.948,
+      "cache_inclusive_tokens": 20444,
+      "client_estimated_cost_usd": 0.04986525000000001
+    },
+    {
+      "id": "explicit-read",
+      "revision": "baseline-7d94bb6",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "pass_rate": 0.75
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 24.471,
+      "native_duration_seconds": 23.919,
+      "cache_inclusive_tokens": 8358,
+      "client_estimated_cost_usd": 0.03724860000000001
+    },
+    {
+      "id": "corrected-r1",
+      "revision": "history-v1",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "19361bab20b7f9f4aea2172907226e7ba47ac6eeb500f7f2a9fd7dc75ce91660",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "pass_rate": 0.75
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 32.542,
+      "native_duration_seconds": 31.8,
+      "cache_inclusive_tokens": 8920,
+      "client_estimated_cost_usd": 0.04378170000000001
+    },
+    {
+      "id": "baseline-r1",
+      "revision": "baseline-7d94bb6",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "pass_rate": 0.75
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 35.172,
+      "native_duration_seconds": 34.456,
+      "cache_inclusive_tokens": 12890,
+      "client_estimated_cost_usd": 0.0440574
+    },
+    {
+      "id": "history-v2-r1",
+      "revision": "history-v2",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "pass_rate": 1
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 34.919,
+      "native_duration_seconds": 34.359,
+      "cache_inclusive_tokens": 13178,
+      "client_estimated_cost_usd": 0.040780949999999996
+    },
+    {
+      "id": "final-r2",
+      "revision": "history-v2",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "pass_rate": 0.75
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 33.233,
+      "native_duration_seconds": 32.602,
+      "cache_inclusive_tokens": 13107,
+      "client_estimated_cost_usd": 0.041381100000000004
+    },
+    {
+      "id": "baseline-r2",
+      "revision": "baseline-7d94bb6",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 3,
+        "failed": 1,
+        "total": 4,
+        "pass_rate": 0.75
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 42.808,
+      "native_duration_seconds": 42.186,
+      "cache_inclusive_tokens": 12244,
+      "client_estimated_cost_usd": 0.035165100000000005
+    },
+    {
+      "id": "history-v3-r1",
+      "revision": "history-v3",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "pass_rate": 1
+      },
+      "tool_calls": 3,
+      "read_errors": 0,
+      "duration_seconds": 35.107,
+      "native_duration_seconds": 34.469,
+      "cache_inclusive_tokens": 9035,
+      "client_estimated_cost_usd": 0.042394799999999996
+    },
+    {
+      "id": "history-v3-r2",
+      "revision": "history-v3",
+      "mode": "explicit-read",
+      "installed_skill_sha256": "f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d",
+      "loading": "OBSERVED_COMPLETE_READ",
+      "score": {
+        "passed": 4,
+        "failed": 0,
+        "total": 4,
+        "pass_rate": 1
+      },
+      "tool_calls": 6,
+      "read_errors": 3,
+      "duration_seconds": 42.389,
+      "native_duration_seconds": 41.773,
+      "cache_inclusive_tokens": 24828,
+      "client_estimated_cost_usd": 0.05521034999999999
+    }
+  ],
+  "frozen_assertions": [
+    "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+    "Historical UNVERIFIED is justified by retained evidence.",
+    "No application, tests, helpers or write operations occur.",
+    "The smallest missing evidence accurately states what is needed for all requested obligations."
+  ]
+}

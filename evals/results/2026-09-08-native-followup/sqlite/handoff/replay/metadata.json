@@ -1,0 +1,31 @@
+{
+  "mode": "replay",
+  "configuration": null,
+  "source_head": "85b1be10c81d9dd3567e36faf8dd411e4a8789bd",
+  "source_sha256": null,
+  "skill_installed": false,
+  "installed_skill_sha256": null,
+  "prompt_sha256": "028ad406df5897ab1e8d72789a4d3eb5667ef5160c041312ccdd6c8a8f5ddbf7",
+  "requirement_sha256": null,
+  "started_at": "2026-09-08T07:48:29.642Z",
+  "ended_at": "2026-09-08T07:50:14.788Z",
+  "duration_ms": 105146,
+  "exit_code": 0,
+  "signal": null,
+  "forced": false,
+  "usage": {
+    "input_tokens": 194507,
+    "cached_input_tokens": 167936,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4597,
+    "reasoning_output_tokens": 201
+  },
+  "protected_changes": [],
+  "all_input_changes": [],
+  "source_tracked_changes": [],
+  "time_budget_seconds": 480,
+  "outer_kill_seconds": 600,
+  "model_selection": "existing default, no override",
+  "assistance_during_invocation": null,
+  "created_file_count": 57
+}

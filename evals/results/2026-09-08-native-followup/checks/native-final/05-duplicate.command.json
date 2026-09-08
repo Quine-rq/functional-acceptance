@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "insert",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/contacts.db",
+    "contacts",
+    "<TASK>/work/sqlite-pack-final-check/artifacts/onboarding-20260908T083754Z-8d89b738/duplicate.input.json",
+    "--pk",
+    "id"
+  ],
+  "cwd": "<TASK>/work/sqlite-pack-final-check",
+  "pid": 42957,
+  "returncode": 1,
+  "timed_out": false,
+  "started_unix": 1788856676.911228,
+  "ended_unix": 1788856677.205782,
+  "stdout": "05-duplicate.stdout",
+  "stderr": "05-duplicate.stderr",
+  "terminal": true
+}

@@ -1,0 +1,18 @@
+{
+  "started_utc": "2026-09-08T07:50:39Z",
+  "final_validation_utc": "2026-09-08T07:54:15.048213+00:00",
+  "elapsed_wall_seconds": 216.04821300506592,
+  "budget_seconds": 480,
+  "remaining_budget_seconds_at_validation": 263.9517869949341,
+  "command_seconds": {
+    "baseline": 3.689692258834839,
+    "maintenance": 4.048978090286255,
+    "verify": 0.18403291702270508
+  },
+  "native_run_count": 2,
+  "audit_run_count": 1,
+  "unexpected_failed_attempts": 0,
+  "correction_iterations": 0,
+  "acceptance_edit_patch_count": 1,
+  "cost_limit": "Wall time only; token cost and actual human labor not measured"
+}

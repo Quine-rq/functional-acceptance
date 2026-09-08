@@ -1,0 +1,50 @@
+{
+  ".agents/skills/functional-acceptance/SKILL.md": {
+    "sha256": "4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9",
+    "bytes": 7325
+  },
+  ".agents/skills/functional-acceptance/agents/openai.yaml": {
+    "sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+    "bytes": 269
+  },
+  ".agents/skills/functional-acceptance/references/host-compatibility.md": {
+    "sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+    "bytes": 3041
+  },
+  ".agents/skills/functional-acceptance/references/material-format.md": {
+    "sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+    "bytes": 8507
+  },
+  ".agents/skills/functional-acceptance/references/native-workflow.md": {
+    "sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+    "bytes": 4497
+  },
+  ".agents/skills/functional-acceptance/scripts/acceptance.py": {
+    "sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+    "bytes": 24048
+  },
+  "README.md": {
+    "sha256": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+    "bytes": 321
+  },
+  "export.py": {
+    "sha256": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+    "bytes": 5749
+  },
+  "fixtures/pages.json": {
+    "sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    "bytes": 568
+  },
+  "requirements.md": {
+    "sha256": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+    "bytes": 289
+  },
+  "sentinel.txt": {
+    "sha256": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+    "bytes": 42
+  },
+  "test_smoke.py": {
+    "sha256": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+    "bytes": 501
+  }
+}

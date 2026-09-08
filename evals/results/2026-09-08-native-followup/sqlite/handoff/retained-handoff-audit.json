@@ -1,0 +1,125 @@
+{
+  "type": "coordinator read-only retained artifact audit; no rerun or acceptance correction",
+  "at": "2026-09-08T07:57:22.470Z",
+  "results": [
+    {
+      "mode": "replay",
+      "native_duration_ms": 105146,
+      "usage": {
+        "input_tokens": 194507,
+        "cached_input_tokens": 167936,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4597,
+        "reasoning_output_tokens": 201
+      },
+      "total_tokens": 199104,
+      "project_skill_directories_absent": true,
+      "recorded_commands_referencing_skill_resource": [],
+      "protected_file_changes_recomputed": [],
+      "all_input_changes_recomputed": [],
+      "new_files_outside_authorized_directories": [],
+      "maintenance_contract_matches_frozen": null,
+      "runs": [
+        {
+          "name": "onboarding-20260908T074855Z-2fe91540",
+          "phase": "original contact pack",
+          "identity_is_current_copy": true,
+          "pytest_summary": "============================== 5 passed in 3.36s ===============================",
+          "termination": {
+            "pid": 24857,
+            "returncode": 0,
+            "state": "exited"
+          },
+          "command_count": 10,
+          "all_commands_terminal_without_timeout": true,
+          "duplicate_exit_code": 1,
+          "duplicate_visible": true,
+          "fresh_read_matches_input": true,
+          "export_matches_input": true,
+          "post_refusal_matches_input": true,
+          "unrelated_unchanged_at_six_boundaries": true,
+          "new_field_values": null
+        }
+      ]
+    },
+    {
+      "mode": "maintenance",
+      "native_duration_ms": 239367,
+      "usage": {
+        "input_tokens": 630122,
+        "cached_input_tokens": 580224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 10168,
+        "reasoning_output_tokens": 1051
+      },
+      "total_tokens": 640290,
+      "project_skill_directories_absent": true,
+      "recorded_commands_referencing_skill_resource": [],
+      "protected_file_changes_recomputed": [],
+      "all_input_changes_recomputed": [
+        "acceptance/README.md",
+        "acceptance/test_onboarding.py"
+      ],
+      "new_files_outside_authorized_directories": [],
+      "maintenance_contract_matches_frozen": true,
+      "runs": [
+        {
+          "name": "onboarding-20260908T075108Z-5575dd08",
+          "phase": "original contact pack",
+          "identity_is_current_copy": true,
+          "pytest_summary": "============================== 5 passed in 3.12s ===============================",
+          "termination": {
+            "pid": 25828,
+            "returncode": 0,
+            "state": "exited"
+          },
+          "command_count": 10,
+          "all_commands_terminal_without_timeout": true,
+          "duplicate_exit_code": 1,
+          "duplicate_visible": true,
+          "fresh_read_matches_input": true,
+          "export_matches_input": true,
+          "post_refusal_matches_input": true,
+          "unrelated_unchanged_at_six_boundaries": true,
+          "new_field_values": null
+        },
+        {
+          "name": "onboarding-20260908T075149Z-61dfd4e6",
+          "phase": "new-field maintenance",
+          "identity_is_current_copy": true,
+          "pytest_summary": "============================== 5 passed in 3.46s ===============================",
+          "termination": {
+            "pid": 26046,
+            "returncode": 0,
+            "state": "exited"
+          },
+          "command_count": 10,
+          "all_commands_terminal_without_timeout": true,
+          "duplicate_exit_code": 1,
+          "duplicate_visible": true,
+          "fresh_read_matches_input": true,
+          "export_matches_input": true,
+          "post_refusal_matches_input": true,
+          "unrelated_unchanged_at_six_boundaries": true,
+          "new_field_values": [
+            {
+              "id": 17,
+              "postal_code": "00123",
+              "preferred_name": null
+            },
+            {
+              "id": 4,
+              "postal_code": "00000",
+              "preferred_name": ""
+            },
+            {
+              "id": 93,
+              "postal_code": "75001",
+              "preferred_name": "Élo 🌙"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

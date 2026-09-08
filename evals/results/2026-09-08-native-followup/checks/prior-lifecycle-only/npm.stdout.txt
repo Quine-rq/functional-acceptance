@@ -1,0 +1,128 @@
+
+> test
+> node --test test-install.mjs test-upgrade.mjs
+
+TAP version 13
+# Subtest: standard YAML parses without host-specific execution directives
+ok 1 - standard YAML parses without host-specific execution directives
+  ---
+  duration_ms: 5.585708
+  type: 'test'
+  ...
+# Subtest: codex: discover, install, reinstall and remove exact package bytes
+ok 2 - codex: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 603.92425
+  type: 'test'
+  ...
+# Subtest: claude-code: discover, install, reinstall and remove exact package bytes
+ok 3 - claude-code: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 560.800833
+  type: 'test'
+  ...
+# Subtest: cursor: discover, install, reinstall and remove exact package bytes
+ok 4 - cursor: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 544.826625
+  type: 'test'
+  ...
+# Subtest: github-copilot: discover, install, reinstall and remove exact package bytes
+ok 5 - github-copilot: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 553.256125
+  type: 'test'
+  ...
+# Subtest: opencode: discover, install, reinstall and remove exact package bytes
+ok 6 - opencode: discover, install, reinstall and remove exact package bytes
+  ---
+  duration_ms: 545.296208
+  type: 'test'
+  ...
+# Subtest: reinstall replaces local edits; it is not a safe merge or backup
+ok 7 - reinstall replaces local edits; it is not a safe merge or backup
+  ---
+  duration_ms: 429.979416
+  type: 'test'
+  ...
+# Subtest: universal hosts share one copy, Claude uses its own copy
+ok 8 - universal hosts share one copy, Claude uses its own copy
+  ---
+  duration_ms: 837.344792
+  type: 'test'
+  ...
+# Subtest: an unknown host fails without modifying the project
+ok 9 - an unknown host fails without modifying the project
+  ---
+  duration_ms: 121.918917
+  type: 'test'
+  ...
+# Subtest: a missing Skill name fails without installing a substitute
+ok 10 - a missing Skill name fails without installing a substitute
+  ---
+  duration_ms: 125.405083
+  type: 'test'
+  ...
+# Subtest: read-only review distinguishes local changes from the proposed update
+ok 11 - read-only review distinguishes local changes from the proposed update
+  ---
+  duration_ms: 319.84575
+  type: 'test'
+  ...
+# Subtest: review detects removed files and executable-bit changes
+ok 12 - review detects removed files and executable-bit changes
+  ---
+  duration_ms: 165.026416
+  type: 'test'
+  ...
+# Subtest: removing only owner execute permission is detected when execution becomes EACCES
+ok 13 - removing only owner execute permission is detected when execution becomes EACCES
+  ---
+  duration_ms: 533.007875
+  type: 'test'
+  ...
+# Subtest: review treats prototype-like filenames and empty directories as local changes
+ok 14 - review treats prototype-like filenames and empty directories as local changes
+  ---
+  duration_ms: 166.066625
+  type: 'test'
+  ...
+# Subtest: review refuses links, missing entrypoint, oversize files and excessive entries
+ok 15 - review refuses links, missing entrypoint, oversize files and excessive entries
+  ---
+  duration_ms: 48.483958
+  type: 'test'
+  ...
+# Subtest: codex: interrupted direct reinstall loses local edits; reviewed backup restores them
+ok 16 - codex: interrupted direct reinstall loses local edits; reviewed backup restores them
+  ---
+  duration_ms: 288.388583
+  type: 'test'
+  ...
+# Subtest: codex: interrupted staging never touches the live copy; replace and rollback preserve backups
+ok 17 - codex: interrupted staging never touches the live copy; replace and rollback preserve backups
+  ---
+  duration_ms: 436.133083
+  type: 'test'
+  ...
+# Subtest: claude-code: interrupted direct reinstall loses local edits; reviewed backup restores them
+ok 18 - claude-code: interrupted direct reinstall loses local edits; reviewed backup restores them
+  ---
+  duration_ms: 285.6805
+  type: 'test'
+  ...
+# Subtest: claude-code: interrupted staging never touches the live copy; replace and rollback preserve backups
+ok 19 - claude-code: interrupted staging never touches the live copy; replace and rollback preserve backups
+  ---
+  duration_ms: 441.40725
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4467.303292

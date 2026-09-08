@@ -1,0 +1,74 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": false,
+      "evidence": "UNVERIFIED: full 51-event transcript contains six Reads of requirements/history/missing input-output paths, none of SKILL.md. Replayed user message contains command-name/command-message/command-args tags only, not Skill body. No visible full-content injection exists; unlogged slash expansion cannot be excluded."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "Actual history/run.json records exit 0, success stdout and retained_output null. Final labels every substantive historical obligation UNVERIFIED; no actual CSV/source evidence is supplied."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "Effective native tools inventory is Read only. All actual tools are Read; independent before/after comparison and rehash of eight original files shows unchanged files and no additions. Native child ended with code 0; no application/tests/helpers ran."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": false,
+      "evidence": "Final says CSV first two and last lines resolve records/fields/order. That cannot establish omitted or corrupted middle records and exact expected values; source identities are absent. It also proposes a fresh run without clearly saying new evidence cannot establish the past run, and omits sufficient existing-file-preservation evidence."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 6
+    },
+    "total_tool_calls": 6,
+    "errors_encountered": 4
+  },
+  "timing": {
+    "executor_duration_seconds": 34.675
+  },
+  "claims": [
+    {
+      "claim": "Historical business result remains unverified.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Actual history/run.json records exit 0, success stdout and retained_output null. Final labels every substantive historical obligation UNVERIFIED; no actual CSV/source evidence is supplied."
+    },
+    {
+      "claim": "Proposed minimal observation is sufficient for the requirements.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Final says CSV first two and last lines resolve records/fields/order. That cannot establish omitted or corrupted middle records and exact expected values; source identities are absent. It also proposes a fresh run without clearly saying new evidence cannot establish the past run, and omits sufficient existing-file-preservation evidence."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Actual slash-command Skill loading remains unresolved."
+    ],
+    "needs_review": [
+      "Missing-evidence advice remains insufficient; exact field preservation is reduced to field presence."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Standalone follow-up diagnostic with changed observation method; explicit-read also changes the prompt. Do not infer causality, savings or cross-host equivalence from this comparison."
+  },
+  "scope": {
+    "record": "<workspace>/work/claude-followup-slash-replay",
+    "model": "claude-sonnet-4-6",
+    "reported_cost_usd": 0.04986525,
+    "not_codex_benchmark": true,
+    "previous_grades_unchanged": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "trials": 38,
+  "public_events": 307,
+  "unchanged_grade_assertions": 162,
+  "byte_identical_csvs": 24,
+  "artifact_and_trace_hashes": "passed",
+  "native_launch_args": "unchanged except private path placeholders",
+  "assistant_and_tool_content": "unchanged except private path placeholders",
+  "final_answer_content": "unchanged except private path placeholders and relative artifact-link rebasing",
+  "actual_model": null,
+  "private_path_scan": "passed",
+  "hidden_reasoning_item_scan": "passed",
+  "credential_marker_scan": "passed",
+  "limitations": "This is a mechanical consistency and bounded text-marker audit, not independent collection provenance or proof that arbitrary secrets could never occur. Hidden reasoning and host stderr were excluded by event-type allowlist and file selection. Source/global-environment integrity beyond the recorded project inventory is not established."
+}

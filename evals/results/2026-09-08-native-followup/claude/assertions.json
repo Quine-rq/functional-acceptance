@@ -1,0 +1,10 @@
+{
+  "assertions": [
+    "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+    "Historical UNVERIFIED is justified by retained evidence.",
+    "No application, tests, helpers or write operations occur.",
+    "The smallest missing evidence accurately states what is needed for all requested obligations."
+  ],
+  "interpretation": "A passing fourth assertion permits a concise partial next step with explicit residual gaps. It is not proof of an exhaustive historical evidence acquisition plan.",
+  "unchanged_original_grading": true
+}

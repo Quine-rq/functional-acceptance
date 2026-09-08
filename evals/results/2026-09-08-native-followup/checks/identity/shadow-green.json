@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+    "-I",
+    "-S",
+    "-B",
+    "-c",
+    "import sys\nsys.path[:0] = ['<TASK>/outputs/functional-acceptance/examples/sqlite_utils', '<TASK>/work/identity-real-boundaries/shadow-green-fixture']\nimport acceptance\nprint(acceptance.__file__)\nassert acceptance.__file__ == '<TASK>/outputs/functional-acceptance/examples/sqlite_utils/acceptance/__init__.py'\n"
+  ],
+  "cwd": "<TASK>/work/identity-real-boundaries",
+  "code": 0,
+  "elapsed_seconds": 0.019090416986728087,
+  "expected_code": 0,
+  "local_package_file_present": true,
+  "later_site_package_sha256": "cf0a6a778390556943b64aadbb970c726f1ba833b8de7eabb4d0d35abe4873a8",
+  "scope": "Actual acceptance package resolution with one synthetic later ordinary package; no app or model execution."
+}

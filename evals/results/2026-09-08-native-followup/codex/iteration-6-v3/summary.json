@@ -1,0 +1,256 @@
+{
+  "version": "iteration-6-v3",
+  "candidate": "V3 with an explicit retained-history branch",
+  "baseline": "7d94bb6",
+  "completed_trials": 12,
+  "completed_pairs": 6,
+  "originally_planned_trials": 12,
+  "not_run_after_revision_changed": 0,
+  "by_configuration": {
+    "with_skill": {
+      "trials": 6,
+      "passed_assertions": 24,
+      "total_assertions": 25,
+      "native_total_tokens": 628600,
+      "mean_duration_seconds": 70.75816666666667
+    },
+    "old_skill": {
+      "trials": 6,
+      "passed_assertions": 25,
+      "total_assertions": 25,
+      "native_total_tokens": 581957,
+      "mean_duration_seconds": 65.036
+    }
+  },
+  "trials": [
+    {
+      "eval_id": 1,
+      "scenario": "coverage-explicit",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 8,
+      "grade_summary": {
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "pass_rate": 1
+      },
+      "total_tokens": 108009,
+      "duration_seconds": 76.807
+    },
+    {
+      "eval_id": 1,
+      "scenario": "coverage-explicit",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 7,
+      "grade_summary": {
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "pass_rate": 1
+      },
+      "total_tokens": 105223,
+      "duration_seconds": 78.616
+    },
+    {
+      "eval_id": 2,
+      "scenario": "coverage-natural-1",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 7,
+      "grade_summary": {
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "pass_rate": 0.8
+      },
+      "total_tokens": 99928,
+      "duration_seconds": 70.908
+    },
+    {
+      "eval_id": 2,
+      "scenario": "coverage-natural-1",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 8,
+      "grade_summary": {
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "pass_rate": 1
+      },
+      "total_tokens": 98019,
+      "duration_seconds": 68.091
+    },
+    {
+      "eval_id": 3,
+      "scenario": "coverage-natural-2",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 8,
+      "grade_summary": {
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "pass_rate": 1
+      },
+      "total_tokens": 99582,
+      "duration_seconds": 79.738
+    },
+    {
+      "eval_id": 3,
+      "scenario": "coverage-natural-2",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 5,
+      "grade_summary": {
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "pass_rate": 1
+      },
+      "total_tokens": 99543,
+      "duration_seconds": 69.261
+    },
+    {
+      "eval_id": 4,
+      "scenario": "plan",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 0,
+      "grade_summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "total_tokens": 71726,
+      "duration_seconds": 72.858
+    },
+    {
+      "eval_id": 4,
+      "scenario": "plan",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 0,
+      "grade_summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "total_tokens": 98635,
+      "duration_seconds": 75.058
+    },
+    {
+      "eval_id": 5,
+      "scenario": "historical",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 0,
+      "grade_summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "total_tokens": 116358,
+      "duration_seconds": 61.616
+    },
+    {
+      "eval_id": 5,
+      "scenario": "historical",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": true,
+      "protected_changes": [],
+      "created_file_count": 0,
+      "grade_summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "total_tokens": 92255,
+      "duration_seconds": 50.139
+    },
+    {
+      "eval_id": 6,
+      "scenario": "near-miss",
+      "configuration": "with_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": false,
+      "protected_changes": [],
+      "created_file_count": 0,
+      "grade_summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "total_tokens": 132997,
+      "duration_seconds": 62.622
+    },
+    {
+      "eval_id": 6,
+      "scenario": "near-miss",
+      "configuration": "old_skill",
+      "execution_exit": 0,
+      "forced": false,
+      "actual_model": null,
+      "actual_full_skill_read": false,
+      "protected_changes": [],
+      "created_file_count": 0,
+      "grade_summary": {
+        "passed": 3,
+        "failed": 0,
+        "total": 3,
+        "pass_rate": 1
+      },
+      "total_tokens": 88282,
+      "duration_seconds": 49.051
+    }
+  ],
+  "limitations": "This version stands alone. Do not pool pass rates or pick successful cases across revisions. Native model identity remains unverified; synthetic local CLI evidence is not production or independent-human proof."
+}

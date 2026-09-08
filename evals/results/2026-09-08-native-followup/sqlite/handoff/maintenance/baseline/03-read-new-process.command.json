@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "query",
+    "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/contacts.db",
+    "select * from contacts order by id"
+  ],
+  "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project",
+  "pid": 25839,
+  "returncode": 0,
+  "timed_out": false,
+  "started_unix": 1788853870.977681,
+  "ended_unix": 1788853871.2716532,
+  "stdout": "03-read-new-process.stdout",
+  "stderr": "03-read-new-process.stderr",
+  "terminal": true
+}

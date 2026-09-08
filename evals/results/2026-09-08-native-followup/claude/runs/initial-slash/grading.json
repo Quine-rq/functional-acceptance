@@ -1,0 +1,79 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": false,
+      "evidence": "UNVERIFIED: all 59 events read. Exactly four Read tool uses target history/run.json, requirements.md, historical.csv, pages.json; the latter two return absent. No Read targets SKILL.md, no Skill invocation or visible Skill-body injection appears. The init skills list is discovery only. The prompt begins with /functional-acceptance, so CLI slash expansion cannot be excluded; these records do not establish actual loading, rather than proving it never happened."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "history/run.json contains exit_code 0, stdout CSV written, retained_output null. Source and output reads fail with file absent. Final consistently marks record, fields, order, UTF-8 and file preservation UNVERIFIED."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "Native effective tool inventory is Read only; all four actual calls are Read. Independently compared before/after inventories and rehashed eight supplied files: unchanged; no created files. No target execution events."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": false,
+      "evidence": "Final says a historical.csv snapshot containing header plus five rows would confirm all five requirements in one step. CSV alone cannot establish original files unchanged; absent historical independent source also prevents confirming exact record identities, order and id/title/notes values. Need correlated original CSV bytes plus historical expected input and historical before/after preservation evidence."
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 2,
+    "total": 4,
+    "pass_rate": 0.5
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 4
+    },
+    "total_tool_calls": 4,
+    "errors_encountered": 2
+  },
+  "timing": {
+    "executor_duration_seconds": 27.138
+  },
+  "claims": [
+    {
+      "claim": "Only the record of exit 0 and a success message is established; content remains unverified.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Matches retained run JSON; no CSV or source bytes available."
+    },
+    {
+      "claim": "A snapshot of historical.csv alone would confirm all five requirements.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "No independent expected data or before/after old-file state can be inferred from output alone."
+    },
+    {
+      "claim": "Installed functional-acceptance Skill was used.",
+      "type": "process",
+      "verified": false,
+      "evidence": "Actual loading remains UNVERIFIED: no actual Skill read or visible injection body in native records. Declared availability and prompt path are insufficient; unlogged CLI slash expansion cannot be excluded."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Past content and preservation remain unverified."
+    ],
+    "needs_review": [
+      "Explicit Skill loading is not established by available evidence; CLI slash expansion remains unresolved.",
+      "Minimum-evidence advice overstates CSV-only proof."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "A historical UNVERIFIED verdict and zero mutations alone do not test whether the proposed missing-evidence path could actually establish the contract."
+      }
+    ],
+    "overall": "Standalone explicit-load/read-only Claude diagnostic; these four checks were assigned for separate review and are not Codex frozen benchmark assertions."
+  },
+  "scope": "Claude Code 2.1.220, claude-sonnet-4-6, --bare with effective Read-only tools. Not a paired comparison; no claim of cross-host equivalence or savings."
+}

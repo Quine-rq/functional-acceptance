@@ -1,0 +1,30 @@
+{
+  "completed_at": "2026-09-08T07:17:53.636Z",
+  "results": [
+    {
+      "configuration": "with_skill",
+      "record": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-pair/with_skill",
+      "exit_code": 1,
+      "signal": null,
+      "forced": false,
+      "duration_ms": 34,
+      "usage": null,
+      "protected_changes": []
+    },
+    {
+      "configuration": "old_skill",
+      "record": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-pair/old_skill",
+      "exit_code": 1,
+      "signal": null,
+      "forced": false,
+      "duration_ms": 37,
+      "usage": null,
+      "protected_changes": []
+    }
+  ],
+  "original_source_changes": [],
+  "grading": "Not graded by preparer/executor. Independent grading and no-Skill replay remain for coordinator.",
+  "assisted": false,
+  "invocation_count": 2,
+  "reruns": 0
+}

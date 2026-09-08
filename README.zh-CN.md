@@ -58,13 +58,15 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 
 确认助手已加载 Skill 后，可以先说：“用 functional-acceptance 规划这个功能怎么验收，先不要运行应用。”同时提供功能预期和项目位置。实际验收再使用该助手已有且获授权的项目工具。
 
-[最新行为对照](evals/results/2026-09-08-product-hardening/README.md)记录了 Codex 使用与不使用 Skill 的实际表现：两组都能发现注入的漏页缺陷，但都不是每次覆盖全部要求。其中一次只读请求虽然安装了 Skill，却没有加载它。Claude Code 的尝试被认证错误阻断，第二种宿主的成功执行仍未验证。[早期失败及修正记录](evals/results/2026-09-08-host-smoke/README.md)继续保留。
+[本轮原生评估](NATIVE-FOLLOWUP-RESULTS.md)包含 Codex 新旧 Skill 对照、Claude Code 实际只读历史审核，以及 sqlite-utils 陌生项目接入、无 Skill 重跑和维护。Claude 最新两次明确加载后的审核正确保留了证据缺口，但自然加载和健康历史的判别能力仍未验证；Codex 仍偶尔漏测要求中的失败分支。这些小样本不能证明普遍优于基线。[早期失败及修正记录](evals/results/2026-09-08-host-smoke/README.md)继续保留。
 
 ## 适配范围与当前限制
 
 这套方法优先使用项目已有工具，不要求采用某种语言或框架。Web、API、命令行、桌面和移动端是计划覆盖的应用场景，不是已经验证的适配清单。
 
 内置示例覆盖的是**合成分页数据 → 真实 Python 进程 → 本地 CSV 文件**。报告检查导出完整性和字段内容，输入异常与文件安全另有测试。
+
+[sqlite-utils 回归包](examples/sqlite_utils/README.md)检查联系人导入、新进程读取、JSON 导出、重复主键拒绝和无关数据保留。生成包通过了另一名 Agent 的无 Skill 重跑，但后续审查发现超时可能遗留写入进程；现在的可复用示例包含针对这个问题的修正及独立生命周期测试。依赖环境由协调者预先准备，尚不能称为陌生用户从零接入。
 
 [可维护的 linkding 回归包](examples/linkding/README.md)检查真实登录、服务重启后的持久化、跨账号隔离、编辑和定向删除，并独立读取 SQLite 核对。它还提供备注丢失、缺少观察、会话丢失、响应丢失和 Unicode 备注场景，不依赖 Skill 或 CSV 工具运行。[最新记录](evals/results/2026-09-08-product-hardening/README.md)分别说明作者实测、独立代理交接及测试程序自身的缺陷；[最初的协助过程](evals/results/2026-09-08-linkding/README.md)未被覆盖。这仍是固定版本的原生示例，不是通用浏览器适配器，也不等于真实外部用户已经用得顺手。外部服务和手机仍未验证。
 
@@ -84,9 +86,11 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 ```sh
 python3 -B -m unittest discover -s tests -v
 python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
+python3 -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_lifecycle.py -v
+python3 -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_identity.py -v
 ```
 
-第一条检查核验工具、证据采集程序、Skill 包及原生示例的安全和报告规则；第二条独立检查导出程序。这两条都不运行依赖本机环境的 linkding 浏览器流程。检出缺陷的测试通过，不表示那次缺陷导出正确。
+第一条检查核验工具、证据采集程序、Skill 包及原生示例的安全和报告规则；第二条独立检查导出程序；第三、四条使用合成对照检查 SQLite 回归包的生命周期和导入前校验，不运行其业务流程。这些命令都不运行依赖本机环境的 linkding 浏览器流程。检出缺陷的测试通过，不表示那次缺陷导出正确。
 
 安装集成检查仅供开发，需要 Node 22.20+：
 
@@ -99,7 +103,7 @@ npm --prefix integration test
 
 已有安装需要更新时，先按[暂存升级指南](UPGRADING.md)检查本地修改、保留备份。
 [本轮复用与恢复结果](REUSE-RESULTS.md)记录了复制中断恢复、旧材料兼容和重复
-浏览器回归，也明确列出尚未执行的宿主与陌生项目评估。
+浏览器回归。此前被阻断的宿主与陌生项目评估已经补做，见[独立的后续记录](NATIVE-FOLLOWUP-RESULTS.md)，旧失败记录不覆盖。
 
 [CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行原生检查，另有 Node 22.22.3 安装集成任务，使用只读权限和固定到提交的 Actions。接入源码 `f4b1ef9` 的三个任务均已通过（[运行记录](https://github.com/Quine-rq/functional-acceptance/actions/runs/34185450287)），[此前的 M2 记录](M2-RESULTS.md#remote-ci)也保留了早期失败及修正过程。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
 
@@ -109,7 +113,7 @@ npm --prefix integration test
 - **核对实现进展：** [M1 范围](M1-PLAN.md)、[M1 验证记录](M1-RESULTS.md)、[M2 加固记录](M2-RESULTS.md)、[路线图](ROADMAP.md)。
 - **了解设计：** [产品设计](DESIGN.md)、[架构](ARCHITECTURE.md)、[评估计划](VALIDATION.md)。这些是中文详细文档，其中计划执行的评估不代表已经通过。
 
-正式发布前，还需要补齐第二种宿主的成功执行，让外部开发者在自己的项目中试用，证明相对不用 Skill 的实际收益，并确定许可证和安全支持方式。[本轮加固结果](PRODUCT-HARDENING-RESULTS.md)逐项说明已做什么、还缺哪些证据；本地测试通过不等于成熟产品。
+正式发布前，还需要验证第二种宿主稳定执行完整流程，让外部开发者在自己的项目中试用，证明相对基线的实际收益，并确定许可证和安全支持方式。[本轮原生评估](NATIVE-FOLLOWUP-RESULTS.md)逐项说明已做什么、仍有哪些失败；本地测试通过不等于成熟产品。
 
 ## 反馈与许可
 

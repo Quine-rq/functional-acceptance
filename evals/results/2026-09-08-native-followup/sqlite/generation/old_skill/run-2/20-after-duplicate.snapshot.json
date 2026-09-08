@@ -1,0 +1,18 @@
+{
+  "schema": [
+    [
+      "table",
+      "unrelated",
+      "unrelated",
+      "CREATE TABLE unrelated (id integer primary key, label text not null, empty text, nullable text)"
+    ]
+  ],
+  "rows": [
+    [
+      901,
+      "合成保留行",
+      "",
+      null
+    ]
+  ]
+}

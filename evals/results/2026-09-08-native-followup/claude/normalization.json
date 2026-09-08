@@ -1,0 +1,33 @@
+{
+  "schema_version": "claude-public-followup/v1",
+  "collector": "collect-claude-native-followup-public.mjs",
+  "collector_sha256": "2081e462d2a357ce2040eff847a063cf9746d4bcee2c112008d378a00916f7a5",
+  "raw_native_stream_published": false,
+  "private_reasoning_or_signatures_published": false,
+  "selection": "Explicit allowlist of ten completed directories; no glob-based future inclusion.",
+  "retained": [
+    "exact frozen grade decisions with path normalization",
+    "public final answer and submitted prompt",
+    "Read call order and original native line numbers",
+    "read result status, complete-file line counts and content hashes",
+    "installed public Skill snapshots by revision",
+    "synthetic requirements and retained history",
+    "configuration, project preservation inventories, timings and CLI cost estimates",
+    "SHA-256 of each local source file"
+  ],
+  "omitted": [
+    "all model private-reasoning blocks, signatures and reasoning-token event bodies",
+    "raw native full streams and arbitrary raw tool-result bodies",
+    "session IDs, opaque tool IDs, machine paths, unrelated environment/configuration and credentials",
+    "stderr contents and request/debug headers"
+  ],
+  "substitutions": [
+    "workspace absolute prefix becomes <workspace> in prompt/final/grades",
+    "Read file paths become <project>/relative-path",
+    "CLI project argument becomes <project>",
+    "Read errors become EISDIR or NOT_FOUND category plus source text hash",
+    "successful Read bodies are represented by hashes/line counts and links to the exact public Skill/input documents"
+  ],
+  "integrity_limits": "Source hashes identify local originals but do not authenticate collection or make unpublished raw files independently available. Public copies are normalized derivatives, not raw traces. The collector recomputes every project file against before/after inventories and verifies complete returned file contents before export.",
+  "privacy_checks": "Allowlisted fields only; reject machine-path patterns, private stream keys and credential-shaped strings before any write. No environment or credential file is read."
+}

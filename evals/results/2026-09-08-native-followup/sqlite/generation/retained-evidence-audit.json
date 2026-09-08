@@ -1,0 +1,261 @@
+{
+  "audit_type": "read-only retained artifact inspection; no native task guidance or acceptance execution",
+  "audited_at": "2026-09-08T07:51:17.992Z",
+  "observations": [
+    {
+      "configuration": "with_skill",
+      "native_exit_code": 0,
+      "native_duration_ms": 174389,
+      "native_usage": {
+        "input_tokens": 299517,
+        "cached_input_tokens": 263680,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7720,
+        "reasoning_output_tokens": 496
+      },
+      "prompt_sha256": "e07383ed10412898bdc7ba9d32cfe290a47cb7bc2c97735b928c88dab820e7a6",
+      "installed_skill_sha256": "b6aa5770147511b8e6c0417c256635bf2547ccf2c5469d469b6a7209b64ae88b",
+      "installed_skill_read_in_trace": true,
+      "native_workflow_read_in_trace": true,
+      "source_protected_changes": [],
+      "created_outside_authorized_directories": [],
+      "native_command_events": 8,
+      "runs": [
+        {
+          "run_directory": "onboarding-20260908T074458Z-8f40320d",
+          "contact_count": 3,
+          "unique_ids": true,
+          "fixture_has_unicode": true,
+          "fixture_has_multiline": true,
+          "fixture_has_quote": true,
+          "fixture_has_explicit_null": true,
+          "fixture_has_empty_string": true,
+          "fresh_read_equals_input": true,
+          "export_equals_input": true,
+          "post_refusal_read_equals_input": true,
+          "export_is_exact_cli_stdout": true,
+          "duplicate_returncode": 1,
+          "duplicate_timed_out": false,
+          "duplicate_visible": true,
+          "snapshot_boundaries": 6,
+          "unrelated_unchanged_at_boundaries": true,
+          "command_count": 10,
+          "commands_all_terminal": true,
+          "actual_runtime_is_current_copy": true,
+          "recorded_original_files_still_match": true,
+          "historical_acceptance_hash_mismatches_with_current_pack": [
+            "acceptance/test_onboarding.py"
+          ],
+          "pytest_summary": "============================== 5 passed in 3.12s ===============================",
+          "obligation_results": null
+        },
+        {
+          "run_directory": "onboarding-20260908T074519Z-2f7e16a6",
+          "contact_count": 3,
+          "unique_ids": true,
+          "fixture_has_unicode": true,
+          "fixture_has_multiline": true,
+          "fixture_has_quote": true,
+          "fixture_has_explicit_null": true,
+          "fixture_has_empty_string": true,
+          "fresh_read_equals_input": true,
+          "export_equals_input": true,
+          "post_refusal_read_equals_input": true,
+          "export_is_exact_cli_stdout": true,
+          "duplicate_returncode": 1,
+          "duplicate_timed_out": false,
+          "duplicate_visible": true,
+          "snapshot_boundaries": 6,
+          "unrelated_unchanged_at_boundaries": true,
+          "command_count": 10,
+          "commands_all_terminal": true,
+          "actual_runtime_is_current_copy": true,
+          "recorded_original_files_still_match": true,
+          "historical_acceptance_hash_mismatches_with_current_pack": [],
+          "pytest_summary": "============================== 5 passed in 3.03s ===============================",
+          "obligation_results": null
+        }
+      ]
+    },
+    {
+      "configuration": "old_skill",
+      "native_exit_code": 0,
+      "native_duration_ms": 256507,
+      "native_usage": {
+        "input_tokens": 499689,
+        "cached_input_tokens": 452352,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11601,
+        "reasoning_output_tokens": 1219
+      },
+      "prompt_sha256": "e07383ed10412898bdc7ba9d32cfe290a47cb7bc2c97735b928c88dab820e7a6",
+      "installed_skill_sha256": "c260cc22e8615954c416b267b9cec7a23acd1794cb6c3381ca8c69f63a2da4a8",
+      "installed_skill_read_in_trace": true,
+      "native_workflow_read_in_trace": true,
+      "source_protected_changes": [],
+      "created_outside_authorized_directories": [],
+      "native_command_events": 11,
+      "runs": [
+        {
+          "run_directory": "onboarding-20260908T074531Z-a91d4862",
+          "contact_count": 3,
+          "unique_ids": true,
+          "fixture_has_unicode": true,
+          "fixture_has_multiline": true,
+          "fixture_has_quote": true,
+          "fixture_has_explicit_null": true,
+          "fixture_has_empty_string": true,
+          "fresh_read_equals_input": true,
+          "export_equals_input": true,
+          "post_refusal_read_equals_input": true,
+          "export_is_exact_cli_stdout": true,
+          "duplicate_returncode": 1,
+          "duplicate_timed_out": false,
+          "duplicate_visible": true,
+          "snapshot_boundaries": 5,
+          "unrelated_unchanged_at_boundaries": true,
+          "command_count": 9,
+          "commands_all_terminal": true,
+          "actual_runtime_is_current_copy": true,
+          "recorded_original_files_still_match": true,
+          "historical_acceptance_hash_mismatches_with_current_pack": [
+            "acceptance/run.py",
+            "acceptance/test_onboarding.py"
+          ],
+          "pytest_summary": "============================== 1 passed in 2.76s ===============================",
+          "obligation_results": [
+            {
+              "obligation": "baseline unrelated synthetic row",
+              "status": "PASS"
+            },
+            {
+              "obligation": "CLI contact import",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after import",
+              "status": "PASS"
+            },
+            {
+              "obligation": "independent persisted contacts and primary key",
+              "status": "PASS"
+            },
+            {
+              "obligation": "later CLI process reads all exact values",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after read",
+              "status": "PASS"
+            },
+            {
+              "obligation": "retained JSON export complete and exact",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after export",
+              "status": "PASS"
+            },
+            {
+              "obligation": "ordinary duplicate id visibly refused",
+              "status": "PASS"
+            },
+            {
+              "obligation": "all contacts unchanged after refusal",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after refusal",
+              "status": "PASS"
+            },
+            {
+              "obligation": "all child processes terminal",
+              "status": "PASS"
+            }
+          ]
+        },
+        {
+          "run_directory": "onboarding-20260908T074651Z-55a84e69",
+          "contact_count": 3,
+          "unique_ids": true,
+          "fixture_has_unicode": true,
+          "fixture_has_multiline": true,
+          "fixture_has_quote": true,
+          "fixture_has_explicit_null": true,
+          "fixture_has_empty_string": true,
+          "fresh_read_equals_input": true,
+          "export_equals_input": true,
+          "post_refusal_read_equals_input": true,
+          "export_is_exact_cli_stdout": true,
+          "duplicate_returncode": 1,
+          "duplicate_timed_out": false,
+          "duplicate_visible": true,
+          "snapshot_boundaries": 5,
+          "unrelated_unchanged_at_boundaries": true,
+          "command_count": 9,
+          "commands_all_terminal": true,
+          "actual_runtime_is_current_copy": true,
+          "recorded_original_files_still_match": true,
+          "historical_acceptance_hash_mismatches_with_current_pack": [],
+          "pytest_summary": "============================== 1 passed in 2.81s ===============================",
+          "obligation_results": [
+            {
+              "obligation": "baseline unrelated synthetic row",
+              "status": "PASS"
+            },
+            {
+              "obligation": "CLI contact import",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after import",
+              "status": "PASS"
+            },
+            {
+              "obligation": "independent persisted contacts and primary key",
+              "status": "PASS"
+            },
+            {
+              "obligation": "later CLI process reads all exact values",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after read",
+              "status": "PASS"
+            },
+            {
+              "obligation": "retained JSON export complete and exact",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after export",
+              "status": "PASS"
+            },
+            {
+              "obligation": "ordinary duplicate id visibly refused",
+              "status": "PASS"
+            },
+            {
+              "obligation": "all contacts unchanged after refusal",
+              "status": "PASS"
+            },
+            {
+              "obligation": "unrelated after refusal",
+              "status": "PASS"
+            },
+            {
+              "obligation": "all child processes terminal",
+              "status": "PASS"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Artifact consistency does not authenticate a fabricated collector; these artifacts are tied to retained actual native command traces.",
+    "JSON numbers are compared by numeric value in this audit; the native Python pack uses canonical JSON that also distinguishes its integer/float renderings.",
+    "This audit does not exercise timeout, interruption, concurrent writers, or missing-evidence controls.",
+    "Historical test-file hashes can differ after documented author edits; upstream source hashes are checked separately."
+  ]
+}

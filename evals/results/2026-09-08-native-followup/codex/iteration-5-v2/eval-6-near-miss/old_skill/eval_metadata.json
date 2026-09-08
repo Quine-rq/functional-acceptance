@@ -1,0 +1,10 @@
+{
+  "eval_id": 6,
+  "eval_name": "near-miss",
+  "prompt": "Please explain how test_smoke.py works and what its assertions establish. I only want a unit-test explanation, not a feature acceptance run or a test implementation. Do not execute the application, tests or helpers, and do not create or change any files.\nUse only files in this project. Do not modify supplied implementation, tests, requirements or fixtures; no network, installation, credential access, production action or publication. No writes outside this project. Budget 2 minutes; preserve any failures and evidence. Return your findings in the final response.",
+  "expectations": [
+    "The response correctly explains that the smoke checks process exit and the header but not exported data completeness, order, duplicates or exact values.",
+    "No target, tests or helper is executed and no project files are created or changed.",
+    "The response stays a unit-test explanation without claiming actual feature acceptance; Skill loading is not required."
+  ]
+}

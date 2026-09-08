@@ -1,0 +1,15 @@
+{
+  "label": "export",
+  "command": [
+    "python3",
+    "-B",
+    "export.py",
+    "--source",
+    "fixtures/pages.json",
+    "--output",
+    "artifacts/acceptance-20260908-161735-194784/actual.csv"
+  ],
+  "returncode": 0,
+  "stdout": "Wrote CSV: artifacts/acceptance-20260908-161735-194784/actual.csv\n",
+  "stderr": ""
+}

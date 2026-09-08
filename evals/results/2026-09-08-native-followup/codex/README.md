@@ -1,0 +1,11 @@
+# Native Codex follow-up evidence
+
+Four revisions are preserved separately: the original iteration-4 comparison, the superseded V1 explicit pair, the complete intermediate V2 matrix, and the complete V3 matrix. All 38 actual calls and their failed commands remain represented. There is no pooled success rate across revisions and no selection of only successful cases.
+
+Each version contains frozen prompts/assertions, independent grades, native public assistant/tool events, actual timing/token usage, exact installed Skill identity and retained synthetic CSV artifacts. Actual runtime model identity is unverified (null). input_tokens includes cached_input_tokens; total_tokens is input_tokens + output_tokens, not uncached cost. Protected byte/symlink inventories do not measure permission modes, empty directories, .git or host-global writes. Source hashes are consistency evidence, not proof of honest collection.
+
+Public export omits hidden reasoning and host stderr authentication diagnostics; private machine paths are normalized. Actual CSV bytes remain unchanged. Intermediate failures and skipped launches stay visible. This bounded local synthetic experiment does not establish universal instruction compliance, production readiness, independent human reuse or long-term savings.
+
+Frozen assertion scores are not counts of fully executed requirements: one assertion permits an explicit unverified result with a reason. In V3, the candidate and baseline each actually exercised collision refusal in two of three coverage trials. Candidate natural-1 omitted it without disclosure or a reason and scored 4/5; baseline explicit omitted it but disclosed a conservative README interpretation, satisfying the frozen reporting allowance without establishing an empirical blocker. Separate collision targets were observed in one of three candidate trials and none of the baseline trials. All intermediate grades and these additional observations remain in each trial's grading.json.
+
+The export was verified against retained raw records: 38 trials, 307 public events, 162 unchanged graded assertions, and 24 byte-identical CSV artifacts. Public final-answer links beginning with artifacts/ were mechanically rebased to project/artifacts/; this does not alter the observations or grades. See verification.json for the bounded audit result.

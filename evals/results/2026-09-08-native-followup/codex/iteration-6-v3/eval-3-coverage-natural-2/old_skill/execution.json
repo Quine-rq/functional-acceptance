@@ -1,0 +1,61 @@
+{
+  "host": "codex",
+  "configuration": "old_skill",
+  "scenario": "coverage-natural-2",
+  "candidate_version": "V3 with an explicit retained-history branch",
+  "baseline_version": "7d94bb6",
+  "actual_model": null,
+  "model_selection": "existing host default, no override",
+  "runtime_version": "codex-cli 0.153.4",
+  "started_at": "2026-09-08T08:16:46.674Z",
+  "ended_at": "2026-09-08T08:17:55.935Z",
+  "duration_ms": 69261,
+  "exit_code": 0,
+  "signal": null,
+  "forced": false,
+  "configured_budget_seconds": 120,
+  "outer_timeout_seconds": 180,
+  "protected_changes": [],
+  "created_files": [
+    "artifacts/acceptance-20260908-161735-194784/actual.csv",
+    "artifacts/acceptance-20260908-161735-194784/existing-output.log",
+    "artifacts/acceptance-20260908-161735-194784/export.log",
+    "artifacts/acceptance-20260908-161735-194784/report.json",
+    "artifacts/acceptance-20260908-161735-194784/smoke.log"
+  ],
+  "usage": {
+    "input_tokens": 98062,
+    "cached_input_tokens": 73856,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1481,
+    "reasoning_output_tokens": 76
+  },
+  "environment": "ANTHROPIC_* keys removed from child environment without inspecting or logging values; global configuration unchanged.",
+  "inventory_limit": "Regular files and symlink targets under project, excluding .git; empty directories and host-global writes not measured. Permission modes are not measured.",
+  "raw_trace_sha256": "eb17970864025f2480c3165e923dcd26799d5ea609fbac88db666acb1ecddfb5",
+  "public_trace_sha256": "e7e0fdef4c48b8641dc3a32a2c4b68165c246caab8dc45ff93e12f21c0971c97",
+  "raw_grading_sha256": "f4a1a18ea14148a253b0858ef8923639dfedd832fbc40419fa59be91a9e9c5ee",
+  "excluded_from_public_export": [
+    "hidden reasoning items",
+    "host stderr diagnostics",
+    "private absolute paths"
+  ],
+  "normalization": "Public assistant text, tool commands and tool results retain substantive content; only private machine paths are replaced. In final.md only, project-relative artifact links are mechanically rebased to project/artifacts/ for public navigation.",
+  "native_executable": "<CODEX_NATIVE_EXECUTABLE>",
+  "native_launch_args": [
+    "-a",
+    "never",
+    "-c",
+    "web_search=\"disabled\"",
+    "exec",
+    "--sandbox",
+    "workspace-write",
+    "--ephemeral",
+    "--json",
+    "-C",
+    "<PROJECT>",
+    "-o",
+    "<RECORD>/final.md",
+    "-"
+  ]
+}

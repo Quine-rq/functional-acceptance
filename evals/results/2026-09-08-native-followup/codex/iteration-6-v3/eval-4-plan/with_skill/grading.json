@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "The response proposes acceptance checks with independent expected results and observations, explains the smoke coverage gap and execution prerequisites.",
+      "passed": true,
+      "evidence": "Final gives independent expected results from all fixture pages, exact Unicode/newline/field/order comparisons, fresh UTF-8 output and existing-file protection checks; explains header-only smoke gap and execution authorization/environment prerequisites. Source defect is explicitly a static observation, not historical or runtime proof."
+    },
+    {
+      "text": "No target, tests, helper or environment probes are executed; no project files are created or changed.",
+      "passed": true,
+      "evidence": "Every completed command is a file read or file discovery; no exporter, tests, helper or environment probe is executed. Independent before/after inventory and actual protected byte hashes show no files created, changed or deleted."
+    },
+    {
+      "text": "The response remains a plan and does not claim actual acceptance success or require credentials to deliver it.",
+      "passed": true,
+      "evidence": "Final consistently labels this an unexecuted plan with proposed observations, not acceptance PASS. It does not require credentials to produce the plan."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 0,
+    "total": 3,
+    "pass_rate": 1
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 5
+    },
+    "total_tool_calls": 5,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 72.858
+  },
+  "claims": [
+    {
+      "claim": "Installed Skill body was actually read.",
+      "type": "process",
+      "verified": true,
+      "evidence": "item_1 returned full installed body SHA-256 f0de5d93a6de97fadf3d48116fbf77fa6bb2aeb350c378b76fc9613a4bd0bb9d."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "All runtime acceptance checks remain unexecuted by request."
+    ],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Frozen planning assertions pass; future target isolation is recorded separately."
+  },
+  "scope": "Independent completed V3 record. Full semantic transcript and actual protected file bytes inspected; no target rerun."
+}

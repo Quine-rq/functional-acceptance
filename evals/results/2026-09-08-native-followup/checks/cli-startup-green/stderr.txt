@@ -1,0 +1,6 @@
+test_cli_timeout_starts_after_synthetic_writer_is_ready (__main__.LifecycleTests.test_cli_timeout_starts_after_synthetic_writer_is_ready) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.387s
+
+OK

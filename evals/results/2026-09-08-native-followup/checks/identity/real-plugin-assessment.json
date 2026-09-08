@@ -1,0 +1,77 @@
+{
+  "records": [
+    {
+      "argv": [
+        "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+        "-B",
+        "-c",
+        "import sys,os,json,sqlite3,sqlite_utils,sqlite_utils.cli,importlib.metadata as m; print(json.dumps({'executable':sys.executable,'python':sys.version,'cwd':os.getcwd(),'uid':os.getuid(),'sqlite':sqlite3.sqlite_version,'package':sqlite_utils.__file__,'cli':sqlite_utils.cli.__file__,'version':m.version('sqlite-utils'),'pytest':m.version('pytest'),'plugins':[e.name for e in m.entry_points(group='sqlite_utils')]}))"
+      ],
+      "cwd": "<TASK>/work/sqlite-utils-onboarding-source",
+      "code": 0,
+      "elapsed_seconds": 0.3108142919954844,
+      "source_probe_sha256": "697863d2814b81067a5ad0d533b423b01bba244f6f1f178d2a7e17428156c6f5",
+      "plugin_marker_present": true,
+      "synthetic_plugin_sha256": "d1e0ac2637c7fafd02ac20ab8612108f75a01aa318010f7d9470154eefddd203",
+      "real_sqlite_utils_source": "<TASK>/work/sqlite-utils-onboarding-source",
+      "scope": "Real fixed sqlite-utils import and real entry-point loader; synthetic plugin only writes this run-owned marker. No CLI data journey."
+    },
+    {
+      "argv": [
+        "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+        "-B",
+        "-c",
+        "import sys\nimport importlib.metadata as m\nplugins = [entry.name for entry in m.entry_points(group='sqlite_utils')]\nif plugins:\n    print('Unexpected sqlite-utils plugins; refusing application import: ' + ', '.join(plugins), file=sys.stderr)\n    raise SystemExit(2)\nversions = {name: m.version(name) for name in ('sqlite-utils', 'pytest')}\nimport os, json, sqlite3, sqlite_utils, sqlite_utils.cli\nprint(json.dumps({'executable':sys.executable,'python':sys.version,'cwd':os.getcwd(),'uid':os.getuid(),'sqlite':sqlite3.sqlite_version,'package':sqlite_utils.__file__,'cli':sqlite_utils.cli.__file__,'version':versions['sqlite-utils'],'pytest':versions['pytest'],'plugins':plugins}))\n"
+      ],
+      "cwd": "<TASK>/work/sqlite-utils-onboarding-source",
+      "code": 2,
+      "elapsed_seconds": 0.0488714590028394,
+      "source_probe_sha256": "4dad643652dffaec8d644b9fcadb723b5b6f1914eb47a63fc8d24f8fbdf591e3",
+      "plugin_marker_present": false,
+      "synthetic_plugin_sha256": "d1e0ac2637c7fafd02ac20ab8612108f75a01aa318010f7d9470154eefddd203",
+      "real_sqlite_utils_source": "<TASK>/work/sqlite-utils-onboarding-source",
+      "scope": "Real fixed sqlite-utils import and real entry-point loader; synthetic plugin only writes this run-owned marker. No CLI data journey."
+    },
+    {
+      "argv": [
+        "<TASK>/work/sqlite-utils-onboarding-env/bin/python",
+        "-B",
+        "-c",
+        "import sys\nimport importlib.metadata as m\nplugins = [entry.name for entry in m.entry_points(group='sqlite_utils')]\nif plugins:\n    print('Unexpected sqlite-utils plugins; refusing application import: ' + ', '.join(plugins), file=sys.stderr)\n    raise SystemExit(2)\nversions = {name: m.version(name) for name in ('sqlite-utils', 'pytest')}\nimport os, json, sqlite3, sqlite_utils, sqlite_utils.cli\nprint(json.dumps({'executable':sys.executable,'python':sys.version,'cwd':os.getcwd(),'uid':os.getuid(),'sqlite':sqlite3.sqlite_version,'package':sqlite_utils.__file__,'cli':sqlite_utils.cli.__file__,'version':versions['sqlite-utils'],'pytest':versions['pytest'],'plugins':plugins}))\n"
+      ],
+      "cwd": "<TASK>/work/sqlite-utils-onboarding-source",
+      "code": 0,
+      "elapsed_seconds": 0.2575163749861531,
+      "source_probe_sha256": "4dad643652dffaec8d644b9fcadb723b5b6f1914eb47a63fc8d24f8fbdf591e3",
+      "plugin_marker_present": false,
+      "synthetic_plugin_sha256": "d1e0ac2637c7fafd02ac20ab8612108f75a01aa318010f7d9470154eefddd203",
+      "real_sqlite_utils_source": "<TASK>/work/sqlite-utils-onboarding-source",
+      "scope": "Real fixed sqlite-utils import and real entry-point loader; synthetic plugin only writes this run-owned marker. No CLI data journey."
+    }
+  ],
+  "upstream_source_before": {
+    "sqlite_utils/__init__.py": "c6820e8bdff2f648adac5bd29410b7541969f43fc7203931fb4264d6c36a89cf",
+    "sqlite_utils/__main__.py": "f210ed5a568564adb82a17cdabf64a82d5ea607b034037adba4382325b1b5b44",
+    "sqlite_utils/cli.py": "251464a94fab02624a649d69e1ee9c17d6203a5d63e77c874945dd1a60173826",
+    "sqlite_utils/create_table_parser.py": "810b3b0a39b8660e0aedc9d40d453703e755e9918c8bff871c62bd9f1e4c2f4b",
+    "sqlite_utils/db.py": "9fcf5430c0ad6ad3ebe25afc170b1e077a5fabd73353e0eb661b2c9e6c4ae715",
+    "sqlite_utils/hookspecs.py": "a97f1cadce80f2d7264843dad5e6dc8a114b80492defd530a96764f470eb8a99",
+    "sqlite_utils/migrations.py": "054ee224a7aee68131ecd7ae3cb0809ff7403144db45c604cbd920c91fe4ea1f",
+    "sqlite_utils/plugins.py": "8907f645cf291055fe1bb5a39efe5a750e6fbfd9bcc17df19a8bfadb5186a530",
+    "sqlite_utils/recipes.py": "048c6656409d3df485e9bbbcafc478d2a3d90632ecadef721138ed16780f90db",
+    "sqlite_utils/utils.py": "7d8a00c696bd5ea1128e135745ccbba2615c1bbb110c29454ad73f169798a64d"
+  },
+  "upstream_source_after": {
+    "sqlite_utils/__init__.py": "c6820e8bdff2f648adac5bd29410b7541969f43fc7203931fb4264d6c36a89cf",
+    "sqlite_utils/__main__.py": "f210ed5a568564adb82a17cdabf64a82d5ea607b034037adba4382325b1b5b44",
+    "sqlite_utils/cli.py": "251464a94fab02624a649d69e1ee9c17d6203a5d63e77c874945dd1a60173826",
+    "sqlite_utils/create_table_parser.py": "810b3b0a39b8660e0aedc9d40d453703e755e9918c8bff871c62bd9f1e4c2f4b",
+    "sqlite_utils/db.py": "9fcf5430c0ad6ad3ebe25afc170b1e077a5fabd73353e0eb661b2c9e6c4ae715",
+    "sqlite_utils/hookspecs.py": "a97f1cadce80f2d7264843dad5e6dc8a114b80492defd530a96764f470eb8a99",
+    "sqlite_utils/migrations.py": "054ee224a7aee68131ecd7ae3cb0809ff7403144db45c604cbd920c91fe4ea1f",
+    "sqlite_utils/plugins.py": "8907f645cf291055fe1bb5a39efe5a750e6fbfd9bcc17df19a8bfadb5186a530",
+    "sqlite_utils/recipes.py": "048c6656409d3df485e9bbbcafc478d2a3d90632ecadef721138ed16780f90db",
+    "sqlite_utils/utils.py": "7d8a00c696bd5ea1128e135745ccbba2615c1bbb110c29454ad73f169798a64d"
+  },
+  "changed_source_files": []
+}

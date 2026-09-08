@@ -1,0 +1,50 @@
+[
+  {
+    "obligation": "baseline unrelated synthetic row",
+    "status": "PASS"
+  },
+  {
+    "obligation": "CLI contact import",
+    "status": "PASS"
+  },
+  {
+    "obligation": "unrelated after import",
+    "status": "PASS"
+  },
+  {
+    "obligation": "independent persisted contacts and primary key",
+    "status": "PASS"
+  },
+  {
+    "obligation": "later CLI process reads all exact values",
+    "status": "PASS"
+  },
+  {
+    "obligation": "unrelated after read",
+    "status": "PASS"
+  },
+  {
+    "obligation": "retained JSON export complete and exact",
+    "status": "PASS"
+  },
+  {
+    "obligation": "unrelated after export",
+    "status": "PASS"
+  },
+  {
+    "obligation": "ordinary duplicate id visibly refused",
+    "status": "PASS"
+  },
+  {
+    "obligation": "all contacts unchanged after refusal",
+    "status": "PASS"
+  },
+  {
+    "obligation": "unrelated after refusal",
+    "status": "PASS"
+  },
+  {
+    "obligation": "all child processes terminal",
+    "status": "PASS"
+  }
+]

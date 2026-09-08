@@ -1,0 +1,39 @@
+{
+  "command": [
+    "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-c",
+    "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/acceptance/pytest.ini",
+    "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/acceptance/test_onboarding.py",
+    "--confcutdir=WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/acceptance",
+    "--basetemp=WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/pytest-tmp",
+    "-o",
+    "cache_dir=WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/pytest-cache",
+    "--junitxml=WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/pytest.xml",
+    "-v"
+  ],
+  "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+  "environment": {
+    "PATH": "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin:/usr/bin:/bin",
+    "PYTHONPATH": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+    "TMPDIR": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/tmp",
+    "TMP": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/tmp",
+    "TEMP": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/tmp",
+    "ACCEPTANCE_RUN": "WORKSPACE_ROOT/work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69",
+    "LC_ALL": "en_US.UTF-8"
+  },
+  "launcher_pid": 23085,
+  "uid": 501,
+  "source_provenance_user_supplied": "sqlite-utils 4.2.1 / 85b1be10c81d9dd3567e36faf8dd411e4a8789bd",
+  "started_utc": "2026-09-08T07:46:51Z",
+  "pytest_pid": 23087,
+  "terminal_state": "pytest exited; CLI children synchronously awaited by test",
+  "returncode": 0,
+  "finished_utc": "2026-09-08T07:46:55Z",
+  "changed_hashed_files": []
+}

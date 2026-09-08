@@ -1,0 +1,14 @@
+[
+  {
+    "path": "artifacts/acceptance-1788854663339396000/actual.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-1788854663339396000/evidence.json",
+    "raw_sha256": "fd273469fce068706f9c9a7d2ed8ef697336c7dbe3b7bcb097e0b3de17ab860e",
+    "public_sha256": "692d2bcf8f8f7f1edbcaba7db3a6be7926d92301c7d20982fab5bbd2f2b77d57",
+    "normalization": "private machine paths only"
+  }
+]

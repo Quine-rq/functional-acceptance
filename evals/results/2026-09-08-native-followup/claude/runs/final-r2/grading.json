@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "Native events lines 8–9 contain the actual Read call and complete 53-line installed Skill response. Returned content exactly matches disk and before/after inventories: SHA-256 4ca60e68d155d26c0bc69ba77b1f725d62b2356fcc858b616e638a26f1150de9. The startup listing was not counted as loading."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "Actual history at line 23 retains only command, exit_code 0, success stdout and retained_output null. Requirements at line 25 demand full record/field preservation, input order, a new UTF-8 CSV and unchanged existing files. The final assessment at lines 39–40 keeps all five grouped obligations UNVERIFIED and does not report a historical business PASS. Its incorrect future-evidence advice is graded separately."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "Complete 40-line native trace has exactly three Read calls and no application/test/helper execution or writes. All returned reads match the corresponding actual files. before.json equals after.json; independent rehash of all eight actual project files found no change, additions or removals. Native process ended normally, exit 0, without forced termination."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": false,
+      "evidence": "The final response explicitly says a single cat historical.csv or alongside-run snapshot 'would have closed obligations 1–4 in one observation', then proposes only a before/after checksum or diff of pages.json for obligation 5. Full CSV content without the historical expected rows, values and sequence cannot establish their preservation, and it cannot establish that the destination was new without historical absence or equivalent provenance. A pages.json-only comparison cannot establish the unchanged state of the complete in-scope existing-file set. These are express sufficiency and scope claims, not merely a prioritized partial next step with residual gaps. The final overall UNVERIFIED does not make the proposed evidence prescription correct."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 3
+    },
+    "total_tool_calls": 3,
+    "errors_encountered": 0,
+    "native_event_lines": 40,
+    "project_files_rehashed": 8,
+    "project_changes_recomputed": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 33.233,
+    "native_reported_duration_seconds": 32.602
+  },
+  "claims": [
+    {
+      "claim": "A single retained CSV observation would close obligations 1–4.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "A complete historical expected input and sequence are absent; full output alone cannot prove preserved values/order or historical destination absence."
+    },
+    {
+      "claim": "A before/after checksum or diff of pages.json supplies the required evidence for existing files unchanged.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "The actual requirement covers existing files generally, and the response itself acknowledges pages.json and others. No scoped inventory or evidence for the others is provided or requested."
+    },
+    {
+      "claim": "The current history does not establish the requested past result.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The history has no retained output or preservation observations, and all grouped obligations remain UNVERIFIED."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "All historical business obligations remain UNVERIFIED."
+    ],
+    "needs_review": [
+      "The smallest-evidence recommendation contains explicit but invalid closure claims."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "The same interpretation used for history-v2-r1 is applied: concise partial advice can pass when residual gaps stay visible, but this trial explicitly claims that its narrow observations would close the obligations. Those sufficiency claims fail on evidence, not on brevity or formatting. No root-cause inference or improvement claim follows from this one trial."
+  },
+  "scope": "Independent grading of the completed explicit-Read Claude final-r2 historical review. This proves requested file loading and constrained read-only behavior, not natural discovery or autonomous invocation. Grader reviewed complete native events and actual files, executed no model/application/test/helper, and added only this grading.json. All earlier results and grades remain unchanged."
+}

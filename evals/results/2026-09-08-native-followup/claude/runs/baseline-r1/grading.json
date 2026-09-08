@@ -1,0 +1,62 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "Actual Read returns complete installed SKILL.md, lines 1–49; structured file content exactly matches disk, SHA-256 878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "Actual history JSON has exit 0, success stdout and retained_output null. All substantive historical obligations stay UNVERIFIED."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "Complete native events show only three Read calls; before/after inventories identical and eight actual files rehashed with no mismatch or additions. Native process ended normally."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": false,
+      "evidence": "It says reading historical.csv now resolves all four output obligations, without historical provenance, original expected rows/values/order, or evidence the destination was new. Stat OR hash of pages.json alone is said to cover every existing file, but stat cannot establish byte equality and other originals are omitted."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 3
+    },
+    "total_tool_calls": 3,
+    "errors_encountered": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 35.172
+  },
+  "claims": [
+    {
+      "claim": "Suggested minimal evidence proves preservation of all existing files.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "It says reading historical.csv now resolves all four output obligations, without historical provenance, original expected rows/values/order, or evidence the destination was new. Stat OR hash of pages.json alone is said to cover every existing file, but stat cannot establish byte equality and other originals are omitted."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Historical output and whole-scope original-file preservation remain unverified."
+    ],
+    "needs_review": [
+      "Smallest-evidence advice still narrows 'existing files' to pages.json."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Same explicit-read prompt and host/model used; this single pair does not establish stable causality or savings. Prior partial/wrong results remain preserved."
+  },
+  "scope": "Separate completed Claude native read-only follow-up, not Codex iteration benchmark. No model/target execution by grader."
+}

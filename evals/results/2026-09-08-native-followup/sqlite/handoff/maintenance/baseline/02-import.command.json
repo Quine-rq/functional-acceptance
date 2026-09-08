@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "WORKSPACE_ROOT/work/sqlite-utils-onboarding-env/bin/python",
+    "-B",
+    "-m",
+    "sqlite_utils",
+    "insert",
+    "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/contacts.db",
+    "contacts",
+    "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/contacts.input.json",
+    "--pk",
+    "id"
+  ],
+  "cwd": "WORKSPACE_ROOT/work/reuse-sqlite-independent-native/maintenance/project",
+  "pid": 25838,
+  "returncode": 0,
+  "timed_out": false,
+  "started_unix": 1788853870.686151,
+  "ended_unix": 1788853870.976303,
+  "stdout": "02-import.stdout",
+  "stderr": "02-import.stderr",
+  "terminal": true
+}

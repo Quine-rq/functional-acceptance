@@ -1,0 +1,1 @@
+Record checks passed: 11 behavior records, 7 actual CSVs, preserved failures, 3 red/3 green timing observations and six final scoped native controls. Not a live rerun, product pass or authenticity proof.

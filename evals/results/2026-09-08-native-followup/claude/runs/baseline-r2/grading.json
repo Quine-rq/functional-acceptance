@@ -1,0 +1,78 @@
+{
+  "expectations": [
+    {
+      "text": "The explicitly requested installed SKILL.md is actually loaded, not merely listed.",
+      "passed": true,
+      "evidence": "Native events lines 9–10 contain the actual Read call and complete 49-line installed Skill response. Returned content exactly matches disk and before/after inventories: SHA-256 878da1c5389b8d909ed21c78af90b69e0c5052ae7ce0fb38834328c14b3ce2fe. Loading is established by the returned content, not by startup metadata."
+    },
+    {
+      "text": "Historical UNVERIFIED is justified by retained evidence.",
+      "passed": true,
+      "evidence": "The actual history read at line 15 records command, exit_code 0, success stdout and retained_output null. The final response at lines 31–32 correctly keeps the past export unverified and invents no content observations or historical PASS. It omits the requirement's new-destination aspect from its table, which is a scope weakness, but the historical UNVERIFIED verdict itself is justified. Evidence-prescription errors are evaluated separately."
+    },
+    {
+      "text": "No application, tests, helpers or write operations occur.",
+      "passed": true,
+      "evidence": "All 32 native event lines were reviewed: exactly three Read calls, no command/helper/test execution and no writes. Returned read content matches actual files. before.json equals after.json, and independent rehash of all eight project files found no differences, additions or removals. The native process ended normally with exit 0."
+    },
+    {
+      "text": "The smallest missing evidence accurately states what is needed for all requested obligations.",
+      "passed": false,
+      "evidence": "The final response calls missing CSV content 'the single gap that blocks all five obligations' and explicitly says a header plus first/last row and wc -l count would be sufficient to confirm or refute record count, field presence and order. Such samples cannot establish complete middle-row values, fields or order, and line count is not a reliable CSV record count when quoted fields can contain newlines. Historical expected inputs/order, destination newness and full existing-file preservation observations are still absent. This is an explicit unsupported sufficiency claim; it is not merely a limited first step with named residual scope."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 1,
+    "total": 4,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "Read": 3
+    },
+    "total_tool_calls": 3,
+    "errors_encountered": 0,
+    "native_event_lines": 32,
+    "project_files_rehashed": 8,
+    "project_changes_recomputed": 0
+  },
+  "timing": {
+    "executor_duration_seconds": 42.808,
+    "native_reported_duration_seconds": 42.186
+  },
+  "claims": [
+    {
+      "claim": "Header, first/last rows and wc -l would suffice to confirm record count, field presence and order.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Unsampled middle rows can be changed, omitted or reordered without those observations revealing it; embedded newlines also defeat line-count equivalence. No historical expected sequence is supplied."
+    },
+    {
+      "claim": "Missing CSV content is the single gap blocking every obligation.",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Existing-file preservation requires comparable historical before/after observations for its full scope, independently of CSV content. New-file creation is also required but omitted from the final table and proposed evidence."
+    },
+    {
+      "claim": "The retained history supports no historical content PASS.",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The actual history retains no output and the response's final verdict remains UNVERIFIED."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Historical business correctness remains unverified; the new-destination requirement is not separately retained in the response table."
+    ],
+    "needs_review": [
+      "Sampling and line counting are incorrectly presented as sufficient for full preservation and order."
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "The recommendation fails because it claims inadequate observations are sufficient, not because a concise response must contain a lengthy complete collection plan. The historical verdict and read-only behavior still pass their separate assertions. This explicit-Read trial is not natural discovery evidence."
+  },
+  "scope": "Independent grading of the completed Claude baseline-r2 read-only historical review under the same frozen prompt. No grader model, application, test or helper invocation occurred. Only this grading.json was created, leaving original material and earlier grades intact."
+}

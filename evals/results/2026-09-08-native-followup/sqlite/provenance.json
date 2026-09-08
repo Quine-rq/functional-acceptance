@@ -1,0 +1,1897 @@
+{
+  "scope": "Prepared native generation pair, no-Skill replay/maintenance, retained failed/interrupted starts, historical lifecycle hardening and one early migration replay. Not the final integrated suite or a release claim.",
+  "upstream": {
+    "repository": "https://github.com/simonw/sqlite-utils",
+    "pin": "85b1be10c81d9dd3567e36faf8dd411e4a8789bd",
+    "pin_evidence": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/metadata.json:source_head",
+    "prepared_source_sha256": "2dfff08ad5efb2894006f017b0c2279fdb0d03dc720d49b127e70d8391087d73",
+    "license": "Apache-2.0",
+    "license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  "transformations": [
+    "Replace the private absolute workspace root with WORKSPACE_ROOT.",
+    "Replace the Python 3.14 framework bin directory, when present, with PYTHON_3_14_BIN.",
+    "Replace the recorded machine hostname with LOCAL_HOST.",
+    "Add one terminal LF only for derived text where needed, explicitly flagged per file. Unredacted data files are copied byte-for-byte.",
+    "Metadata files are selected-key excerpts with a derived created_file_count; per-file structural_transform, selected_keys, derived_keys and omitted_keys enumerate this transformation. Null selected fields mean missing/unavailable, not zero."
+  ],
+  "not_included": [
+    "Database files, complete upstream source, model event streams, reasoning/thinking, credentials or authentication diagnostics.",
+    "Root's later integrated startup-timing/plugin-guard regressions; their evidence is separately owned under ../checks/.",
+    "No source-code body copied from upstream. Native pytest output contains only runtime metadata and generated acceptance test names; identity command is generated pack code, not upstream source."
+  ],
+  "interpretation": [
+    "Hashes bind source/public byte sequences; they do not independently authenticate collection or prove that no side effect occurred.",
+    "Retained historical PID numbers correlate this run only; they must never be used to signal current processes.",
+    "The native fault harness substitutes the first identity CLI with a self-terminating synthetic writer. cli-started.json retains the original requested argv; it is not proof that the original identity program executed in that fault run.",
+    "Native fault termination.json retains configured timeout_seconds=180 while the harness intercepts its wait and scales the exercised deadline to 0.4 seconds. result.json discloses instrumentation."
+  ],
+  "files": [
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/pair-result.json",
+      "public_path": "generation/pair-result.json",
+      "source_sha256": "b93d4777f8d8a1ea438d0b37f8970d62bdfe6ca8908732ed7f980403bb04a33e",
+      "public_sha256": "7fab61d506bee65e68d051b0d00e6d083e7af66b44bd7c78279b588e986ead61",
+      "source_bytes": 1295,
+      "public_bytes": 1231,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/retained-evidence-audit.json",
+      "public_path": "generation/retained-evidence-audit.json",
+      "source_sha256": "c08dc80ac4eac6642bdd340c7a7f54421d9137a0f30806b491e972be5134e74f",
+      "public_sha256": "c08dc80ac4eac6642bdd340c7a7f54421d9137a0f30806b491e972be5134e74f",
+      "source_bytes": 9878,
+      "public_bytes": 9878,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/EXECUTION-NOTES.md",
+      "public_path": "generation/EXECUTION-NOTES.md",
+      "source_sha256": "95fb4c646ae0ea7770cae3daac78597a91e73f9b945dfcefc579d2887f6b57d8",
+      "public_sha256": "95fb4c646ae0ea7770cae3daac78597a91e73f9b945dfcefc579d2887f6b57d8",
+      "source_bytes": 10416,
+      "public_bytes": 10416,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/PUBLIC-SUMMARY.md",
+      "public_path": "handoff/PUBLIC-SUMMARY.md",
+      "source_sha256": "71bae182e5ab7b29051e334f94c3b94c3c45b8555cc28084d9b22b287ec69d59",
+      "public_sha256": "71bae182e5ab7b29051e334f94c3b94c3c45b8555cc28084d9b22b287ec69d59",
+      "source_bytes": 5741,
+      "public_bytes": 5741,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/COORDINATOR-HANDOFF.md",
+      "public_path": "handoff/COORDINATOR-HANDOFF.md",
+      "source_sha256": "4d58ff55b87513605b67bd805d0d381b2867dfef0fa864547baa90c1d7aa50a2",
+      "public_sha256": "4d58ff55b87513605b67bd805d0d381b2867dfef0fa864547baa90c1d7aa50a2",
+      "source_bytes": 5521,
+      "public_bytes": 5521,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/retained-handoff-audit.json",
+      "public_path": "handoff/retained-handoff-audit.json",
+      "source_sha256": "45910034d59a6a4701d1ace235002e6a36d321b762689b508de6e983f6a2ae42",
+      "public_sha256": "45910034d59a6a4701d1ace235002e6a36d321b762689b508de6e983f6a2ae42",
+      "source_bytes": 4259,
+      "public_bytes": 4259,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-pair/pair-result.json",
+      "public_path": "starts/initial-host-failure/pair-result.json",
+      "source_sha256": "96fee52dc952bfc5d13d35b0400344e33192bf2dc124201e6261b9b7a467f901",
+      "public_sha256": "8bd3a851ab14498c935c555476e51e8e45b1308fcfc3bb1f465be752bb129d58",
+      "source_bytes": 881,
+      "public_bytes": 817,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-pair/pair-result.json",
+      "public_path": "starts/operator-stopped/pair-result.json",
+      "source_sha256": "12865220d8378aaaa73f428253ba8b653148ef4e784ddcfda3a42a7255d8dc63",
+      "public_sha256": "846f2809adef1fc6758c04af0f2d72a621d6a94db19e8ce5150c3cfdcc311b64",
+      "source_bytes": 925,
+      "public_bytes": 861,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/final-validation.json",
+      "public_path": "handoff/maintenance/final-validation.json",
+      "source_sha256": "d7e97c25ac78d41d4a8a62ea20491197b912546231f9ef0f35dd1a129aeaae3a",
+      "public_sha256": "d4f7b24aa6d9c3eb8f4833396812d7454bfc9e65cb35122e189cbe9dbe05aafe",
+      "source_bytes": 249,
+      "public_bytes": 250,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/observer-controls.json",
+      "public_path": "handoff/maintenance/observer-controls.json",
+      "source_sha256": "1d5d8327f0cbc3bd6026ba1b445ff501097a63937d581377a9c04c15050bbdb3",
+      "public_sha256": "a3d7eea3e58835b008c5bad6ac456795a58554c545b895ec1692840915e24e67",
+      "source_bytes": 3275,
+      "public_bytes": 3116,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/cost.json",
+      "public_path": "handoff/maintenance/internal-cost.json",
+      "source_sha256": "cd1cf888a7f839a6fb2b559072916a2877cc0b3c18449e51df6488752fa7ac16",
+      "public_sha256": "6ded6b17f3701159e1c91710b2a0969ddaa5ceca59d1767b31869a9316510c57",
+      "source_bytes": 606,
+      "public_bytes": 607,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/MAINTENANCE-REQUIREMENTS.md",
+      "public_path": "handoff/maintenance/MAINTENANCE-REQUIREMENTS.md",
+      "source_sha256": "4a3d510a24ffb11247b8b9856e3518525af5262e68cdc2cb769396aa5932134c",
+      "public_sha256": "4a3d510a24ffb11247b8b9856e3518525af5262e68cdc2cb769396aa5932134c",
+      "source_bytes": 2271,
+      "public_bytes": 2271,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/project/ONBOARDING-REQUIREMENTS.md",
+      "public_path": "generation/ONBOARDING-REQUIREMENTS.md",
+      "source_sha256": "c5ac9e74c45fdd3972262646171dfe9608c92ae386c0436a6c2cc4e9dd141b8f",
+      "public_sha256": "c5ac9e74c45fdd3972262646171dfe9608c92ae386c0436a6c2cc4e9dd141b8f",
+      "source_bytes": 1717,
+      "public_bytes": 1717,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/metadata.json",
+      "public_path": "generation/with_skill/metadata.json",
+      "source_sha256": "7a14b1edaacd5309f27fada0ce70bcda002876531c7f19d321d1a7e7e8470136",
+      "public_sha256": "335847fedfdf1ead3c45149b6210fd85c1a502bcf28ef9c28fba998d72ae1da9",
+      "source_bytes": 60074,
+      "public_bytes": 1129,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/final.md",
+      "public_path": "generation/with_skill/final.md",
+      "source_sha256": "c1d3c5943f06f75d99652ee2b91987462c94d67ff70999cc931d6c7ef4d605c5",
+      "public_sha256": "afef3a8b054ca0475cb9250b15e4a3bcfd82c6158d0c59aa4512c3a2b1167d12",
+      "source_bytes": 595,
+      "public_bytes": 596,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/metadata.json",
+      "public_path": "generation/old_skill/metadata.json",
+      "source_sha256": "1e412bf78a7fe410945c3365bb60604185e6c672f8cb6a21764038e8cea05f82",
+      "public_sha256": "d94097632fe5a77b12f97db33981d6366bf993b1dec7fd18ccda2b77d6c18852",
+      "source_bytes": 56431,
+      "public_bytes": 1129,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/final.md",
+      "public_path": "generation/old_skill/final.md",
+      "source_sha256": "fc3c9d9cb6cdffd42a0e6359a03c075308186f35359bc9fca73b2b6e7c473130",
+      "public_sha256": "9b804cff4cff079b54bd74e0ea11d12849cc12d3344dd912752e08d6bc946c1f",
+      "source_bytes": 783,
+      "public_bytes": 720,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/metadata.json",
+      "public_path": "handoff/replay/metadata.json",
+      "source_sha256": "4c07c5c1a10e04444263202a7e797f9024dc81b9a2a87e864006db7863045656",
+      "public_sha256": "7b09480136ea4397dc35aba8aae02f52b7648d312521641c8c4694bd73a08833",
+      "source_bytes": 46500,
+      "public_bytes": 924,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/final.md",
+      "public_path": "handoff/replay/final.md",
+      "source_sha256": "2eff779d1912b592b3807051736440a738ccca34f82f627703d2afedac011465",
+      "public_sha256": "844903d569ef98d16ec96791c49950acedb380184ab232ec2e9108dac01bc8c2",
+      "source_bytes": 395,
+      "public_bytes": 396,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/metadata.json",
+      "public_path": "handoff/maintenance/metadata.json",
+      "source_sha256": "63f988d547d90c137a1661a353827c7757733207e76d3338a9535885866d0540",
+      "public_sha256": "880541426c40c9a6905e899092d29ae358019f095ada4e72d9e733788e02de41",
+      "source_bytes": 60674,
+      "public_bytes": 999,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/final.md",
+      "public_path": "handoff/maintenance/final.md",
+      "source_sha256": "e0ef17db5cb273c4919b3992e5a91cac78f28d6cd5edc8ba2a661ab937c94973",
+      "public_sha256": "4ff7489a04436e8a706a394b99459d17f43bbb44e5864d8db0572be0f250db26",
+      "source_bytes": 568,
+      "public_bytes": 537,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-pair/with_skill/metadata.json",
+      "public_path": "starts/operator-stopped/with_skill/metadata.json",
+      "source_sha256": "28248ed36a21a28004e1dbcaa555bc36a3d8a64054cfef380c8277ea880e901c",
+      "public_sha256": "18ebf3a4203eaf7fc004f6fec44d5233e5fa765d80d5020646ab750a31220c97",
+      "source_bytes": 37305,
+      "public_bytes": 973,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-pair/old_skill/metadata.json",
+      "public_path": "starts/operator-stopped/old_skill/metadata.json",
+      "source_sha256": "d4369a823dadbf2fb3eff7e9e23aff2bd48eaebc7cc0ea0c60c45e009fe9b200",
+      "public_sha256": "01dcf4e294703906eeed2716c103bb784fa61191c30c312a564bf6c2d987c967",
+      "source_bytes": 37278,
+      "public_bytes": 972,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-pair/with_skill/metadata.json",
+      "public_path": "starts/initial-host-failure/with_skill/metadata.json",
+      "source_sha256": "93081c5cf30ffc24d6f168d18bf152fa1b6df29339c0d971d5af97a7db0d5aa7",
+      "public_sha256": "f700df1cdba47fc3632980ba8008b3b1955f0b29b11d4fe2ea9357c1930bd568",
+      "source_bytes": 36950,
+      "public_bytes": 962,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-pair/old_skill/metadata.json",
+      "public_path": "starts/initial-host-failure/old_skill/metadata.json",
+      "source_sha256": "ae3515af8bccc16201cad006953b75162bb12710a484aaf7044668e411ef5ed0",
+      "public_sha256": "97ff9db8265096e55ab62e43b1a91cfc82711c2025c2b69abcda1c3459056a4d",
+      "source_bytes": 36923,
+      "public_bytes": 961,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": false,
+      "structural_transform": "metadata_excerpt",
+      "selected_keys": [
+        "mode",
+        "configuration",
+        "source_head",
+        "source_sha256",
+        "skill_installed",
+        "installed_skill_sha256",
+        "prompt_sha256",
+        "requirement_sha256",
+        "started_at",
+        "ended_at",
+        "duration_ms",
+        "exit_code",
+        "signal",
+        "forced",
+        "usage",
+        "protected_changes",
+        "all_input_changes",
+        "source_tracked_changes",
+        "time_budget_seconds",
+        "outer_kill_seconds",
+        "model_selection",
+        "assistance_during_invocation"
+      ],
+      "derived_keys": {
+        "created_file_count": "length of created_files"
+      },
+      "omitted_keys": "All other metadata keys, including full inventories, invocation argv, authentication descriptors and host diagnostics. Null selected fields mean absent/unavailable, not zero."
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/05-duplicate.command.json",
+      "public_path": "generation/with_skill/run-2/05-duplicate.command.json",
+      "source_sha256": "42f6a535c69acb2d8782ef1deb2f2ee45d1f3e9606bcde394c19e6f90d88a704",
+      "public_sha256": "21f1a449aa21fd431b9d577bdef9fda4e86570395ce52747bd0ecf69969885c5",
+      "source_bytes": 931,
+      "public_bytes": 804,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/contacts.export.json",
+      "public_path": "generation/with_skill/run-2/contacts.export.json",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/contacts.input.json",
+      "public_path": "generation/with_skill/run-2/contacts.input.json",
+      "source_sha256": "c990b5c9376e04a08b4b33e1a83ac189ef91a8ba20f13e5bd2428f62fc9a1ad5",
+      "public_sha256": "c990b5c9376e04a08b4b33e1a83ac189ef91a8ba20f13e5bd2428f62fc9a1ad5",
+      "source_bytes": 449,
+      "public_bytes": 449,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/pytest.stdout.txt",
+      "public_path": "generation/with_skill/run-2/pytest.stdout.txt",
+      "source_sha256": "abcd6ba7743f2fd839a55f006a2181fae120090926ea786360910ed7b6526436",
+      "public_sha256": "97760cb979976f22c693b338b8d2e7366ee5b714a681738e8070678ef506b0d7",
+      "source_bytes": 1162,
+      "public_bytes": 1066,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/03-read.snapshot.json",
+      "public_path": "generation/with_skill/run-2/03-read.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/06-read-after-rejection.stdout",
+      "public_path": "generation/with_skill/run-2/06-read-after-rejection.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/06-final.snapshot.json",
+      "public_path": "generation/with_skill/run-2/06-final.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/02-imported.snapshot.json",
+      "public_path": "generation/with_skill/run-2/02-imported.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/03-read-new-process.command.json",
+      "public_path": "generation/with_skill/run-2/03-read-new-process.command.json",
+      "source_sha256": "4163e298a2d5055a73108833159bef36abc29da3fe0752647813cb4444070344",
+      "public_sha256": "9aaf8470445885b195d80cc14e39c83db790d1a2d359f0af4f3e6b3e2b31f8b0",
+      "source_bytes": 756,
+      "public_bytes": 661,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/source-sha256.json",
+      "public_path": "generation/with_skill/run-2/source-sha256.json",
+      "source_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "public_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "source_bytes": 1362,
+      "public_bytes": 1362,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/03-read-new-process.stdout",
+      "public_path": "generation/with_skill/run-2/03-read-new-process.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/termination.json",
+      "public_path": "generation/with_skill/run-2/termination.json",
+      "source_sha256": "796ddb1b1162f50be78024bebd9244563b5cce7938c2807d88c000688d75f843",
+      "public_sha256": "796ddb1b1162f50be78024bebd9244563b5cce7938c2807d88c000688d75f843",
+      "source_bytes": 58,
+      "public_bytes": 58,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/04-export.stdout",
+      "public_path": "generation/with_skill/run-2/04-export.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/05-duplicate.stderr",
+      "public_path": "generation/with_skill/run-2/05-duplicate.stderr",
+      "source_sha256": "5f6c469303452fbb16589f16bdb7fcd23a2812e050319d113608444edcdad8d4",
+      "public_sha256": "5f6c469303452fbb16589f16bdb7fcd23a2812e050319d113608444edcdad8d4",
+      "source_bytes": 233,
+      "public_bytes": 233,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/02-import.command.json",
+      "public_path": "generation/with_skill/run-2/02-import.command.json",
+      "source_sha256": "5c7b7dca6bed59212bc6b7128b32e6ba682e357a3aaef53445a6ef417bfbc905",
+      "public_sha256": "36819f1f70db6c9b11f3634f17f4be5702b37d18bd8207221b80234476c93a6a",
+      "source_bytes": 924,
+      "public_bytes": 797,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/04-exported.snapshot.json",
+      "public_path": "generation/with_skill/run-2/04-exported.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/05-rejected.snapshot.json",
+      "public_path": "generation/with_skill/run-2/05-rejected.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/01-seeded.snapshot.json",
+      "public_path": "generation/with_skill/run-2/01-seeded.snapshot.json",
+      "source_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "public_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "source_bytes": 555,
+      "public_bytes": 555,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/17-after-export.snapshot.json",
+      "public_path": "generation/old_skill/run-2/17-after-export.snapshot.json",
+      "source_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "public_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "source_bytes": 276,
+      "public_bytes": 276,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.export.json",
+      "public_path": "generation/old_skill/run-2/contacts.export.json",
+      "source_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "public_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "source_bytes": 346,
+      "public_bytes": 346,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/execution.json",
+      "public_path": "generation/old_skill/run-2/execution.json",
+      "source_sha256": "b80030b078e0013990e3931b77cd2d731e1a0f2b418433979694028c26228fc1",
+      "public_sha256": "4e4579fe61d387e0f244ee8c07a1e62a4bcddc1f950c8724e59768988ca8200b",
+      "source_bytes": 2855,
+      "public_bytes": 2408,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/15-after-read.snapshot.json",
+      "public_path": "generation/old_skill/run-2/15-after-read.snapshot.json",
+      "source_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "public_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "source_bytes": 276,
+      "public_bytes": 276,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/contacts.input.json",
+      "public_path": "generation/old_skill/run-2/contacts.input.json",
+      "source_sha256": "8061ba7541aa6030977c7d63879c7ecd1864ae5f728b5e91b057e0b7f1cd6272",
+      "public_sha256": "8061ba7541aa6030977c7d63879c7ecd1864ae5f728b5e91b057e0b7f1cd6272",
+      "source_bytes": 435,
+      "public_bytes": 435,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/pytest.stdout.txt",
+      "public_path": "generation/old_skill/run-2/pytest.stdout.txt",
+      "source_sha256": "b8f3b2099b275f0babe465208e9ec5d812b729440853821b8bb3037758c56190",
+      "public_sha256": "d5884381037ce0252e69cd483dff3995260238bc3a72369a5e77fc9ce95f946d",
+      "source_bytes": 974,
+      "public_bytes": 846,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/20-after-duplicate.snapshot.json",
+      "public_path": "generation/old_skill/run-2/20-after-duplicate.snapshot.json",
+      "source_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "public_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "source_bytes": 276,
+      "public_bytes": 276,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/13-persisted.json",
+      "public_path": "generation/old_skill/run-2/13-persisted.json",
+      "source_sha256": "d12f1c74f46a451707eab44a97f415a90f052d3374b17651932fb6b36f5a899f",
+      "public_sha256": "d12f1c74f46a451707eab44a97f415a90f052d3374b17651932fb6b36f5a899f",
+      "source_bytes": 435,
+      "public_bytes": 435,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/18-duplicate.stderr",
+      "public_path": "generation/old_skill/run-2/18-duplicate.stderr",
+      "source_sha256": "7512568be7caf0f117c3e128e050a88548260bd93d1c1de496a14d0024401344",
+      "public_sha256": "7512568be7caf0f117c3e128e050a88548260bd93d1c1de496a14d0024401344",
+      "source_bytes": 244,
+      "public_bytes": 244,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/16-export.stdout",
+      "public_path": "generation/old_skill/run-2/16-export.stdout",
+      "source_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "public_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "source_bytes": 346,
+      "public_bytes": 346,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/14-fresh-read.stdout",
+      "public_path": "generation/old_skill/run-2/14-fresh-read.stdout",
+      "source_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "public_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "source_bytes": 346,
+      "public_bytes": 346,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/commands.json",
+      "public_path": "generation/old_skill/run-2/commands.json",
+      "source_sha256": "418c4f2df6ba968034c6c14743be896a68d0b871f20f6593632572b168ebba85",
+      "public_sha256": "94a58220f8d27a1930a9a1de3f3a3b099f51130544487e262efd6a20ed9dacbb",
+      "source_bytes": 6664,
+      "public_bytes": 5865,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/results.json",
+      "public_path": "generation/old_skill/run-2/results.json",
+      "source_sha256": "89328c563020e9e3f6af08c5b8ed2daf4f4f5c493eb8d278926d6134c0d1b52c",
+      "public_sha256": "89328c563020e9e3f6af08c5b8ed2daf4f4f5c493eb8d278926d6134c0d1b52c",
+      "source_bytes": 989,
+      "public_bytes": 989,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/12-after-import.snapshot.json",
+      "public_path": "generation/old_skill/run-2/12-after-import.snapshot.json",
+      "source_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "public_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "source_bytes": 276,
+      "public_bytes": 276,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/19-after-duplicate-read.stdout",
+      "public_path": "generation/old_skill/run-2/19-after-duplicate-read.stdout",
+      "source_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "public_sha256": "f6bb6122acdf9fc459a1527d56b70517779a22ca3b49d66aaa31e365f0a5eb67",
+      "source_bytes": 346,
+      "public_bytes": 346,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/10-baseline.snapshot.json",
+      "public_path": "generation/old_skill/run-2/10-baseline.snapshot.json",
+      "source_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "public_sha256": "529c967e66c145bb841697595cea427afb649bb56b981b4665e8ada55382c5c6",
+      "source_bytes": 276,
+      "public_bytes": 276,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074651Z-55a84e69/input-hashes.json",
+      "public_path": "generation/old_skill/run-2/input-hashes.json",
+      "source_sha256": "434a31f5df59e2897e7ca5f507e5b1dac6e70249dc39e1621affaa015cc31fd4",
+      "public_sha256": "434a31f5df59e2897e7ca5f507e5b1dac6e70249dc39e1621affaa015cc31fd4",
+      "source_bytes": 9013,
+      "public_bytes": 9013,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/05-duplicate.command.json",
+      "public_path": "handoff/replay/run-1/05-duplicate.command.json",
+      "source_sha256": "8c5e28c81df6a827915c156a0f685db6fe6b3a8d51a362e28de6493359e563a6",
+      "public_sha256": "3c981ad5ff8504d42fe10b919af200294b45f43387196c5da69091601bc480a5",
+      "source_bytes": 879,
+      "public_bytes": 752,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/contacts.export.json",
+      "public_path": "handoff/replay/run-1/contacts.export.json",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/contacts.input.json",
+      "public_path": "handoff/replay/run-1/contacts.input.json",
+      "source_sha256": "c990b5c9376e04a08b4b33e1a83ac189ef91a8ba20f13e5bd2428f62fc9a1ad5",
+      "public_sha256": "c990b5c9376e04a08b4b33e1a83ac189ef91a8ba20f13e5bd2428f62fc9a1ad5",
+      "source_bytes": 449,
+      "public_bytes": 449,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/pytest.stdout.txt",
+      "public_path": "handoff/replay/run-1/pytest.stdout.txt",
+      "source_sha256": "9cca2a60d1b3952f94906bd2415225c6a0bef226d842e78094050dc526bc881d",
+      "public_sha256": "d40def9cc245de5505633ea48eca2a34f0bcf0e6e4a51c83aa8cdca26adaf3a3",
+      "source_bytes": 1126,
+      "public_bytes": 1030,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/03-read.snapshot.json",
+      "public_path": "handoff/replay/run-1/03-read.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/06-read-after-rejection.stdout",
+      "public_path": "handoff/replay/run-1/06-read-after-rejection.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/06-final.snapshot.json",
+      "public_path": "handoff/replay/run-1/06-final.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/02-imported.snapshot.json",
+      "public_path": "handoff/replay/run-1/02-imported.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/03-read-new-process.command.json",
+      "public_path": "handoff/replay/run-1/03-read-new-process.command.json",
+      "source_sha256": "873976ef4c5a1c09305f0967b0527e9ad2772b7cb14c798a0ed8e208ad3539ae",
+      "public_sha256": "ad1a6bb6cea33000734a599635dcc3b3a3acae5573e954e2bee733f71f053ddb",
+      "source_bytes": 720,
+      "public_bytes": 625,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/source-sha256.json",
+      "public_path": "handoff/replay/run-1/source-sha256.json",
+      "source_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "public_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "source_bytes": 1362,
+      "public_bytes": 1362,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/03-read-new-process.stdout",
+      "public_path": "handoff/replay/run-1/03-read-new-process.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/termination.json",
+      "public_path": "handoff/replay/run-1/termination.json",
+      "source_sha256": "c54d3f00ec7006f3bda4ed9a8cb5567f3bd892ff6c810149368ecc7f28504852",
+      "public_sha256": "c54d3f00ec7006f3bda4ed9a8cb5567f3bd892ff6c810149368ecc7f28504852",
+      "source_bytes": 58,
+      "public_bytes": 58,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/04-export.stdout",
+      "public_path": "handoff/replay/run-1/04-export.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/05-rejected.snapshot.json",
+      "public_path": "handoff/replay/run-1/05-rejected.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/01-seeded.snapshot.json",
+      "public_path": "handoff/replay/run-1/01-seeded.snapshot.json",
+      "source_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "public_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "source_bytes": 555,
+      "public_bytes": 555,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/02-import.command.json",
+      "public_path": "handoff/replay/run-1/02-import.command.json",
+      "source_sha256": "c9f73860fb2d2afbf30a42cfdc6692ae7ad1b52faaa18d61ba9f87abefca0028",
+      "public_sha256": "e2f606e3f043d29fe88835a486f81626b5dc638e6401323215bc751d9256219f",
+      "source_bytes": 870,
+      "public_bytes": 743,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/04-exported.snapshot.json",
+      "public_path": "handoff/replay/run-1/04-exported.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/replay/project/artifacts/onboarding-20260908T074855Z-2fe91540/05-duplicate.stderr",
+      "public_path": "handoff/replay/run-1/05-duplicate.stderr",
+      "source_sha256": "5f6c469303452fbb16589f16bdb7fcd23a2812e050319d113608444edcdad8d4",
+      "public_sha256": "5f6c469303452fbb16589f16bdb7fcd23a2812e050319d113608444edcdad8d4",
+      "source_bytes": 233,
+      "public_bytes": 233,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/05-duplicate.command.json",
+      "public_path": "handoff/maintenance/baseline/05-duplicate.command.json",
+      "source_sha256": "caf9d82d50665d0f2f370c88bbea9c6a2c54f67ac6d8ffe780f22c45946f0ca2",
+      "public_sha256": "dd844b3d69eaf957f4815319367bbdbd529f9b779ab333a9874cf22245eb0902",
+      "source_bytes": 893,
+      "public_bytes": 766,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/contacts.export.json",
+      "public_path": "handoff/maintenance/baseline/contacts.export.json",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/contacts.input.json",
+      "public_path": "handoff/maintenance/baseline/contacts.input.json",
+      "source_sha256": "c990b5c9376e04a08b4b33e1a83ac189ef91a8ba20f13e5bd2428f62fc9a1ad5",
+      "public_sha256": "c990b5c9376e04a08b4b33e1a83ac189ef91a8ba20f13e5bd2428f62fc9a1ad5",
+      "source_bytes": 449,
+      "public_bytes": 449,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/pytest.stdout.txt",
+      "public_path": "handoff/maintenance/baseline/pytest.stdout.txt",
+      "source_sha256": "2c39c70949da773aa33f7586bcceb98c9e0eb8d7c93926241a32a86ca9585c5a",
+      "public_sha256": "b84b3a78e60791b1e04663f175e94a25e3970503a0e5b790260ff3cdf9e4bb63",
+      "source_bytes": 1136,
+      "public_bytes": 1040,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/03-read.snapshot.json",
+      "public_path": "handoff/maintenance/baseline/03-read.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/06-read-after-rejection.stdout",
+      "public_path": "handoff/maintenance/baseline/06-read-after-rejection.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/06-final.snapshot.json",
+      "public_path": "handoff/maintenance/baseline/06-final.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/02-imported.snapshot.json",
+      "public_path": "handoff/maintenance/baseline/02-imported.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/03-read-new-process.command.json",
+      "public_path": "handoff/maintenance/baseline/03-read-new-process.command.json",
+      "source_sha256": "580217a78600bce894b73d4227aa9a93ade7fa2b7343936ba9890a37acca8d58",
+      "public_sha256": "9efc78520d2615418a1b4e8585a355c53a989d28edceac99314062a2053ea9d2",
+      "source_bytes": 731,
+      "public_bytes": 636,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/source-sha256.json",
+      "public_path": "handoff/maintenance/baseline/source-sha256.json",
+      "source_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "public_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "source_bytes": 1362,
+      "public_bytes": 1362,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/03-read-new-process.stdout",
+      "public_path": "handoff/maintenance/baseline/03-read-new-process.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/termination.json",
+      "public_path": "handoff/maintenance/baseline/termination.json",
+      "source_sha256": "cbfa7286a48aaf73b76dba4d1578b6d4396d3c6efa64e2e86c395f91c4708009",
+      "public_sha256": "cbfa7286a48aaf73b76dba4d1578b6d4396d3c6efa64e2e86c395f91c4708009",
+      "source_bytes": 58,
+      "public_bytes": 58,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/04-export.stdout",
+      "public_path": "handoff/maintenance/baseline/04-export.stdout",
+      "source_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "public_sha256": "fdb41eaa9e75944981c71d012733de5dae0d3da4646f07f36af36b5366c0b601",
+      "source_bytes": 360,
+      "public_bytes": 360,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/05-duplicate.stderr",
+      "public_path": "handoff/maintenance/baseline/05-duplicate.stderr",
+      "source_sha256": "5f6c469303452fbb16589f16bdb7fcd23a2812e050319d113608444edcdad8d4",
+      "public_sha256": "5f6c469303452fbb16589f16bdb7fcd23a2812e050319d113608444edcdad8d4",
+      "source_bytes": 233,
+      "public_bytes": 233,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/02-import.command.json",
+      "public_path": "handoff/maintenance/baseline/02-import.command.json",
+      "source_sha256": "b5ef795d73d4a9b0057f8235fb0d3b7fac059a9cf2fe974f0a22eb4e703286f9",
+      "public_sha256": "53d5b92edf5c620af7b56d963cbc844dbb4129c8890545962bfe57f8ec8b7b0f",
+      "source_bytes": 885,
+      "public_bytes": 758,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/04-exported.snapshot.json",
+      "public_path": "handoff/maintenance/baseline/04-exported.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/05-rejected.snapshot.json",
+      "public_path": "handoff/maintenance/baseline/05-rejected.snapshot.json",
+      "source_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "public_sha256": "690d92156f031c2f528653aad8ec405847c0311ecab64c036dd9eecfc82036de",
+      "source_bytes": 1066,
+      "public_bytes": 1066,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075108Z-5575dd08/01-seeded.snapshot.json",
+      "public_path": "handoff/maintenance/baseline/01-seeded.snapshot.json",
+      "source_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "public_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "source_bytes": 555,
+      "public_bytes": 555,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/05-duplicate.command.json",
+      "public_path": "handoff/maintenance/changed/05-duplicate.command.json",
+      "source_sha256": "7b90a993075c90d141733ab5b3bbac79f21b123ca2c88651196750c1cae79ccf",
+      "public_sha256": "b6a4c27d927950596286eb34147181f283bd7aa79da65622251093da44af2b9e",
+      "source_bytes": 892,
+      "public_bytes": 765,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/contacts.export.json",
+      "public_path": "handoff/maintenance/changed/contacts.export.json",
+      "source_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "public_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "source_bytes": 509,
+      "public_bytes": 509,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/contacts.input.json",
+      "public_path": "handoff/maintenance/changed/contacts.input.json",
+      "source_sha256": "d503ef9a41d96dc7a8367fe3e5ee96b77173c0822adcb37cb0cc935d54b9634b",
+      "public_sha256": "d503ef9a41d96dc7a8367fe3e5ee96b77173c0822adcb37cb0cc935d54b9634b",
+      "source_bytes": 622,
+      "public_bytes": 622,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/pytest.stdout.txt",
+      "public_path": "handoff/maintenance/changed/pytest.stdout.txt",
+      "source_sha256": "d4006ab5f66d611f2d3f2dbe948e24b2c1f9a4039e1e802765c37c60cbb812b5",
+      "public_sha256": "db26c7d329fc0f395ef7c5743d3839bd413d3b14e90778484b71cb87147a0451",
+      "source_bytes": 1136,
+      "public_bytes": 1040,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/03-read.snapshot.json",
+      "public_path": "handoff/maintenance/changed/03-read.snapshot.json",
+      "source_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "public_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "source_bytes": 1251,
+      "public_bytes": 1251,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/06-read-after-rejection.stdout",
+      "public_path": "handoff/maintenance/changed/06-read-after-rejection.stdout",
+      "source_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "public_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "source_bytes": 509,
+      "public_bytes": 509,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/06-final.snapshot.json",
+      "public_path": "handoff/maintenance/changed/06-final.snapshot.json",
+      "source_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "public_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "source_bytes": 1251,
+      "public_bytes": 1251,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/02-imported.snapshot.json",
+      "public_path": "handoff/maintenance/changed/02-imported.snapshot.json",
+      "source_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "public_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "source_bytes": 1251,
+      "public_bytes": 1251,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/03-read-new-process.command.json",
+      "public_path": "handoff/maintenance/changed/03-read-new-process.command.json",
+      "source_sha256": "aad2c06d9001c2d5c18bdd017b0491bf5e6c9a804bcfc8dcd39c6ccf524bc2a1",
+      "public_sha256": "97f246d5570f18870a0b9f2383445fb2259724656edd0d30f4ccf19cc504299f",
+      "source_bytes": 732,
+      "public_bytes": 637,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/source-sha256.json",
+      "public_path": "handoff/maintenance/changed/source-sha256.json",
+      "source_sha256": "8ba0bd12d8c7b385625a635c2d23811e50fffad3b660bbd2223bc6eb903a48f2",
+      "public_sha256": "8ba0bd12d8c7b385625a635c2d23811e50fffad3b660bbd2223bc6eb903a48f2",
+      "source_bytes": 1362,
+      "public_bytes": 1362,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/03-read-new-process.stdout",
+      "public_path": "handoff/maintenance/changed/03-read-new-process.stdout",
+      "source_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "public_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "source_bytes": 509,
+      "public_bytes": 509,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/termination.json",
+      "public_path": "handoff/maintenance/changed/termination.json",
+      "source_sha256": "c5c9393cacb33f5125642213ebdfa61b7246e5d1535d8804527bf362e626de85",
+      "public_sha256": "c5c9393cacb33f5125642213ebdfa61b7246e5d1535d8804527bf362e626de85",
+      "source_bytes": 58,
+      "public_bytes": 58,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/04-export.stdout",
+      "public_path": "handoff/maintenance/changed/04-export.stdout",
+      "source_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "public_sha256": "a77448483ec9b93f489c2d57aef71ab2f4feeba85cae399fe30ae0012ae1f156",
+      "source_bytes": 509,
+      "public_bytes": 509,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/05-duplicate.stderr",
+      "public_path": "handoff/maintenance/changed/05-duplicate.stderr",
+      "source_sha256": "ab448c593749df32464cc154f25474c495d9c415cf90aac243350178b5d6b1d2",
+      "public_sha256": "ab448c593749df32464cc154f25474c495d9c415cf90aac243350178b5d6b1d2",
+      "source_bytes": 301,
+      "public_bytes": 301,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/02-import.command.json",
+      "public_path": "handoff/maintenance/changed/02-import.command.json",
+      "source_sha256": "3993c249401c6a582b8c9467f4be8b52cd519f89a7a66e67b01ad5b5ae98b036",
+      "public_sha256": "29ef94ac6d951cffe2c5ecd5ae2cdd997f76faf95170bc816bff3a0e856a8f8b",
+      "source_bytes": 886,
+      "public_bytes": 759,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/04-exported.snapshot.json",
+      "public_path": "handoff/maintenance/changed/04-exported.snapshot.json",
+      "source_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "public_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "source_bytes": 1251,
+      "public_bytes": 1251,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/05-rejected.snapshot.json",
+      "public_path": "handoff/maintenance/changed/05-rejected.snapshot.json",
+      "source_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "public_sha256": "5e6846b144281dbbd8e7bec859f635d8a7d034f2dea438adecc9330a8314165c",
+      "source_bytes": 1251,
+      "public_bytes": 1251,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/onboarding-20260908T075149Z-61dfd4e6/01-seeded.snapshot.json",
+      "public_path": "handoff/maintenance/changed/01-seeded.snapshot.json",
+      "source_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "public_sha256": "04edde6260feb447917af4c50f6d3c4124524e132f16de693ea3df0d3645eb9b",
+      "source_bytes": 555,
+      "public_bytes": 555,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074531Z-a91d4862/pytest.stdout.txt",
+      "public_path": "generation/old_skill/run-1/pytest.stdout.txt",
+      "source_sha256": "5c4c8b07fd6828d3e7e56249433db6cd0b1eaa904a0746ac179c90d5370a8103",
+      "public_sha256": "678e175574affd4fa8d5f51ff992986cd890d4344f37aeaaad4d7d9a48048351",
+      "source_bytes": 974,
+      "public_bytes": 846,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/old_skill/project/artifacts/onboarding-20260908T074531Z-a91d4862/input-hashes.json",
+      "public_path": "generation/old_skill/run-1/input-hashes.json",
+      "source_sha256": "56ce3cd04ceb119bfc6cb9f15e5d0665309a2d33d52da859dff5f9852f1e29f0",
+      "public_sha256": "56ce3cd04ceb119bfc6cb9f15e5d0665309a2d33d52da859dff5f9852f1e29f0",
+      "source_bytes": 8919,
+      "public_bytes": 8919,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074458Z-8f40320d/source-sha256.json",
+      "public_path": "generation/with_skill/run-1/source-sha256.json",
+      "source_sha256": "5cd76206a01fffa7a861a96c1bfd0f857e2a95de5d8f6d2b68ec804b3d525f70",
+      "public_sha256": "5cd76206a01fffa7a861a96c1bfd0f857e2a95de5d8f6d2b68ec804b3d525f70",
+      "source_bytes": 1362,
+      "public_bytes": 1362,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-independent-native/maintenance/project/artifacts/maintenance-session-20260908T075039Z/acceptance.diff",
+      "public_path": "handoff/maintenance/acceptance.diff",
+      "source_sha256": "b31d045baaececafdd15144e845111f5e20686627baa61eaa1c009719ef733b7",
+      "public_sha256": "b31d045baaececafdd15144e845111f5e20686627baa61eaa1c009719ef733b7",
+      "source_bytes": 4639,
+      "public_bytes": 4639,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/final-audit-after-native-fault.json",
+      "public_path": "hardening/audit.json",
+      "source_sha256": "1cc5257cf3adb3bc953603b45f53589f9215321a4f1533168aca6e36d6a39d6c",
+      "public_sha256": "371ca1f153d7aab76433ce0a61e688821490bd07c73c4b774d176c20f8c1cdab",
+      "source_bytes": 2446,
+      "public_bytes": 2404,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT",
+        "LOCAL_HOST"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/stdlib-tests-final.log",
+      "public_path": "hardening/stdlib-9.log",
+      "source_sha256": "afb1f304a4cb575cf29927a4675021777d20e79895a72e800b943ccc99ea8bc1",
+      "public_sha256": "afb1f304a4cb575cf29927a4675021777d20e79895a72e800b943ccc99ea8bc1",
+      "source_bytes": 1301,
+      "public_bytes": 1301,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/native-tests-final.log",
+      "public_path": "hardening/native-5.stdout.txt",
+      "source_sha256": "39d61e6ea846d950989f52079f5736a9da3d6a6e64bc1f2fcc03a82fb874d1b9",
+      "public_sha256": "af5c1e8fe152b2040a832fe521857fade918c8ac7229c5ec0bd197e728ade545",
+      "source_bytes": 1231,
+      "public_bytes": 1103,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T081329Z-22be99ed/termination.json",
+      "public_path": "hardening/termination.json",
+      "source_sha256": "9e6fa6ddb3c53b0b18e7f82c27d9857829758b04e21bbcd422b961c0150c0518",
+      "public_sha256": "9e6fa6ddb3c53b0b18e7f82c27d9857829758b04e21bbcd422b961c0150c0518",
+      "source_bytes": 361,
+      "public_bytes": 361,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T081329Z-22be99ed/source-sha256.json",
+      "public_path": "hardening/source-sha256.json",
+      "source_sha256": "51c74a94defd006a8fa0bc4b83b99827d45d7048c7ebc9f5fc5612313eec63c5",
+      "public_sha256": "dabe44875bece44750bb344bfe070fa636c3f88abd2f891092cbac58e0c98764",
+      "source_bytes": 1459,
+      "public_bytes": 1460,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074458Z-8f40320d/pytest.stdout.txt",
+      "public_path": "original/native-run-1.stdout.txt",
+      "source_sha256": "b67b969847e7edbda9205c32e4ce0cb0e473c6d496f771d02ff36499fa0b7c6c",
+      "public_sha256": "2e88ecc2e70177b74014846def3e66b67ab370a4e75a30d2ad56e5cc14c759d1",
+      "source_bytes": 1162,
+      "public_bytes": 1066,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/pytest.stdout.txt",
+      "public_path": "original/native-run-2.stdout.txt",
+      "source_sha256": "abcd6ba7743f2fd839a55f006a2181fae120090926ea786360910ed7b6526436",
+      "public_sha256": "97760cb979976f22c693b338b8d2e7366ee5b714a681738e8070678ef506b0d7",
+      "source_bytes": 1162,
+      "public_bytes": 1066,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/reuse-sqlite-onboarding-authorized-clean-pair/with_skill/project/artifacts/onboarding-20260908T074519Z-2f7e16a6/source-sha256.json",
+      "public_path": "original/source-sha256.json",
+      "source_sha256": "044d7fbb81af1665edc72d23607520f7cd134b4f2e7ccd4c0ab9b7237b5ba504",
+      "public_sha256": "651d0c7a3905fe5dafeb6dbe5a4032555e7b1d17f74f0437d39a7001aecf11e9",
+      "source_bytes": 1362,
+      "public_bytes": 1363,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-integrated-check/artifacts/onboarding-20260908T082011Z-de86e6da/pytest.stdout.txt",
+      "public_path": "migration-early/native-5.stdout.txt",
+      "source_sha256": "a5f9aeda4f957c8c368e868668095270f52d26a6ff4e39717e4291fe2eba6f41",
+      "public_sha256": "1c36b61bd01269738d456d1fb8f860bdec7fd21fc2baedef1ccf9709b7949de2",
+      "source_bytes": 1090,
+      "public_bytes": 994,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-integrated-check/artifacts/onboarding-20260908T082011Z-de86e6da/termination.json",
+      "public_path": "migration-early/termination.json",
+      "source_sha256": "db004ab984e175c5a36b52bd25ab8902abd36c3a3c45c0423f02e69269945f37",
+      "public_sha256": "db004ab984e175c5a36b52bd25ab8902abd36c3a3c45c0423f02e69269945f37",
+      "source_bytes": 362,
+      "public_bytes": 362,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-integrated-check/artifacts/onboarding-20260908T082011Z-de86e6da/source-sha256.json",
+      "public_path": "migration-early/source-sha256.json",
+      "source_sha256": "51c74a94defd006a8fa0bc4b83b99827d45d7048c7ebc9f5fc5612313eec63c5",
+      "public_sha256": "dabe44875bece44750bb344bfe070fa636c3f88abd2f891092cbac58e0c98764",
+      "source_bytes": 1459,
+      "public_bytes": 1460,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T081607Z-c045e819/termination.json",
+      "public_path": "fault/native-green/termination.json",
+      "source_sha256": "78b8d4486c1523dea3876f0580d54b2242c479a44455197dd4c1a847391f82cd",
+      "public_sha256": "78b8d4486c1523dea3876f0580d54b2242c479a44455197dd4c1a847391f82cd",
+      "source_bytes": 374,
+      "public_bytes": 374,
+      "replacement_aliases": [],
+      "terminal_lf_added": false,
+      "byte_identical": true
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/project/artifacts/onboarding-20260908T081607Z-c045e819/00-identity.started.json",
+      "public_path": "fault/native-green/cli-started.json",
+      "source_sha256": "e16cc046065e18991c68e81d869da0c8b641591285f8429be968dc1e726a9b49",
+      "public_sha256": "2cdbd987daad8377561c077e24b9569ccbcf180b2adff709e1da768eec1db3b7",
+      "source_bytes": 811,
+      "public_bytes": 747,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/red-project/artifacts/onboarding-20260908T081604Z-3b99c295/termination.json",
+      "public_path": "fault/native-red/termination.json",
+      "source_sha256": "635128a40737361bd9527f63c640d982d7783d027a2164d5d6e3552ab10a2d87",
+      "public_sha256": "8bd3e23cc76fb43c14eeb779c0ca0120aa93eac88f32e45df72d27a8baa540a1",
+      "source_bytes": 111,
+      "public_bytes": 112,
+      "replacement_aliases": [],
+      "terminal_lf_added": true,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/red-1-f0ed0100/result.json",
+      "public_path": "fault/red-1/result.json",
+      "source_sha256": "2d9e32c5c0005c1430750e084de7ad8473de776c280956c029163d42f4bf0b94",
+      "public_sha256": "c9548a907be7a72418f83f01f86d63bbfd6fbd90a772a91eb02472272ba74486",
+      "source_bytes": 1413,
+      "public_bytes": 1221,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/red-2-6512b185/result.json",
+      "public_path": "fault/red-2/result.json",
+      "source_sha256": "3b6b3c8d2a0a5114269c612bfa66d75a790df253ac56f347e5b0bc63630e2932",
+      "public_sha256": "ef17979dbbe4e0934eaddf7e3ee58ed00e0aa31eb56226454559280890eba194",
+      "source_bytes": 1413,
+      "public_bytes": 1221,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/group-only-probe-9eb9b2a3/result.json",
+      "public_path": "fault/group-only/result.json",
+      "source_sha256": "2159c316db50644036d60d949e157122a421a952480e794ddfe2c7650914c2cd",
+      "public_sha256": "51d3db6fa807444868a5da7b29c3371578802bf1907667d6aa8c5d0c21369180",
+      "source_bytes": 1435,
+      "public_bytes": 1243,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/green-1-e382dacb/result.json",
+      "public_path": "fault/green-1/result.json",
+      "source_sha256": "a8687548e2a8a67d96b709a0b0c8a8cff3dbddfc06175c72ef41b2192d6f09ed",
+      "public_sha256": "0ac8804d76931dae765ebf14ccd0ef1d98f3e3b1a4a4185a240562334c2f3a2c",
+      "source_bytes": 1424,
+      "public_bytes": 1232,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/green-final-43398f28/result.json",
+      "public_path": "fault/green-final/result.json",
+      "source_sha256": "d45d6bcdb4178d35a374157ad2bf77c1c79f671534069c536c2bfa8c0aca7311",
+      "public_sha256": "71b93f829d7c97d5c34dd83f93a2ed85ce6654dc5b7c7c91bdce78600d0eae3a",
+      "source_bytes": 1428,
+      "public_bytes": 1236,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/native-red-89c8e121/result.json",
+      "public_path": "fault/native-red/result.json",
+      "source_sha256": "97dbc740db84c92df956225c8759ae43db89dfa1c8f4d1e0c1d7913326a11455",
+      "public_sha256": "d26b7aed0032ecd00760b58e53434f2ee6aa385fdb9c29ddc496d02a3309b12b",
+      "source_bytes": 1487,
+      "public_bytes": 1295,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/native-red-89c8e121/runner.stdout",
+      "public_path": "fault/native-red/runner.stdout.txt",
+      "source_sha256": "9a03f5b8f09ceb84cfe2b940cbd4bc44eb14f52c1ec60489273691e3c299c27c",
+      "public_sha256": "699a6e8920ada3ec227bd154204c0756fc2e26b3cf2376ee395da4f99ad5e88d",
+      "source_bytes": 602,
+      "public_bytes": 506,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/native-green-c06e4ac2/result.json",
+      "public_path": "fault/native-green/result.json",
+      "source_sha256": "28b1a147be8e6580334005e807d2c7777c11814651718ec3f2a37a9393fbcbb7",
+      "public_sha256": "f0a8cb75ce528cd03d4120a6bb5e3a44bb01b5f26405031507c95923575301d3",
+      "source_bytes": 1486,
+      "public_bytes": 1294,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    },
+    {
+      "source_record_relative_to_workspace": "work/sqlite-pack-hardening/debug/evidence/native-green-c06e4ac2/runner.stdout",
+      "public_path": "fault/native-green/runner.stdout.txt",
+      "source_sha256": "64fb9c53fb039af2de67e04a0f017fd07f958f518106aca530eabe2a792de35e",
+      "public_sha256": "1e7f7595e39466bf2cb5d85e346c6fffb3bcb76c0104e95a976542ce24838988",
+      "source_bytes": 594,
+      "public_bytes": 498,
+      "replacement_aliases": [
+        "WORKSPACE_ROOT"
+      ],
+      "terminal_lf_added": false,
+      "byte_identical": false
+    }
+  ]
+}

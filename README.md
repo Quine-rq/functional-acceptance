@@ -58,13 +58,15 @@ For a first installation into a project, see the [installation guide and measure
 
 Once your host has loaded the Skill, try: “Use functional-acceptance to plan how to verify this feature. Do not run the application yet.” Supply the feature's expected behavior and project location. Actual acceptance then uses that host's authorized project tools.
 
-[Current behavior checks](evals/results/2026-09-08-product-hardening/README.md) compare actual Codex execution with and without the Skill. Both detected the seeded export defect; neither covered every requirement on every trial. One installed read-only run did not load the Skill at all. Claude Code attempts stopped at authentication, so successful second-host execution remains unverified. [Earlier failures and corrections](evals/results/2026-09-08-host-smoke/README.md) remain available.
+[Native follow-up checks](NATIVE-FOLLOWUP-RESULTS.md) now include Codex old/new-Skill comparisons, actual Claude Code read-only history reviews, and sqlite-utils onboarding followed by separate no-Skill replay and maintenance. Claude's latest explicitly loaded trials correctly kept insufficient history unverified; natural loading and healthy-history discrimination remain unproven. Codex still sometimes omits a required failure branch. These small studies do not establish a general advantage over the baseline. [Earlier failures and corrections](evals/results/2026-09-08-host-smoke/README.md) remain available.
 
 ## Compatibility and current limits
 
 The workflow is designed to use tools already available in a project, rather than require a particular language or framework. Web, API, CLI, desktop, and mobile flows are intended applications—not a list of tested integrations.
 
 The bundled example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests.
+
+The [sqlite-utils pack](examples/sqlite_utils/README.md) checks contact import, retrieval by another process, JSON export, duplicate-key rejection and unrelated-data preservation. A generated pack passed independent no-Skill replay; review then exposed and corrected a timeout that could leave a child writer alive. The reusable example includes that correction and separate process-lifecycle tests. Dependencies were prepared in advance; cold installation and external-human handoff are not demonstrated.
 
 The [maintained linkding pack](examples/linkding/README.md) uses real browser login, a real server restart, private-account isolation, editing and scoped deletion, with independent SQLite observations. It includes note-loss, missing-observation, session-loss and lost-response controls, plus a Unicode maintenance exercise. It runs without the Skill or helper. [The hardening record](evals/results/2026-09-08-product-hardening/README.md) separates author runs, independent agent handoff and harness defects; the [original assisted study](evals/results/2026-09-08-linkding/README.md) is unchanged. This is a pinned native example, not a generic browser adapter or external-human usability proof. External services and mobile devices remain unverified.
 
@@ -84,9 +86,11 @@ See the [material format](skills/functional-acceptance/references/material-forma
 ```sh
 python3 -B -m unittest discover -s tests -v
 python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
+python3 -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_lifecycle.py -v
+python3 -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_identity.py -v
 ```
 
-The first command tests the helper, evidence collector, relocatable Skill package and native example's safety/report contracts. The second tests the exporter independently of the Skill and helper. Neither command runs the host-dependent linkding browser journey. A passing defect-detection test does not make that export correct.
+The first command tests the helper, evidence collector, relocatable Skill package and native example's safety/report contracts. The second tests the exporter independently of the Skill and helper. The third and fourth check the SQLite pack's process lifecycle and pre-import guard with synthetic controls, not its business flow. These commands do not run the host-dependent linkding browser journey. A passing defect-detection test does not make that export correct.
 
 Installer integration checks are development-only and need Node 22.20+:
 
@@ -100,7 +104,7 @@ They exercise the pinned `skills` CLI in disposable projects. No agent login or 
 Before replacing an existing installation, use the [staged update guide](UPGRADING.md)
 and read-only local-change check. [Reuse and recovery results](REUSE-RESULTS.md)
 record interrupted-copy recovery, older material compatibility and repeated browser
-journeys, alongside the still-unexecuted host and unfamiliar-project evaluations.
+journeys. Previously blocked host and unfamiliar-project work is recorded separately in the [native follow-up](NATIVE-FOLLOWUP-RESULTS.md), preserving those earlier failures.
 
 [CI](.github/workflows/checks.yml) runs the Python suites on Ubuntu 24.04 with Python 3.10 and 3.14, plus a separate Node 22.22.3 installation job, using read-only permissions and commit-pinned actions. All three jobs passed for integration source `f4b1ef9` ([run](https://github.com/Quine-rq/functional-acceptance/actions/runs/34185450287)); [earlier M2 results](M2-RESULTS.md#remote-ci) retain a previous failure and its correction. Check the run for the commit you use; an earlier green build does not validate later changes.
 
@@ -110,7 +114,7 @@ journeys, alongside the still-unexecuted host and unfamiliar-project evaluations
 - **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Next release gates: successful second-host execution, external developers using their own projects, demonstrated benefit beyond the baseline, and license/security-support decisions. The [product-hardening results](PRODUCT-HARDENING-RESULTS.md) explain what is implemented and what still needs evidence. Passing local checks is not a supported-release claim.
+Next release gates: reliable full-flow execution in a second host, external developers using their own projects, demonstrated benefit beyond the baseline, and license/security-support decisions. The [native follow-up](NATIVE-FOLLOWUP-RESULTS.md) explains the latest improvements and remaining failures. Passing local checks is not a supported-release claim.
 
 ## Feedback and licensing
 

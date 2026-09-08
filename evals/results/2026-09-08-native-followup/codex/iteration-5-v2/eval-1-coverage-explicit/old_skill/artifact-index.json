@@ -1,0 +1,56 @@
+[
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/actual.csv",
+    "raw_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "public_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "normalization": "none; exact original bytes"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/execution.json",
+    "raw_sha256": "1e3bc0eec6fdd8387885ff3a82885d0886acf2276905252011835cdeec535336",
+    "public_sha256": "9d9fcafe77eebc3acfed29e6316f192b70f6514fd4b749c894f5f27d712749d2",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/existing-output.stderr.txt",
+    "raw_sha256": "8b1b3ec3c2fde6816f3886225a1af16d3f42291025396db283172e4dcc8429b7",
+    "public_sha256": "8b1b3ec3c2fde6816f3886225a1af16d3f42291025396db283172e4dcc8429b7",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/existing-output.stdout.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/export.stderr.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/export.stdout.txt",
+    "raw_sha256": "3b890d9227668e7310f22fbd3d96b8751a89c9d36df5f031c549203b57a25ecf",
+    "public_sha256": "dca3473fa5f254a32954de0a4a8654bad3922f4946887bb5ebd2a448fadd17b5",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/observation.json",
+    "raw_sha256": "d3e57d2186df935c058c178e8bcc79e39dab298b3b70e266408dafd963771986",
+    "public_sha256": "d3e57d2186df935c058c178e8bcc79e39dab298b3b70e266408dafd963771986",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/smoke.stderr.txt",
+    "raw_sha256": "d0f1e19a9fc2c6be1d6fe29c0bad01f1e99e75f01cc9cf013d7dc82a760babb7",
+    "public_sha256": "d0f1e19a9fc2c6be1d6fe29c0bad01f1e99e75f01cc9cf013d7dc82a760babb7",
+    "normalization": "private machine paths only"
+  },
+  {
+    "path": "artifacts/acceptance-20260908T160250944749/smoke.stdout.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalization": "private machine paths only"
+  }
+]

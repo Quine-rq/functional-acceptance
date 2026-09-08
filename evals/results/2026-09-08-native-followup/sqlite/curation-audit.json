@@ -1,0 +1,67 @@
+{
+  "scope": "Read-only public-curation consistency check, not a native model rerun or new DB observation.",
+  "runs": [
+    {
+      "run": "generation/with_skill/run-2",
+      "contact_count": 3,
+      "full_input_export_equal_by_id": true,
+      "unrelated_unchanged_at_retained_boundaries": true,
+      "boundaries": 6,
+      "contacts_match_at_populated_snapshots": true,
+      "limitations": "No database opened or application rerun in public-curation audit."
+    },
+    {
+      "run": "generation/old_skill/run-2",
+      "contact_count": 3,
+      "full_input_export_equal_by_id": true,
+      "unrelated_unchanged_at_retained_boundaries": true,
+      "boundaries": 5,
+      "contacts_match_at_populated_snapshots": null,
+      "limitations": "Old snapshots contain unrelated table only; contact persistence is separately retained in 13-persisted.json and CLI outputs.",
+      "contacts_match_retained_persisted_json": true
+    },
+    {
+      "run": "handoff/replay/run-1",
+      "contact_count": 3,
+      "full_input_export_equal_by_id": true,
+      "unrelated_unchanged_at_retained_boundaries": true,
+      "boundaries": 6,
+      "contacts_match_at_populated_snapshots": true,
+      "limitations": "No database opened or application rerun in public-curation audit."
+    },
+    {
+      "run": "handoff/maintenance/baseline",
+      "contact_count": 3,
+      "full_input_export_equal_by_id": true,
+      "unrelated_unchanged_at_retained_boundaries": true,
+      "boundaries": 6,
+      "contacts_match_at_populated_snapshots": true,
+      "limitations": "No database opened or application rerun in public-curation audit."
+    },
+    {
+      "run": "handoff/maintenance/changed",
+      "contact_count": 3,
+      "full_input_export_equal_by_id": true,
+      "unrelated_unchanged_at_retained_boundaries": true,
+      "boundaries": 6,
+      "contacts_match_at_populated_snapshots": true,
+      "limitations": "No database opened or application rerun in public-curation audit."
+    }
+  ],
+  "completed_native_invocations": 4,
+  "completed_native_input_plus_output_tokens": 1657921,
+  "token_scope": "Reported input includes cached input; no double count. Excludes unavailable usage from initial host failures/operator-stopped pair and later hardening/integrated checks. Not currency, human work or total study usage.",
+  "public_byte_checks": {
+    "source_records": 141,
+    "byte_identical": 84,
+    "transformed": 57,
+    "all_source_and_public_hashes_recorded": true
+  },
+  "limitations": [
+    "Comparator normalizes JSON object keys and incidental contact order; JSON numbers are compared numerically. Original data bytes, including numeric rendering, are retained unchanged.",
+    "Public snapshots and command records permit content/correlation checks, not independent authentication of collection. Native full event streams, original DBs and full protected-file before/after inventories are not distributed here.",
+    "No project Skill copied/read in replay/maintenance is an attributed retained-audit/metadata observation. Without publishing all native events, this extract alone cannot independently re-prove that negative.",
+    "Initial failure and operator-stopped metadata are preserved separately and never counted as completed comparisons. forced=false is the wrapper timer field, not absence of operator intervention.",
+    "The original historical defect, subsequent hardening, and root's later integrated fixes are different versions; retained good results do not erase prior defects or supersede later review."
+  ]
+}

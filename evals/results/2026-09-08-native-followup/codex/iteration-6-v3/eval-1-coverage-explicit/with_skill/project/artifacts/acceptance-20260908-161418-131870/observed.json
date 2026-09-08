@@ -1,0 +1,42 @@
+{
+  "output_absent_before": true,
+  "sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+  "header": [
+    "id",
+    "title",
+    "notes"
+  ],
+  "rows": [
+    [
+      "r-001",
+      "示例, Hello",
+      "第一行\n第二行"
+    ],
+    [
+      "r-002",
+      "Quote \"double\"",
+      "café ☕"
+    ],
+    [
+      "r-003",
+      "雪 / snow",
+      ""
+    ],
+    [
+      "r-004",
+      "Emoji 🚀",
+      "CRLF\r\nnext"
+    ]
+  ],
+  "expected_count": 5,
+  "actual_count": 4,
+  "exact_match": false,
+  "missing_rows": [
+    [
+      "r-005",
+      "最后一页",
+      "END, \"边界\"\n末尾"
+    ]
+  ],
+  "retained_rows_exact_order": true
+}
