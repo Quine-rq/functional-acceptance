@@ -8,17 +8,50 @@ Functional Acceptance 是一个帮助 AI 编程助手按真实使用流程验收
 
 比如：导出命令提示成功，CSV 却少了最后一条数据。验收要做的是打开文件、核对内容，而不是看到命令返回 `0` 就结束。
 
-> 开发预览：已有可运行的 CLI/CSV 和浏览器/数据库示例。目前仍是实验性源码，尚未正式发布。
+> 可安装的开发预览版，尚非受支持的正式版本。请先在隔离测试项目中试用；许可证仍待确定。
 
-## 它怎样工作
+## 在你的项目中开始
 
-从功能需求和待验收的项目开始，Skill 指导 AI 编程助手完成三步：
+### 1. 安装
 
-1. **说清怎样才算成功。** 明确用户要完成什么，以及怎样证明结果正确。规则不明确、缺少权限等问题要保留下来。
-2. **实际核对结果。** 使用项目已有工具执行流程，检查最终产物。除了正常情况，也检查与本次需求相关的失败和恢复场景。
-3. **交付结论和复验方法。** 说明哪些通过、哪里失败、哪些还没验证，附上证据和再次检查的运行说明。
+在待使用 Skill 的项目根目录运行。下面使用已测试的第三方安装工具 `skills@1.5.24`，需要 Node 22.20+；执行时可能联网下载工具和仓库。
 
-Skill 提供验收方法，实际操作由助手和项目工具执行。它不替代现有测试框架，也不替你批准上线。它要求逐项核对需求是否真的有对应断言，分清“功能出错”和“测试本身出错”，并保留缺少证据的项目。可以先运行下面的导出示例，或按 [linkding 原生验收指南](examples/linkding/README.md)检查真实浏览器与数据库流程。
+**仅用于首次安装：** 先检查 `.agents/skills/functional-acceptance/` 是否已存在；Claude Code 对应 `.claude/skills/functional-acceptance/`。安装会替换同名目录，包括你的本地修改。已有安装请按[升级指南](UPGRADING.md)处理。
+
+```sh
+DO_NOT_TRACK=1 npx --yes skills@1.5.24 add Quine-rq/functional-acceptance --skill functional-acceptance --agent codex --copy --yes
+```
+
+使用其他助手时，把 `codex` 换成 `claude-code`、`cursor`、`github-copilot` 或 `opencode`。这些是已检查的安装目标，不代表实际执行能力都验证到了同一程度，详见[适配范围](#适配范围与当前限制)。
+
+必要时重新加载助手，确认它发现的是当前项目中的 `functional-acceptance`。没发现时，先按[安装与发现检查](INTEGRATIONS.md#verify-the-installed-copy)排查。无需全局安装或新模型账号，Skill 也不附带运行环境。上面的命令跟随默认分支；要固定版本，请[指定已审阅的提交](INTEGRATIONS.md#pin-update-recover-and-remove)。
+
+### 2. 说清你要验收的结果
+
+在待验收项目中，点名 Skill 并描述功能预期。例如，项目有 CSV 导出功能时可以说：
+
+> 用 functional-acceptance 验收这个项目的 CSV 导出：应有的记录和字段都不能丢，也不能覆盖已有目标文件。只用合成数据和临时测试文件。先列出检查项，再执行，最后给我证据和复验命令。不要修改业务代码。
+
+把导出要求换成你自己的功能和限制即可，不需要先学一套配置格式。助手应使用项目已有工具；缺少必要工具、观察手段或权限时，应明确指出缺口，而不是宣称通过。
+
+第一次只想看看计划，可以说：“用 functional-acceptance 规划这个功能怎么验收，不要运行命令或创建文件。”交付完整计划就完成了这个请求，不需要为了规划先提供凭据。
+
+### 3. 拿到能核查的结果
+
+执行前，助手应给出简短的[验收前检查表](skills/functional-acceptance/references/acceptance-contract.md)：保留原始目标，列清每个检查项、独立预期和获授权范围。执行后，给出包含证据和复验方法的[验收报告](skills/functional-acceptance/references/acceptance-report.md)。
+
+下面是交付形式示意，不是新增的一次实测记录：
+
+```text
+结论：失败——导出返回 0，但缺少记录 r-005。
+完整性：FAIL，实际 4 条，独立预期为 5 条。
+已有目标文件：PASS，拒绝覆盖，前后内容一致。
+覆盖：两项要求均已观察。执行：已结束。
+清理：仅保留已标识的测试证据，没有活动写入进程。
+复验：附原生命令、工作目录、输入数据和证据位置。
+```
+
+没观察到的项目应标为 **UNVERIFIED（未验证）**，说明阻塞原因和下一步。发现真实缺陷也是有用的验收结果，但不等于获得修复或上线授权。两份模板默认在对话中填写，不强制往项目里生成文档。下面的可运行示例会产生实际证据，而不只是这段示意文字。
 
 ## 运行示例
 
@@ -50,27 +83,24 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 
 如果只想检查导出程序，不使用 Skill 或报告工具，可按[独立示例说明](examples/paginated_export/README.md)运行。
 
-## 接入你的编程助手
-
-开发版 Skill 已整理为独立目录 [`skills/functional-acceptance/`](skills/functional-acceptance)，采用 Agent Skills 格式，不附带新的 Agent 运行时。可选 CSV 核验脚本另需 Python/POSIX 环境；只做验收计划不需要它。
-
-首次接入请看[安装说明与实测范围](INTEGRATIONS.md)：使用固定版本的现有安装工具，覆盖 Codex、Claude Code、Cursor、GitHub Copilot、OpenCode 五种安装目标，并说明更新、卸载的影响。**安装检查通过，不等于 Agent 已经实际完成验收。**
-
-确认助手已加载 Skill 后，可以先说：“用 functional-acceptance 规划这个功能怎么验收，先不要运行应用。”同时提供功能预期和项目位置。实际验收再使用该助手已有且获授权的项目工具。
-
-[本轮原生评估](NATIVE-FOLLOWUP-RESULTS.md)包含 Codex 新旧 Skill 对照、Claude Code 实际只读历史审核，以及 sqlite-utils 陌生项目接入、无 Skill 重跑和维护。Claude 最新两次明确加载后的审核正确保留了证据缺口，但自然加载和健康历史的判别能力仍未验证；Codex 仍偶尔漏测要求中的失败分支。这些小样本不能证明普遍优于基线。[早期失败及修正记录](evals/results/2026-09-08-host-smoke/README.md)继续保留。
-
 ## 适配范围与当前限制
 
-这套方法优先使用项目已有工具，不要求采用某种语言或框架。Web、API、命令行、桌面和移动端是计划覆盖的应用场景，不是已经验证的适配清单。
+Skill 采用 Agent Skills 格式，使用项目已有工具，不限定语言或框架；实际能验什么，仍取决于工具、权限和观察条件。只做计划不需要 Python，可选 CSV 核验脚本另有上文说明的 Python/POSIX 要求。
+
+| 助手 / 环境 | 已实际检查 | 尚未验证 |
+| --- | --- | --- |
+| Codex | 原生执行、计划、历史证据审核及回归试验 | 稳定的完整覆盖：记录中仍有漏测必需失败分支的情况 |
+| Claude Code | 明确加载 Skill 后的实际只读历史审核 | 自然加载、健康历史判别、执行完整用户流程 |
+| Cursor、GitHub Copilot、OpenCode | 项目内安装、替换和卸载 | 原生发现与实际执行效果 |
+| 手机 / 其他远端服务 | 仅为预期应用场景 | 真机和具体服务的验收 |
+
+这些观察对应[原生评估](NATIVE-FOLLOWUP-RESULTS.md)与[安装记录](INTEGRATIONS.md)中的版本和环境，不是对后续指令改动的行为认证。普遍适配、节省时间和生产可用性都还没有得到证明。
 
 内置示例覆盖的是**合成分页数据 → 真实 Python 进程 → 本地 CSV 文件**。报告检查导出完整性和字段内容，输入异常与文件安全另有测试。
 
-[sqlite-utils 回归包](examples/sqlite_utils/README.md)检查联系人导入、新进程读取、JSON 导出、重复主键拒绝和无关数据保留。生成包通过了另一名 Agent 的无 Skill 重跑，但后续审查发现超时可能遗留写入进程；现在的可复用示例包含针对这个问题的修正及独立生命周期测试。依赖环境由协调者预先准备，尚不能称为陌生用户从零接入。
+[sqlite-utils 回归包](examples/sqlite_utils/README.md)检查导入、独立读取、导出、重复主键拒绝和无关数据保留；[linkding 回归包](examples/linkding/README.md)检查真实浏览器、服务端与数据库流程，包括持久化、账号隔离和恢复。它们是原生示例，不是通用适配器。接入协助和修正过程均有记录，尚不能证明外部用户能从零独立接入。
 
-[可维护的 linkding 回归包](examples/linkding/README.md)检查真实登录、服务重启后的持久化、跨账号隔离、编辑和定向删除，并独立读取 SQLite 核对。它还提供备注丢失、缺少观察、会话丢失、响应丢失和 Unicode 备注场景，不依赖 Skill 或 CSV 工具运行。[最新记录](evals/results/2026-09-08-product-hardening/README.md)分别说明作者实测、独立代理交接及测试程序自身的缺陷；[最初的协助过程](evals/results/2026-09-08-linkding/README.md)未被覆盖。这仍是固定版本的原生示例，不是通用浏览器适配器，也不等于真实外部用户已经用得顺手。外部服务和手机仍未验证。
-
-[M1 验证记录](M1-RESULTS.md)记载了首批 77 个通过的测试方法，以及另一名 Agent 对独立示例的重跑。[M2 报告交付检查](M2-RESULTS.md)将当时测试补至 84 个方法，覆盖中断、磁盘错误和未完成交接。本轮打包与安装检查[另有记录](INTEGRATIONS.md)。这些结果不代表外部用户已经用得顺手、节省了时间，或具备生产可用性。正式版本仍待验证，克隆源码本身不等于安装了 Skill。
+详细尝试及失败保留在[初期宿主试验](evals/results/2026-09-08-host-smoke/README.md)、[协助完成的 linkding 研究](evals/results/2026-09-08-linkding/README.md)、[加固记录](evals/results/2026-09-08-product-hardening/README.md)和[原生后续评估](NATIVE-FOLLOWUP-RESULTS.md)中。测试数量不能证明用户收益。
 
 ### 安全与证据边界
 

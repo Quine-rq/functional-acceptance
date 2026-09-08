@@ -2,6 +2,24 @@
 
 Milestones are ordered by evidence, not dates. M1 now has a controlled local implementation; the broader product and release gates remain pending.
 
+## Current priority — make the Skill usable without the design background
+
+1. **Product entrypoint:** bilingual install → request → result guidance, short
+   contract/report templates, conditional history guidance and honest host coverage.
+   Local implementation and packaging/regression checks are recorded in
+   [phase 1 results](INTEGRATIONS.md#product-entrypoint-consolidation--2026-09-08).
+   New-executor onboarding is not yet demonstrated by these engineering checks.
+2. **Behavior:** evaluate the changed entrypoint and description with natural
+   requests, near misses, plan-only and historical controls; retain the known
+   omitted failure branch. Use fair with/without-Skill comparisons rather than
+   promoting old/new-Skill scores to proof of benefit.
+3. **Human trial and release decision:** observe external developers on their own
+   authorized projects, including a repeat use. Resolve licensing and support
+   scope before a supported release. An installable preview is not that release.
+
+The historical milestone records below remain intact; local phase 1 checks do not
+close their behavior, external-user or release gates.
+
 ## M0 — Public design baseline
 
 - [x] Document the stack-independent product definition and bounded acceptance workflow.

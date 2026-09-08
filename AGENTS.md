@@ -18,4 +18,4 @@ This repository contains an experimental M1 Skill, offline helper, and controlle
 - Use synthetic data and authorized isolated targets. Never commit credentials, customer data, private evidence, or machine-specific paths.
 - State which checks were actually run. A design review or document check is not an L1–L4 product evaluation and must not become a production-readiness claim.
 
-Run the two native test commands in [README.md](README.md) after relevant changes. They cover different boundaries: helper/collector checks and a standalone sample regression pack. Keep tests behavior-based, use new temporary directories, and record actual results separately from the larger planned evaluation matrix.
+Run the applicable development checks in [README.md](README.md) after changes. The Python suites cover helper/collector/package behavior, standalone export regression and native process safety; the Node suite covers installation and upgrade. Keep tests behavior-based, use new temporary directories, and record actual results separately from the larger planned evaluation matrix.

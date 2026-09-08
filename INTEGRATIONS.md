@@ -49,7 +49,7 @@ For Codex, install a project-local copy:
 DO_NOT_TRACK=1 npx --yes skills@1.5.24 add Quine-rq/functional-acceptance --skill functional-acceptance --agent codex --copy --yes
 ```
 
-Replace `codex` with exactly one target below. No `--global`, wildcard target, hooks, MCP servers, or permission allowlist is needed. The current package contains six files, including the native-workflow reference; tests, evaluation outputs, repository `AGENTS.md`, and development dependencies are not copied. The older five-file measurements below describe their recorded source revision.
+Replace `codex` with exactly one target below. No `--global`, wildcard target, hooks, MCP servers, or permission allowlist is needed. The current package contains nine files: the entrypoint, UI metadata, optional helper, and six references including two short templates and the history-only branch. Tests, evaluation outputs, repository `AGENTS.md`, and development dependencies are not copied. Older five- and six-file measurements below describe their recorded source revisions.
 
 | Host | Installer target | Project location | Discovery / invocation reference |
 | --- | --- | --- | --- |
@@ -109,7 +109,7 @@ A separate installation from that exact GitHub commit into a temporary Claude Co
 
 The optional Codex probe initially timed out in the restricted environment, then exposed a startup permission error. The same probe passed with normal process permissions, without invoking a model or changing shared configuration. The failed attempts are not counted as successes.
 
-Reproduce package/helper tests with the two Python commands in the README. Reproduce the current installer and upgrade tests with:
+Reproduce package/helper and native safety tests with the Python commands in the README. Reproduce the current installer and upgrade tests with:
 
 ```sh
 npm --prefix integration ci --ignore-scripts --no-audit --no-fund
@@ -158,3 +158,34 @@ healthy-history discrimination and a complete executing Claude journey remain
 unverified. Codex old/new comparisons and sqlite-utils native handoffs now also ran,
 but a final candidate trial still omitted a requested safety branch. Cursor,
 Copilot and OpenCode remain filesystem-installation checks only.
+
+## Product entrypoint consolidation — 2026-09-08
+
+Phase 1 local changes on base `85591c2f1cc8868b3026ee2eee7ae10ed6727700`:
+the bilingual README now leads with installation, one concrete request and a
+sample handoff. The Skill links to short contract/report templates and reads the
+historical-proof details only for that branch. Its main file decreased from 8,083
+to 6,485 bytes; this is a structural reduction, not a measured token saving or
+behavioral improvement. The package grew from six to nine files to carry those
+resources. The helper, native examples and frozen evaluation records are unchanged.
+
+Local verification of this working-tree revision:
+
+| Check | Result | Boundary |
+| --- | --- | --- |
+| Skill Creator structure validator | Passed | Frontmatter/package syntax, not model decisions |
+| Python suites in README | 94 + 23 + 11 + 3 = 131 methods passed on both Python 3.10.20 and 3.14.4, macOS | Includes relocated healthy/defective/missing-observation checks; not native agent execution |
+| Installer/upgrade suite | 19 tests passed on Node 22.22.3 with the existing pinned installer | Local source; all nine files copied byte-identically for five targets, replacement/removal/recovery checks |
+| Reference graph and documentation links | All package Markdown reachable from the entrypoint; reviewed local links resolve | Structural reachability, not proof that an agent reads the right branch |
+
+The added reference-graph test detects orphaned instructions without asserting
+particular prose. Existing installer tests compare every installed file with the
+source, so the new templates participate in install/update/removal verification.
+Tests use disposable projects and do not alter global Skill installations.
+
+No paid model calls, fresh remote-source installation, new remote CI run, supported
+release or license selection occurred in this phase. The new description and
+reference routing still need behavior evaluation. A first-time executor completing
+a useful acceptance from just the README/request, and external-human usability,
+remain unverified. Earlier host results above must not be relabelled as tests of
+these changed instructions.

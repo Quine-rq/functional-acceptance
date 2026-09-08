@@ -27,6 +27,8 @@ class SkillPackageTests(unittest.TestCase):
         self.assertEqual(set(inventory(SKILL)), {
             "SKILL.md", "agents/openai.yaml", "scripts/acceptance.py",
             "references/material-format.md", "references/host-compatibility.md", "references/native-workflow.md",
+            "references/acceptance-contract.md", "references/acceptance-report.md",
+            "references/historical-evidence.md",
         })
         self.assertFalse(any(p.is_symlink() for p in SKILL.rglob("*")))
         # A root SKILL.md makes ecosystem installers select the entire checkout.
@@ -51,6 +53,26 @@ class SkillPackageTests(unittest.TestCase):
                 with self.subTest(document=str(path.relative_to(SKILL)), link=link):
                     self.assertTrue(target.is_relative_to(SKILL.resolve()))
                     self.assertTrue(target.is_file())
+
+    def test_every_reference_is_reachable_from_the_entrypoint(self):
+        # Existence alone misses an installed template that no instruction routes to.
+        # This checks the link graph, not whether a model follows the routing prose.
+        pending = [SKILL / "SKILL.md"]
+        reached = set()
+        while pending:
+            path = pending.pop().resolve()
+            if path in reached:
+                continue
+            reached.add(path)
+            links = re.findall(r"\[[^\]]+\]\(([^)]+)\)", path.read_text(encoding="utf-8"))
+            for link in links:
+                if urlsplit(link).scheme or link.startswith("#"):
+                    continue
+                target = (path.parent / unquote(link.split("#", 1)[0])).resolve()
+                self.assertTrue(target.is_relative_to(SKILL.resolve()))
+                if target.suffix == ".md":
+                    pending.append(target)
+        self.assertEqual(reached, {p.resolve() for p in SKILL.rglob("*.md")})
 
     def test_relocated_helper_checks_real_runs_without_checkout_dependencies(self):
         with tempfile.TemporaryDirectory(prefix="skill-package-") as temp:

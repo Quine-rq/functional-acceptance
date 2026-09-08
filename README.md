@@ -8,17 +8,50 @@ Functional Acceptance is a skill for coding agents to verify features through re
 
 For example: an export command reports success, but the CSV is missing the final record. Acceptance means opening the file and checking its contents—not stopping at exit code `0`.
 
-> Development preview: runnable CLI/CSV and browser/database examples are available. This is experimental source, not a supported release.
+> Installable development preview, not a supported release. Start in an isolated test project; licensing is still pending.
 
-## How it works
+## Start in your project
 
-Start with the feature's requirements and the project you want checked. The Skill guides your coding agent through three steps:
+### 1. Install
 
-1. **Define success.** Identify what the user needs to accomplish and what would prove it worked. Keep unclear requirements and missing access visible.
-2. **Check the result.** Use the project's existing tools to run the flow and inspect the outcome. Focus on relevant failure and recovery cases as well as the happy path.
-3. **Hand over the findings.** Report what passed, what failed, and what remains unverified, with evidence and instructions for repeating the checks.
+Run from the project where you want to use the Skill. This uses the tested third-party installer (`skills@1.5.24`, Node 22.20+) and may fetch it and the repository over the network.
 
-The Skill provides the workflow; the agent and project tools perform the checks. It does not replace your test framework or approve a release. It maps requirements to actual assertions, distinguishes a product defect from a broken test, and keeps missing evidence visible. Start with the local export demo below, or follow the [maintained linkding example](examples/linkding/README.md) for a browser/database journey.
+**Fresh installation only:** check `.agents/skills/functional-acceptance/` first (`.claude/skills/functional-acceptance/` for Claude Code). A same-name copy will be replaced, including local edits. Existing users should follow [the update guide](UPGRADING.md).
+
+```sh
+DO_NOT_TRACK=1 npx --yes skills@1.5.24 add Quine-rq/functional-acceptance --skill functional-acceptance --agent codex --copy --yes
+```
+
+For another agent, replace `codex` with `claude-code`, `cursor`, `github-copilot` or `opencode`. These are checked installation targets, not equal levels of behavioral support; see [the scope below](#compatibility-and-current-limits).
+
+Reload your agent if needed and confirm it sees this project's `functional-acceptance` copy. If it does not, stop at [installation and discovery troubleshooting](INTEGRATIONS.md#verify-the-installed-copy). No global installation, new model account or runtime is included. This command follows the default branch; [pin a reviewed commit](INTEGRATIONS.md#pin-update-recover-and-remove) for a reproducible installation.
+
+### 2. Ask for a user result
+
+In the project you want checked, name the Skill and describe the expected behavior. For a project with a CSV export, for example:
+
+> Use functional-acceptance to verify this project's CSV export: every expected record and field must be present, and an existing destination must not be overwritten. Use synthetic data and temporary test files only. Show the checks before running, then give evidence and a repeat command. Do not change product code.
+
+Replace the export requirements with your own feature and constraints. The agent should use your existing project tools, not require you to fill out a schema. If a required tool, observation or permission is missing, it should explain the gap instead of claiming success.
+
+For a read-only first try, say: “Use functional-acceptance to plan acceptance for this feature. Do not run commands or create files.” A complete plan is the result of that request; no credentials are needed just to plan.
+
+### 3. Get a checkable result
+
+Before running, expect a short [acceptance contract](skills/functional-acceptance/references/acceptance-contract.md): your original goal, each required check, its independent expectation, and authorized scope. Afterwards, expect an [acceptance report](skills/functional-acceptance/references/acceptance-report.md) with evidence and a way to repeat the checks.
+
+Illustrative handoff—not an additional recorded test:
+
+```text
+Result: FAIL — export returned 0, but record r-005 is missing.
+Completeness: FAIL — 4 records observed; 5 independently expected.
+Existing destination: PASS — replacement refused; before/after bytes match.
+Coverage: both requested checks observed. Execution: completed.
+Cleanup: only identified test evidence retained; no active writer.
+Replay: native command, working directory, fixture and evidence references attached.
+```
+
+An unobserved check should say **UNVERIFIED**, with its blocker and next safe step. A discovered defect is a useful acceptance result; it is not permission to fix or deploy. Templates are filled in the conversation by default, not mandatory project files. The runnable demo below supplies actual evidence rather than this illustrative text.
 
 ## Try the demo
 
@@ -50,27 +83,24 @@ Runs are kept separate and retained locally. To choose a location, add `--run-di
 
 Want to inspect the exporter without the Skill or report helper? Follow the [standalone sample guide](examples/paginated_export/README.md) (Chinese).
 
-## Use with your coding agent
-
-The development Skill is now a self-contained directory at [`skills/functional-acceptance/`](skills/functional-acceptance). It uses the Agent Skills format and ships no agent runtime. The optional CSV helper has separate Python/POSIX requirements; planning does not require it.
-
-For a first installation into a project, see the [installation guide and measured coverage](INTEGRATIONS.md). It covers Codex, Claude Code, Cursor, GitHub Copilot and OpenCode installation targets using a pinned ecosystem installer, with local testing and explicit upgrade/removal precautions. **Installation checks are not proof of successful agent execution.**
-
-Once your host has loaded the Skill, try: “Use functional-acceptance to plan how to verify this feature. Do not run the application yet.” Supply the feature's expected behavior and project location. Actual acceptance then uses that host's authorized project tools.
-
-[Native follow-up checks](NATIVE-FOLLOWUP-RESULTS.md) now include Codex old/new-Skill comparisons, actual Claude Code read-only history reviews, and sqlite-utils onboarding followed by separate no-Skill replay and maintenance. Claude's latest explicitly loaded trials correctly kept insufficient history unverified; natural loading and healthy-history discrimination remain unproven. Codex still sometimes omits a required failure branch. These small studies do not establish a general advantage over the baseline. [Earlier failures and corrections](evals/results/2026-09-08-host-smoke/README.md) remain available.
-
 ## Compatibility and current limits
 
-The workflow is designed to use tools already available in a project, rather than require a particular language or framework. Web, API, CLI, desktop, and mobile flows are intended applications—not a list of tested integrations.
+The Skill uses the Agent Skills format and tools already available in the project. It is not tied to a language or framework, but tools, permissions and observations still determine what can actually be verified. Planning requires no Python; the optional CSV helper has the separate Python/POSIX requirements above.
+
+| Agent / environment | What has been checked | Still unverified |
+| --- | --- | --- |
+| Codex | Native execution, planning, retained-history review and regression trials | Reliable full coverage: a recorded run omitted a required failure branch |
+| Claude Code | Actual, explicitly loaded read-only history reviews | Natural loading, healthy-history discrimination and complete executing journeys |
+| Cursor, GitHub Copilot, OpenCode | Project-local install, replacement and removal only | Native discovery and useful execution |
+| Mobile devices / other remote services | Intended applications only | Real-device and service-specific acceptance |
+
+These observations describe the revisions and environments in [the native record](NATIVE-FOLLOWUP-RESULTS.md) and [installation record](INTEGRATIONS.md), not a behavioral certification of later instruction changes. Broad compatibility, savings and production readiness remain unproven.
 
 The bundled example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests.
 
-The [sqlite-utils pack](examples/sqlite_utils/README.md) checks contact import, retrieval by another process, JSON export, duplicate-key rejection and unrelated-data preservation. A generated pack passed independent no-Skill replay; review then exposed and corrected a timeout that could leave a child writer alive. The reusable example includes that correction and separate process-lifecycle tests. Dependencies were prepared in advance; cold installation and external-human handoff are not demonstrated.
+The [sqlite-utils pack](examples/sqlite_utils/README.md) checks import, independent retrieval, export, duplicate-key rejection and unrelated-data preservation. The [linkding pack](examples/linkding/README.md) checks a real browser/server/database journey, including persistence, account isolation and recovery. Both are native examples, not generic adapters. Setup assistance and corrections are recorded; neither establishes external-human cold onboarding.
 
-The [maintained linkding pack](examples/linkding/README.md) uses real browser login, a real server restart, private-account isolation, editing and scoped deletion, with independent SQLite observations. It includes note-loss, missing-observation, session-loss and lost-response controls, plus a Unicode maintenance exercise. It runs without the Skill or helper. [The hardening record](evals/results/2026-09-08-product-hardening/README.md) separates author runs, independent agent handoff and harness defects; the [original assisted study](evals/results/2026-09-08-linkding/README.md) is unchanged. This is a pinned native example, not a generic browser adapter or external-human usability proof. External services and mobile devices remain unverified.
-
-The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test methods and an independent agent's replay of the standalone sample. [M2 report-delivery checks](M2-RESULTS.md) brought the suite to 84 methods, including interruption, disk failures, and incomplete handoff. Current packaging and installation checks are tracked [separately](INTEGRATIONS.md). These results do not establish external-user usefulness, time savings, or production readiness. A supported release remains pending; cloning the source alone does not install the Skill.
+Detailed attempts, including failures, stay in the [initial host study](evals/results/2026-09-08-host-smoke/README.md), [assisted linkding study](evals/results/2026-09-08-linkding/README.md), [hardening record](evals/results/2026-09-08-product-hardening/README.md) and [native follow-up](NATIVE-FOLLOWUP-RESULTS.md). Test counts are not evidence of user benefit.
 
 ### Safety and evidence limits
 

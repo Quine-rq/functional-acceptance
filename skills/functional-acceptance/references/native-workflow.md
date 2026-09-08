@@ -5,19 +5,10 @@ not a new test language or a claim of support for every framework.
 
 ## Ready check
 
-Before execution, state the smallest complete contract:
-
-- **Outcome and source:** who must be able to do what, including constraints from
-  the request that existing tests omit.
-- **Coverage:** for each outcome, the existing test/assertion or missing check;
-  inspect what it observes rather than rely on its name or suite exit code.
-- **Target and authority:** actual checkout/build, environment and identity;
-  write scope, relevant downstream effects and the run-owned evidence location.
-- **Execution and observation:** reviewed native entrypoint; independent expected
-  data; how to identify and reopen the same business object or artifact.
-- **Stop and recovery:** bounded termination, the identity of possible writes,
-  and what remains when interrupted. After an uncertain write, inspect its state
-  before proposing another write.
+Use the [acceptance contract](acceptance-contract.md) already established for this
+run. Inspect its native entrypoint and how each assertion identifies and observes
+the same business object. Resolve missing setup, observation and termination paths
+before executing the affected check.
 
 Check only capabilities needed for this path. Read configuration and tool help
 first; run a bounded prerequisite probe when necessary and authorized. Missing
