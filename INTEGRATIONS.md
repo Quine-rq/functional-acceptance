@@ -97,6 +97,7 @@ A separate installation from that exact GitHub commit into a temporary Claude Co
 | Installer | Node 22.22.3 + `skills@1.5.24` on macOS: five targets install/reinstall/remove byte-identical copies; unknown host/name rejected; unrelated files preserved | Native host discovery or transactional/safe merging of local edits |
 | Relocated helper | Real healthy/defective/missing-observation runs rechecked as PASS/FAIL/UNVERIFIED from another working directory; installation unchanged | Another business project or another execution mapping |
 | Codex discovery | CLI 0.146.0 `skills/list` returns the installed, enabled repo Skill and UI metadata; after removal and rescan it is absent | Model invocation or execution of a user journey |
+| Codex behavior | Separate CLI 0.153.4 smoke checks exercised natural loading, native CSV execution, planning, regression, a near-miss and missing history; a read-only write violation was found and narrowly rechecked after correction | Repeated reliability, a controlled baseline, other host models or a second project; see the [full record](evals/results/2026-09-08-host-smoke/README.md) |
 | Other hosts | Official paths inspected; installer filesystem checks only | Claude Code, Cursor, Copilot and OpenCode discovery/behavior remain unverified |
 
 The optional Codex probe initially timed out in the restricted environment, then exposed a startup permission error. The same probe passed with normal process permissions, without invoking a model or changing shared configuration. The failed attempts are not counted as successes.
@@ -116,4 +117,6 @@ node integration/check-codex-discovery.mjs
 
 It creates and cleans an isolated temporary project and does not install into the user's global Skill folders. Codex itself may need normal permission to initialize its runtime state. A timeout or unavailable host is a failed/unverified check, not a skipped success. The default CI runs package/helper and installer tests, not this host-dependent probe.
 
-Next gates: real host invocation, natural discovery and near-miss behavior, missing-tool handling, a second authorized project, and license/release decisions. This preview does not declare those complete.
+The behavior probe also found that PATH CLI 0.146.0 could discover the Skill but could not invoke the configured model. An existing app-bundled 0.153.4 executable worked without changing the user's model or global setup. Record the actual executable/version and distinguish host startup errors from Skill behavior; this observation is not a minimum-version guarantee.
+
+Next gates: repeated behavior checks, another host's real invocation, missing-tool handling, a second authorized project, and license/release decisions. This preview does not declare those complete.

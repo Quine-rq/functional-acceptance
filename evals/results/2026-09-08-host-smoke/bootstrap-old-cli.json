@@ -1,0 +1,109 @@
+{
+  "schema": "functional-acceptance/host-smoke-result/v1",
+  "name": "bootstrap-old-cli",
+  "review": {
+    "outcome": "not-evaluated",
+    "rationale": "CLI 0.146.0 rejected the configured model before task execution.",
+    "evaluator": "author inspection of the independent host trace and filesystem; not blind human grading"
+  },
+  "normalization": "Local paths and native session identifier replaced; complete CLI JSON events retained. Embedded file digests label original versus exported bytes. These are consistency checks, not provenance authentication.",
+  "original_trace_sha256": "7b71c8aaa85f810a3bc49f550b92d0872d2954f6905b121e93de729f52c4bd95",
+  "frozen_spec_sha256": "fd63fc4de35c0d858879ea0eefb03c31f81eb57c773367c9ce4d7f14dc56b4e1",
+  "prompt_sha256": "d406faa88538ee5eb8df209eed517105ee660413473dec38d640b0124a57c066",
+  "prompt": "分页导出看起来好了，帮我确认用户拿到的 CSV 记录完整、字段原样可读，而且失败时不会覆盖原文件。以 requirements.md 为准，可以运行现有本地命令和测试；请区分正常路径与显式缺陷对照的结果。\n\n这是本地合成数据项目。本次最多用 3 分钟，只操作当前项目。可以读取项目文件和宿主提供的 Skill；写入只限新建的 artifacts/ 中。不要修改源代码、要求、fixtures、测试、历史材料或安装的 Skill，不安装依赖，不联网，不调用外部服务，不提交或发布。若执行被宿主限制，说明具体缺口后结束，不提升权限。输出简明结论及证据位置；真实执行后保留本轮证据，后续由本项目负责人处理。",
+  "metadata": {
+    "case": "execute",
+    "skill_revision": "43e3e59bce251c11ccabb60cb5f7cef07d9c7e07",
+    "project": "PROJECT_ROOT",
+    "record": "HARNESS_RECORD",
+    "host": "codex-cli 0.146.0",
+    "args": [
+      "-a",
+      "never",
+      "exec",
+      "--sandbox",
+      "workspace-write",
+      "--ephemeral",
+      "--json",
+      "-C",
+      "PROJECT_ROOT",
+      "-o",
+      "HARNESS_RECORD/final.md",
+      "-"
+    ],
+    "model_selection": "existing host default; no override",
+    "started_at": "2026-09-08T04:10:04.114Z",
+    "deadline_ms": 240000,
+    "task_budget_seconds": 180,
+    "discovery": "installed project Skill; no Skill instruction in prompt",
+    "baseline": false,
+    "code": 1,
+    "signal": null,
+    "forced": false,
+    "ended_at": "2026-09-08T04:10:16.178Z",
+    "protected_input_changes": [],
+    "final_present": false,
+    "descendant_termination": "not independently verified; do not infer from CLI exit alone",
+    "evidence_retention": "retained locally, no automatic cleanup"
+  },
+  "configured_host": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "service_tier": "priority",
+    "source": "read-only inspection of existing local settings; no overrides",
+    "resolved_server_model": "not reported in this CLI JSON trace",
+    "skill_catalog_and_complete_system_context": "not emitted by this trace; other personal/global Skills were not disabled"
+  },
+  "input_sha256": {
+    ".agents/skills/functional-acceptance/SKILL.md": "6cc1d0e7a1e533672fe019316566e59c69cad464599d54fa25337e01887a1698",
+    ".agents/skills/functional-acceptance/agents/openai.yaml": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+    ".agents/skills/functional-acceptance/references/host-compatibility.md": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+    ".agents/skills/functional-acceptance/references/material-format.md": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+    ".agents/skills/functional-acceptance/scripts/acceptance.py": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+    "export.py": "2ba4954a1aad0a91e4c72a07616b73873a30144382766222fefa808c97de779c",
+    "fixtures/empty_pages.json": "e9552443a81c4dc31b1f645c4344ab9a07e57003e57fc84cdf639945caa4a3af",
+    "fixtures/expected_records.json": "1c3e572673aba569d887528e45513d36851207f3d40e5440042a4c56a40fdd86",
+    "fixtures/pages.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    "requirements.md": "2f41bda455f0209f8418a6d3d147f7d56001bfffee5ccce2a1ffad3ae5221938",
+    "skills-lock.json": "016a0191ba2cec3c2e2dbe03fb08e43b7c377dc8b7269aa21aa4d6860733a096",
+    "test_export.py": "242455d50bd87d2983a5965c839603f42b86ef372ff98ab4b7ef7fd2fb31fbac"
+  },
+  "events": [
+    {
+      "type": "thread.started",
+      "thread_id": "NATIVE_SESSION_ID"
+    },
+    {
+      "type": "item.completed",
+      "item": {
+        "id": "item_0",
+        "type": "error",
+        "message": "Configured service tier `priority` is not advertised as supported for model `gpt-6-astra` and will be omitted from requests."
+      }
+    },
+    {
+      "type": "item.completed",
+      "item": {
+        "id": "item_1",
+        "type": "error",
+        "message": "Model metadata for `gpt-6-astra` not found. Defaulting to fallback metadata; this can degrade performance and cause issues."
+      }
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "type": "error",
+      "message": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6-astra' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.\"}}"
+    },
+    {
+      "type": "turn.failed",
+      "error": {
+        "message": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6-astra' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.\"}}"
+      }
+    }
+  ],
+  "stderr": "2026-09-08T04:10:04.371894Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 132 column 5\n2026-09-08T04:10:06.598711Z  WARN codex_models_manager::model_info: Unknown model gpt-6-astra is used. This will use fallback model metadata.\n2026-09-08T04:10:06.609474Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object\n2026-09-08T04:10:06.610915Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object\n2026-09-08T04:10:06.611335Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object\n2026-09-08T04:10:06.612006Z  WARN codex_core_plugins::manifest: ignoring hooks: expected a string, string array, object, or object array; found object\n2026-09-08T04:10:06.680420Z  WARN codex_core_skills::loader: ignoring interface.icon_small: icon path with '..' must resolve under plugin assets/\n2026-09-08T04:10:06.680437Z  WARN codex_core_skills::loader: ignoring interface.icon_large: icon path with '..' must resolve under plugin assets/\n2026-09-08T04:10:06.719492Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back\n2026-09-08T04:10:06.910875Z  WARN codex_models_manager::model_info: Unknown model gpt-6-astra is used. This will use fallback model metadata.\n2026-09-08T04:10:06.951417Z  WARN codex_models_manager::model_info: Unknown model gpt-6-astra is used. This will use fallback model metadata.\n2026-09-08T04:10:12.079515Z  WARN codex_core::session_startup_prewarm: startup websocket prewarm setup failed: {\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6-astra' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.\"}}\n",
+  "generated_files": [],
+  "captured_project_files": {}
+}

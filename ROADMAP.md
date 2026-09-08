@@ -45,6 +45,8 @@ The clean-directory replay so far used an independent agent, not an external hum
 
 A [first paired plan-content probe](evals/results/2026-09-08-plan-only/README.md) retained three outputs per configuration and independent grades. Tool traces and usage were unavailable, and its only scoring difference depends on an ambiguous expectation. This does not complete the behavior/baseline gates above or establish practical benefit.
 
+A [native Codex smoke check](evals/results/2026-09-08-host-smoke/README.md) now retains complete normalized traces and actual CSV evidence. Four initial requests met their expectations; a fifth created files during a read-only review. A narrow instruction correction passed one targeted recheck. This is not the required repeated experiment or a claim that all cases passed on the corrected revision.
+
 ## M4 — Limited release
 
 - [ ] Provide a verified install/uninstall path and an explicit tested support matrix.

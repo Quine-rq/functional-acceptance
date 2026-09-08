@@ -13,6 +13,8 @@ Use the host's available, authorized tools; this Skill does not supply an agent 
 
 Identify whether the user wants execution, regression recheck, or **plan only**. Read the relevant requirements, live entrypoint, and existing checks. Preserve each explicit user outcome and constraint as a check, a visible gap, or an exclusion grounded in the user's decision. Tool availability may narrow execution, not rewrite the request.
 
+For a read-only request, inspect existing material and return findings in the conversation without creating files. A designated evidence directory limits where authorized writes go; it does not override a read-only constraint.
+
 For plan-only requests, deliver the proposed checks, independent expected results, observation locations, execution prerequisites, and gaps. Finish without running the target or requiring credentials just to produce a plan.
 
 ## Choose a bounded check

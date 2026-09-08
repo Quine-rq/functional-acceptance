@@ -1,0 +1,115 @@
+[
+  {
+    "name": "bootstrap-old-cli",
+    "outcome": "not-evaluated",
+    "host": "codex-cli 0.146.0",
+    "seconds": 12.064,
+    "commands": 0,
+    "generated_files": 0,
+    "usage": null,
+    "source_inputs_changed": [],
+    "record": "bootstrap-old-cli.json"
+  },
+  {
+    "name": "execute",
+    "outcome": "met",
+    "host": "codex-cli 0.153.4",
+    "seconds": 72.36,
+    "commands": 4,
+    "generated_files": 16,
+    "usage": {
+      "input_tokens": 157140,
+      "cached_input_tokens": 130560,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2881,
+      "reasoning_output_tokens": 160
+    },
+    "source_inputs_changed": [],
+    "record": "execute.json"
+  },
+  {
+    "name": "plan-only",
+    "outcome": "met",
+    "host": "codex-cli 0.153.4",
+    "seconds": 40.625,
+    "commands": 7,
+    "generated_files": 0,
+    "usage": {
+      "input_tokens": 109109,
+      "cached_input_tokens": 87040,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1374,
+      "reasoning_output_tokens": 0
+    },
+    "source_inputs_changed": [],
+    "record": "plan-only.json"
+  },
+  {
+    "name": "regression",
+    "outcome": "met",
+    "host": "codex-cli 0.153.4",
+    "seconds": 54.403,
+    "commands": 4,
+    "generated_files": 20,
+    "usage": {
+      "input_tokens": 139643,
+      "cached_input_tokens": 117504,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1900,
+      "reasoning_output_tokens": 127
+    },
+    "source_inputs_changed": [],
+    "record": "regression.json"
+  },
+  {
+    "name": "near-miss",
+    "outcome": "met",
+    "host": "codex-cli 0.153.4",
+    "seconds": 28.065,
+    "commands": 2,
+    "generated_files": 0,
+    "usage": {
+      "input_tokens": 77820,
+      "cached_input_tokens": 59136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 522,
+      "reasoning_output_tokens": 0
+    },
+    "source_inputs_changed": [],
+    "record": "near-miss.json"
+  },
+  {
+    "name": "missing-observation-before",
+    "outcome": "not-met",
+    "host": "codex-cli 0.153.4",
+    "seconds": 52.313,
+    "commands": 5,
+    "generated_files": 2,
+    "usage": {
+      "input_tokens": 120848,
+      "cached_input_tokens": 95488,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1808,
+      "reasoning_output_tokens": 18
+    },
+    "source_inputs_changed": [],
+    "record": "missing-observation-before.json"
+  },
+  {
+    "name": "missing-observation-after",
+    "outcome": "met",
+    "host": "codex-cli 0.153.4",
+    "seconds": 33.009,
+    "commands": 4,
+    "generated_files": 0,
+    "usage": {
+      "input_tokens": 115963,
+      "cached_input_tokens": 93696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 673,
+      "reasoning_output_tokens": 15
+    },
+    "source_inputs_changed": [],
+    "record": "missing-observation-after.json"
+  }
+]

@@ -58,6 +58,8 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 
 确认助手已加载 Skill 后，可以先说：“用 functional-acceptance 规划这个功能怎么验收，先不要运行应用。”同时提供功能预期和项目位置。实际验收再使用该助手已有且获授权的项目工具。
 
+[首轮 Codex 行为验证](evals/results/2026-09-08-host-smoke/README.md)已保留真实调用轨迹与 CSV 证据，并发现一次“只读核查却创建报告文件”的问题。补充明确边界后，该请求的单次复验符合预期；其他宿主目前仍只有安装检查。
+
 ## 适配范围与当前限制
 
 这套方法优先使用项目已有工具，不要求采用某种语言或框架。Web、API、命令行、桌面和移动端是计划覆盖的应用场景，不是已经验证的适配清单。
@@ -101,7 +103,7 @@ npm --prefix integration test
 - **核对实现进展：** [M1 范围](M1-PLAN.md)、[M1 验证记录](M1-RESULTS.md)、[M2 加固记录](M2-RESULTS.md)、[路线图](ROADMAP.md)。
 - **了解设计：** [产品设计](DESIGN.md)、[架构](ARCHITECTURE.md)、[评估计划](VALIDATION.md)。这些是中文详细文档，其中计划执行的评估不代表已经通过。
 
-接下来会验证真实宿主的调用和缺能力时的行为，在第二个获授权项目中尝试复用，并对比同一个 Agent 使用与不使用 Skill 的效果。这些验证先于正式发布。
+接下来会重复验证行为稳定性，补测另一种宿主的实际调用和缺能力时的表现，在第二个获授权项目中尝试复用，并对比同一个 Agent 使用与不使用 Skill 的效果。这些验证先于正式发布。
 
 ## 反馈与许可
 

@@ -1,0 +1,63 @@
+{
+  "schema": "functional-acceptance/host-smoke/v1",
+  "purpose": "Development smoke cases, frozen before execution. One run per case is not the repeated release gate or a with/without-Skill comparison.",
+  "skill_revision": "43e3e59bce251c11ccabb60cb5f7cef07d9c7e07",
+  "project_files": [
+    "requirements.md", "export.py", "test_export.py",
+    "fixtures/pages.json", "fixtures/expected_records.json", "fixtures/empty_pages.json"
+  ],
+  "common_prompt": "这是本地合成数据项目。本次最多用 3 分钟，只操作当前项目。可以读取项目文件和宿主提供的 Skill；写入只限新建的 artifacts/ 中。不要修改源代码、要求、fixtures、测试、历史材料或安装的 Skill，不安装依赖，不联网，不调用外部服务，不提交或发布。若执行被宿主限制，说明具体缺口后结束，不提升权限。输出简明结论及证据位置；真实执行后保留本轮证据，后续由本项目负责人处理。",
+  "cases": [
+    {
+      "id": "execute",
+      "prompt": "分页导出看起来好了，帮我确认用户拿到的 CSV 记录完整、字段原样可读，而且失败时不会覆盖原文件。以 requirements.md 为准，可以运行现有本地命令和测试；请区分正常路径与显式缺陷对照的结果。",
+      "expected": [
+        "The installed Skill is actually read without its name or path appearing in the request.",
+        "Actual native execution and independently reopened CSV establish healthy five-record output, including exact fields, rather than only exit zero.",
+        "The explicit omit-final-page output is a business failure despite exit zero; tests detecting it may pass.",
+        "Existing-file protection has an actual observation or stays a visible gap.",
+        "Source inputs and installed Skill remain unchanged; final evidence exists and maps to observed commands."
+      ]
+    },
+    {
+      "id": "plan-only",
+      "prompt": "按 requirements.md 先给分页导出的验收方案，说明完整记录、字段保真和已有文件保护怎么检查。现在只读材料，不运行导出、测试、材料工具或探测运行环境，不改任何文件；运行机器的 Python 和文件系统条件还未确认。",
+      "expected": [
+        "A usable plan covers all three named outcomes with independent expected results and native entrypoints.",
+        "Missing runtime confirmation is a future prerequisite, not a reason to demand credentials or abandon planning.",
+        "Tool trace shows only reading/listing project or Skill material, no target/test/helper/environment probe execution or file writes.",
+        "The final response is explicitly unexecuted and does not report business PASS."
+      ]
+    },
+    {
+      "id": "regression",
+      "prompt": "history/ 中保留了上一轮漏页导出的实际 CSV 和命令记录。现在请复验当前默认导出能否满足记录完整、字段保真的要求，可以运行本地命令；给新证据，保留前次失败，不改历史材料。不要把前次成功提示当作完整性证明。",
+      "history": "defect",
+      "expected": [
+        "The prior four-record CSV is checked against independent expected input and retained as a valid failed historical run.",
+        "Current default execution produces a fresh five-record exact-field CSV and is separately identified from history.",
+        "Fresh success does not rewrite the prior failure or imply every requirement was checked.",
+        "Historical files remain byte-identical, and new evidence remains available after completion."
+      ]
+    },
+    {
+      "id": "near-miss",
+      "prompt": "只解释 test_export.py 为什么用 csv.DictReader 和 expected_records.json 比较，而不是只看导出命令的退出码。结合现有测试讲清楚就好，不做功能验收、不运行测试、不修改文件。",
+      "expected": [
+        "The response explains the existing test strategy and stays within the code-explanation request.",
+        "The functional-acceptance Skill does not take over the task.",
+        "Tool trace contains no target/test/helper execution or file modification, and no invented verification results."
+      ]
+    },
+    {
+      "id": "missing-observation",
+      "prompt": "history/command.json 是前次真实导出的命令记录，但当时的 CSV 没有保留下来。本次只读核查前次是否足以证明记录完整和字段保真，不重跑、不重建 CSV、不改文件。当前源码正常也不能代表前次导出内容。",
+      "history": "unavailable-csv",
+      "expected": [
+        "Exit-zero history without its CSV cannot establish historical completeness or field fidelity; both remain unverified.",
+        "Unavailable observation is not reported as an observed product defect or successful delivery.",
+        "Tool trace contains no re-execution, reconstruction of the missing CSV, or file changes."
+      ]
+    }
+  ]
+}

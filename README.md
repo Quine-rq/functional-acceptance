@@ -58,6 +58,8 @@ For a first installation into a project, see the [installation guide and measure
 
 Once your host has loaded the Skill, try: “Use functional-acceptance to plan how to verify this feature. Do not run the application yet.” Supply the feature's expected behavior and project location. Actual acceptance then uses that host's authorized project tools.
 
+[Early Codex behavior checks](evals/results/2026-09-08-host-smoke/README.md) now include real invocation and retained tool traces. They caught a read-only request that incorrectly created report files; a small instruction correction passed a targeted recheck. Other hosts still have installation checks only.
+
 ## Compatibility and current limits
 
 The workflow is designed to use tools already available in a project, rather than require a particular language or framework. Web, API, CLI, desktop, and mobile flows are intended applications—not a list of tested integrations.
@@ -101,7 +103,7 @@ They exercise the pinned `skills` CLI in disposable projects. No agent login or 
 - **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Next: validate real host invocation and capability gaps, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.
+Next: repeat the behavior checks, verify another host's real invocation and capability gaps, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.
 
 ## Feedback and licensing
 
