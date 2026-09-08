@@ -76,7 +76,7 @@ python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py'
 
 The first command tests the helper and evidence collector. The second tests the exporter independently of the Skill and helper, including whether the deliberately broken export is caught. A passing defect-detection test does not make that export correct.
 
-[CI](.github/workflows/checks.yml) runs these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Both jobs passed for the initial M1 source at `1eb78de` ([run #1](https://github.com/Quine-rq/functional-acceptance/actions/runs/34182582017)). Check the run for the commit you use; an earlier green build does not validate later changes.
+[CI](.github/workflows/checks.yml) runs these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Both jobs passed for M2 source `c26a86f` ([run #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278)); the [validation record](M2-RESULTS.md#remote-ci) includes an earlier failure and its correction. Check the run for the commit you use; an earlier green build does not validate later changes.
 
 ## Documentation and next steps
 

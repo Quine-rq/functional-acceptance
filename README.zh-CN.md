@@ -76,7 +76,7 @@ python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py'
 
 第一条检查核验工具和证据采集程序；第二条独立检查导出程序，不依赖 Skill 或核验工具，也会确认故意注入的缺陷能被检出。检出缺陷的测试通过，不表示那次缺陷导出正确。
 
-[CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行检查，使用只读权限和固定到提交的 Actions。初始 M1 源码 `1eb78de` 的两个任务均已通过（[运行 #1](https://github.com/Quine-rq/functional-acceptance/actions/runs/34182582017)）。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
+[CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行检查，使用只读权限和固定到提交的 Actions。M2 源码 `c26a86f` 的两个任务均已通过（[运行 #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278)），[验证记录](M2-RESULTS.md#remote-ci)也保留了此前失败及修正过程。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
 
 ## 文档与下一步
 

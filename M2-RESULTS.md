@@ -41,7 +41,9 @@ The initial M1 source at `1eb78de` passed both Ubuntu 24.04 jobs, Python 3.10 an
 
 The first M2 commit `f30f6ba` exposed a test portability defect in [run #2](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183395185): Python 3.14 passed; Python 3.10 failed both cleanup-probe subcases because the intended fault never fired. Its standalone job step was consequently skipped, not passed. Python 3.10's pathlib retains an earlier `os.unlink` binding, so replacing the module attribute after import did not intercept its removal calls.
 
-The same failure was reproduced locally on Python 3.10.20 before changing the test. The corrected child-only probe uses the documented [`os.remove` audit event](https://docs.python.org/3.10/library/os.html#os.unlink), with the same actual-file/same-inode guard and failure assertions. It does not change product code, patch private pathlib internals, or skip older Python. Both complete suites then passed locally on Python 3.10.20 and 3.14.4: 61 + 23 methods per interpreter. Hosted verification of this follow-up remains pending until its own CI completes.
+The same failure was reproduced locally on Python 3.10.20 before changing the test. The corrected child-only probe uses the documented [`os.remove` audit event](https://docs.python.org/3.10/library/os.html#os.unlink), with the same actual-file/same-inode guard and failure assertions. It does not change product code, patch private pathlib internals, or skip older Python. Both complete suites then passed locally on Python 3.10.20 and 3.14.4: 61 + 23 methods per interpreter.
+
+The follow-up commit `c26a86f` passed [run #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278). Both Python 3.10 and 3.14 jobs completed their helper/collector suite and standalone regression pack successfully on Ubuntu 24.04. This confirms the tested commit; later commits must be checked against their own CI results. The failed earlier run remains part of this record.
 
 ## Delivery and recovery limits
 
