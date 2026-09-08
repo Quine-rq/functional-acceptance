@@ -1,0 +1,17 @@
+# Local secrets and runtime state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.acceptance/runs/
+.acceptance/evidence/
+.acceptance/secrets/
+
+# Local development artifacts
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+work/
