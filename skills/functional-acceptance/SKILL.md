@@ -7,7 +7,7 @@ description: Verify a feature's real user outcome, recheck a saved user-flow reg
 
 Verify the promised result, not just a successful action. This is an experimental development Skill, not a release or deployment approval.
 
-Execution depends on authorized project tools. The experimental helper requires Python 3.10+ on a POSIX filesystem; only the documented local CSV workflow has a concrete mapping. Tested combinations are listed in the repository README, not inferred from the instruction format.
+Use the host's available, authorized tools; this Skill does not supply an agent runtime. When choosing tools, resolving installed resource paths, or encountering a missing capability, read [references/host-compatibility.md](references/host-compatibility.md). Planning does not require the optional Python helper.
 
 ## Preserve the request
 

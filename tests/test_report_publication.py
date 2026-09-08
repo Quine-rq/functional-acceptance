@@ -19,7 +19,7 @@ import unittest
 import test_acceptance as material_fixtures
 
 
-HELPER = Path(__file__).resolve().parents[1] / "scripts" / "acceptance.py"
+HELPER = Path(__file__).resolve().parents[1] / "skills" / "functional-acceptance" / "scripts" / "acceptance.py"
 WRITE_LIMIT = 120
 
 # Run the unchanged CLI with a controlled file-write boundary in this child.

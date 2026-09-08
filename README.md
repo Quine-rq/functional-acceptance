@@ -50,13 +50,21 @@ Runs are kept separate and retained locally. To choose a location, add `--run-di
 
 Want to inspect the exporter without the Skill or report helper? Follow the [standalone sample guide](examples/paginated_export/README.md) (Chinese).
 
+## Use with your coding agent
+
+The development Skill is now a self-contained directory at [`skills/functional-acceptance/`](skills/functional-acceptance). It uses the Agent Skills format and ships no agent runtime. The optional CSV helper has separate Python/POSIX requirements; planning does not require it.
+
+For a first installation into a project, see the [installation guide and measured coverage](INTEGRATIONS.md). It covers Codex, Claude Code, Cursor, GitHub Copilot and OpenCode installation targets using a pinned ecosystem installer, with local testing and explicit upgrade/removal precautions. **Installation checks are not proof of successful agent execution.**
+
+Once your host has loaded the Skill, try: “Use functional-acceptance to plan how to verify this feature. Do not run the application yet.” Supply the feature's expected behavior and project location. Actual acceptance then uses that host's authorized project tools.
+
 ## Compatibility and current limits
 
 The workflow is designed to use tools already available in a project, rather than require a particular language or framework. Web, API, CLI, desktop, and mobile flows are intended applications—not a list of tested integrations.
 
 Today, the working example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests. No real upstream API, browser, database, mobile device, or second project has been validated.
 
-The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test methods and an independent agent's replay of the standalone sample. [M2 report-delivery checks](M2-RESULTS.md) bring the local suite to 84 methods, including interruption, disk failures, and incomplete handoff. These results do not establish external-user usefulness, time savings, or production readiness. A verified installation path and a supported release are still pending; do not treat cloning the source as installing the Skill.
+The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test methods and an independent agent's replay of the standalone sample. [M2 report-delivery checks](M2-RESULTS.md) brought the suite to 84 methods, including interruption, disk failures, and incomplete handoff. Current packaging and installation checks are tracked [separately](INTEGRATIONS.md). These results do not establish external-user usefulness, time savings, or production readiness. A supported release remains pending; cloning the source alone does not install the Skill.
 
 ### Safety and evidence limits
 
@@ -65,7 +73,7 @@ The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test me
 - The helper directly compares the CSV with fixed expectations. It does not run commands from reports or accept a supplied PASS. File hashes detect changed evidence, not fabricated collection or requirements omitted from the start.
 - Reports stay local and are not automatically sanitized. Review them before sharing; keep credentials, private logs, and customer data out of public issues.
 
-See the [material format](references/material-format.md) for supported checks and trust boundaries.
+See the [material format](skills/functional-acceptance/references/material-format.md) for supported checks and trust boundaries.
 
 ## Development checks
 
@@ -74,17 +82,26 @@ python3 -B -m unittest discover -s tests -v
 python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
 ```
 
-The first command tests the helper and evidence collector. The second tests the exporter independently of the Skill and helper, including whether the deliberately broken export is caught. A passing defect-detection test does not make that export correct.
+The first command tests the helper, evidence collector, and relocatable Skill package. The second tests the exporter independently of the Skill and helper, including whether the deliberately broken export is caught. A passing defect-detection test does not make that export correct.
+
+Installer integration checks are development-only and need Node 22.20+:
+
+```sh
+npm --prefix integration ci --ignore-scripts --no-audit --no-fund
+npm --prefix integration test
+```
+
+They exercise the pinned `skills` CLI in disposable projects. No agent login or global Skill installation is required. These npm dependencies are not part of the installed Skill.
 
 [CI](.github/workflows/checks.yml) runs these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Both jobs passed for M2 source `c26a86f` ([run #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278)); the [validation record](M2-RESULTS.md#remote-ci) includes an earlier failure and its correction. Check the run for the commit you use; an earlier green build does not validate later changes.
 
 ## Documentation and next steps
 
-- **Explore the Skill:** [instructions](SKILL.md), [sample guide](examples/paginated_export/README.md), [material format](references/material-format.md).
+- **Explore the Skill:** [instructions](skills/functional-acceptance/SKILL.md), [sample guide](examples/paginated_export/README.md), [material format](skills/functional-acceptance/references/material-format.md).
 - **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Next: strengthen failure and handoff checks, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.
+Next: validate real host invocation and capability gaps, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.
 
 ## Feedback and licensing
 

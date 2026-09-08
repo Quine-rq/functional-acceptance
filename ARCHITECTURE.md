@@ -1,6 +1,6 @@
 # 功能验收 Skill：架构与执行约定
 
-历史设计稿 v0.2，包含尚未实现与验证的能力。领域术语以 [CONTEXT.md](CONTEXT.md) 为准，产品边界以 [DESIGN.md](DESIGN.md) 为准。当前 M1 实现范围见 [README.md](README.md)，实际材料接口见 [references/material-format.md](references/material-format.md)。本文中的其余名称、数据和 Interface 仍为设计示意，不是安装指南。
+历史设计稿 v0.2，包含尚未实现与验证的能力。领域术语以 [CONTEXT.md](CONTEXT.md) 为准，产品边界以 [DESIGN.md](DESIGN.md) 为准。当前 M1 实现范围见 [README.md](README.md)，实际材料接口见 [references/material-format.md](skills/functional-acceptance/references/material-format.md)。本文中的其余名称、数据和 Interface 仍为设计示意，不是安装指南。
 
 ## 1. 架构立场
 
@@ -69,7 +69,7 @@
 
 ### 执行预算与退出
 
-执行时以 [SKILL.md](SKILL.md) 中的默认预算和本次用户/项目明确指定值为准。下表保留设计阶段的计数口径说明；这些是宿主操作约束，不是已经实现的强计时器或性能标准。
+执行时以 [SKILL.md](skills/functional-acceptance/SKILL.md) 中的默认预算和本次用户/项目明确指定值为准。下表保留设计阶段的计数口径说明；这些是宿主操作约束，不是已经实现的强计时器或性能标准。
 
 | 项目 | 原型默认值 | 计数口径 |
 | --- | --- | --- |

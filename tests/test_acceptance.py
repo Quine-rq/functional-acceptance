@@ -16,7 +16,7 @@ import unittest
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-CLI = PROJECT_ROOT / "scripts" / "acceptance.py"
+CLI = PROJECT_ROOT / "skills" / "functional-acceptance" / "scripts" / "acceptance.py"
 HEALTHY_CSV = b"id,name\n001,Alpha\n002,Beta\n003,Gamma\n"
 MISSING_PAGE_CSV = b"id,name\n001,Alpha\n002,Beta\n"
 

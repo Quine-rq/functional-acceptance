@@ -138,7 +138,7 @@ def collect(case, directory, *, on_directory_created=None):
     results = []
     for format_name in ("json", "markdown"):
         report_name = "report.json" if format_name == "json" else "report.md"
-        result = subprocess.run([sys.executable, "-B", str(REPO / "scripts" / "acceptance.py"),
+        result = subprocess.run([sys.executable, "-B", str(REPO / "skills" / "functional-acceptance" / "scripts" / "acceptance.py"),
                                  "--contract", "contract.json", "--run", "run.json", "--root", ".",
                                  "--format", format_name, "--output", report_name], cwd=root,
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10)

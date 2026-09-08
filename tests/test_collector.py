@@ -18,7 +18,7 @@ import unittest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 COLLECTOR = PROJECT_ROOT / "examples" / "paginated_export" / "accept.py"
-HELPER = PROJECT_ROOT / "scripts" / "acceptance.py"
+HELPER = PROJECT_ROOT / "skills" / "functional-acceptance" / "scripts" / "acceptance.py"
 EXPECTED_HEADER = ["id", "title", "notes"]
 EXPECTED_ROWS = [
     ["r-001", "示例, Hello", "第一行\n第二行"],

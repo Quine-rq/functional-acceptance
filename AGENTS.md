@@ -1,6 +1,6 @@
 # Working on Functional Acceptance
 
-This repository contains an experimental M1 Skill, offline helper, and controlled sample, not a supported release. Read [DESIGN.md](DESIGN.md) for product scope, [CONTEXT.md](CONTEXT.md) for terminology, and [M1-PLAN.md](M1-PLAN.md) plus [references/material-format.md](references/material-format.md) for the implemented boundary. [ROADMAP.md](ROADMAP.md) defines the next small milestones.
+This repository contains an experimental M1 Skill, offline helper, and controlled sample, not a supported release. Read [DESIGN.md](DESIGN.md) for product scope, [CONTEXT.md](CONTEXT.md) for terminology, and [M1-PLAN.md](M1-PLAN.md) plus [references/material-format.md](skills/functional-acceptance/references/material-format.md) for the implemented boundary. [ROADMAP.md](ROADMAP.md) defines the next small milestones.
 
 ## Task and authority
 

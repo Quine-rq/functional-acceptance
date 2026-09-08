@@ -28,3 +28,18 @@ jobs:
         run: python -B -m unittest discover -s tests -v
       - name: Standalone native regression pack
         run: python -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
+  installation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '22.22.3'
+          package-manager-cache: false
+      - name: Install pinned development-only dependencies
+        run: npm --prefix integration ci --ignore-scripts --no-audit --no-fund
+      - name: Package discovery and isolated install lifecycle
+        run: npm --prefix integration test

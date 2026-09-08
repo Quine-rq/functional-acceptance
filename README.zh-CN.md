@@ -50,13 +50,21 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 
 如果只想检查导出程序，不使用 Skill 或报告工具，可按[独立示例说明](examples/paginated_export/README.md)运行。
 
+## 接入你的编程助手
+
+开发版 Skill 已整理为独立目录 [`skills/functional-acceptance/`](skills/functional-acceptance)，采用 Agent Skills 格式，不附带新的 Agent 运行时。可选 CSV 核验脚本另需 Python/POSIX 环境；只做验收计划不需要它。
+
+首次接入请看[安装说明与实测范围](INTEGRATIONS.md)：使用固定版本的现有安装工具，覆盖 Codex、Claude Code、Cursor、GitHub Copilot、OpenCode 五种安装目标，并说明更新、卸载的影响。**安装检查通过，不等于 Agent 已经实际完成验收。**
+
+确认助手已加载 Skill 后，可以先说：“用 functional-acceptance 规划这个功能怎么验收，先不要运行应用。”同时提供功能预期和项目位置。实际验收再使用该助手已有且获授权的项目工具。
+
 ## 适配范围与当前限制
 
 这套方法优先使用项目已有工具，不要求采用某种语言或框架。Web、API、命令行、桌面和移动端是计划覆盖的应用场景，不是已经验证的适配清单。
 
 当前示例实际覆盖的是**合成分页数据 → 真实 Python 进程 → 本地 CSV 文件**。报告检查导出完整性和字段内容，输入异常与文件安全另有测试。真实上游 API、浏览器、数据库、手机和第二个项目都还没有验证。
 
-[M1 验证记录](M1-RESULTS.md)记载了首批 77 个通过的测试方法，以及另一名 Agent 对独立示例的重跑。[M2 报告交付检查](M2-RESULTS.md)将本地测试补至 84 个方法，覆盖中断、磁盘错误和未完成交接。这不代表外部用户已经用得顺手、节省了时间，或具备生产可用性。安装流程和正式版本仍待验证，克隆源码不等于安装了 Skill。
+[M1 验证记录](M1-RESULTS.md)记载了首批 77 个通过的测试方法，以及另一名 Agent 对独立示例的重跑。[M2 报告交付检查](M2-RESULTS.md)将当时测试补至 84 个方法，覆盖中断、磁盘错误和未完成交接。本轮打包与安装检查[另有记录](INTEGRATIONS.md)。这些结果不代表外部用户已经用得顺手、节省了时间，或具备生产可用性。正式版本仍待验证，克隆源码本身不等于安装了 Skill。
 
 ### 安全与证据边界
 
@@ -65,7 +73,7 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 - 核验工具直接读取 CSV 并与固定期望比较，不执行报告中的命令，也不接受外部填入的“通过”。文件摘要能发现材料被改动，但不能证明采集过程真实，或发现一开始就漏掉的需求。
 - 报告默认留在本地，不会自动脱敏。分享前须检查内容，不要把凭据、私有日志或用户数据放进公开 Issue。
 
-支持的核验规则与信任边界见[材料格式说明](references/material-format.md)。
+支持的核验规则与信任边界见[材料格式说明](skills/functional-acceptance/references/material-format.md)。
 
 ## 开发检查
 
@@ -74,17 +82,26 @@ python3 -B -m unittest discover -s tests -v
 python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
 ```
 
-第一条检查核验工具和证据采集程序；第二条独立检查导出程序，不依赖 Skill 或核验工具，也会确认故意注入的缺陷能被检出。检出缺陷的测试通过，不表示那次缺陷导出正确。
+第一条检查核验工具、证据采集程序和可迁移的 Skill 包；第二条独立检查导出程序，不依赖 Skill 或核验工具，也会确认故意注入的缺陷能被检出。检出缺陷的测试通过，不表示那次缺陷导出正确。
+
+安装集成检查仅供开发，需要 Node 22.20+：
+
+```sh
+npm --prefix integration ci --ignore-scripts --no-audit --no-fund
+npm --prefix integration test
+```
+
+它们在临时项目中实际调用固定版本的 `skills` 安装工具，不要求登录 Agent 或全局安装 Skill。这些 npm 依赖不会进入用户的 Skill 包。
 
 [CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行检查，使用只读权限和固定到提交的 Actions。M2 源码 `c26a86f` 的两个任务均已通过（[运行 #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278)），[验证记录](M2-RESULTS.md#remote-ci)也保留了此前失败及修正过程。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
 
 ## 文档与下一步
 
-- **了解使用方法：** [Skill 指令](SKILL.md)、[独立示例](examples/paginated_export/README.md)、[材料格式](references/material-format.md)。
+- **了解使用方法：** [Skill 指令](skills/functional-acceptance/SKILL.md)、[独立示例](examples/paginated_export/README.md)、[材料格式](skills/functional-acceptance/references/material-format.md)。
 - **核对实现进展：** [M1 范围](M1-PLAN.md)、[M1 验证记录](M1-RESULTS.md)、[M2 加固记录](M2-RESULTS.md)、[路线图](ROADMAP.md)。
 - **了解设计：** [产品设计](DESIGN.md)、[架构](ARCHITECTURE.md)、[评估计划](VALIDATION.md)。这些是中文详细文档，其中计划执行的评估不代表已经通过。
 
-接下来会继续检查失败路径和交接流程，在第二个获授权项目中尝试复用，并对比同一个 Agent 使用与不使用 Skill 的效果。这些验证先于正式发布。
+接下来会验证真实宿主的调用和缺能力时的行为，在第二个获授权项目中尝试复用，并对比同一个 Agent 使用与不使用 Skill 的效果。这些验证先于正式发布。
 
 ## 反馈与许可
 

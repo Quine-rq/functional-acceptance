@@ -26,7 +26,7 @@ from unittest import mock
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 COLLECTOR_PATH = PROJECT_ROOT / "examples" / "paginated_export" / "accept.py"
-HELPER_PATH = PROJECT_ROOT / "scripts" / "acceptance.py"
+HELPER_PATH = PROJECT_ROOT / "skills" / "functional-acceptance" / "scripts" / "acceptance.py"
 FILE_LIMIT = 2 * 1024 * 1024
 READ_LIMIT = 16 * 1024 * 1024
 

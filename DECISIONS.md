@@ -24,7 +24,7 @@ Evidence is tied to the actual target, object, identity, attempt, and retention 
 
 **Status: implemented for the M1 local format.** Freeze the exact contract bytes for a run; changed requirements produce a new contract, while fixes and reruns produce new observations. Retaining both adds some bookkeeping but prevents historical failures from disappearing when expectations, artifacts, or attempts change.
 
-This is not a general event-sourcing system. The experimental `m1` format is documented in [references/material-format.md](references/material-format.md); unknown versions are rejected, and no migration or compatibility promise has been established.
+This is not a general event-sourcing system. The experimental `m1` format is documented in [references/material-format.md](skills/functional-acceptance/references/material-format.md); unknown versions are rejected, and no migration or compatibility promise has been established.
 
 ## Keep ownership with the project
 
@@ -48,4 +48,6 @@ The following primary references informed the design. They are not a tested comp
 
 The first sample is offline paginated JSON exported through a native Python process to CSV. The upstream pages are synthetic. The material helper supports only `csv-exact/v1` with a bounded native process record; it is not a general executor or arbitrary-log adapter. Python standard-library `unittest`, subprocesses, and CSV parsing keep the native checks usable without the Skill.
 
-Installation channel, license, multi-host support, cross-project usefulness, and external user benefits remain unresolved. Next are the scoped trust checks and comparisons in [VALIDATION.md](VALIDATION.md), not a broader support list.
+The experimental install path now reuses a pinned Skills CLI with one self-contained directory; rationale, safety limits and actual checks are in [Agent integration](INTEGRATIONS.md). Node dependencies remain development-only. The old repository CLI forwards to the packaged helper so existing sample usage is preserved.
+
+License, supported multi-host behavior, cross-project usefulness, and external user benefits remain unresolved. Next are the scoped trust checks and comparisons in [VALIDATION.md](VALIDATION.md), not an unqualified support list.

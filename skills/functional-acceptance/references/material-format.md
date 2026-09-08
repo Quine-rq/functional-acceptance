@@ -4,15 +4,15 @@ Use this reference only for the bundled local CSV mapping. It is a narrow develo
 
 ## Native execution first
 
-Run the project's reviewed native checks. The sample collector in `examples/paginated_export/accept.py` records actual subprocess termination and copies the executed program/input to a unique evidence directory. It never calls commands found in input material. The helper reads that directory without running code or making network requests.
+Run the project's reviewed native checks. The separately available [repository sample collector](https://github.com/Quine-rq/functional-acceptance/tree/main/examples/paginated_export) records actual subprocess termination and copies the executed program/input to a unique evidence directory. The sample is not bundled or required for installation. It never calls commands found in input material. The helper reads that directory without running code or making network requests.
 
-From the repository root:
+Use the absolute path to this installed Skill and one actual run directory, from any working directory:
 
 ```sh
-python3 scripts/acceptance.py --contract RUN/contract.json --run RUN/run.json --root RUN --format json
+python3 /path/to/functional-acceptance/scripts/acceptance.py --contract /path/to/RUN/contract.json --run /path/to/RUN/run.json --root /path/to/RUN --format json
 ```
 
-Replace `RUN` with one actual run directory. Use `--format markdown` for a human-readable report. Output goes to stdout unless `--output NEW_FILE` is supplied; existing files are never overwritten. Exit 0 means qualified scoped PASS, 1 means a valid counterexample, and 2 means incomplete, invalid, or unavailable material/output. A report still distinguishes business facts from cleanup and coverage.
+Replace both placeholder paths; do not assume the project root is the Skill root. The helper needs Python 3.10+ and a POSIX filesystem with no-follow access and hard-link support. Use `--format markdown` for a human-readable report. Output goes to stdout unless `--output NEW_FILE` is supplied; existing files are never overwritten. Exit 0 means qualified scoped PASS, 1 means a valid counterexample, and 2 means incomplete, invalid, or unavailable material/output. A report still distinguishes business facts from cleanup and coverage.
 
 With `--output`, the helper writes and flushes a same-directory temporary file before publishing the complete report without overwriting an existing path. A killed writer can leave `.acceptance-report-*.tmp`; these are not delivered reports. This protects file visibility, not stdout redirection or crash/power-loss durability. Use a trusted local output directory with hard-link support.
 

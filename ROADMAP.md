@@ -54,3 +54,5 @@ A [first paired plan-content probe](evals/results/2026-09-08-plan-only/README.md
 - [ ] Obtain authorization for the release.
 
 **Exit:** release claims match the demonstrated scope. This is not an automatic approval for users to deploy their own products.
+
+Development progress: [portable package and integration checks](INTEGRATIONS.md) cover five installer targets and one Codex discovery probe. Actual multi-host invocation, interruption-safe upgrade evaluation, and supported-release qualification remain pending; the gate above is not yet marked complete.

@@ -1,0 +1,9 @@
+{
+  "name": "functional-acceptance-integration-checks",
+  "private": true,
+  "description": "Development-only checks against a pinned ecosystem installer; not Skill runtime dependencies.",
+  "type": "module",
+  "engines": { "node": ">=22.20.0" },
+  "scripts": { "test": "node --test test-install.mjs" },
+  "devDependencies": { "skills": "1.5.24", "yaml": "2.9.0" }
+}
