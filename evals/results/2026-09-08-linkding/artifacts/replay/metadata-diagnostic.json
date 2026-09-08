@@ -1,0 +1,28 @@
+[
+  {
+    "path": "/api/bookmarks/check",
+    "status": 301,
+    "article": [
+      "http://127.0.0.1:18742/article.html?diagnostic=metadata"
+    ]
+  },
+  {
+    "path": "/api/bookmarks/check/",
+    "status": 200,
+    "article": [
+      "http://127.0.0.1:18742/article.html?diagnostic=metadata"
+    ]
+  },
+  {
+    "rendered_title": "Acceptance study article",
+    "bookmark_saved": false
+  },
+  {
+    "owned_pid": 67476,
+    "returncode": -15
+  },
+  {
+    "owned_pid": 67475,
+    "returncode": -15
+  }
+]

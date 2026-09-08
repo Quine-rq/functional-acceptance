@@ -1,0 +1,21 @@
+{"time": "2026-09-08T05:21:32.747150+00:00", "kind": "identity", "head": "65813a75404b1319aca8b09700fadc0b15adabaf", "python": "3.14.4", "script_sha256": "9028f60377b7f02b2393276bbe80d1250f01a8a6f46e9b0c6b118fadebbb3ff9", "target_url": "http://127.0.0.1:18742/article.html?case=assisted-run-20260908t052132725841z", "expected_tags": ["acceptance", "assisted-run-20260908t052132725841z"], "expected_notes": "Private research notes assisted-run-20260908t052132725841z\nSecond line: retain this context."}
+{"time": "2026-09-08T05:21:32.774718+00:00", "kind": "database_observation", "label": "initial", "rows": []}
+{"time": "2026-09-08T05:21:32.774887+00:00", "kind": "check", "name": "initial_database_empty", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T05:21:32.777150+00:00", "kind": "process_started", "name": "article", "pid": 67046, "command": ["-m", "http.server", "18742", "--bind", "127.0.0.1", "--directory", ".acceptance-study/article"]}
+{"time": "2026-09-08T05:21:32.881711+00:00", "kind": "process_started", "name": "application", "pid": 67047, "command": ["manage.py", "runserver", "127.0.0.1:18741", "--noreload"]}
+{"time": "2026-09-08T05:21:35.680076+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T05:21:35.724742+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T05:21:35.732018+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T05:21:35.769049+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T05:21:36.867758+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T05:21:36.868110+00:00", "kind": "check", "name": "normal_login", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T05:21:37.071007+00:00", "kind": "check", "name": "invalid_url_feedback", "status": "PASS", "evidence": {"message": "Enter a valid URL.", "url_input": "http://"}}
+{"time": "2026-09-08T05:21:37.072070+00:00", "kind": "database_observation", "label": "invalid URL", "rows": []}
+{"time": "2026-09-08T05:21:37.072208+00:00", "kind": "check", "name": "invalid_url_not_persisted", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T05:21:37.142235+00:00", "kind": "browser_evidence", "label": "invalid-url", "url": "http://127.0.0.1:18741/bookmarks/new"}
+{"time": "2026-09-08T05:21:37.678646+00:00", "kind": "obstacle", "phase": "invalid URL and recovery", "error_type": "Error", "detail": "See safe browser evidence; no automatic journey retry", "target_id": null, "control_id": null}
+{"time": "2026-09-08T05:21:37.720840+00:00", "kind": "browser_evidence", "label": "obstacle", "url": "http://127.0.0.1:18741/bookmarks/new"}
+{"time": "2026-09-08T05:21:40.486459+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T05:21:40.496503+00:00", "kind": "process_stopped", "name": "application", "pid": 67047, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T05:21:40.498204+00:00", "kind": "process_stopped", "name": "article", "pid": 67046, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T05:21:40.498942+00:00", "kind": "finished", "exit_code": 1, "evidence": "LINKDING_REPLAY_ROOT/.acceptance-study/artifacts/assisted-run-20260908T052132725841Z"}

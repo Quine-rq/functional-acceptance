@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "initial_database_empty": "PASS",
+    "normal_login": "PASS",
+    "invalid_url_feedback": "PASS",
+    "invalid_url_not_persisted": "PASS",
+    "real_http_metadata": "FAIL",
+    "invalid_recovery": "UNVERIFIED",
+    "save_private_tags_notes": "UNVERIFIED",
+    "fresh_browser_retrieval": "UNVERIFIED",
+    "server_restart_retrieval": "UNVERIFIED",
+    "other_account_no_view": "UNVERIFIED",
+    "other_account_no_modify": "UNVERIFIED",
+    "edit_persisted": "UNVERIFIED",
+    "delete_target": "UNVERIFIED",
+    "unrelated_intact": "UNVERIFIED"
+  },
+  "phase_at_exit": "invalid URL and recovery",
+  "exit_code": 1,
+  "target_id": null,
+  "control_id": null,
+  "run": "assisted-run-20260908t052036453688z",
+  "processes": [
+    {
+      "name": "article",
+      "pid": 66843,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application",
+      "pid": 66844,
+      "returncode": -15,
+      "port_closed": true
+    }
+  ],
+  "execution_cleanup": "stopped"
+}

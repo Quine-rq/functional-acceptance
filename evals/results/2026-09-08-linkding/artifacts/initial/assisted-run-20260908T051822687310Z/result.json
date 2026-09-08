@@ -1,0 +1,48 @@
+{
+  "checks": {
+    "initial_database_empty": "PASS",
+    "normal_login": "PASS",
+    "invalid_url_feedback": "PASS",
+    "invalid_url_not_persisted": "PASS",
+    "real_http_metadata": "PASS",
+    "invalid_recovery": "PASS",
+    "save_private_tags_notes": "PASS",
+    "save_private_tags_notes_database": "PASS",
+    "fresh_browser_retrieval": "PASS",
+    "fresh_browser_fields": "PASS",
+    "fresh_browser_fields_database": "PASS",
+    "server_restart_retrieval": "PASS",
+    "server_restart_retrieval_database": "PASS",
+    "other_account_no_view": "PASS",
+    "other_account_no_modify": "UNVERIFIED",
+    "edit_persisted": "UNVERIFIED",
+    "delete_target": "UNVERIFIED",
+    "unrelated_intact": "UNVERIFIED"
+  },
+  "phase_at_exit": "other ordinary account isolation",
+  "exit_code": 1,
+  "target_id": 1,
+  "control_id": 2,
+  "run": "assisted-run-20260908t051822687310z",
+  "processes": [
+    {
+      "name": "article",
+      "pid": 66159,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application",
+      "pid": 66160,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application-restarted",
+      "pid": 66258,
+      "returncode": -15,
+      "port_closed": true
+    }
+  ],
+  "execution_cleanup": "stopped"
+}

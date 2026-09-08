@@ -1,0 +1,15 @@
+LINKDING
+Add bookmark Bookmarks Settings Logout
+Edit bookmark
+URL
+Tags
+Enter any number of tags separated by space and without the hash (#). If a tag does not exist it will be automatically created.
+Title
+Refresh from website Clear
+Description
+Notes
+Notes
+Additional notes, supports Markdown.
+Mark as unread
+Unread bookmarks can be filtered for, and marked as read after you had a chance to look at them.
+Cancel

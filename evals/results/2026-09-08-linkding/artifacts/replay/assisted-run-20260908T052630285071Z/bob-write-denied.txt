@@ -1,0 +1,22 @@
+Page not found (404)
+Bookmark does not exist
+Request Method:	POST
+Request URL:	http://127.0.0.1:18741/bookmarks/3/edit
+Raised by:	bookmarks.views.bookmarks.edit
+
+Using the URLconf defined in bookmarks.urls, Django tried these URL patterns, in this order:
+
+^$ [name='root']
+bookmarks [name='bookmarks.index']
+bookmarks/action [name='bookmarks.index.action']
+bookmarks/archived [name='bookmarks.archived']
+bookmarks/archived/action [name='bookmarks.archived.action']
+bookmarks/shared [name='bookmarks.shared']
+bookmarks/shared/action [name='bookmarks.shared.action']
+bookmarks/new [name='bookmarks.new']
+bookmarks/close [name='bookmarks.close']
+bookmarks/<int:bookmark_id>/edit [name='bookmarks.edit']
+
+The current path, bookmarks/3/edit, matched the last one.
+
+You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.

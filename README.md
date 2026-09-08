@@ -18,7 +18,7 @@ Start with the feature's requirements and the project you want checked. The Skil
 2. **Check the result.** Use the project's existing tools to run the flow and inspect the outcome. Focus on relevant failure and recovery cases as well as the happy path.
 3. **Hand over the findings.** Report what passed, what failed, and what remains unverified, with evidence and instructions for repeating the checks.
 
-The Skill provides the workflow; the agent and project tools perform the checks. It does not replace your test framework or approve a release. The implemented demo below covers one local export flow; other workflows still need validation.
+The Skill provides the workflow; the agent and project tools perform the checks. It does not replace your test framework or approve a release. Start with the local export demo below; a separate [linkding study](evals/results/2026-09-08-linkding/README.md) records a real browser/database journey and the author assistance it required.
 
 ## Try the demo
 
@@ -64,7 +64,9 @@ Once your host has loaded the Skill, try: “Use functional-acceptance to plan h
 
 The workflow is designed to use tools already available in a project, rather than require a particular language or framework. Web, API, CLI, desktop, and mobile flows are intended applications—not a list of tested integrations.
 
-Today, the working example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests. No real upstream API, browser, database, mobile device, or second project has been validated.
+The bundled example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests.
+
+A [second-project study on linkding](evals/results/2026-09-08-linkding/README.md) now covers real browser login, bookmark persistence across a server restart, private-account isolation, editing and scoped deletion, with SQLite observations. The independent Skill invocation was blocked by local runtime permissions; the full journey passed only after author assistance and regression-script corrections. The study preserves those failures and a native replay guide. It is not autonomous reuse evidence or a supported browser integration. External services and mobile devices remain unverified.
 
 The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test methods and an independent agent's replay of the standalone sample. [M2 report-delivery checks](M2-RESULTS.md) brought the suite to 84 methods, including interruption, disk failures, and incomplete handoff. Current packaging and installation checks are tracked [separately](INTEGRATIONS.md). These results do not establish external-user usefulness, time savings, or production readiness. A supported release remains pending; cloning the source alone does not install the Skill.
 
@@ -103,7 +105,7 @@ They exercise the pinned `skills` CLI in disposable projects. No agent login or 
 - **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Next: repeat the behavior checks, verify another host's real invocation and capability gaps, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.
+Next: independently replay the reviewed linkding handoff, repeat behavior checks, verify another host's real invocation and capability gaps, and compare the same agent's work with and without the Skill. These checks come before a supported release.
 
 ## Feedback and licensing
 

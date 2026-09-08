@@ -38,7 +38,7 @@ The clean-directory replay so far used an independent agent, not an external hum
 
 - [ ] Test natural discovery, near-miss requests, and plan-only behavior.
 - [ ] Compare against the same agent, tools, inputs, and budget without this Skill.
-- [ ] Run on a second authorized project; changing entrypoints in the same demo is not cross-project reuse.
+- [x] Run on a second authorized project; changing entrypoints in the same demo is not cross-project reuse.
 - [ ] Record initial setup, correction, review, and one subsequent change's maintenance effort.
 
 **Exit:** publish the actual sample sizes, outcomes, limitations, and cumulative human effort. Do not infer long-term savings or universal compatibility from a few examples.
@@ -46,6 +46,8 @@ The clean-directory replay so far used an independent agent, not an external hum
 A [first paired plan-content probe](evals/results/2026-09-08-plan-only/README.md) retained three outputs per configuration and independent grades. Tool traces and usage were unavailable, and its only scoring difference depends on an ambiguous expectation. This does not complete the behavior/baseline gates above or establish practical benefit.
 
 A [native Codex smoke check](evals/results/2026-09-08-host-smoke/README.md) now retains complete normalized traces and actual CSV evidence. Four initial requests met their expectations; a fifth created files during a read-only review. A narrow instruction correction passed one targeted recheck. This is not the required repeated experiment or a claim that all cases passed on the corrected revision.
+
+The [linkding study](evals/results/2026-09-08-linkding/README.md) satisfies only scoped second-project execution: a real browser/Django/SQLite bookmark journey passed after author assistance and native-regression corrections. The independent Skill invocation stopped at a local permission gap. All failed attempts and setup/correction work are retained; autonomous reuse, external-human handoff, a fair baseline and maintenance effort remain unproven. M3's overall exit is not met.
 
 ## M4 — Limited release
 

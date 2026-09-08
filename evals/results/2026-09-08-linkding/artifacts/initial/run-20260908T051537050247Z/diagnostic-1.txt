@@ -1,0 +1,10 @@
+Attribution: primary executor's exec_command tool result cdca08/c26ab1; diagnostic probe after initial startup failure.
+Command: .venv/bin/python -m http.server 18742 --bind 127.0.0.1 --directory .acceptance-study/article
+Working directory: LINKDING_INITIAL_ROOT
+Result: exit code 1.
+Observed traceback terminal frames:
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+No server listener was established. No application/browser journey was retried. One diagnostic probe used; no second probe needed.
+The direct diagnostic command terminated synchronously; tool did not expose a process PID.

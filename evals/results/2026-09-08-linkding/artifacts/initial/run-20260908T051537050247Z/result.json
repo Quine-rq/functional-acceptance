@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "normal_login": "UNVERIFIED",
+    "invalid_url_feedback": "UNVERIFIED",
+    "invalid_recovery": "UNVERIFIED",
+    "save_private_tags_notes": "UNVERIFIED",
+    "fresh_browser_retrieval": "UNVERIFIED",
+    "server_restart_retrieval": "UNVERIFIED",
+    "other_account_no_view": "UNVERIFIED",
+    "other_account_no_modify": "UNVERIFIED",
+    "edit_persisted": "UNVERIFIED",
+    "delete_target": "UNVERIFIED",
+    "unrelated_intact": "UNVERIFIED"
+  },
+  "phase_at_exit": "setup",
+  "exit_code": 1,
+  "target_id": null,
+  "control_id": null,
+  "run": "run-20260908t051537050247z",
+  "processes": [
+    {
+      "name": "article",
+      "pid": 65518,
+      "returncode": 1,
+      "port_closed": true
+    }
+  ]
+}

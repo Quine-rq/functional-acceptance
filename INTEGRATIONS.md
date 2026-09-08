@@ -98,6 +98,7 @@ A separate installation from that exact GitHub commit into a temporary Claude Co
 | Relocated helper | Real healthy/defective/missing-observation runs rechecked as PASS/FAIL/UNVERIFIED from another working directory; installation unchanged | Another business project or another execution mapping |
 | Codex discovery | CLI 0.146.0 `skills/list` returns the installed, enabled repo Skill and UI metadata; after removal and rescan it is absent | Model invocation or execution of a user journey |
 | Codex behavior | Separate CLI 0.153.4 smoke checks exercised natural loading, native CSV execution, planning, regression, a near-miss and missing history; a read-only write violation was found and narrowly rechecked after correction | Repeated reliability, a controlled baseline, other host models or a second project; see the [full record](evals/results/2026-09-08-host-smoke/README.md) |
+| External-project study | The unchanged Skill loaded in linkding; its independent run stopped on a local socket-bind denial. An author-assisted native browser/Django/SQLite journey subsequently passed after regression corrections | Not autonomous completion, an independent human handoff or a supported browser adapter; all attempts are in the [linkding record](evals/results/2026-09-08-linkding/README.md) |
 | Other hosts | Official paths inspected; installer filesystem checks only | Claude Code, Cursor, Copilot and OpenCode discovery/behavior remain unverified |
 
 The optional Codex probe initially timed out in the restricted environment, then exposed a startup permission error. The same probe passed with normal process permissions, without invoking a model or changing shared configuration. The failed attempts are not counted as successes.
@@ -119,4 +120,4 @@ It creates and cleans an isolated temporary project and does not install into th
 
 The behavior probe also found that PATH CLI 0.146.0 could discover the Skill but could not invoke the configured model. An existing app-bundled 0.153.4 executable worked without changing the user's model or global setup. Record the actual executable/version and distinguish host startup errors from Skill behavior; this observation is not a minimum-version guarantee.
 
-Next gates: repeated behavior checks, another host's real invocation, missing-tool handling, a second authorized project, and license/release decisions. This preview does not declare those complete.
+Next gates: repeated behavior checks, another host's real invocation, missing-tool handling, independent replay of the assisted second-project handoff, and license/release decisions. This preview does not declare those complete.

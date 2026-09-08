@@ -1,0 +1,22 @@
+[
+  {
+    "variant": "executed-old",
+    "error": "__main__.<lambda>() got multiple values for keyword argument 'status'",
+    "events": []
+  },
+  {
+    "variant": "corrected",
+    "error": null,
+    "events": [
+      {
+        "kind": "check",
+        "name": "private-access",
+        "status": "PASS",
+        "evidence": {
+          "status": 200,
+          "bookmark_id": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "initial_scope_unused": "PASS",
+    "normal_login": "PASS",
+    "invalid_url_feedback": "PASS",
+    "invalid_url_not_persisted": "PASS",
+    "real_http_metadata": "PASS",
+    "invalid_recovery": "PASS",
+    "save_private_tags_notes": "PASS",
+    "save_private_tags_notes_database": "PASS",
+    "fresh_browser_retrieval": "PASS",
+    "fresh_browser_fields": "PASS",
+    "fresh_browser_fields_database": "PASS",
+    "server_restart_retrieval": "PASS",
+    "server_restart_retrieval_database": "PASS",
+    "other_account_no_view": "PASS",
+    "bob_edit_get_denied": "PASS",
+    "owner_unchanged_after_attack": "PASS",
+    "owner_unchanged_after_attack_database": "PASS",
+    "other_account_no_modify": "PASS",
+    "edit_persisted": "PASS",
+    "edit_persisted_database": "PASS",
+    "delete_target": "PASS",
+    "delete_target_database": "PASS",
+    "unrelated_intact": "PASS",
+    "run_bookmarks_cleaned_baseline_preserved": "PASS"
+  },
+  "phase_at_exit": "cleanup control through UI",
+  "exit_code": 0,
+  "target_id": 3,
+  "control_id": 4,
+  "run": "assisted-run-20260908t052630285071z",
+  "processes": [
+    {
+      "name": "article",
+      "pid": 68111,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application",
+      "pid": 68112,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application-restarted",
+      "pid": 68173,
+      "returncode": -15,
+      "port_closed": true
+    }
+  ],
+  "execution_cleanup": "stopped"
+}
