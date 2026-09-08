@@ -1,0 +1,1 @@
+{"completion": "partial", "obstacle_kind": "evidence-delivery", "owned_run": "<TASK_ROOT>/work/linkding-hardened/.acceptance-study/artifacts/run-20260908T060751456937Z", "qualified_pass": false}

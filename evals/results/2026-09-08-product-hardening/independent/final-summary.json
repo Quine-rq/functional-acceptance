@@ -1,0 +1,238 @@
+{
+  "evidence_kind": "independent-agent-handoff",
+  "human_user_validation": false,
+  "execution_policy": "Each scenario once, sequentially; stop after unexpected outcome; no automatic retry.",
+  "observed_scenarios": [
+    {
+      "scenario": "healthy",
+      "code": 0,
+      "elapsed_ms": 32249,
+      "run_dir": "run-20260908T061206476263Z",
+      "business_verdict": "PASS",
+      "completion": "complete",
+      "obstacle_kind": null,
+      "independent_ok": true,
+      "baseline_count": 0,
+      "final_bookmark_count": 0,
+      "candidate_identity_unchanged": true
+    },
+    {
+      "scenario": "note-loss",
+      "code": 1,
+      "elapsed_ms": 5714,
+      "run_dir": "run-20260908T061251551005Z",
+      "business_verdict": "FAIL",
+      "completion": "partial",
+      "obstacle_kind": "business",
+      "independent_ok": true,
+      "baseline_count": 0,
+      "final_bookmark_count": 1,
+      "candidate_identity_unchanged": true
+    },
+    {
+      "scenario": "missing-observation",
+      "code": 2,
+      "elapsed_ms": 50795,
+      "run_dir": "run-20260908T061315674040Z",
+      "business_verdict": "UNVERIFIED",
+      "completion": "partial",
+      "obstacle_kind": null,
+      "independent_ok": true,
+      "baseline_count": 1,
+      "final_bookmark_count": 1,
+      "candidate_identity_unchanged": true
+    },
+    {
+      "scenario": "expired-session",
+      "code": 2,
+      "elapsed_ms": 90329,
+      "run_dir": "run-20260908T061415262120Z",
+      "business_verdict": "UNVERIFIED",
+      "completion": "partial",
+      "obstacle_kind": "harness-or-observation",
+      "independent_ok": false,
+      "baseline_count": 1,
+      "final_bookmark_count": 2,
+      "candidate_identity_unchanged": true
+    }
+  ],
+  "not_executed": [
+    {
+      "scenario": "lost-response",
+      "reason": "Stopped after unexpected expired-session UNVERIFIED"
+    },
+    {
+      "scenario": "unicode-notes",
+      "reason": "Stopped after unexpected expired-session UNVERIFIED"
+    }
+  ],
+  "raw_results_file": "final-results.json",
+  "actual_directory_field": "run_dir",
+  "unexpected_obstacle": {
+    "scenario": "expired-session",
+    "phase": "cleanup control through UI",
+    "error_type": "TimeoutError",
+    "classification": "harness-or-observation",
+    "missing_evidence": [
+      "Exact failing Playwright locator/call",
+      "Exception stack or action trace"
+    ],
+    "visible_state": "Control id 9 detail dialog visible, Delete visible, Confirm not visible",
+    "target_id": 8,
+    "control_id": 9,
+    "watchdog_triggered": false
+  },
+  "privacy_review": {
+    "recognized_debug_404_capture_omitted_in": [
+      "healthy",
+      "missing-observation",
+      "expired-session"
+    ],
+    "forbidden_files_absent": [
+      "bob-edit-denied.png",
+      "bob-edit-denied.txt",
+      "bob-write-denied.png",
+      "bob-write-denied.txt"
+    ],
+    "not_reached_in": [
+      "note-loss"
+    ],
+    "general_artifacts_certified_safe_to_publish": false
+  },
+  "maintenance_evidence": {
+    "script_snapshot_and_environment_verified": true,
+    "source_unchanged": true,
+    "unicode_fields": "Not independently measured: scenario not executed",
+    "signal_interrupt_recovery": "Not independently measured: no signal injection in authorized cases"
+  },
+  "event_review": [
+    {
+      "scenario": "healthy",
+      "browser_starts": 5,
+      "browser_closes": 5,
+      "all_fresh_and_sandboxed": true,
+      "processes": [
+        {
+          "name": "article",
+          "pid": 82684
+        },
+        {
+          "name": "application",
+          "pid": 82686
+        },
+        {
+          "name": "application-restarted",
+          "pid": 82741
+        }
+      ],
+      "obstacles": [],
+      "event_count": 113
+    },
+    {
+      "scenario": "note-loss",
+      "browser_starts": 1,
+      "browser_closes": 1,
+      "all_fresh_and_sandboxed": true,
+      "processes": [
+        {
+          "name": "article",
+          "pid": 82883
+        },
+        {
+          "name": "application",
+          "pid": 82884
+        }
+      ],
+      "obstacles": [
+        {
+          "time": "2026-09-08T06:12:55.215236+00:00",
+          "kind": "obstacle",
+          "phase": "invalid URL and recovery",
+          "category": "business",
+          "error_type": "BusinessMismatch",
+          "detail": "save_private_tags_notes",
+          "target_id": 5,
+          "control_id": null
+        }
+      ],
+      "event_count": 30
+    },
+    {
+      "scenario": "missing-observation",
+      "browser_starts": 5,
+      "browser_closes": 5,
+      "all_fresh_and_sandboxed": true,
+      "processes": [
+        {
+          "name": "article",
+          "pid": 82986
+        },
+        {
+          "name": "application",
+          "pid": 82987
+        },
+        {
+          "name": "application-restarted",
+          "pid": 83040
+        }
+      ],
+      "obstacles": [],
+      "event_count": 112
+    },
+    {
+      "scenario": "expired-session",
+      "browser_starts": 5,
+      "browser_closes": 5,
+      "all_fresh_and_sandboxed": true,
+      "processes": [
+        {
+          "name": "article",
+          "pid": 83222
+        },
+        {
+          "name": "application",
+          "pid": 83223
+        },
+        {
+          "name": "application-restarted",
+          "pid": 83286
+        }
+      ],
+      "obstacles": [
+        {
+          "time": "2026-09-08T06:15:36.484734+00:00",
+          "kind": "obstacle",
+          "phase": "cleanup control through UI",
+          "category": "harness-or-observation",
+          "error_type": "TimeoutError",
+          "detail": "Inspect private startup logs and safe browser evidence; no automatic journey retry",
+          "target_id": 8,
+          "control_id": 9
+        }
+      ],
+      "event_count": 124
+    }
+  ],
+  "cleanup": {
+    "native_all_runs": "stopped",
+    "both_ports_no_listener_after_stop": true,
+    "expired_service_pids_absent": [
+      83222,
+      83223,
+      83286
+    ],
+    "browser_start_close_pairs": 16,
+    "retained_bookmarks": {
+      "count": 2,
+      "note_loss_target_id": 5,
+      "expired_session_control_id": 9
+    },
+    "no_manual_cleanup": true
+  },
+  "corrections": {
+    "source_changes": 0,
+    "pack_changes": 0,
+    "journey_retries": 0,
+    "raw_results_rewrites_after_parent_request": 0
+  }
+}

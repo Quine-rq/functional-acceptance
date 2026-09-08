@@ -1,0 +1,45 @@
+import {spawn} from 'node:child_process';
+import {mkdirSync, readFileSync, readdirSync, writeFileSync, existsSync} from 'node:fs';
+import {resolve, join} from 'node:path';
+import net from 'node:net';
+const project=resolve('work/linkding-hardened');
+const pack=resolve('outputs/functional-acceptance/examples/linkding');
+const record=resolve(process.argv[2] || 'work/hardening-native-faults'); mkdirSync(record);
+const runs=join(project,'.acceptance-study/artifacts');
+const results=[];
+for(const scenario of ['interrupt','receipt-collision','occupied-port']){
+ const listener=scenario==='occupied-port'?net.createServer():null;
+ if(listener)await new Promise((ok,no)=>{listener.on('error',no);listener.listen(18741,'127.0.0.1',ok)});
+ const before=new Set(readdirSync(runs)); const started=Date.now();
+ const args=[join(pack,'accept.py'),'--project',project,'--browser','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome','--case','healthy'];
+ const child=spawn(join(project,'.venv/bin/python'),args,{cwd:project,detached:true,stdio:['ignore','pipe','pipe']});
+ let stdout='',stderr='',injected=false,forced=false,killTimer;
+ const stop=()=>{forced=true;try{process.kill(child.pid,'SIGTERM')}catch{};killTimer=setTimeout(()=>{try{process.kill(-child.pid,'SIGKILL')}catch{}},10000)};
+ const timer=setTimeout(stop,120000);
+ child.stdout.on('data',b=>{
+  stdout+=b;
+  if(!injected&&stdout.includes('"kind": "browser_started"')){
+   if(scenario==='interrupt'){injected=true;process.kill(child.pid,'SIGTERM')}
+   if(scenario==='receipt-collision'){
+    const created=readdirSync(runs).filter(x=>!before.has(x));
+    if(created.length===1){writeFileSync(join(runs,created[0],'result.json.pending'),'CONTROL: pre-existing pending receipt must be preserved\n',{flag:'wx'});injected=true}
+   }
+  }
+ });
+ child.stderr.on('data',b=>stderr+=b);
+ const ended=await new Promise(done=>{child.on('error',e=>done({error:e.message}));child.on('close',(code,signal)=>done({code,signal}))});
+ clearTimeout(timer);clearTimeout(killTimer);
+ const listenerPreserved=listener?.listening??null;
+ if(listener)await new Promise(ok=>listener.close(ok));
+ writeFileSync(join(record,scenario+'.jsonl'),stdout);writeFileSync(join(record,scenario+'.stderr.txt'),stderr);
+ const created=readdirSync(runs).filter(x=>!before.has(x));
+ const directory=created.length===1?join(runs,created[0]):null;
+ const result=directory&&existsSync(join(directory,'result.json'))?JSON.parse(readFileSync(join(directory,'result.json'))):null;
+ const events=stdout.split('\n').filter(Boolean).flatMap(l=>{try{return[JSON.parse(l)]}catch{return[]}});
+ const starts=events.filter(e=>e.kind==='process_started'), stops=events.filter(e=>e.kind==='process_stopped');
+ const stopped=starts.every(s=>stops.some(e=>e.pid===s.pid&&e.port_closed));
+ const pending=directory&&existsSync(join(directory,'result.json.pending'))?readFileSync(join(directory,'result.json.pending'),'utf8'):null;
+ const row={scenario,...ended,forced,injected,elapsed_ms:Date.now()-started,run:created,result,owned_services_stopped:stopped,unowned_listener_preserved:listenerPreserved,pending_receipt:pending};results.push(row);
+ writeFileSync(join(record,'results.json'),JSON.stringify(results,null,2));console.log(JSON.stringify(row));
+ if(forced||ended.code!==2||!stopped||(scenario==='receipt-collision'&&(result||!pending))||(scenario==='occupied-port'&&!listenerPreserved)){process.exitCode=1;break}
+}

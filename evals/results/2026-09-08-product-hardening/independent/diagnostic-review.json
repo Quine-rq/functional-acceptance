@@ -1,0 +1,155 @@
+{
+  "kind": "explicit-diagnostic-recheck",
+  "not_human_user_proof": true,
+  "not_proof_intermittent_issue_eliminated": true,
+  "records": [
+    {
+      "scenario": "expired-session",
+      "code": 0,
+      "elapsed_ms": 29657,
+      "run_dir": "run-20260908T062102428303Z",
+      "verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "independent_ok": true
+    },
+    {
+      "scenario": "lost-response",
+      "code": 0,
+      "elapsed_ms": 28607,
+      "run_dir": "run-20260908T062141545322Z",
+      "verdict": "PASS",
+      "completion": "complete",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "independent_ok": true
+    },
+    {
+      "scenario": "unicode-notes",
+      "code": 2,
+      "elapsed_ms": 32945,
+      "run_dir": "run-20260908T062225292764Z",
+      "verdict": "UNVERIFIED",
+      "completion": "partial",
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+      "independent_ok": false
+    }
+  ],
+  "candidate_scripts": {
+    "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+    "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+    "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+    "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+  },
+  "same_candidate_across_runs": true,
+  "old_report_digests": {
+    "final-results.json": "b62a2d0260a68e55bb0cbc4f6eb4c950128942b0b69a0430674b508171ba0749",
+    "final-summary.json": "5bf17e9fdfb05b76195bd2fd189594be8dd2e6a63a520588cdc69485d86b9aaa",
+    "final-candidate-report.md": "687a5f0780959a990e90638e1b552aadbdd488e3a0fd5666ed19f7415e043eea"
+  },
+  "old_reports_unchanged_after_all_runs": true,
+  "unicode_note_persistence": {
+    "independent_unicode_fixture_exact": true,
+    "exact_ui_and_database_at": [
+      "save_private_tags_notes",
+      "fresh_browser_fields",
+      "server_restart_retrieval",
+      "owner_unchanged_after_attack",
+      "edit_persisted"
+    ],
+    "current_database_edited_notes_exact": true,
+    "full_journey_pass": false
+  },
+  "failure": {
+    "scenario": "unicode-notes",
+    "phase": "delete with unrelated control",
+    "error_type": "TimeoutError",
+    "native_step": {
+      "time": "2026-09-08T06:22:47.464787+00:00",
+      "kind": "native_step",
+      "step": "target.confirm_click",
+      "bookmark_id": 14
+    },
+    "caller": "accept.py:334 confirm_delete(target_id, 'target')",
+    "failing_call": "accept.py:212 confirmation.click()",
+    "locator": "locator(\"ld-confirm-dropdown\").get_by_role(\"button\", name=\"Confirm\", exact=True)",
+    "timeout_ms": 7000,
+    "private_file_mode": "0600",
+    "watchdog_triggered": false,
+    "safe_stack": [
+      "Traceback (most recent call last):",
+      "  File \"<PACK>/accept.py\", line 334, in <module>",
+      "  File \"<PACK>/accept.py\", line 212, in confirm_delete",
+      "    confirmation.click()",
+      "  File \"<ISOLATED_PROJECT>/.venv/lib/python3.14/site-packages/playwright/sync_api/_generated.py\", line 17876, in click",
+      "  File \"<ISOLATED_PROJECT>/.venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py\", line 115, in _sync",
+      "  File \"<ISOLATED_PROJECT>/.venv/lib/python3.14/site-packages/playwright/_impl/_locator.py\", line 165, in click",
+      "  File \"<ISOLATED_PROJECT>/.venv/lib/python3.14/site-packages/playwright/_impl/_frame.py\", line 593, in _click",
+      "  File \"<ISOLATED_PROJECT>/.venv/lib/python3.14/site-packages/playwright/_impl/_connection.py\", line 76, in send",
+      "  File \"<ISOLATED_PROJECT>/.venv/lib/python3.14/site-packages/playwright/_impl/_connection.py\", line 632, in wrap_api_call",
+      "playwright._impl._errors.TimeoutError: Locator.click: Timeout 7000ms exceeded.",
+      "Call log:",
+      "  - waiting for locator(\"ld-confirm-dropdown\").get_by_role(\"button\", name=\"Confirm\", exact=True)"
+    ],
+    "screenshot_and_text_between_visibility_assertion_and_click_contain_confirm": false,
+    "root_cause_confirmed": false
+  },
+  "data": {
+    "baseline_ids": [
+      5,
+      9
+    ],
+    "prior_rows_exactly_unchanged": true,
+    "current_ids": [
+      5,
+      9,
+      14,
+      15
+    ],
+    "entire_dataset_restored": false,
+    "retained_current_target_id": 14,
+    "retained_current_control_id": 15,
+    "no_manual_deletion": true
+  },
+  "observer_label_correction": {
+    "original_key": "old_id5_and_id9_full_rows_preserved",
+    "actual_predicate": "current entire bookmark dataset == baseline",
+    "actual_false_reason": "Current attempt retained IDs 14 and 15 in addition to the unchanged prior IDs 5 and 9",
+    "original_record_preserved": true
+  },
+  "cleanup": {
+    "ports_18741_18742_no_listeners": true,
+    "recorded_service_pids_absent": [
+      85746,
+      85747,
+      85789
+    ],
+    "browser_start_close_counts": [
+      {
+        "scenario": "expired-session",
+        "counts": [
+          5,
+          5
+        ]
+      },
+      {
+        "scenario": "lost-response",
+        "counts": [
+          5,
+          5
+        ]
+      },
+      {
+        "scenario": "unicode-notes",
+        "counts": [
+          5,
+          5
+        ]
+      }
+    ],
+    "manual_kills": false
+  },
+  "stopped_after_unicode_anomaly": true
+}

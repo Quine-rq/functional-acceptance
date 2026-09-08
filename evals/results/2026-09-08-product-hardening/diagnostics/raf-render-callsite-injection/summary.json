@@ -1,0 +1,269 @@
+{
+  "kind": "runtime-render-callsite-scheduling-injection-summary",
+  "verdict": "CONTROLLED_SIGNAL_OBSERVED_3_OF_3",
+  "scope": "Independent agent handoff evidence, not human-user evidence. Runtime scheduling injection only; neither natural-root-cause proof nor product-fix proof.",
+  "command": ".venv/bin/python .raf-render-callsite-injection/probe.py",
+  "collector_code": 0,
+  "outer_elapsed_ms": 7047,
+  "child_elapsed_ms": 6285,
+  "max_total_ms": 60000,
+  "source_hashes": {
+    "bookmarks/static/bundle.js": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+    "node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js": "d89c6484a76483f8dcd87a9440bc0678028ae76f3d2f0937dee092bab8cd8dfd",
+    "bookmarks/frontend/components/confirm-dropdown.js": "1b30a3d7f55c51d81db65d827afc3afedd5eeeb448b8274de4e1495b92dac62b"
+  },
+  "callsite": {
+    "source_path": "/static/bundle.js",
+    "line": 19,
+    "start_column": 11228,
+    "end_column": 11258,
+    "callback_source": "()=>e()",
+    "unique_render_method_utf16_offset": 49370,
+    "unique_render_method_utf8_byte_offset": 49371,
+    "call_utf16_offset": 49497,
+    "call_utf8_byte_offset": 49498
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "file": "render-callsite-injection-1.json",
+      "target_matched": true,
+      "passed_through_before_match": 1,
+      "actual_delay_ms": 150.4,
+      "raf_restored": true,
+      "cancel_restored": true,
+      "before_cache_correlated_removal": true,
+      "removed_before_exit": true,
+      "exit_action": "Escape",
+      "frame_load_epoch_ms": 1788849789700.1,
+      "timeline": [
+        {
+          "event": "injection.matched",
+          "relative_ms": 1.5,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "injection.original_callback_due",
+          "relative_ms": 16.8,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "dropdown.added",
+          "relative_ms": 37.1,
+          "dropdown_count": 1,
+          "confirm_visible": false
+        },
+        {
+          "event": "confirm.observed_visible",
+          "relative_ms": 62.1,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "injection.delivered",
+          "relative_ms": 167.2,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "turbo:before-cache",
+          "relative_ms": 167.3,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "dropdown.removed",
+          "relative_ms": 168.5,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "turbo:load",
+          "relative_ms": 168.9,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "file": "render-callsite-injection-2.json",
+      "target_matched": true,
+      "passed_through_before_match": 1,
+      "actual_delay_ms": 151.1,
+      "raf_restored": true,
+      "cancel_restored": true,
+      "before_cache_correlated_removal": true,
+      "removed_before_exit": true,
+      "exit_action": "Escape",
+      "frame_load_epoch_ms": 1788849790450.4,
+      "timeline": [
+        {
+          "event": "injection.matched",
+          "relative_ms": 0.6,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "injection.original_callback_due",
+          "relative_ms": 16.4,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "dropdown.added",
+          "relative_ms": 36.3,
+          "dropdown_count": 1,
+          "confirm_visible": false
+        },
+        {
+          "event": "confirm.observed_visible",
+          "relative_ms": 53.4,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "injection.delivered",
+          "relative_ms": 167.5,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "turbo:before-cache",
+          "relative_ms": 167.6,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "dropdown.removed",
+          "relative_ms": 168.5,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "turbo:load",
+          "relative_ms": 169,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "file": "render-callsite-injection-3.json",
+      "target_matched": true,
+      "passed_through_before_match": 1,
+      "actual_delay_ms": 150.4,
+      "raf_restored": true,
+      "cancel_restored": true,
+      "before_cache_correlated_removal": true,
+      "removed_before_exit": true,
+      "exit_action": "Escape",
+      "frame_load_epoch_ms": 1788849791183.3,
+      "timeline": [
+        {
+          "event": "injection.matched",
+          "relative_ms": 0.7,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "injection.original_callback_due",
+          "relative_ms": 16.8,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "dropdown.added",
+          "relative_ms": 36.7,
+          "dropdown_count": 1,
+          "confirm_visible": false
+        },
+        {
+          "event": "confirm.observed_visible",
+          "relative_ms": 55.3,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "injection.delivered",
+          "relative_ms": 167.2,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "turbo:before-cache",
+          "relative_ms": 167.4,
+          "dropdown_count": 1,
+          "confirm_visible": true
+        },
+        {
+          "event": "dropdown.removed",
+          "relative_ms": 168.2,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        },
+        {
+          "event": "turbo:load",
+          "relative_ms": 168.7,
+          "dropdown_count": 0,
+          "confirm_visible": false
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "confirm_clicked": false,
+    "bookmark_request_monitoring_boundary": "Post-login. All non-GET/HEAD/OPTIONS requests would be blocked before sending; normal login is excluded and can create/update a session.",
+    "blocked_write_attempts": [],
+    "bookmark_business_write_requests_sent": false,
+    "baseline_ids": [
+      5,
+      9,
+      14,
+      15
+    ],
+    "all_bookmark_rows_unchanged": true,
+    "source_and_environment_unchanged": true,
+    "old_final_results_unchanged": true,
+    "pack_documents_changed": [],
+    "no_fake_events": true
+  },
+  "cleanup": {
+    "processes": [
+      {
+        "name": "article",
+        "pid": 93178,
+        "returncode": -15
+      },
+      {
+        "name": "application",
+        "pid": 93179,
+        "returncode": -15
+      }
+    ],
+    "ports_free": {
+      "18741": true,
+      "18742": true
+    },
+    "additional_os_check": {
+      "owned_pids_absent": [
+        93178,
+        93179
+      ],
+      "listening_ports_absent": [
+        18741,
+        18742
+      ],
+      "ps_exit_code": 1,
+      "lsof_exit_code": 1
+    }
+  },
+  "limitations": [
+    "Earlier three nonmatching injections remain preserved in .raf-scheduling-injection; they delayed the progressbar callback, not this Visit.render stage.",
+    "No complete full-journey rerun, Confirm submission, natural-timeout root-cause attribution, or upstream fix was performed.",
+    "MutationObserver reports observed DOM removal after event dispatch; event capture and after-dispatch states additionally show disappearance during the real before-cache dispatch."
+  ]
+}

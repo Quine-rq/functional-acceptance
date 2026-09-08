@@ -1,0 +1,258 @@
+{
+  "round": 4,
+  "events": [
+    {
+      "time_ms": 1788848918355.9,
+      "kind": "action",
+      "name": "list.ready",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918397.1,
+      "kind": "frame.attribute",
+      "attribute": "busy",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": true,
+        "aria_busy": true,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918397.1,
+      "kind": "frame.attribute",
+      "attribute": "aria-busy",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": true,
+        "aria_busy": true,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918422.9,
+      "kind": "frame.attribute",
+      "attribute": "busy",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918422.9,
+      "kind": "frame.attribute",
+      "attribute": "aria-busy",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918457.6,
+      "kind": "turbo:frame-render",
+      "phase": "dispatch",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918457.7,
+      "kind": "turbo:frame-load",
+      "phase": "dispatch",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918457.7,
+      "kind": "frame.attribute",
+      "attribute": "complete",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918457.7,
+      "kind": "turbo:frame-render",
+      "phase": "after-dispatch",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918457.7,
+      "kind": "turbo:frame-load",
+      "phase": "after-dispatch",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918460.8,
+      "kind": "action",
+      "name": "modal.visible",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918461.6,
+      "kind": "action",
+      "name": "delete.begin",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918475.1,
+      "kind": "turbo:before-cache",
+      "phase": "dispatch",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918475.6,
+      "kind": "turbo:before-cache",
+      "phase": "after-dispatch",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918494.9,
+      "kind": "dropdown.added",
+      "count": 1,
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788848918506.1,
+      "kind": "action",
+      "name": "delete.returned",
+      "state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    }
+  ],
+  "final_state": {
+    "frame_present": true,
+    "frame_complete": true,
+    "complete_attribute": true,
+    "busy": false,
+    "aria_busy": false,
+    "dropdown_count": 1,
+    "confirm_present": true,
+    "confirm_visible": true
+  },
+  "before_cache_correlated_removal": false,
+  "removed_before_exit": false,
+  "outcome": "observed"
+}

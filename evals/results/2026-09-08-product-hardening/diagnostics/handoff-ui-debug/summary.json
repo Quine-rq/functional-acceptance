@@ -1,0 +1,283 @@
+{
+  "kind": "read-only-ui-lifecycle-diagnostic",
+  "rounds": 10,
+  "confirm_disappearance_reproduced": false,
+  "before_cache_correlated_removal_observed": false,
+  "comparison_group_executed": false,
+  "comparison_group_reason": "The requested condition to compare after locating removal was not met",
+  "comparisons": [
+    {
+      "round": 1,
+      "delete_begin_ms": 1788848916139.4001,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        2.9
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        39.3
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 2,
+      "delete_begin_ms": 1788848916927.4001,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        14.7
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        35.3
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 3,
+      "delete_begin_ms": 1788848917709.6,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        15.7
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        36.2
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 4,
+      "delete_begin_ms": 1788848918461.6,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        13.5
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        33.3
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 5,
+      "delete_begin_ms": 1788848919209.6,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        14.8
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        34.2
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 6,
+      "delete_begin_ms": 1788848919974.2998,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        16.5
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        36.3
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 7,
+      "delete_begin_ms": 1788848920793.8,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        -19.5
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        36
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 8,
+      "delete_begin_ms": 1788848921558.0999,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        16.8
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        36.9
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 9,
+      "delete_begin_ms": 1788848922309.2,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        15.7
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        35.5
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    },
+    {
+      "round": 10,
+      "delete_begin_ms": 1788848923060.6,
+      "modal_visible_state": {
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      },
+      "before_cache_relative_to_delete_ms": [
+        14.4
+      ],
+      "before_cache_dropdown_counts": [
+        0
+      ],
+      "dropdown_added_after_delete_ms": [
+        33.8
+      ],
+      "removed_before_exit": false,
+      "final_confirm_visible": true
+    }
+  ],
+  "all_bookmark_rows_unchanged": true,
+  "source_and_environment_unchanged": true,
+  "old_final_results_unchanged": true,
+  "confirm_clicked": false,
+  "write_requests": [],
+  "processes": [
+    {
+      "name": "article",
+      "pid": 87932,
+      "returncode": -15
+    },
+    {
+      "name": "application",
+      "pid": 87933,
+      "returncode": -15
+    }
+  ],
+  "ports_free": {
+    "18741": true,
+    "18742": true
+  },
+  "elapsed_ms": 13797,
+  "added_listener_request_arrived_after_collection_finished": true
+}

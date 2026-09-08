@@ -1,0 +1,417 @@
+[
+  {
+    "scenario": "healthy",
+    "expected": 0,
+    "code": 0,
+    "signal": null,
+    "forced": false,
+    "elapsed_ms": 24896,
+    "run": [
+      "run-20260908T055957230170Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 10,
+      "control_id": 11,
+      "run": "run-20260908t055957230170z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 78262,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 78263,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 78320,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "case": "healthy",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    }
+  },
+  {
+    "scenario": "note-loss",
+    "expected": 1,
+    "code": 1,
+    "signal": null,
+    "forced": false,
+    "elapsed_ms": 6727,
+    "run": [
+      "run-20260908T060022017587Z"
+    ],
+    "result": {
+      "business_verdict": "FAIL",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": "business",
+      "exit_code": 1,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "FAIL",
+        "fresh_browser_retrieval": "UNVERIFIED",
+        "server_restart_retrieval": "UNVERIFIED",
+        "other_account_no_view": "UNVERIFIED",
+        "other_account_no_modify": "UNVERIFIED",
+        "edit_persisted": "UNVERIFIED",
+        "delete_target": "UNVERIFIED",
+        "unrelated_intact": "UNVERIFIED"
+      },
+      "phase_at_exit": "invalid URL and recovery",
+      "target_id": 12,
+      "control_id": null,
+      "run": "run-20260908t060022017587z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 78399,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 78403,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "case": "note-loss",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    }
+  },
+  {
+    "scenario": "missing-observation",
+    "expected": 2,
+    "code": 2,
+    "signal": null,
+    "forced": false,
+    "elapsed_ms": 26303,
+    "run": [
+      "run-20260908T060028756918Z"
+    ],
+    "result": {
+      "business_verdict": "UNVERIFIED",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": null,
+      "exit_code": 2,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "UNVERIFIED",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 13,
+      "control_id": 14,
+      "run": "run-20260908t060028756918z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 78787,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 78788,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 78939,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "case": "missing-observation",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    }
+  },
+  {
+    "scenario": "expired-session",
+    "expected": 0,
+    "code": 0,
+    "signal": null,
+    "forced": false,
+    "elapsed_ms": 99097,
+    "run": [
+      "run-20260908T060055055261Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "reauthenticated_same_object": "PASS",
+        "reauthenticated_same_object_database": "PASS",
+        "expired_session_recovered": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 15,
+      "control_id": 16,
+      "run": "run-20260908t060055055261z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 79062,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 79063,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 79415,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "case": "expired-session",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    }
+  },
+  {
+    "scenario": "lost-response",
+    "expected": 0,
+    "code": 0,
+    "signal": null,
+    "forced": false,
+    "elapsed_ms": 39607,
+    "run": [
+      "run-20260908T060234252665Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "uncertain_write_found_once": "PASS",
+        "lost_response_recovered_without_resubmit": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 17,
+      "control_id": 18,
+      "run": "run-20260908t060234252665z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 80059,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 80060,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 80125,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "case": "lost-response",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    }
+  },
+  {
+    "scenario": "unicode-notes",
+    "expected": 0,
+    "code": 0,
+    "signal": null,
+    "forced": false,
+    "elapsed_ms": 53424,
+    "run": [
+      "run-20260908T060313756291Z"
+    ],
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 19,
+      "control_id": 20,
+      "run": "run-20260908t060313756291z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 80248,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 80249,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 80308,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "case": "unicode-notes",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    }
+  }
+]

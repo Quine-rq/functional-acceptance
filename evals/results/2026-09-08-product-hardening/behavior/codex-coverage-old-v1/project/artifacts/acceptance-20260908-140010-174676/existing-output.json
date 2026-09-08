@@ -1,0 +1,16 @@
+{
+  "label": "existing-output",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+    "-B",
+    "export.py",
+    "--source",
+    "fixtures/pages.json",
+    "--output",
+    "artifacts/acceptance-20260908-140010-174676/existing.txt"
+  ],
+  "cwd": "<TASK_ROOT>/work/codex-coverage-old-v1/project",
+  "returncode": 2,
+  "stdout": "",
+  "stderr": "export: error: output already exists; choose a new path\n"
+}

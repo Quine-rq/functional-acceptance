@@ -1,0 +1,1137 @@
+[
+  {
+    "evidence_kind": "explicit-diagnostic-recheck",
+    "human_user_validation": false,
+    "scenario": "expired-session",
+    "code": 0,
+    "elapsed_ms": 29657,
+    "run_dir": "run-20260908T062102428303Z",
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "reauthenticated_same_object": "PASS",
+        "reauthenticated_same_object_database": "PASS",
+        "expired_session_recovered": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 10,
+      "control_id": 11,
+      "run": "run-20260908t062102428303z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 85359,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 85361,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 85409,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "expired-session",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "independent_ok": true,
+    "independent_checks": {
+      "one_complete_qualified_pass": true,
+      "under_120_seconds_without_watchdog": true,
+      "candidate_inputs_unchanged": true,
+      "pinned_source_unmodified": true,
+      "old_reports_unchanged": true,
+      "old_id5_and_id9_full_rows_preserved": true,
+      "data_cleanup_independently_reported": true,
+      "ports_free": true,
+      "owned_services_absent": true,
+      "native_execution_cleanup_stopped": true,
+      "fresh_sandboxed_browsers_closed": true,
+      "logs_drained": true,
+      "native_identity_confirmed": true,
+      "script_snapshot_exact": true,
+      "pack_identity_exact": true,
+      "environment_identity_exact": true,
+      "server_from_snapshot": true,
+      "initial_observation_matches_independent_baseline": true,
+      "final_observation_matches_independent_baseline": true,
+      "save_private_tags_notes_exact_ui": true,
+      "save_private_tags_notes_exact_database": true,
+      "fresh_browser_fields_exact_ui": true,
+      "fresh_browser_fields_exact_database": true,
+      "server_restart_retrieval_exact_ui": true,
+      "server_restart_retrieval_exact_database": true,
+      "owner_unchanged_after_attack_exact_ui": true,
+      "owner_unchanged_after_attack_exact_database": true,
+      "edit_persisted_exact_ui": true,
+      "edit_persisted_exact_database": true,
+      "reauthenticated_same_object_exact_ui": true,
+      "reauthenticated_same_object_exact_database": true,
+      "target_exact_delete_step_sequence": true,
+      "control_exact_delete_step_sequence": true,
+      "debug_404_artifacts_absent": true,
+      "expired_session_recovered_same_object": true
+    },
+    "independent_failures": [],
+    "timed_out": false,
+    "baseline_ids": [
+      5,
+      9
+    ],
+    "final_ids": [
+      5,
+      9
+    ],
+    "command": [
+      "<TASK_ROOT>/work/linkding-independent-handoff/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-independent-handoff",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "expired-session"
+    ],
+    "stdout": ".handoff-diagnostic/expired-session.stdout.private.txt",
+    "stderr": ".handoff-diagnostic/expired-session.stderr.private.txt",
+    "candidate_identity": {
+      "scripts": {
+        "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+        "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+        "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+        "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+      },
+      "pack_all": {
+        "README.md": "9023c91fe52d5325183a80d09ebde70764ba37fdbc23369ccddba4c4ff77af97",
+        "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+        "environment/article.html": "93af781aa8b0f63cdb4b68d19d26788fcb730e884c10e477fc7601d6a13cf9d1",
+        "environment/study_settings.py": "dd72545f0cf343cd3af2342320f7978c45534a17109af076b37a4c4307b4841b",
+        "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+        "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+        "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+      },
+      "environment": {
+        ".acceptance-study/article/article.html": "93af781aa8b0f63cdb4b68d19d26788fcb730e884c10e477fc7601d6a13cf9d1",
+        ".acceptance-study/study_settings.py": "dd72545f0cf343cd3af2342320f7978c45534a17109af076b37a4c4307b4841b",
+        "bookmarks/static/apple-touch-icon.png": "253839ed0b7cb1d92b51668a4ee9d6f9c2e930d2435fd0c138bbdd31ade0e695",
+        "bookmarks/static/bundle.js": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+        "bookmarks/static/bundle.js.map": "e491f0786eea1a84aaecd4873a87905e7e3f9cf00af863b574f8ed489992dd44",
+        "bookmarks/static/favicon.ico": "56338ffb3789975c26b4ba2a461227bc00acdf986f03e9264a51825e6993a4f0",
+        "bookmarks/static/favicon.svg": "2c5a71a01a98ba824065d921ac53f1d16c2cf0184889101ef2e4040ab2d9a477",
+        "bookmarks/static/icons.svg": "648104ae09c37e5f90c71f542bb853c1fb0cc436d59519bd0c6390b19031a474",
+        "bookmarks/static/linkding-screenshot.png": "c31006d71966ac20faa2d24c8b76fc039d29458bbbf97d150841dd0c9d9485cf",
+        "bookmarks/static/live-reload.js": "42b19d87230d2543ab67469c5f2e52e3e83129b867e18d2d0a9f391dbf3df706",
+        "bookmarks/static/logo-192.png": "a4a1626e1728eaaeb40586153a74bee27110ee0e72e6ff7c9d7b8299b8645475",
+        "bookmarks/static/logo-512.png": "d4c399a3dec56b0aa45e6c260800266b73421bd7f719881aebe7cdbbe8939d13",
+        "bookmarks/static/logo.png": "b52133b0136cf40a3ad229941e9750371b30ce241c4702f155babe61e03dd234",
+        "bookmarks/static/logo.svg": "9a7a04afa8c933fc782419099931ba36030f088ace3f161e1746c0e896e1346e",
+        "bookmarks/static/maskable-logo-192.png": "f99a17d953de0b0d36f39c710e6a764391ffcf88c03919d51838b81bc2d65614",
+        "bookmarks/static/maskable-logo-512.png": "55c82586dc1d4242de06e2700bb41eb3e3d4dcae1f2eadcfac4ccbb5e1f164c1",
+        "bookmarks/static/maskable-logo.svg": "a76b1494cb00561c56c33b52e96a6b83472b943f76246b9c95d0c92dc6cc8323",
+        "bookmarks/static/preview-placeholder.svg": "427d50ad15e56a4931fe491c7721147c8d02b0969c3a44404b3149a44a556878",
+        "bookmarks/static/robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+        "bookmarks/static/safari-pinned-tab.svg": "18df659796ddcf03ec9f275909efc8cbd350fc2294bc2402c93461e38dfc9c7f",
+        "bookmarks/static/theme-dark.css": "1eb38da6e1ef57fc5cb825cb026f7f95f3787afe9bb73a571be63b0933da0178",
+        "bookmarks/static/theme-light.css": "81ab032a0804098f79e07802dea875ce07a4b59c7ab3811e5387782871142a50",
+        "bookmarks/static/vendor/Readability.js": "61521a78d29e60def9623a14ebcc5a54aff88c61fd11326d7c016478a4f23047",
+        "bookmarks/styles/auth.css": "81c927b0e94208b68794371a976a356ae342dec44a12975061d14f1dc3e54541",
+        "bookmarks/styles/bookmark-details.css": "37aa15eb23e3c3b0139deb8baef60b044d00e690cc88ec2698c68b7056196f40",
+        "bookmarks/styles/bookmark-form.css": "5bab84d86d262972884dcbf18373d087ce8a2d0c078a9121d4a80794c48d3df0",
+        "bookmarks/styles/bookmark-page.css": "81111496ce049c713fc228af65a1908caff97cbe04e951233c99406bfe15f74e",
+        "bookmarks/styles/bundles.css": "cdc38999ce88ffaa992dc2e389701f102b070728dd44d15247842cf4af1464d4",
+        "bookmarks/styles/components.css": "1115738bc5993508e9b7754efe2d1dcd3dc0338a7d96ac193e5a0b747546447a",
+        "bookmarks/styles/crud.css": "8ae36d78876e6a014e6a6bba50caf2c16ea15aa30d1fcad66bcff147fb4f60fb",
+        "bookmarks/styles/layout.css": "5316c258363b78042d4aa6e657541b4106e71d2e1acce65d51fb4aae1b72eb1b",
+        "bookmarks/styles/markdown.css": "a40b6a0a66632e90fbb316879e56abfbc4913d799fa64f826e6b65383184fc9c",
+        "bookmarks/styles/reader-mode.css": "f6265f5cd2fcb4c6f63c7dd9b278bbc185ada26fc5d870c08dfcdd578a13b5a0",
+        "bookmarks/styles/responsive.css": "7077762adee1eb726f4a7918458d311093f8575e7b731249eb8d631b8a6788a2",
+        "bookmarks/styles/settings.css": "291ae1bd5191d54b2aac248863e8889ee0c44177023cbe0337517bac1103a9cf",
+        "bookmarks/styles/tags.css": "9c7963bd71afcefe2feff301dc332badaa35b8858c895b9bbf6b2465bcc6ea48",
+        "bookmarks/styles/theme/LICENSE": "30ca73ed0d18d0e198428000b0fd988896fb203eead2c47901a5dbfed6792690",
+        "bookmarks/styles/theme/_normalize.css": "bba59fc6ec62f78f7c4b716434ae075db0d44c53a0505498a5e46b96456e5357",
+        "bookmarks/styles/theme/animations.css": "62517ff75da07e5f94c8722273bdb9c374420c7bc14debc4a4bfdf46336753a5",
+        "bookmarks/styles/theme/asian.css": "a3b30a78d47c00eb1e652eadc66200ff9cc67b346cbe5e86166911acea4e5b1f",
+        "bookmarks/styles/theme/autocomplete.css": "01adb7f135dc6fc4b9370e89706157b825a856020c66f464c4b88392648834f2",
+        "bookmarks/styles/theme/badges.css": "24d7d353e9b7ab3154f7d16e051c269ce5e519e89030557ff64514a6e0862e8c",
+        "bookmarks/styles/theme/base.css": "652d8ed34027109b6cbffc98783a4bcfd5a3a383c4efad87b880bba35b261f56",
+        "bookmarks/styles/theme/buttons.css": "c18ed1266b2a40a9b82a9b2060268ba20a9585d1879a6a15daa7ca71d403c484",
+        "bookmarks/styles/theme/code.css": "770c31a808ea8804ccd6c457adc59f45608389cb6f698d2e188ae829e477ef3a",
+        "bookmarks/styles/theme/dropdowns.css": "168529b7aa9fccd969d39145df15d67de12c3ce13160650b4fb50b7eb7fe52af",
+        "bookmarks/styles/theme/empty.css": "6a8e3975fbfe63e18762b009849ab89a3f45bfffeec0413885cff8a233539958",
+        "bookmarks/styles/theme/forms.css": "3702874cd198f8e474a07bc130482b2d2d7c2a6cd6d60190769e2ca3d25b90f6",
+        "bookmarks/styles/theme/menus.css": "510bd69175783a1598a0cf9cb028f0f6aeb9908c1f75fbc49f31f8e3d1368618",
+        "bookmarks/styles/theme/modals.css": "bb98bd21e660211f2ffce6bd527b28ef4ebf275593d3ede6f0699ba31c3a5b58",
+        "bookmarks/styles/theme/pagination.css": "60235d356a7b1d4ec13a187dacdec09a980423d6ff98ff8af78b6ce7f0a45de1",
+        "bookmarks/styles/theme/tables.css": "6dc9c58ab71af25d006e3a251fbf027f99908804ebc19d27b790451e43a4642d",
+        "bookmarks/styles/theme/tabs.css": "009a057281b179db1435b9830f0508f74287e41630b2635b99cc429ce4f9836e",
+        "bookmarks/styles/theme/toasts.css": "517dab1d7abcda5a539a471c201c20fc2ad9c017600ab1e24a58b9b592c8bdbb",
+        "bookmarks/styles/theme/typography.css": "96969828aa27ac8ca51a5bb515d7596d7c5ad903b9e0baf1fae2599953637ac4",
+        "bookmarks/styles/theme/utilities.css": "c1a4e8db88ae8412515f7cba7fec370877bc023d3684b1c228f7ca66a0e48c22",
+        "bookmarks/styles/theme/variables.css": "e94e821f02f972931c30b66948c151e59f7a20c30bd4b3221f5d89b93a833fd8",
+        "bookmarks/styles/theme-dark.css": "674af8a022f923c2c612f9b5bb5dc8f0dc23fb8fd2a89f47b54c2b60237f28bf",
+        "bookmarks/styles/theme-light.css": "a126b35909e0e5088f2d9675b31743a516e182d425747629db3b0c03eebe63cb",
+        "package-lock.json": "5121ff6e9c803bd97e846e43e832477a1e3a9372c612e5db1cf98662369e982d",
+        "uv.lock": "5ff80ccb3022fd0d667c9dfc31c2f2cbadf714dc05f9b8e35fbb8750814f8f7f"
+      },
+      "head": "65813a75404b1319aca8b09700fadc0b15adabaf",
+      "tracked_diff": ""
+    },
+    "old_report_digests": {
+      "final-results.json": "b62a2d0260a68e55bb0cbc4f6eb4c950128942b0b69a0430674b508171ba0749",
+      "final-summary.json": "5bf17e9fdfb05b76195bd2fd189594be8dd2e6a63a520588cdc69485d86b9aaa",
+      "final-candidate-report.md": "687a5f0780959a990e90638e1b552aadbdd488e3a0fd5666ed19f7415e043eea"
+    },
+    "native_steps": [
+      {
+        "time": "2026-09-08T06:21:08.901852+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:09.010431+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:09.133820+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "10"
+      },
+      {
+        "time": "2026-09-08T06:21:09.597088+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Control run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:09.691885+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Control run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:09.791612+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "11"
+      },
+      {
+        "time": "2026-09-08T06:21:13.577555+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:13.706229+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:13.809547+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "10"
+      },
+      {
+        "time": "2026-09-08T06:21:18.417033+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:18.555804+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:18.664774+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "10"
+      },
+      {
+        "time": "2026-09-08T06:21:29.050674+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062102428303z edited"
+      },
+      {
+        "time": "2026-09-08T06:21:29.156619+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062102428303z edited"
+      },
+      {
+        "time": "2026-09-08T06:21:29.277092+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "10"
+      },
+      {
+        "time": "2026-09-08T06:21:29.280925+00:00",
+        "kind": "native_step",
+        "step": "target.delete_click",
+        "bookmark_id": 10
+      },
+      {
+        "time": "2026-09-08T06:21:29.337389+00:00",
+        "kind": "native_step",
+        "step": "target.await_confirmation",
+        "bookmark_id": 10
+      },
+      {
+        "time": "2026-09-08T06:21:29.408276+00:00",
+        "kind": "native_step",
+        "step": "target.confirm_click",
+        "bookmark_id": 10
+      },
+      {
+        "time": "2026-09-08T06:21:29.520901+00:00",
+        "kind": "native_step",
+        "step": "target.modal_closed",
+        "bookmark_id": 10
+      },
+      {
+        "time": "2026-09-08T06:21:29.829838+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Control run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:29.936120+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Control run-20260908t062102428303z"
+      },
+      {
+        "time": "2026-09-08T06:21:30.038588+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "11"
+      },
+      {
+        "time": "2026-09-08T06:21:30.046167+00:00",
+        "kind": "native_step",
+        "step": "control.delete_click",
+        "bookmark_id": 11
+      },
+      {
+        "time": "2026-09-08T06:21:30.086655+00:00",
+        "kind": "native_step",
+        "step": "control.await_confirmation",
+        "bookmark_id": 11
+      },
+      {
+        "time": "2026-09-08T06:21:30.089131+00:00",
+        "kind": "native_step",
+        "step": "control.confirm_click",
+        "bookmark_id": 11
+      },
+      {
+        "time": "2026-09-08T06:21:30.205746+00:00",
+        "kind": "native_step",
+        "step": "control.modal_closed",
+        "bookmark_id": 11
+      }
+    ],
+    "last_native_step": {
+      "time": "2026-09-08T06:21:30.205746+00:00",
+      "kind": "native_step",
+      "step": "control.modal_closed",
+      "bookmark_id": 11
+    },
+    "obstacles": [],
+    "browser_start_close_counts": [
+      5,
+      5
+    ],
+    "live_recorded_service_pids": [],
+    "expected_notes_sha256": "d4d45a7e22d4baae39dd3b30488cbda9295ab2e76ac0b2086c51ab40beb92045",
+    "event_count": 153
+  },
+  {
+    "evidence_kind": "explicit-diagnostic-recheck",
+    "human_user_validation": false,
+    "scenario": "lost-response",
+    "code": 0,
+    "elapsed_ms": 28607,
+    "run_dir": "run-20260908T062141545322Z",
+    "result": {
+      "business_verdict": "PASS",
+      "qualified_pass": true,
+      "completion": "complete",
+      "obstacle_kind": null,
+      "exit_code": 0,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "uncertain_write_found_once": "PASS",
+        "lost_response_recovered_without_resubmit": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "PASS",
+        "delete_target_database": "PASS",
+        "unrelated_intact": "PASS",
+        "run_bookmarks_cleaned_baseline_preserved": "PASS"
+      },
+      "phase_at_exit": "cleanup control through UI",
+      "target_id": 12,
+      "control_id": 13,
+      "run": "run-20260908t062141545322z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 85529,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 85530,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 85580,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "baseline-restored",
+      "case": "lost-response",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "independent_ok": true,
+    "independent_checks": {
+      "one_complete_qualified_pass": true,
+      "under_120_seconds_without_watchdog": true,
+      "candidate_inputs_unchanged": true,
+      "pinned_source_unmodified": true,
+      "old_reports_unchanged": true,
+      "old_id5_and_id9_full_rows_preserved": true,
+      "data_cleanup_independently_reported": true,
+      "ports_free": true,
+      "owned_services_absent": true,
+      "native_execution_cleanup_stopped": true,
+      "fresh_sandboxed_browsers_closed": true,
+      "logs_drained": true,
+      "native_identity_confirmed": true,
+      "script_snapshot_exact": true,
+      "pack_identity_exact": true,
+      "environment_identity_exact": true,
+      "server_from_snapshot": true,
+      "initial_observation_matches_independent_baseline": true,
+      "final_observation_matches_independent_baseline": true,
+      "save_private_tags_notes_exact_ui": true,
+      "save_private_tags_notes_exact_database": true,
+      "fresh_browser_fields_exact_ui": true,
+      "fresh_browser_fields_exact_database": true,
+      "server_restart_retrieval_exact_ui": true,
+      "server_restart_retrieval_exact_database": true,
+      "owner_unchanged_after_attack_exact_ui": true,
+      "owner_unchanged_after_attack_exact_database": true,
+      "edit_persisted_exact_ui": true,
+      "edit_persisted_exact_database": true,
+      "target_exact_delete_step_sequence": true,
+      "control_exact_delete_step_sequence": true,
+      "debug_404_artifacts_absent": true,
+      "completed_post_observed_once_before_recovery": true
+    },
+    "independent_failures": [],
+    "timed_out": false,
+    "baseline_ids": [
+      5,
+      9
+    ],
+    "final_ids": [
+      5,
+      9
+    ],
+    "command": [
+      "<TASK_ROOT>/work/linkding-independent-handoff/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-independent-handoff",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "lost-response"
+    ],
+    "stdout": ".handoff-diagnostic/lost-response.stdout.private.txt",
+    "stderr": ".handoff-diagnostic/lost-response.stderr.private.txt",
+    "candidate_identity": {
+      "scripts": {
+        "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+        "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+        "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+        "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+      },
+      "pack_all": {
+        "README.md": "9023c91fe52d5325183a80d09ebde70764ba37fdbc23369ccddba4c4ff77af97",
+        "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+        "environment/article.html": "93af781aa8b0f63cdb4b68d19d26788fcb730e884c10e477fc7601d6a13cf9d1",
+        "environment/study_settings.py": "dd72545f0cf343cd3af2342320f7978c45534a17109af076b37a4c4307b4841b",
+        "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+        "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+        "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+      },
+      "environment": {
+        ".acceptance-study/article/article.html": "93af781aa8b0f63cdb4b68d19d26788fcb730e884c10e477fc7601d6a13cf9d1",
+        ".acceptance-study/study_settings.py": "dd72545f0cf343cd3af2342320f7978c45534a17109af076b37a4c4307b4841b",
+        "bookmarks/static/apple-touch-icon.png": "253839ed0b7cb1d92b51668a4ee9d6f9c2e930d2435fd0c138bbdd31ade0e695",
+        "bookmarks/static/bundle.js": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+        "bookmarks/static/bundle.js.map": "e491f0786eea1a84aaecd4873a87905e7e3f9cf00af863b574f8ed489992dd44",
+        "bookmarks/static/favicon.ico": "56338ffb3789975c26b4ba2a461227bc00acdf986f03e9264a51825e6993a4f0",
+        "bookmarks/static/favicon.svg": "2c5a71a01a98ba824065d921ac53f1d16c2cf0184889101ef2e4040ab2d9a477",
+        "bookmarks/static/icons.svg": "648104ae09c37e5f90c71f542bb853c1fb0cc436d59519bd0c6390b19031a474",
+        "bookmarks/static/linkding-screenshot.png": "c31006d71966ac20faa2d24c8b76fc039d29458bbbf97d150841dd0c9d9485cf",
+        "bookmarks/static/live-reload.js": "42b19d87230d2543ab67469c5f2e52e3e83129b867e18d2d0a9f391dbf3df706",
+        "bookmarks/static/logo-192.png": "a4a1626e1728eaaeb40586153a74bee27110ee0e72e6ff7c9d7b8299b8645475",
+        "bookmarks/static/logo-512.png": "d4c399a3dec56b0aa45e6c260800266b73421bd7f719881aebe7cdbbe8939d13",
+        "bookmarks/static/logo.png": "b52133b0136cf40a3ad229941e9750371b30ce241c4702f155babe61e03dd234",
+        "bookmarks/static/logo.svg": "9a7a04afa8c933fc782419099931ba36030f088ace3f161e1746c0e896e1346e",
+        "bookmarks/static/maskable-logo-192.png": "f99a17d953de0b0d36f39c710e6a764391ffcf88c03919d51838b81bc2d65614",
+        "bookmarks/static/maskable-logo-512.png": "55c82586dc1d4242de06e2700bb41eb3e3d4dcae1f2eadcfac4ccbb5e1f164c1",
+        "bookmarks/static/maskable-logo.svg": "a76b1494cb00561c56c33b52e96a6b83472b943f76246b9c95d0c92dc6cc8323",
+        "bookmarks/static/preview-placeholder.svg": "427d50ad15e56a4931fe491c7721147c8d02b0969c3a44404b3149a44a556878",
+        "bookmarks/static/robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+        "bookmarks/static/safari-pinned-tab.svg": "18df659796ddcf03ec9f275909efc8cbd350fc2294bc2402c93461e38dfc9c7f",
+        "bookmarks/static/theme-dark.css": "1eb38da6e1ef57fc5cb825cb026f7f95f3787afe9bb73a571be63b0933da0178",
+        "bookmarks/static/theme-light.css": "81ab032a0804098f79e07802dea875ce07a4b59c7ab3811e5387782871142a50",
+        "bookmarks/static/vendor/Readability.js": "61521a78d29e60def9623a14ebcc5a54aff88c61fd11326d7c016478a4f23047",
+        "bookmarks/styles/auth.css": "81c927b0e94208b68794371a976a356ae342dec44a12975061d14f1dc3e54541",
+        "bookmarks/styles/bookmark-details.css": "37aa15eb23e3c3b0139deb8baef60b044d00e690cc88ec2698c68b7056196f40",
+        "bookmarks/styles/bookmark-form.css": "5bab84d86d262972884dcbf18373d087ce8a2d0c078a9121d4a80794c48d3df0",
+        "bookmarks/styles/bookmark-page.css": "81111496ce049c713fc228af65a1908caff97cbe04e951233c99406bfe15f74e",
+        "bookmarks/styles/bundles.css": "cdc38999ce88ffaa992dc2e389701f102b070728dd44d15247842cf4af1464d4",
+        "bookmarks/styles/components.css": "1115738bc5993508e9b7754efe2d1dcd3dc0338a7d96ac193e5a0b747546447a",
+        "bookmarks/styles/crud.css": "8ae36d78876e6a014e6a6bba50caf2c16ea15aa30d1fcad66bcff147fb4f60fb",
+        "bookmarks/styles/layout.css": "5316c258363b78042d4aa6e657541b4106e71d2e1acce65d51fb4aae1b72eb1b",
+        "bookmarks/styles/markdown.css": "a40b6a0a66632e90fbb316879e56abfbc4913d799fa64f826e6b65383184fc9c",
+        "bookmarks/styles/reader-mode.css": "f6265f5cd2fcb4c6f63c7dd9b278bbc185ada26fc5d870c08dfcdd578a13b5a0",
+        "bookmarks/styles/responsive.css": "7077762adee1eb726f4a7918458d311093f8575e7b731249eb8d631b8a6788a2",
+        "bookmarks/styles/settings.css": "291ae1bd5191d54b2aac248863e8889ee0c44177023cbe0337517bac1103a9cf",
+        "bookmarks/styles/tags.css": "9c7963bd71afcefe2feff301dc332badaa35b8858c895b9bbf6b2465bcc6ea48",
+        "bookmarks/styles/theme/LICENSE": "30ca73ed0d18d0e198428000b0fd988896fb203eead2c47901a5dbfed6792690",
+        "bookmarks/styles/theme/_normalize.css": "bba59fc6ec62f78f7c4b716434ae075db0d44c53a0505498a5e46b96456e5357",
+        "bookmarks/styles/theme/animations.css": "62517ff75da07e5f94c8722273bdb9c374420c7bc14debc4a4bfdf46336753a5",
+        "bookmarks/styles/theme/asian.css": "a3b30a78d47c00eb1e652eadc66200ff9cc67b346cbe5e86166911acea4e5b1f",
+        "bookmarks/styles/theme/autocomplete.css": "01adb7f135dc6fc4b9370e89706157b825a856020c66f464c4b88392648834f2",
+        "bookmarks/styles/theme/badges.css": "24d7d353e9b7ab3154f7d16e051c269ce5e519e89030557ff64514a6e0862e8c",
+        "bookmarks/styles/theme/base.css": "652d8ed34027109b6cbffc98783a4bcfd5a3a383c4efad87b880bba35b261f56",
+        "bookmarks/styles/theme/buttons.css": "c18ed1266b2a40a9b82a9b2060268ba20a9585d1879a6a15daa7ca71d403c484",
+        "bookmarks/styles/theme/code.css": "770c31a808ea8804ccd6c457adc59f45608389cb6f698d2e188ae829e477ef3a",
+        "bookmarks/styles/theme/dropdowns.css": "168529b7aa9fccd969d39145df15d67de12c3ce13160650b4fb50b7eb7fe52af",
+        "bookmarks/styles/theme/empty.css": "6a8e3975fbfe63e18762b009849ab89a3f45bfffeec0413885cff8a233539958",
+        "bookmarks/styles/theme/forms.css": "3702874cd198f8e474a07bc130482b2d2d7c2a6cd6d60190769e2ca3d25b90f6",
+        "bookmarks/styles/theme/menus.css": "510bd69175783a1598a0cf9cb028f0f6aeb9908c1f75fbc49f31f8e3d1368618",
+        "bookmarks/styles/theme/modals.css": "bb98bd21e660211f2ffce6bd527b28ef4ebf275593d3ede6f0699ba31c3a5b58",
+        "bookmarks/styles/theme/pagination.css": "60235d356a7b1d4ec13a187dacdec09a980423d6ff98ff8af78b6ce7f0a45de1",
+        "bookmarks/styles/theme/tables.css": "6dc9c58ab71af25d006e3a251fbf027f99908804ebc19d27b790451e43a4642d",
+        "bookmarks/styles/theme/tabs.css": "009a057281b179db1435b9830f0508f74287e41630b2635b99cc429ce4f9836e",
+        "bookmarks/styles/theme/toasts.css": "517dab1d7abcda5a539a471c201c20fc2ad9c017600ab1e24a58b9b592c8bdbb",
+        "bookmarks/styles/theme/typography.css": "96969828aa27ac8ca51a5bb515d7596d7c5ad903b9e0baf1fae2599953637ac4",
+        "bookmarks/styles/theme/utilities.css": "c1a4e8db88ae8412515f7cba7fec370877bc023d3684b1c228f7ca66a0e48c22",
+        "bookmarks/styles/theme/variables.css": "e94e821f02f972931c30b66948c151e59f7a20c30bd4b3221f5d89b93a833fd8",
+        "bookmarks/styles/theme-dark.css": "674af8a022f923c2c612f9b5bb5dc8f0dc23fb8fd2a89f47b54c2b60237f28bf",
+        "bookmarks/styles/theme-light.css": "a126b35909e0e5088f2d9675b31743a516e182d425747629db3b0c03eebe63cb",
+        "package-lock.json": "5121ff6e9c803bd97e846e43e832477a1e3a9372c612e5db1cf98662369e982d",
+        "uv.lock": "5ff80ccb3022fd0d667c9dfc31c2f2cbadf714dc05f9b8e35fbb8750814f8f7f"
+      },
+      "head": "65813a75404b1319aca8b09700fadc0b15adabaf",
+      "tracked_diff": ""
+    },
+    "old_report_digests": {
+      "final-results.json": "b62a2d0260a68e55bb0cbc4f6eb4c950128942b0b69a0430674b508171ba0749",
+      "final-summary.json": "5bf17e9fdfb05b76195bd2fd189594be8dd2e6a63a520588cdc69485d86b9aaa",
+      "final-candidate-report.md": "687a5f0780959a990e90638e1b552aadbdd488e3a0fd5666ed19f7415e043eea"
+    },
+    "native_steps": [
+      {
+        "time": "2026-09-08T06:21:45.339396+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:45.452329+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:45.546375+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "12"
+      },
+      {
+        "time": "2026-09-08T06:21:46.113141+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Control run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:46.218593+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Control run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:46.321773+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "13"
+      },
+      {
+        "time": "2026-09-08T06:21:52.004701+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:52.141554+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:52.280963+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "12"
+      },
+      {
+        "time": "2026-09-08T06:21:55.835337+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:55.963212+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:21:56.071031+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "12"
+      },
+      {
+        "time": "2026-09-08T06:22:05.927596+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062141545322z edited"
+      },
+      {
+        "time": "2026-09-08T06:22:06.037922+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062141545322z edited"
+      },
+      {
+        "time": "2026-09-08T06:22:06.134396+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "12"
+      },
+      {
+        "time": "2026-09-08T06:22:06.159191+00:00",
+        "kind": "native_step",
+        "step": "target.delete_click",
+        "bookmark_id": 12
+      },
+      {
+        "time": "2026-09-08T06:22:06.204494+00:00",
+        "kind": "native_step",
+        "step": "target.await_confirmation",
+        "bookmark_id": 12
+      },
+      {
+        "time": "2026-09-08T06:22:06.273938+00:00",
+        "kind": "native_step",
+        "step": "target.confirm_click",
+        "bookmark_id": 12
+      },
+      {
+        "time": "2026-09-08T06:22:06.387407+00:00",
+        "kind": "native_step",
+        "step": "target.modal_closed",
+        "bookmark_id": 12
+      },
+      {
+        "time": "2026-09-08T06:22:06.692247+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Control run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:22:06.804816+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Control run-20260908t062141545322z"
+      },
+      {
+        "time": "2026-09-08T06:22:06.906786+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "13"
+      },
+      {
+        "time": "2026-09-08T06:22:06.910162+00:00",
+        "kind": "native_step",
+        "step": "control.delete_click",
+        "bookmark_id": 13
+      },
+      {
+        "time": "2026-09-08T06:22:06.955116+00:00",
+        "kind": "native_step",
+        "step": "control.await_confirmation",
+        "bookmark_id": 13
+      },
+      {
+        "time": "2026-09-08T06:22:06.957367+00:00",
+        "kind": "native_step",
+        "step": "control.confirm_click",
+        "bookmark_id": 13
+      },
+      {
+        "time": "2026-09-08T06:22:07.072788+00:00",
+        "kind": "native_step",
+        "step": "control.modal_closed",
+        "bookmark_id": 13
+      }
+    ],
+    "last_native_step": {
+      "time": "2026-09-08T06:22:07.072788+00:00",
+      "kind": "native_step",
+      "step": "control.modal_closed",
+      "bookmark_id": 13
+    },
+    "obstacles": [],
+    "browser_start_close_counts": [
+      5,
+      5
+    ],
+    "live_recorded_service_pids": [],
+    "expected_notes_sha256": "c9cd36e5357c4d65398c3cbf3d7e76646cb4b68cd12bb03360c91273162e8409",
+    "event_count": 144
+  },
+  {
+    "evidence_kind": "explicit-diagnostic-recheck",
+    "human_user_validation": false,
+    "scenario": "unicode-notes",
+    "code": 2,
+    "elapsed_ms": 32945,
+    "run_dir": "run-20260908T062225292764Z",
+    "result": {
+      "business_verdict": "UNVERIFIED",
+      "qualified_pass": false,
+      "completion": "partial",
+      "obstacle_kind": "harness-or-observation",
+      "exit_code": 2,
+      "checks": {
+        "initial_scope_unused": "PASS",
+        "normal_login": "PASS",
+        "invalid_url_feedback": "PASS",
+        "invalid_url_not_persisted": "PASS",
+        "real_http_metadata": "PASS",
+        "invalid_recovery": "PASS",
+        "save_private_tags_notes": "PASS",
+        "save_private_tags_notes_database": "PASS",
+        "fresh_browser_retrieval": "PASS",
+        "fresh_browser_fields": "PASS",
+        "fresh_browser_fields_database": "PASS",
+        "server_restart_retrieval": "PASS",
+        "server_restart_retrieval_database": "PASS",
+        "other_account_no_view": "PASS",
+        "bob_edit_get_denied": "PASS",
+        "owner_unchanged_after_attack": "PASS",
+        "owner_unchanged_after_attack_database": "PASS",
+        "other_account_no_modify": "PASS",
+        "edit_persisted": "PASS",
+        "edit_persisted_database": "PASS",
+        "delete_target": "UNVERIFIED",
+        "unrelated_intact": "UNVERIFIED"
+      },
+      "phase_at_exit": "delete with unrelated control",
+      "target_id": 14,
+      "control_id": 15,
+      "run": "run-20260908t062225292764z",
+      "processes": [
+        {
+          "name": "article",
+          "pid": 85746,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application",
+          "pid": 85747,
+          "returncode": -15,
+          "port_closed": true
+        },
+        {
+          "name": "application-restarted",
+          "pid": 85789,
+          "returncode": -15,
+          "port_closed": true
+        }
+      ],
+      "execution_cleanup": "stopped",
+      "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+      "case": "unicode-notes",
+      "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+    },
+    "independent_ok": false,
+    "independent_checks": {
+      "one_complete_qualified_pass": false,
+      "under_120_seconds_without_watchdog": true,
+      "candidate_inputs_unchanged": true,
+      "pinned_source_unmodified": true,
+      "old_reports_unchanged": true,
+      "old_id5_and_id9_full_rows_preserved": false,
+      "data_cleanup_independently_reported": false,
+      "ports_free": true,
+      "owned_services_absent": true,
+      "native_execution_cleanup_stopped": true,
+      "fresh_sandboxed_browsers_closed": true,
+      "logs_drained": true,
+      "native_identity_confirmed": true,
+      "script_snapshot_exact": true,
+      "pack_identity_exact": true,
+      "environment_identity_exact": true,
+      "server_from_snapshot": true,
+      "initial_observation_matches_independent_baseline": true,
+      "final_observation_matches_independent_baseline": false,
+      "save_private_tags_notes_exact_ui": true,
+      "save_private_tags_notes_exact_database": true,
+      "fresh_browser_fields_exact_ui": true,
+      "fresh_browser_fields_exact_database": true,
+      "server_restart_retrieval_exact_ui": true,
+      "server_restart_retrieval_exact_database": true,
+      "owner_unchanged_after_attack_exact_ui": true,
+      "owner_unchanged_after_attack_exact_database": true,
+      "edit_persisted_exact_ui": true,
+      "edit_persisted_exact_database": true,
+      "target_exact_delete_step_sequence": false,
+      "control_exact_delete_step_sequence": false,
+      "debug_404_artifacts_absent": true,
+      "independent_unicode_fixture_exact": true
+    },
+    "independent_failures": [
+      "one_complete_qualified_pass",
+      "old_id5_and_id9_full_rows_preserved",
+      "data_cleanup_independently_reported",
+      "final_observation_matches_independent_baseline",
+      "target_exact_delete_step_sequence",
+      "control_exact_delete_step_sequence"
+    ],
+    "timed_out": false,
+    "baseline_ids": [
+      5,
+      9
+    ],
+    "final_ids": [
+      5,
+      9,
+      14,
+      15
+    ],
+    "command": [
+      "<TASK_ROOT>/work/linkding-independent-handoff/.venv/bin/python",
+      "<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/accept.py",
+      "--project",
+      "<TASK_ROOT>/work/linkding-independent-handoff",
+      "--browser",
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "--case",
+      "unicode-notes"
+    ],
+    "stdout": ".handoff-diagnostic/unicode-notes.stdout.private.txt",
+    "stderr": ".handoff-diagnostic/unicode-notes.stderr.private.txt",
+    "candidate_identity": {
+      "scripts": {
+        "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+        "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+        "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+        "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+      },
+      "pack_all": {
+        "README.md": "9023c91fe52d5325183a80d09ebde70764ba37fdbc23369ccddba4c4ff77af97",
+        "accept.py": "d8a302e60119199e872b17508062785fd74ef43f40d37dba2135cce07e489a35",
+        "environment/article.html": "93af781aa8b0f63cdb4b68d19d26788fcb730e884c10e477fc7601d6a13cf9d1",
+        "environment/study_settings.py": "dd72545f0cf343cd3af2342320f7978c45534a17109af076b37a4c4307b4841b",
+        "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+        "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+        "support.py": "58cbde6646d11647882095ec40bd424bd360e15d3bce25bcacdc4d7353aa01b3"
+      },
+      "environment": {
+        ".acceptance-study/article/article.html": "93af781aa8b0f63cdb4b68d19d26788fcb730e884c10e477fc7601d6a13cf9d1",
+        ".acceptance-study/study_settings.py": "dd72545f0cf343cd3af2342320f7978c45534a17109af076b37a4c4307b4841b",
+        "bookmarks/static/apple-touch-icon.png": "253839ed0b7cb1d92b51668a4ee9d6f9c2e930d2435fd0c138bbdd31ade0e695",
+        "bookmarks/static/bundle.js": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+        "bookmarks/static/bundle.js.map": "e491f0786eea1a84aaecd4873a87905e7e3f9cf00af863b574f8ed489992dd44",
+        "bookmarks/static/favicon.ico": "56338ffb3789975c26b4ba2a461227bc00acdf986f03e9264a51825e6993a4f0",
+        "bookmarks/static/favicon.svg": "2c5a71a01a98ba824065d921ac53f1d16c2cf0184889101ef2e4040ab2d9a477",
+        "bookmarks/static/icons.svg": "648104ae09c37e5f90c71f542bb853c1fb0cc436d59519bd0c6390b19031a474",
+        "bookmarks/static/linkding-screenshot.png": "c31006d71966ac20faa2d24c8b76fc039d29458bbbf97d150841dd0c9d9485cf",
+        "bookmarks/static/live-reload.js": "42b19d87230d2543ab67469c5f2e52e3e83129b867e18d2d0a9f391dbf3df706",
+        "bookmarks/static/logo-192.png": "a4a1626e1728eaaeb40586153a74bee27110ee0e72e6ff7c9d7b8299b8645475",
+        "bookmarks/static/logo-512.png": "d4c399a3dec56b0aa45e6c260800266b73421bd7f719881aebe7cdbbe8939d13",
+        "bookmarks/static/logo.png": "b52133b0136cf40a3ad229941e9750371b30ce241c4702f155babe61e03dd234",
+        "bookmarks/static/logo.svg": "9a7a04afa8c933fc782419099931ba36030f088ace3f161e1746c0e896e1346e",
+        "bookmarks/static/maskable-logo-192.png": "f99a17d953de0b0d36f39c710e6a764391ffcf88c03919d51838b81bc2d65614",
+        "bookmarks/static/maskable-logo-512.png": "55c82586dc1d4242de06e2700bb41eb3e3d4dcae1f2eadcfac4ccbb5e1f164c1",
+        "bookmarks/static/maskable-logo.svg": "a76b1494cb00561c56c33b52e96a6b83472b943f76246b9c95d0c92dc6cc8323",
+        "bookmarks/static/preview-placeholder.svg": "427d50ad15e56a4931fe491c7721147c8d02b0969c3a44404b3149a44a556878",
+        "bookmarks/static/robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+        "bookmarks/static/safari-pinned-tab.svg": "18df659796ddcf03ec9f275909efc8cbd350fc2294bc2402c93461e38dfc9c7f",
+        "bookmarks/static/theme-dark.css": "1eb38da6e1ef57fc5cb825cb026f7f95f3787afe9bb73a571be63b0933da0178",
+        "bookmarks/static/theme-light.css": "81ab032a0804098f79e07802dea875ce07a4b59c7ab3811e5387782871142a50",
+        "bookmarks/static/vendor/Readability.js": "61521a78d29e60def9623a14ebcc5a54aff88c61fd11326d7c016478a4f23047",
+        "bookmarks/styles/auth.css": "81c927b0e94208b68794371a976a356ae342dec44a12975061d14f1dc3e54541",
+        "bookmarks/styles/bookmark-details.css": "37aa15eb23e3c3b0139deb8baef60b044d00e690cc88ec2698c68b7056196f40",
+        "bookmarks/styles/bookmark-form.css": "5bab84d86d262972884dcbf18373d087ce8a2d0c078a9121d4a80794c48d3df0",
+        "bookmarks/styles/bookmark-page.css": "81111496ce049c713fc228af65a1908caff97cbe04e951233c99406bfe15f74e",
+        "bookmarks/styles/bundles.css": "cdc38999ce88ffaa992dc2e389701f102b070728dd44d15247842cf4af1464d4",
+        "bookmarks/styles/components.css": "1115738bc5993508e9b7754efe2d1dcd3dc0338a7d96ac193e5a0b747546447a",
+        "bookmarks/styles/crud.css": "8ae36d78876e6a014e6a6bba50caf2c16ea15aa30d1fcad66bcff147fb4f60fb",
+        "bookmarks/styles/layout.css": "5316c258363b78042d4aa6e657541b4106e71d2e1acce65d51fb4aae1b72eb1b",
+        "bookmarks/styles/markdown.css": "a40b6a0a66632e90fbb316879e56abfbc4913d799fa64f826e6b65383184fc9c",
+        "bookmarks/styles/reader-mode.css": "f6265f5cd2fcb4c6f63c7dd9b278bbc185ada26fc5d870c08dfcdd578a13b5a0",
+        "bookmarks/styles/responsive.css": "7077762adee1eb726f4a7918458d311093f8575e7b731249eb8d631b8a6788a2",
+        "bookmarks/styles/settings.css": "291ae1bd5191d54b2aac248863e8889ee0c44177023cbe0337517bac1103a9cf",
+        "bookmarks/styles/tags.css": "9c7963bd71afcefe2feff301dc332badaa35b8858c895b9bbf6b2465bcc6ea48",
+        "bookmarks/styles/theme/LICENSE": "30ca73ed0d18d0e198428000b0fd988896fb203eead2c47901a5dbfed6792690",
+        "bookmarks/styles/theme/_normalize.css": "bba59fc6ec62f78f7c4b716434ae075db0d44c53a0505498a5e46b96456e5357",
+        "bookmarks/styles/theme/animations.css": "62517ff75da07e5f94c8722273bdb9c374420c7bc14debc4a4bfdf46336753a5",
+        "bookmarks/styles/theme/asian.css": "a3b30a78d47c00eb1e652eadc66200ff9cc67b346cbe5e86166911acea4e5b1f",
+        "bookmarks/styles/theme/autocomplete.css": "01adb7f135dc6fc4b9370e89706157b825a856020c66f464c4b88392648834f2",
+        "bookmarks/styles/theme/badges.css": "24d7d353e9b7ab3154f7d16e051c269ce5e519e89030557ff64514a6e0862e8c",
+        "bookmarks/styles/theme/base.css": "652d8ed34027109b6cbffc98783a4bcfd5a3a383c4efad87b880bba35b261f56",
+        "bookmarks/styles/theme/buttons.css": "c18ed1266b2a40a9b82a9b2060268ba20a9585d1879a6a15daa7ca71d403c484",
+        "bookmarks/styles/theme/code.css": "770c31a808ea8804ccd6c457adc59f45608389cb6f698d2e188ae829e477ef3a",
+        "bookmarks/styles/theme/dropdowns.css": "168529b7aa9fccd969d39145df15d67de12c3ce13160650b4fb50b7eb7fe52af",
+        "bookmarks/styles/theme/empty.css": "6a8e3975fbfe63e18762b009849ab89a3f45bfffeec0413885cff8a233539958",
+        "bookmarks/styles/theme/forms.css": "3702874cd198f8e474a07bc130482b2d2d7c2a6cd6d60190769e2ca3d25b90f6",
+        "bookmarks/styles/theme/menus.css": "510bd69175783a1598a0cf9cb028f0f6aeb9908c1f75fbc49f31f8e3d1368618",
+        "bookmarks/styles/theme/modals.css": "bb98bd21e660211f2ffce6bd527b28ef4ebf275593d3ede6f0699ba31c3a5b58",
+        "bookmarks/styles/theme/pagination.css": "60235d356a7b1d4ec13a187dacdec09a980423d6ff98ff8af78b6ce7f0a45de1",
+        "bookmarks/styles/theme/tables.css": "6dc9c58ab71af25d006e3a251fbf027f99908804ebc19d27b790451e43a4642d",
+        "bookmarks/styles/theme/tabs.css": "009a057281b179db1435b9830f0508f74287e41630b2635b99cc429ce4f9836e",
+        "bookmarks/styles/theme/toasts.css": "517dab1d7abcda5a539a471c201c20fc2ad9c017600ab1e24a58b9b592c8bdbb",
+        "bookmarks/styles/theme/typography.css": "96969828aa27ac8ca51a5bb515d7596d7c5ad903b9e0baf1fae2599953637ac4",
+        "bookmarks/styles/theme/utilities.css": "c1a4e8db88ae8412515f7cba7fec370877bc023d3684b1c228f7ca66a0e48c22",
+        "bookmarks/styles/theme/variables.css": "e94e821f02f972931c30b66948c151e59f7a20c30bd4b3221f5d89b93a833fd8",
+        "bookmarks/styles/theme-dark.css": "674af8a022f923c2c612f9b5bb5dc8f0dc23fb8fd2a89f47b54c2b60237f28bf",
+        "bookmarks/styles/theme-light.css": "a126b35909e0e5088f2d9675b31743a516e182d425747629db3b0c03eebe63cb",
+        "package-lock.json": "5121ff6e9c803bd97e846e43e832477a1e3a9372c612e5db1cf98662369e982d",
+        "uv.lock": "5ff80ccb3022fd0d667c9dfc31c2f2cbadf714dc05f9b8e35fbb8750814f8f7f"
+      },
+      "head": "65813a75404b1319aca8b09700fadc0b15adabaf",
+      "tracked_diff": ""
+    },
+    "old_report_digests": {
+      "final-results.json": "b62a2d0260a68e55bb0cbc4f6eb4c950128942b0b69a0430674b508171ba0749",
+      "final-summary.json": "5bf17e9fdfb05b76195bd2fd189594be8dd2e6a63a520588cdc69485d86b9aaa",
+      "final-candidate-report.md": "687a5f0780959a990e90638e1b552aadbdd488e3a0fd5666ed19f7415e043eea"
+    },
+    "native_steps": [
+      {
+        "time": "2026-09-08T06:22:29.850871+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:29.955865+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:30.050973+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "14"
+      },
+      {
+        "time": "2026-09-08T06:22:30.507273+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Control run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:30.616377+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Control run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:30.702763+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "15"
+      },
+      {
+        "time": "2026-09-08T06:22:33.062992+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:33.188472+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:33.311450+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "14"
+      },
+      {
+        "time": "2026-09-08T06:22:38.802215+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:38.931767+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062225292764z"
+      },
+      {
+        "time": "2026-09-08T06:22:39.050870+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "14"
+      },
+      {
+        "time": "2026-09-08T06:22:47.153021+00:00",
+        "kind": "native_step",
+        "step": "details.list_navigation",
+        "title": "Private run-20260908t062225292764z edited"
+      },
+      {
+        "time": "2026-09-08T06:22:47.264062+00:00",
+        "kind": "native_step",
+        "step": "details.view_click",
+        "title": "Private run-20260908t062225292764z edited"
+      },
+      {
+        "time": "2026-09-08T06:22:47.350486+00:00",
+        "kind": "native_step",
+        "step": "details.visible",
+        "bookmark_id": "14"
+      },
+      {
+        "time": "2026-09-08T06:22:47.354963+00:00",
+        "kind": "native_step",
+        "step": "target.delete_click",
+        "bookmark_id": 14
+      },
+      {
+        "time": "2026-09-08T06:22:47.387061+00:00",
+        "kind": "native_step",
+        "step": "target.await_confirmation",
+        "bookmark_id": 14
+      },
+      {
+        "time": "2026-09-08T06:22:47.464787+00:00",
+        "kind": "native_step",
+        "step": "target.confirm_click",
+        "bookmark_id": 14
+      }
+    ],
+    "last_native_step": {
+      "time": "2026-09-08T06:22:47.464787+00:00",
+      "kind": "native_step",
+      "step": "target.confirm_click",
+      "bookmark_id": 14
+    },
+    "obstacles": [
+      {
+        "time": "2026-09-08T06:22:54.470012+00:00",
+        "kind": "obstacle",
+        "phase": "delete with unrelated control",
+        "category": "harness-or-observation",
+        "error_type": "TimeoutError",
+        "detail": "Inspect private startup logs and safe browser evidence; no automatic journey retry",
+        "target_id": 14,
+        "control_id": 15
+      }
+    ],
+    "browser_start_close_counts": [
+      5,
+      5
+    ],
+    "live_recorded_service_pids": [],
+    "expected_notes_sha256": "cc629252b52c47ebd93afaa3e7da03154ab5a36bb8b44b5fac308f65e20b82e4",
+    "event_count": 120
+  }
+]

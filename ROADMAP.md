@@ -49,6 +49,13 @@ A [native Codex smoke check](evals/results/2026-09-08-host-smoke/README.md) now 
 
 The [linkding study](evals/results/2026-09-08-linkding/README.md) satisfies only scoped second-project execution: a real browser/Django/SQLite bookmark journey passed after author assistance and native-regression corrections. The independent Skill invocation stopped at a local permission gap. All failed attempts and setup/correction work are retained; autonomous reuse, external-human handoff, a fair baseline and maintenance effort remain unproven. M3's overall exit is not met.
 
+Follow-up: [product hardening](PRODUCT-HARDENING-RESULTS.md) adds a maintained
+native pack, independent agent replay, a Unicode fixture maintenance exercise,
+real recovery controls and ten current-host paired behavior runs. Both paired
+configurations have incomplete-coverage trials; installation did not always
+produce invocation. These are scoped advances, not completion of the full
+natural-trigger matrix, causal benefit experiment or external-human M3 exit.
+
 ## M4 — Limited release
 
 - [ ] Provide a verified install/uninstall path and an explicit tested support matrix.

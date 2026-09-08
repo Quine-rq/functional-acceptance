@@ -1,0 +1,19 @@
+{"time": "2026-09-08T06:07:45.350336+00:00", "kind": "identity", "head": "65813a75404b1319aca8b09700fadc0b15adabaf", "python": "3.14.4", "script_sha256": "b4c13e3eadf58365186184ea742d77a796a883b2bc30851d6c275187b64605e2", "target_url": "http://127.0.0.1:18742/article.html?case=run-20260908t060745325514z", "expected_tags": ["acceptance", "run-20260908t060745325514z"], "expected_notes": "Private research notes run-20260908t060745325514z\nSecond line: retain this context."}
+{"time": "2026-09-08T06:07:45.373046+00:00", "kind": "database_observation", "label": "initial", "rows": [{"id": 3, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055046533629z", "title": "Private run-20260908t055046533629z", "notes": "", "shared": 0, "tags": ["acceptance", "run-20260908t055046533629z"]}, {"id": 12, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t060022017587z", "title": "Private run-20260908t060022017587z", "notes": "", "shared": 0, "tags": ["acceptance", "run-20260908t060022017587z"]}]}
+{"time": "2026-09-08T06:07:45.373289+00:00", "kind": "check", "name": "initial_scope_unused", "status": "PASS", "evidence": {"retained_baseline_ids": [3, 12]}}
+{"time": "2026-09-08T06:07:45.376494+00:00", "kind": "process_started", "name": "article", "pid": 81539, "command": ["-m", "http.server", "18742", "--bind", "127.0.0.1", "--directory", ".acceptance-study/article"], "private_logs": ["article.stdout.private.txt", "article.stderr.private.txt"]}
+{"time": "2026-09-08T06:07:45.480490+00:00", "kind": "scenario", "name": "healthy", "mutation": null}
+{"time": "2026-09-08T06:07:45.483377+00:00", "kind": "process_started", "name": "application", "pid": 81540, "command": ["<TASK_ROOT>/work/linkding-hardened/.acceptance-study/artifacts/run-20260908T060745325514Z/native-pack/server.py", "--project", "<TASK_ROOT>/work/linkding-hardened"], "private_logs": ["application.stdout.private.txt", "application.stderr.private.txt"]}
+{"time": "2026-09-08T06:07:49.067211+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T06:07:49.168079+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T06:07:49.233259+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T06:07:49.260496+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T06:07:50.595881+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T06:07:50.599741+00:00", "kind": "obstacle", "phase": "setup", "category": "interrupted", "error_type": "ExecutionInterrupted", "detail": "Inspect private startup logs and safe browser evidence; no automatic journey retry", "target_id": null, "control_id": null}
+{"time": "2026-09-08T06:07:51.219163+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T06:07:51.229516+00:00", "kind": "process_stopped", "name": "application", "pid": 81540, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T06:07:51.231159+00:00", "kind": "process_stopped", "name": "article", "pid": 81539, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T06:07:51.231317+00:00", "kind": "process_logs", "pid": 81539, "files": ["article.stdout.private.txt", "article.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T06:07:51.231396+00:00", "kind": "process_logs", "pid": 81540, "files": ["application.stdout.private.txt", "application.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T06:07:51.278503+00:00", "kind": "execution_inputs_unchanged", "pack": true, "environment": true, "pinned_source": true}
+{"time": "2026-09-08T06:07:51.279200+00:00", "kind": "finished", "exit_code": 2, "evidence": "<TASK_ROOT>/work/linkding-hardened/.acceptance-study/artifacts/run-20260908T060745325514Z"}

@@ -1,0 +1,27 @@
+import {spawn} from 'node:child_process';
+import {mkdirSync, readFileSync, readdirSync, writeFileSync} from 'node:fs';
+import {resolve, join} from 'node:path';
+const project=resolve('work/linkding-hardened');
+const pack=resolve('outputs/functional-acceptance/examples/linkding');
+const record=resolve(process.argv[2] || 'work/hardening-controls-1'); mkdirSync(record);
+const runs=join(project,'.acceptance-study/artifacts');
+const results=[];
+for(const [scenario,expected] of [['healthy',0],['note-loss',1],['missing-observation',2],['expired-session',0],['lost-response',0],['unicode-notes',0]]){
+ const before=new Set(readdirSync(runs)); const start=Date.now();
+ const args=[join(pack,'accept.py'),'--project',project,'--browser','/Applications/Google Chrome.app/Contents/MacOS/Google Chrome','--case',scenario];
+ const child=spawn(join(project,'.venv/bin/python'),args,{cwd:project,detached:true,stdio:['ignore','pipe','pipe']});
+ let stdout='',stderr='',forced=false,killTimer;
+ const stop=()=>{if(forced)return;forced=true;try{process.kill(child.pid,'SIGTERM')}catch{};killTimer=setTimeout(()=>{try{process.kill(-child.pid,'SIGKILL')}catch{}},10000)};
+ const timer=setTimeout(stop,120000);
+ child.stdout.on('data',b=>{stdout+=b;if(stdout.length>16*1024*1024)stop()});
+ child.stderr.on('data',b=>{stderr+=b;if(stderr.length>2*1024*1024)stop()});
+ const ended=await new Promise(done=>{child.on('error',e=>done({error:e.message}));child.on('close',(code,signal)=>done({code,signal}))});
+ clearTimeout(timer);clearTimeout(killTimer);
+ writeFileSync(join(record,scenario+'.jsonl'),stdout);writeFileSync(join(record,scenario+'.stderr.txt'),stderr);
+ const created=readdirSync(runs).filter(x=>!before.has(x));
+ let result=null;if(created.length===1){try{result=JSON.parse(readFileSync(join(runs,created[0],'result.json')))}catch{}}
+ const row={scenario,expected,...ended,forced,elapsed_ms:Date.now()-start,run:created,result};results.push(row);
+ writeFileSync(join(record,'results.json'),JSON.stringify(results,null,2));
+ console.log(JSON.stringify({scenario,code:ended.code,elapsed_ms:row.elapsed_ms,verdict:result?.business_verdict,obstacle:result?.obstacle_kind,cleanup:result?.execution_cleanup,run:created}));
+ if(forced||!result||result.execution_cleanup!=='stopped'||ended.code!==expected){process.exitCode=1;break}
+}

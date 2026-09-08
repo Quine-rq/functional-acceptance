@@ -1,0 +1,1 @@
+User requirement: export every provided record once, in page/record order, preserving id/title/notes exactly. Output must be a new UTF-8 CSV. Existing files must remain unchanged. The complete provided pages are local synthetic data, not a live API. No production or remote-service claim.

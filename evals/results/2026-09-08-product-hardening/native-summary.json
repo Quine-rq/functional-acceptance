@@ -1,0 +1,263 @@
+[
+  {
+    "group": "author",
+    "run": "run-20260908T054909807893Z",
+    "case": "healthy",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T055046533629Z",
+    "case": "note-loss",
+    "verdict": "FAIL",
+    "code": 1,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T055053860473Z",
+    "case": "missing-observation",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T055117074438Z",
+    "case": "expired-session",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T055142732590Z",
+    "case": "lost-response",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T055957230170Z",
+    "case": "healthy",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060022017587Z",
+    "case": "note-loss",
+    "verdict": "FAIL",
+    "code": 1,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060028756918Z",
+    "case": "missing-observation",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060055055261Z",
+    "case": "expired-session",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060234252665Z",
+    "case": "lost-response",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060313756291Z",
+    "case": "unicode-notes",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060418432400Z",
+    "case": null,
+    "verdict": null,
+    "code": null,
+    "cleanup": null,
+    "has_final_receipt": false
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060745325514Z",
+    "case": "healthy",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060751456937Z",
+    "case": null,
+    "verdict": null,
+    "code": null,
+    "cleanup": null,
+    "has_final_receipt": false
+  },
+  {
+    "group": "author",
+    "run": "run-20260908T060829745928Z",
+    "case": "healthy",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T055443757097Z",
+    "case": "healthy",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T061206476263Z",
+    "case": "healthy",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T061251551005Z",
+    "case": "note-loss",
+    "verdict": "FAIL",
+    "code": 1,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T061315674040Z",
+    "case": "missing-observation",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T061415262120Z",
+    "case": "expired-session",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T062102428303Z",
+    "case": "expired-session",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T062141545322Z",
+    "case": "lost-response",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T062225292764Z",
+    "case": "unicode-notes",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T064933595747Z",
+    "case": "healthy",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T065001070681Z",
+    "case": "note-loss",
+    "verdict": "FAIL",
+    "code": 1,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T065021106437Z",
+    "case": "missing-observation",
+    "verdict": "UNVERIFIED",
+    "code": 2,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T065050840688Z",
+    "case": "expired-session",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T065127721172Z",
+    "case": "lost-response",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  },
+  {
+    "group": "independent",
+    "run": "run-20260908T065156014250Z",
+    "case": "unicode-notes",
+    "verdict": "PASS",
+    "code": 0,
+    "cleanup": "stopped",
+    "has_final_receipt": true
+  }
+]

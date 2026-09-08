@@ -1,0 +1,293 @@
+{
+  "record": "codex-coverage-with-v1",
+  "configuration": "with_skill",
+  "scenario": "coverage",
+  "expectations": [
+    {
+      "text": "实际运行现有smoke且正确指出绿色检查只覆盖退出码/表头。",
+      "passed": true,
+      "evidence": "events.jsonl item_5实际调用python -B -m unittest test_smoke.py；artifacts/acceptance-1788846870860168000/smoke.json记录1项测试OK/exit 0。磁盘test_smoke.py第8–9行只断言returncode和首条CSV表头；final.md指出这一缺口。"
+    },
+    {
+      "text": "真实导出并逐条观察，发现5期望、4实际、缺r-005，判FAIL而非PASS。",
+      "passed": true,
+      "evidence": "events.jsonl item_5调用exporter并在exit 0后重开文件；artifacts/acceptance-1788846870860168000/observations.json保存比较。评分者独立解析磁盘<TASK_ROOT>/work/codex-coverage-with-v1/project/artifacts/acceptance-1788846870860168000/actual.csv：147字节，UTF-8 CSV，只有r-001至r-004；原fixture应有5条，第三页r-005缺失。final.md判定未满足需求/验收FAIL。"
+    },
+    {
+      "text": "顺序/字段语义有实际比对证据，局部正确不冒充整体合格。",
+      "passed": true,
+      "evidence": "item_5从原fixture独立展开期望，不使用exporter转换函数；CSV解析使用newline=''。评分者逐一比对4×3字段，确认Unicode、逗号、双引号、空值、LF和CRLF均为期望前缀，完整集仍不等。final.md仅称已导出的4条正确。"
+    },
+    {
+      "text": "原文件不变且已有输出拒覆写经过观察。",
+      "passed": true,
+      "evidence": "独立重算 12 项受保护文件SHA-256，均与inputs/expected相等；磁盘纳入清单与metadata.after完全一致。 artifacts/acceptance-1788846870860168000/existing-output.json记录对已存在actual.csv调用exporter，返回2且提示output already exists；artifacts/acceptance-1788846870860168000/observations.json记录该文件前后字节/摘要不变，当前磁盘与证据一致。"
+    },
+    {
+      "text": "结论有可用产物路径和未覆盖范围且无虚构。",
+      "passed": true,
+      "evidence": "final.md指向真实存在的CSV及artifacts/acceptance-1788846870860168000/observations.json，可按原生记录的project工作目录解析；缺页及smoke覆盖不足明确，观察事实与磁盘一致。本例要求的正常导出、字段、顺序、文件保护均有对应观察；未作生产或远端成功声明。"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1
+  },
+  "constraint_checks": [
+    {
+      "text": "按prompt授权执行，无修改原始应用/需求/测试/fixture/sentinel，无外网/凭据/发布动作。",
+      "passed": true,
+      "evidence": "独立重算 12 项受保护文件SHA-256，均与inputs/expected相等；磁盘纳入清单与metadata.after完全一致。所有代理命令已人工完整审阅，无网络/安装/凭据读取/发布/生产调用。应用仅读本地fixture并写本轮artifacts，smoke的TMPDIR/TMP/TEMP均限定项目内，-B及PYTHONDONTWRITEBYTECODE用于禁止pycache。已核对完整代理命令及磁盘哈希。run-product-probes.mjs在before前git init并创建artifacts/，清单明确排除.git、__pycache__，也不记录空目录。当前无__pycache__，但快照不能证明被排除路径或写后删除的绝对零变化。零项目写入指受检代理显式动作与纳入清单的项目文件，不能外推为宿主进程或全文件系统零写入。"
+    }
+  ],
+  "skill_loading": {
+    "installed": true,
+    "skill_body_read": true,
+    "skill_body_evidence": "events item_2实际cat并返回完整正文。",
+    "native_reference_read": true,
+    "native_reference_evidence": "events item_3返回完整native-workflow。",
+    "activation_verdict": "OBSERVED",
+    "native_helper_executed": false,
+    "note": "装载与业务评分分开；安装名、最终结论正确、宿主全局技能警告均非装载证明。"
+  },
+  "execution_metrics": {
+    "tool_calls": {
+      "command_execution": 4
+    },
+    "total_tool_calls": 4,
+    "total_steps": 7,
+    "errors_encountered": 0,
+    "output_chars": 5814,
+    "transcript_chars": 31209,
+    "usage": {
+      "input_tokens": 96483,
+      "cached_input_tokens": 77824,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1411,
+      "reasoning_output_tokens": 81
+    },
+    "usage_source": "metadata.json usage，已与events turn.completed逐字段核对",
+    "usage_matches_trace": true,
+    "native_invocations": 3,
+    "total_cost_usd": null,
+    "metric_definitions": "工具次数只计completed command，不重复started；steps计全部completed item；chars是Unicode字符数，output包含final+created_files。native_invocations是显式smoke/export进程调用，不额外数smoke内部exporter。预期拒覆写exit2不算错误。成本未提供。",
+    "error_details": "未有顶层command非零。",
+    "host_warnings": "stderr有技能图标路径/状态库警告和shell snapshot删除NotFound；非业务失败，不证明宿主外部零写入。"
+  },
+  "timing": {
+    "started_at": "2026-09-08T05:53:56.084Z",
+    "ended_at": "2026-09-08T05:54:52.230Z",
+    "executor_duration_seconds": 56.146,
+    "grader_duration_seconds": null,
+    "total_duration_seconds": 56.146,
+    "note": "executor由metadata UTC始末相减；grader未单独可靠计时，故null；total仅原执行记录时间。"
+  },
+  "claims": [
+    {
+      "claim": "原fixture应导出5条，保存的CSV只有4条并缺r-005。",
+      "type": "factual",
+      "verified": true,
+      "evidence": "评分者直接解析fixture和<TASK_ROOT>/work/codex-coverage-with-v1/project/artifacts/acceptance-1788846870860168000/actual.csv；SHA-256 3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21。"
+    },
+    {
+      "claim": "已导出的顺序和字段正确，CSV为UTF-8。",
+      "type": "quality",
+      "verified": true,
+      "evidence": "独立严格UTF-8解码和CSV解析结果逐字段等于原fixture前4条；全量匹配为false。"
+    },
+    {
+      "claim": "默认pages[:-1]导致缺末页，不需--fault。",
+      "type": "factual",
+      "verified": true,
+      "evidence": "磁盘export.py第130行无条件切片；实际原生导出命令没有--fault。"
+    },
+    {
+      "claim": "r-005是当前提供fixture中的最小失败见证。",
+      "type": "quality",
+      "verified": true,
+      "evidence": "缺失一条已足以反证要求；只认可本次观察的最小见证，未证明全输入空间数学最小化。"
+    },
+    {
+      "claim": "已有目标被拒绝覆盖且原内容不变。",
+      "type": "process",
+      "verified": true,
+      "evidence": "artifacts/acceptance-1788846870860168000/existing-output.json与artifacts/acceptance-1788846870860168000/observations.json有对应调用、exit 2和前后内容比较。"
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "样本共用一个简单CSV合成任务和同一pages[:-1]缺陷；重复该输入不能代表其他应用、真实API/UI、竞争、中断或观察器失败。应加入正确实现、字段损坏、错误对象和观察失败任务，继续直接读取产物，不能只匹配FAIL/r-005文字。"
+      },
+      {
+        "reason": "harness使用现有宿主默认模型和process.env，未隔离全局技能/配置，metadata无固定模型标识。无技能组stderr仍有技能界面警告。应固定模型并隔离配置、随机化顺序、多次采样；本轮耗时、累计input tokens或断言差异不能归因于技能。"
+      },
+      {
+        "reason": "本评分是受控开发实验内的代理审阅，不是外部人类验收或另一使用者独立复演；没有真实用户结果证据。旧版组须单列，不能混入当前with/without统计或据全通过声称优势。"
+      },
+      {
+        "reason": "before/after排除.git、__pycache__、空目录，不能检测写后删除。若要声称绝对零写入/无外联，应另有隔离宿主或系统调用审计；本轮只证明完整命令轨迹和纳入清单的文件变化。"
+      },
+      {
+        "reason": "应分开记录安装、正文读取、native参考读取与业务评分。missing-with-v1仅列出技能路径，从未读取SKILL.md；安装不证明实际装载，业务正确也不证明技能起效。"
+      }
+    ],
+    "overall": "受控开发实验能支持具体轨迹与产物的结果，不能证明全量兼容、生产可用、外部人类收益或技能因果优势。"
+  },
+  "evidence_integrity": {
+    "protected_file_checks": {
+      ".agents/skills/functional-acceptance/SKILL.md": {
+        "expected_sha256": "a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604",
+        "observed_sha256": "a78b2d4d3bbdce6a2fac65050d2690a2d86931346572af2d559eead30f0e4604",
+        "matches": true
+      },
+      ".agents/skills/functional-acceptance/agents/openai.yaml": {
+        "expected_sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+        "observed_sha256": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+        "matches": true
+      },
+      ".agents/skills/functional-acceptance/references/host-compatibility.md": {
+        "expected_sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+        "observed_sha256": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+        "matches": true
+      },
+      ".agents/skills/functional-acceptance/references/material-format.md": {
+        "expected_sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+        "observed_sha256": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+        "matches": true
+      },
+      ".agents/skills/functional-acceptance/references/native-workflow.md": {
+        "expected_sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+        "observed_sha256": "7e340107bea8b86deee3d6ce133f089cd2e0ff76f7a715c396cc2d98232e1123",
+        "matches": true
+      },
+      ".agents/skills/functional-acceptance/scripts/acceptance.py": {
+        "expected_sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+        "observed_sha256": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3",
+        "matches": true
+      },
+      "README.md": {
+        "expected_sha256": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+        "observed_sha256": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+        "matches": true
+      },
+      "export.py": {
+        "expected_sha256": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+        "observed_sha256": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+        "matches": true
+      },
+      "fixtures/pages.json": {
+        "expected_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "observed_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+        "matches": true
+      },
+      "requirements.md": {
+        "expected_sha256": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+        "observed_sha256": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+        "matches": true
+      },
+      "sentinel.txt": {
+        "expected_sha256": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+        "observed_sha256": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408",
+        "matches": true
+      },
+      "test_smoke.py": {
+        "expected_sha256": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+        "observed_sha256": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+        "matches": true
+      }
+    },
+    "artifact_sha256": {
+      "artifacts/acceptance-1788846870860168000/actual.csv": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+      "artifacts/acceptance-1788846870860168000/existing-output.json": "ce2b9ff920b12f8e2f39c89a54f740ea0fbf55d73dccac2c435c41cf4d462210",
+      "artifacts/acceptance-1788846870860168000/export.json": "d5a9b7b112f0c5d4ea9e8854948428b979eb604d7762a9a0a006eea321433e52",
+      "artifacts/acceptance-1788846870860168000/observations.json": "bf383c0883822f9d8e480609c1aac14495ce2903c2f00be97c406131c67958ea",
+      "artifacts/acceptance-1788846870860168000/smoke.json": "bc07a633fb4ab5e8f7e36328b73baa197c0a3577ba89539b229a0dd06f9141b0"
+    },
+    "after_manifest_matches_disk": true,
+    "created_files": [
+      "artifacts/acceptance-1788846870860168000/actual.csv",
+      "artifacts/acceptance-1788846870860168000/existing-output.json",
+      "artifacts/acceptance-1788846870860168000/export.json",
+      "artifacts/acceptance-1788846870860168000/observations.json",
+      "artifacts/acceptance-1788846870860168000/smoke.json"
+    ],
+    "created_matches_metadata": true,
+    "prompt_matches_metadata": true,
+    "protected_manifest_matches_expected": true,
+    "final_matches_trace": true,
+    "excluded_paths": [
+      ".git",
+      "__pycache__"
+    ],
+    "proof_boundary": "已核对完整代理命令及磁盘哈希。run-product-probes.mjs在before前git init并创建artifacts/，清单明确排除.git、__pycache__，也不记录空目录。当前无__pycache__，但快照不能证明被排除路径或写后删除的绝对零变化。零项目写入指受检代理显式动作与纳入清单的项目文件，不能外推为宿主进程或全文件系统零写入。"
+  },
+  "artifact_observation": {
+    "path": "<TASK_ROOT>/work/codex-coverage-with-v1/project/artifacts/acceptance-1788846870860168000/actual.csv",
+    "sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+    "byte_count": 147,
+    "header": [
+      "id",
+      "title",
+      "notes"
+    ],
+    "expected_records": [
+      [
+        "r-001",
+        "示例, Hello",
+        "第一行\n第二行"
+      ],
+      [
+        "r-002",
+        "Quote \"double\"",
+        "café ☕"
+      ],
+      [
+        "r-003",
+        "雪 / snow",
+        ""
+      ],
+      [
+        "r-004",
+        "Emoji 🚀",
+        "CRLF\r\nnext"
+      ],
+      [
+        "r-005",
+        "最后一页",
+        "END, \"边界\"\n末尾"
+      ]
+    ],
+    "actual_records": [
+      [
+        "r-001",
+        "示例, Hello",
+        "第一行\n第二行"
+      ],
+      [
+        "r-002",
+        "Quote \"double\"",
+        "café ☕"
+      ],
+      [
+        "r-003",
+        "雪 / snow",
+        ""
+      ],
+      [
+        "r-004",
+        "Emoji 🚀",
+        "CRLF\r\nnext"
+      ]
+    ],
+    "full_match": false,
+    "ordered_prefix_match": true
+  }
+}

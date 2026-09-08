@@ -1,0 +1,14 @@
+{
+  "label": "smoke",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "test_smoke.py"
+  ],
+  "cwd": "<TASK_ROOT>/work/codex-coverage-old-v1/project",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.058s\n\nOK\n"
+}

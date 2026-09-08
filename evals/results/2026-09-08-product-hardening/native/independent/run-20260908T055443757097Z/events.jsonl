@@ -1,0 +1,112 @@
+{"time": "2026-09-08T05:54:43.778813+00:00", "kind": "identity", "head": "65813a75404b1319aca8b09700fadc0b15adabaf", "python": "3.14.4", "script_sha256": "bd05e46270e891ed22bc252987139ea2d3e95b9e8132985a4292cc7224620709", "target_url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "expected_tags": ["acceptance", "run-20260908t055443757097z"], "expected_notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context."}
+{"time": "2026-09-08T05:54:43.798401+00:00", "kind": "database_observation", "label": "initial", "rows": []}
+{"time": "2026-09-08T05:54:43.798596+00:00", "kind": "check", "name": "initial_scope_unused", "status": "PASS", "evidence": {"retained_baseline_ids": []}}
+{"time": "2026-09-08T05:54:43.801968+00:00", "kind": "process_started", "name": "article", "pid": 75936, "command": ["-m", "http.server", "18742", "--bind", "127.0.0.1", "--directory", ".acceptance-study/article"], "private_logs": ["article.stdout.private.txt", "article.stderr.private.txt"]}
+{"time": "2026-09-08T05:54:43.905510+00:00", "kind": "scenario", "name": "healthy", "mutation": null}
+{"time": "2026-09-08T05:54:43.908922+00:00", "kind": "process_started", "name": "application", "pid": 75938, "command": ["<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/server.py", "--project", "<TASK_ROOT>/work/linkding-independent-handoff"], "private_logs": ["application.stdout.private.txt", "application.stderr.private.txt"]}
+{"time": "2026-09-08T05:54:52.738490+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T05:54:52.816311+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T05:54:52.851055+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T05:54:52.890350+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T05:54:53.984879+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T05:54:53.985437+00:00", "kind": "check", "name": "normal_login", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T05:54:54.194318+00:00", "kind": "check", "name": "invalid_url_feedback", "status": "PASS", "evidence": {"message": "Enter a valid URL.", "url_input": "http://"}}
+{"time": "2026-09-08T05:54:54.195170+00:00", "kind": "database_observation", "label": "invalid URL", "rows": []}
+{"time": "2026-09-08T05:54:54.195324+00:00", "kind": "check", "name": "invalid_url_not_persisted", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T05:54:54.252578+00:00", "kind": "browser_evidence", "label": "invalid-url", "url": "http://127.0.0.1:18741/bookmarks/new"}
+{"time": "2026-09-08T05:54:54.795674+00:00", "kind": "check", "name": "real_http_metadata", "status": "PASS", "evidence": {"metadata_title": "Acceptance study article", "response_status": 200, "requested_article": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z"}}
+{"time": "2026-09-08T05:54:54.953835+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:54:55.134714+00:00", "kind": "check", "name": "invalid_recovery", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:54:55.157566+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 200}
+{"time": "2026-09-08T05:54:55.245637+00:00", "kind": "check", "name": "save_private_tags_notes", "status": "PASS", "evidence": {"bookmark_id": 1, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "tags": "acceptance run-20260908t055443757097z"}}}
+{"time": "2026-09-08T05:54:55.246397+00:00", "kind": "database_observation", "label": "save_private_tags_notes", "rows": [{"id": 1, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "shared": 0, "tags": ["acceptance", "run-20260908t055443757097z"]}]}
+{"time": "2026-09-08T05:54:55.246570+00:00", "kind": "check", "name": "save_private_tags_notes_database", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:54:55.296687+00:00", "kind": "browser_evidence", "label": "save_private_tags_notes", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:54:55.313118+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/new", "status": 200}
+{"time": "2026-09-08T05:54:55.587967+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:54:55.805165+00:00", "kind": "browser_evidence", "label": "control-created", "url": "http://127.0.0.1:18741/bookmarks?details=2"}
+{"time": "2026-09-08T05:54:56.816743+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T05:54:57.634305+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T05:54:57.667790+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T05:54:57.674136+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T05:54:57.687253+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T05:54:58.682447+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T05:54:58.720546+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:54:58.923519+00:00", "kind": "check", "name": "fresh_browser_retrieval", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:54:58.940961+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 200}
+{"time": "2026-09-08T05:54:59.042530+00:00", "kind": "check", "name": "fresh_browser_fields", "status": "PASS", "evidence": {"bookmark_id": 1, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "tags": "acceptance run-20260908t055443757097z"}}}
+{"time": "2026-09-08T05:54:59.043706+00:00", "kind": "database_observation", "label": "fresh_browser_fields", "rows": [{"id": 1, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "shared": 0, "tags": ["acceptance", "run-20260908t055443757097z"]}, {"id": 2, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z&control=1", "title": "Control run-20260908t055443757097z", "notes": "Unrelated control notes", "shared": 0, "tags": ["control", "run-20260908t055443757097z"]}]}
+{"time": "2026-09-08T05:54:59.043853+00:00", "kind": "check", "name": "fresh_browser_fields_database", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:54:59.104239+00:00", "kind": "browser_evidence", "label": "fresh_browser_fields", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:54:59.108378+00:00", "kind": "process_stopped", "name": "application", "pid": 75938, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T05:54:59.112002+00:00", "kind": "process_started", "name": "application-restarted", "pid": 75995, "command": ["<TASK_ROOT>/outputs/functional-acceptance/examples/linkding/server.py", "--project", "<TASK_ROOT>/work/linkding-independent-handoff"], "private_logs": ["application-restarted.stdout.private.txt", "application-restarted.stderr.private.txt"]}
+{"time": "2026-09-08T05:55:00.931963+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T05:55:01.718439+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T05:55:01.764268+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T05:55:01.770676+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T05:55:01.791405+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T05:55:02.772742+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T05:55:02.798155+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:03.026482+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 200}
+{"time": "2026-09-08T05:55:03.118871+00:00", "kind": "check", "name": "server_restart_retrieval", "status": "PASS", "evidence": {"bookmark_id": 1, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "tags": "acceptance run-20260908t055443757097z"}}}
+{"time": "2026-09-08T05:55:03.119749+00:00", "kind": "database_observation", "label": "server_restart_retrieval", "rows": [{"id": 1, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "shared": 0, "tags": ["acceptance", "run-20260908t055443757097z"]}, {"id": 2, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z&control=1", "title": "Control run-20260908t055443757097z", "notes": "Unrelated control notes", "shared": 0, "tags": ["control", "run-20260908t055443757097z"]}]}
+{"time": "2026-09-08T05:55:03.119925+00:00", "kind": "check", "name": "server_restart_retrieval_database", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:55:03.153237+00:00", "kind": "browser_evidence", "label": "server_restart_retrieval", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:55:03.153350+00:00", "kind": "restart_correlated", "old_pid": 75938, "new_pid": 75995, "bookmark_id": 1}
+{"time": "2026-09-08T05:55:03.386680+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T05:55:04.038612+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T05:55:04.070932+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T05:55:04.077371+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T05:55:04.087066+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T05:55:05.079227+00:00", "kind": "normal_browser_login", "user": "fa_bob"}
+{"time": "2026-09-08T05:55:05.104130+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:05.226547+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:05.311518+00:00", "kind": "check", "name": "other_account_no_view", "status": "PASS", "evidence": {"bookmark_id": 1, "status": 200}}
+{"time": "2026-09-08T05:55:05.363927+00:00", "kind": "browser_evidence", "label": "bob-no-view", "url": "http://127.0.0.1:18741/bookmarks?details=1"}
+{"time": "2026-09-08T05:55:05.378971+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 404}
+{"time": "2026-09-08T05:55:05.409995+00:00", "kind": "check", "name": "bob_edit_get_denied", "status": "PASS", "evidence": {"status": 404, "bookmark_id": 1}}
+{"time": "2026-09-08T05:55:05.468859+00:00", "kind": "browser_evidence", "label": "bob-edit-denied", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:55:05.484385+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/new", "status": 200}
+{"time": "2026-09-08T05:55:05.713234+00:00", "kind": "http", "method": "POST", "path": "/bookmarks/1/edit", "status": 404}
+{"time": "2026-09-08T05:55:05.722998+00:00", "kind": "bob_exact_id_write_attempt", "bookmark_id": 1, "status": 404, "submitted_title": "ATTACK run-20260908t055443757097z"}
+{"time": "2026-09-08T05:55:05.803234+00:00", "kind": "browser_evidence", "label": "bob-write-denied", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:55:06.124269+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T05:55:06.787780+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T05:55:06.816979+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T05:55:06.822231+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T05:55:06.828413+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T05:55:07.868688+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T05:55:07.891625+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 200}
+{"time": "2026-09-08T05:55:08.001578+00:00", "kind": "check", "name": "owner_unchanged_after_attack", "status": "PASS", "evidence": {"bookmark_id": 1, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "tags": "acceptance run-20260908t055443757097z"}}}
+{"time": "2026-09-08T05:55:08.002593+00:00", "kind": "database_observation", "label": "owner_unchanged_after_attack", "rows": [{"id": 1, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.", "shared": 0, "tags": ["acceptance", "run-20260908t055443757097z"]}, {"id": 2, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z&control=1", "title": "Control run-20260908t055443757097z", "notes": "Unrelated control notes", "shared": 0, "tags": ["control", "run-20260908t055443757097z"]}]}
+{"time": "2026-09-08T05:55:08.002875+00:00", "kind": "check", "name": "owner_unchanged_after_attack_database", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:55:08.081659+00:00", "kind": "browser_evidence", "label": "owner_unchanged_after_attack", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:55:08.081786+00:00", "kind": "check", "name": "other_account_no_modify", "status": "PASS", "evidence": {"bookmark_id": 1, "owner_reopened_unchanged": true}}
+{"time": "2026-09-08T05:55:08.283969+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 200}
+{"time": "2026-09-08T05:55:08.384254+00:00", "kind": "check", "name": "edit_persisted", "status": "PASS", "evidence": {"bookmark_id": 1, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z edited", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.\nEdited after restart.", "tags": "edited run-20260908t055443757097z"}}}
+{"time": "2026-09-08T05:55:08.385010+00:00", "kind": "database_observation", "label": "edit_persisted", "rows": [{"id": 1, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z", "title": "Private run-20260908t055443757097z edited", "notes": "Private research notes run-20260908t055443757097z\nSecond line: retain this context.\nEdited after restart.", "shared": 0, "tags": ["edited", "run-20260908t055443757097z"]}, {"id": 2, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z&control=1", "title": "Control run-20260908t055443757097z", "notes": "Unrelated control notes", "shared": 0, "tags": ["control", "run-20260908t055443757097z"]}]}
+{"time": "2026-09-08T05:55:08.385154+00:00", "kind": "check", "name": "edit_persisted_database", "status": "PASS", "evidence": {"bookmark_id": 1}}
+{"time": "2026-09-08T05:55:08.445758+00:00", "kind": "browser_evidence", "label": "edit_persisted", "url": "http://127.0.0.1:18741/bookmarks/1/edit"}
+{"time": "2026-09-08T05:55:08.462959+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:08.767138+00:00", "kind": "browser_evidence", "label": "delete-confirmation", "url": "http://127.0.0.1:18741/bookmarks?details=1"}
+{"time": "2026-09-08T05:55:08.886419+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:08.992368+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/1/edit", "status": 404}
+{"time": "2026-09-08T05:55:09.000612+00:00", "kind": "check", "name": "delete_target", "status": "PASS", "evidence": {"bookmark_id": 1, "status": 404}}
+{"time": "2026-09-08T05:55:09.001541+00:00", "kind": "database_observation", "label": "target deleted", "rows": [{"id": 2, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z&control=1", "title": "Control run-20260908t055443757097z", "notes": "Unrelated control notes", "shared": 0, "tags": ["control", "run-20260908t055443757097z"]}]}
+{"time": "2026-09-08T05:55:09.001754+00:00", "kind": "check", "name": "delete_target_database", "status": "PASS", "evidence": {"target_id": 1, "control_id": 2}}
+{"time": "2026-09-08T05:55:09.025666+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/2/edit", "status": 200}
+{"time": "2026-09-08T05:55:09.118976+00:00", "kind": "check", "name": "unrelated_intact", "status": "PASS", "evidence": {"bookmark_id": 2, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t055443757097z&control=1", "title": "Control run-20260908t055443757097z", "notes": "Unrelated control notes", "tags": "control run-20260908t055443757097z"}}}
+{"time": "2026-09-08T05:55:09.176643+00:00", "kind": "browser_evidence", "label": "unrelated-intact", "url": "http://127.0.0.1:18741/bookmarks/2/edit"}
+{"time": "2026-09-08T05:55:09.198489+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:09.568752+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T05:55:09.704994+00:00", "kind": "browser_evidence", "label": "final-empty", "url": "http://127.0.0.1:18741/bookmarks"}
+{"time": "2026-09-08T05:55:09.705605+00:00", "kind": "database_observation", "label": "control cleaned", "rows": []}
+{"time": "2026-09-08T05:55:09.705764+00:00", "kind": "check", "name": "run_bookmarks_cleaned_baseline_preserved", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T05:55:09.705844+00:00", "kind": "data_cleanup", "target_id": 1, "control_id": 2, "owned_bookmarks_absent": true, "tags_retained": "Unused run-specific tags may remain; no ORM cleanup performed"}
+{"time": "2026-09-08T05:55:09.939411+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T05:55:09.950929+00:00", "kind": "process_stopped", "name": "application-restarted", "pid": 75995, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T05:55:09.952661+00:00", "kind": "process_stopped", "name": "article", "pid": 75936, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T05:55:09.952823+00:00", "kind": "process_logs", "pid": 75936, "files": ["article.stdout.private.txt", "article.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T05:55:09.952940+00:00", "kind": "process_logs", "pid": 75938, "files": ["application.stdout.private.txt", "application.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T05:55:09.953052+00:00", "kind": "process_logs", "pid": 75995, "files": ["application-restarted.stdout.private.txt", "application-restarted.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T05:55:09.953806+00:00", "kind": "finished", "exit_code": 0, "evidence": "<TASK_ROOT>/work/linkding-independent-handoff/.acceptance-study/artifacts/run-20260908T055443757097Z"}

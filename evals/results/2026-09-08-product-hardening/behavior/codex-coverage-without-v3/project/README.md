@@ -1,0 +1,1 @@
+Run existing smoke checks with python3 -B -m unittest test_smoke.py. The application command is python3 -B export.py --source fixtures/pages.json --output artifacts/NEW.csv. Existing output names cannot be reused. Requirements live in requirements.md. Use the provided fixtures, no network/dependency setup is necessary.

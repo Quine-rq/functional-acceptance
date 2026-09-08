@@ -8,7 +8,7 @@ Functional Acceptance is a skill for coding agents to verify features through re
 
 For example: an export command reports success, but the CSV is missing the final record. Acceptance means opening the file and checking its contents—not stopping at exit code `0`.
 
-> Early development: a working local CLI/CSV demo is available. This is experimental source, not a supported release.
+> Development preview: runnable CLI/CSV and browser/database examples are available. This is experimental source, not a supported release.
 
 ## How it works
 
@@ -18,13 +18,13 @@ Start with the feature's requirements and the project you want checked. The Skil
 2. **Check the result.** Use the project's existing tools to run the flow and inspect the outcome. Focus on relevant failure and recovery cases as well as the happy path.
 3. **Hand over the findings.** Report what passed, what failed, and what remains unverified, with evidence and instructions for repeating the checks.
 
-The Skill provides the workflow; the agent and project tools perform the checks. It does not replace your test framework or approve a release. Start with the local export demo below; a separate [linkding study](evals/results/2026-09-08-linkding/README.md) records a real browser/database journey and the author assistance it required.
+The Skill provides the workflow; the agent and project tools perform the checks. It does not replace your test framework or approve a release. It maps requirements to actual assertions, distinguishes a product defect from a broken test, and keeps missing evidence visible. Start with the local export demo below, or follow the [maintained linkding example](examples/linkding/README.md) for a browser/database journey.
 
 ## Try the demo
 
 The sample exports three pages of synthetic data into a real CSV file, then reads it back against five independently specified records. It includes a deliberate defect that drops the last page while still returning success.
 
-No third-party packages, account, network connection, or Skill installation are needed. Run from the repository root with Python 3.10+ on a POSIX local filesystem supporting hard links and no-follow file access. So far, the demo has been checked on macOS with Python 3.14.4.
+No third-party packages, account, network connection, or Skill installation are needed. Run from the repository root with Python 3.10+ on a POSIX local filesystem supporting hard links and no-follow file access. The local demo checks have run on macOS with Python 3.10.20 and 3.14.4.
 
 ```sh
 python3 -B examples/paginated_export/accept.py --case healthy
@@ -58,7 +58,7 @@ For a first installation into a project, see the [installation guide and measure
 
 Once your host has loaded the Skill, try: “Use functional-acceptance to plan how to verify this feature. Do not run the application yet.” Supply the feature's expected behavior and project location. Actual acceptance then uses that host's authorized project tools.
 
-[Early Codex behavior checks](evals/results/2026-09-08-host-smoke/README.md) now include real invocation and retained tool traces. They caught a read-only request that incorrectly created report files; a small instruction correction passed a targeted recheck. Other hosts still have installation checks only.
+[Current behavior checks](evals/results/2026-09-08-product-hardening/README.md) compare actual Codex execution with and without the Skill. Both detected the seeded export defect; neither covered every requirement on every trial. One installed read-only run did not load the Skill at all. Claude Code attempts stopped at authentication, so successful second-host execution remains unverified. [Earlier failures and corrections](evals/results/2026-09-08-host-smoke/README.md) remain available.
 
 ## Compatibility and current limits
 
@@ -66,7 +66,7 @@ The workflow is designed to use tools already available in a project, rather tha
 
 The bundled example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests.
 
-A [second-project study on linkding](evals/results/2026-09-08-linkding/README.md) now covers real browser login, bookmark persistence across a server restart, private-account isolation, editing and scoped deletion, with SQLite observations. The independent Skill invocation was blocked by local runtime permissions; the full journey passed only after author assistance and regression-script corrections. The study preserves those failures and a native replay guide. It is not autonomous reuse evidence or a supported browser integration. External services and mobile devices remain unverified.
+The [maintained linkding pack](examples/linkding/README.md) uses real browser login, a real server restart, private-account isolation, editing and scoped deletion, with independent SQLite observations. It includes note-loss, missing-observation, session-loss and lost-response controls, plus a Unicode maintenance exercise. It runs without the Skill or helper. [The hardening record](evals/results/2026-09-08-product-hardening/README.md) separates author runs, independent agent handoff and harness defects; the [original assisted study](evals/results/2026-09-08-linkding/README.md) is unchanged. This is a pinned native example, not a generic browser adapter or external-human usability proof. External services and mobile devices remain unverified.
 
 The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test methods and an independent agent's replay of the standalone sample. [M2 report-delivery checks](M2-RESULTS.md) brought the suite to 84 methods, including interruption, disk failures, and incomplete handoff. Current packaging and installation checks are tracked [separately](INTEGRATIONS.md). These results do not establish external-user usefulness, time savings, or production readiness. A supported release remains pending; cloning the source alone does not install the Skill.
 
@@ -86,7 +86,7 @@ python3 -B -m unittest discover -s tests -v
 python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
 ```
 
-The first command tests the helper, evidence collector, and relocatable Skill package. The second tests the exporter independently of the Skill and helper, including whether the deliberately broken export is caught. A passing defect-detection test does not make that export correct.
+The first command tests the helper, evidence collector, relocatable Skill package and native example's safety/report contracts. The second tests the exporter independently of the Skill and helper. Neither command runs the host-dependent linkding browser journey. A passing defect-detection test does not make that export correct.
 
 Installer integration checks are development-only and need Node 22.20+:
 
@@ -105,7 +105,7 @@ They exercise the pinned `skills` CLI in disposable projects. No agent login or 
 - **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Next: independently replay the reviewed linkding handoff, repeat behavior checks, verify another host's real invocation and capability gaps, and compare the same agent's work with and without the Skill. These checks come before a supported release.
+Next release gates: successful second-host execution, external developers using their own projects, demonstrated benefit beyond the baseline, and license/security-support decisions. The [product-hardening results](PRODUCT-HARDENING-RESULTS.md) explain what is implemented and what still needs evidence. Passing local checks is not a supported-release claim.
 
 ## Feedback and licensing
 

@@ -1,0 +1,90 @@
+{
+  "runtime": "3.14.4 (v3.14.4:23116f998f6, Apr  7 2026, 09:45:22) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "executable": "/Library/Frameworks/Python.framework/Versions/3.14/bin/python3",
+  "source": "fixtures/pages.json",
+  "source_sha256": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+  "smoke_returncode": 0,
+  "export_returncode": 0,
+  "csv": "artifacts/acceptance-20260908-140100-117076/actual.csv",
+  "csv_sha256": "3b53d90b99f4978e92560722f5a05f5affc78092c508afd0729db56ea865bd21",
+  "header": [
+    "id",
+    "title",
+    "notes"
+  ],
+  "expected_rows": [
+    [
+      "r-001",
+      "示例, Hello",
+      "第一行\n第二行"
+    ],
+    [
+      "r-002",
+      "Quote \"double\"",
+      "café ☕"
+    ],
+    [
+      "r-003",
+      "雪 / snow",
+      ""
+    ],
+    [
+      "r-004",
+      "Emoji 🚀",
+      "CRLF\r\nnext"
+    ],
+    [
+      "r-005",
+      "最后一页",
+      "END, \"边界\"\n末尾"
+    ]
+  ],
+  "actual_rows": [
+    [
+      "r-001",
+      "示例, Hello",
+      "第一行\n第二行"
+    ],
+    [
+      "r-002",
+      "Quote \"double\"",
+      "café ☕"
+    ],
+    [
+      "r-003",
+      "雪 / snow",
+      ""
+    ],
+    [
+      "r-004",
+      "Emoji 🚀",
+      "CRLF\r\nnext"
+    ]
+  ],
+  "exact_all_rows_match": false,
+  "missing_ids": [
+    "r-005"
+  ],
+  "present_rows_preserve_order_and_fields": true,
+  "unique_exported_ids": true,
+  "utf8_decode": "PASS",
+  "supplied_files_unchanged": true,
+  "before_sha256": {
+    "requirements.md": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+    "README.md": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+    "export.py": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+    "test_smoke.py": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+    "fixtures/pages.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    "sentinel.txt": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408"
+  },
+  "after_sha256": {
+    "requirements.md": "1157570368d835d76a8e718aa845bd53efbfb47e98499d670257cde9ae67bb1e",
+    "README.md": "6dd8f98cc2fd568b320361ddb33598a772960955d9e821318bfbbab08a7854e3",
+    "export.py": "67d23ac5e20d221a5168da19acc4b692dea09f386749fdbee703de82a83b454f",
+    "test_smoke.py": "0f98c369f5c71424c503ec5a159504a1765a7da54189ec14f6e1306da2ef52b0",
+    "fixtures/pages.json": "8b928221cc19848ef88905b5d4d4cc3bfeee6fd686782a87b5f274d3a3583d69",
+    "sentinel.txt": "4f620f5b33c84c99b20b9c77e1486435e267d49cf0019d2641e4bfdb3e068408"
+  },
+  "remaining_temporary_files": [],
+  "remaining_export_temporary_files": []
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Functional Acceptance"
+  short_description: "Verify user outcomes with evidence and clear gaps"
+  default_prompt: "Use $functional-acceptance to verify this feature's real user outcome and report evidence-backed results and remaining gaps."

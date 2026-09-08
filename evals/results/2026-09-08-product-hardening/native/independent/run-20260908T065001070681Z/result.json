@@ -1,0 +1,45 @@
+{
+  "business_verdict": "FAIL",
+  "qualified_pass": false,
+  "completion": "partial",
+  "obstacle_kind": "business",
+  "exit_code": 1,
+  "checks": {
+    "initial_scope_unused": "PASS",
+    "normal_login": "PASS",
+    "invalid_url_feedback": "PASS",
+    "invalid_url_not_persisted": "PASS",
+    "real_http_metadata": "PASS",
+    "invalid_recovery": "PASS",
+    "save_private_tags_notes": "FAIL",
+    "fresh_browser_retrieval": "UNVERIFIED",
+    "server_restart_retrieval": "UNVERIFIED",
+    "other_account_no_view": "UNVERIFIED",
+    "other_account_no_modify": "UNVERIFIED",
+    "edit_persisted": "UNVERIFIED",
+    "delete_target": "UNVERIFIED",
+    "unrelated_intact": "UNVERIFIED"
+  },
+  "phase_at_exit": "invalid URL and recovery",
+  "target_id": 18,
+  "control_id": null,
+  "run": "run-20260908t065001070681z",
+  "processes": [
+    {
+      "name": "article",
+      "pid": 94898,
+      "returncode": -15,
+      "port_closed": true
+    },
+    {
+      "name": "application",
+      "pid": 94899,
+      "returncode": -15,
+      "port_closed": true
+    }
+  ],
+  "execution_cleanup": "stopped",
+  "data_cleanup": "not-completed-or-unobserved; inspect recorded target/control IDs before any write",
+  "case": "note-loss",
+  "retention": "Run artifacts, synthetic accounts/tags/sessions and failed-attempt bookmarks retained; no historical cleanup"
+}

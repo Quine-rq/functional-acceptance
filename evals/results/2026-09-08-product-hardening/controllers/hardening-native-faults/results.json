@@ -1,0 +1,17 @@
+[
+  {
+    "scenario": "interrupt",
+    "code": null,
+    "signal": "SIGKILL",
+    "forced": true,
+    "injected": true,
+    "elapsed_ms": 130018,
+    "run": [
+      "run-20260908T060418432400Z"
+    ],
+    "result": null,
+    "owned_services_stopped": false,
+    "unowned_listener_preserved": null,
+    "pending_receipt": null
+  }
+]

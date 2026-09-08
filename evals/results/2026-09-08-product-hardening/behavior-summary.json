@@ -1,0 +1,244 @@
+[
+  {
+    "record": "codex-coverage-with-v1",
+    "scenario": "coverage",
+    "configuration": "with_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 56.146,
+    "usage": {
+      "input_tokens": 96483,
+      "cached_input_tokens": 77824,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1411,
+      "reasoning_output_tokens": 81
+    },
+    "grade": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-coverage-with-v2",
+    "scenario": "coverage",
+    "configuration": "with_skill",
+    "trial": 2,
+    "code": 0,
+    "forced": false,
+    "seconds": 61.848,
+    "usage": {
+      "input_tokens": 96555,
+      "cached_input_tokens": 77824,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1635,
+      "reasoning_output_tokens": 200
+    },
+    "grade": {
+      "passed": 4,
+      "failed": 1,
+      "total": 5,
+      "pass_rate": 0.8
+    }
+  },
+  {
+    "record": "codex-coverage-with-v3",
+    "scenario": "coverage",
+    "configuration": "with_skill",
+    "trial": 3,
+    "code": 0,
+    "forced": false,
+    "seconds": 55.317,
+    "usage": {
+      "input_tokens": 97104,
+      "cached_input_tokens": 77696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1576,
+      "reasoning_output_tokens": 27
+    },
+    "grade": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-coverage-without-v1",
+    "scenario": "coverage",
+    "configuration": "without_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 51.69,
+    "usage": {
+      "input_tokens": 116146,
+      "cached_input_tokens": 99328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1213,
+      "reasoning_output_tokens": 97
+    },
+    "grade": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-coverage-without-v2",
+    "scenario": "coverage",
+    "configuration": "without_skill",
+    "trial": 2,
+    "code": 0,
+    "forced": false,
+    "seconds": 47.59,
+    "usage": {
+      "input_tokens": 115448,
+      "cached_input_tokens": 89088,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1299,
+      "reasoning_output_tokens": 102
+    },
+    "grade": {
+      "passed": 3,
+      "failed": 2,
+      "total": 5,
+      "pass_rate": 0.6
+    }
+  },
+  {
+    "record": "codex-coverage-without-v3",
+    "scenario": "coverage",
+    "configuration": "without_skill",
+    "trial": 3,
+    "code": 0,
+    "forced": false,
+    "seconds": 52.02,
+    "usage": {
+      "input_tokens": 115831,
+      "cached_input_tokens": 99456,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1386,
+      "reasoning_output_tokens": 101
+    },
+    "grade": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-plan-with-v1",
+    "scenario": "plan",
+    "configuration": "with_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 52.553,
+    "usage": {
+      "input_tokens": 94946,
+      "cached_input_tokens": 77824,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1395,
+      "reasoning_output_tokens": 0
+    },
+    "grade": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-plan-without-v1",
+    "scenario": "plan",
+    "configuration": "without_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 42.299,
+    "usage": {
+      "input_tokens": 91096,
+      "cached_input_tokens": 74496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1062,
+      "reasoning_output_tokens": 0
+    },
+    "grade": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-missing-with-v1",
+    "scenario": "missing",
+    "configuration": "with_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 37.284,
+    "usage": {
+      "input_tokens": 89427,
+      "cached_input_tokens": 63488,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 563,
+      "reasoning_output_tokens": 0
+    },
+    "grade": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-missing-without-v1",
+    "scenario": "missing",
+    "configuration": "without_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 38.79,
+    "usage": {
+      "input_tokens": 89840,
+      "cached_input_tokens": 74624,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 613,
+      "reasoning_output_tokens": 14
+    },
+    "grade": {
+      "passed": 4,
+      "failed": 0,
+      "total": 4,
+      "pass_rate": 1
+    }
+  },
+  {
+    "record": "codex-coverage-old-v1",
+    "scenario": "coverage",
+    "configuration": "old_skill",
+    "trial": 1,
+    "code": 0,
+    "forced": false,
+    "seconds": 64.77,
+    "usage": {
+      "input_tokens": 93930,
+      "cached_input_tokens": 66944,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1796,
+      "reasoning_output_tokens": 196
+    },
+    "grade": {
+      "passed": 5,
+      "failed": 0,
+      "total": 5,
+      "pass_rate": 1
+    }
+  }
+]

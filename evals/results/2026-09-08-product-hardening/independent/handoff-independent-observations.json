@@ -1,0 +1,65 @@
+{
+  "identity_count": 1,
+  "run_head": "65813a75404b1319aca8b09700fadc0b15adabaf",
+  "python": "3.14.4",
+  "checks_count": 24,
+  "all_checks_pass": true,
+  "initial_bookmarks_count": 0,
+  "invalid_url_leaves_baseline": true,
+  "target_id": 1,
+  "control_id": 2,
+  "saved_exact_url_notes_tags_owner_and_private": true,
+  "fresh_browser_ui_retains_exact_object": true,
+  "fresh_browser_database_retains_exact_object": true,
+  "server_restart_ui_retains_exact_object": true,
+  "server_restart_database_retains_exact_object": true,
+  "actual_distinct_app_pids": true,
+  "app_restart": {
+    "old_pid": 75938,
+    "new_pid": 75995,
+    "target_id": 1
+  },
+  "bob_exact_id_post_status": 404,
+  "owner_db_unchanged_after_bob_post": true,
+  "edited_notes_append_persists": true,
+  "target_absent_control_present_after_target_delete": true,
+  "final_bookmarks_equal_initial_baseline": true,
+  "browser_starts": 5,
+  "browser_closes": 5,
+  "browser_all_fresh_and_sandboxed": true,
+  "browser_versions": [
+    "152.0.7977.76"
+  ],
+  "process_starts": [
+    {
+      "name": "article",
+      "pid": 75936
+    },
+    {
+      "name": "application",
+      "pid": 75938
+    },
+    {
+      "name": "application-restarted",
+      "pid": 75995
+    }
+  ],
+  "each_owned_service_has_stopped_event": true,
+  "process_log_records": 3,
+  "process_log_errors": [],
+  "process_log_truncated": [],
+  "obstacles": [],
+  "unresolved_cleanup_events": 0,
+  "event_count": 112,
+  "console_timing": [
+    "real 27.06",
+    "user 16.60",
+    "sys 5.91"
+  ],
+  "persisted_event_count": 112,
+  "persisted_events_equal_executed_console_events": true,
+  "final_readonly_sqlite_observation": {
+    "all_bookmarks": 0,
+    "target_and_control_remaining": 0
+  }
+}

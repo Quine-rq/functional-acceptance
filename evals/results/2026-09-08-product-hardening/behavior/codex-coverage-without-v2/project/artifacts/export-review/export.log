@@ -1,0 +1,6 @@
+command: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '-B', 'export.py', '--source', 'fixtures/pages.json', '--output', '<TASK_ROOT>/work/codex-coverage-without-v2/project/artifacts/export-review/actual.csv']
+exit_code: 0
+stdout:
+Wrote CSV: <TASK_ROOT>/work/codex-coverage-without-v2/project/artifacts/export-review/actual.csv
+
+stderr:

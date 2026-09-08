@@ -1,0 +1,30 @@
+{"time": "2026-09-08T06:00:22.038337+00:00", "kind": "identity", "head": "65813a75404b1319aca8b09700fadc0b15adabaf", "python": "3.14.4", "script_sha256": "8d633f715f756b60885a3707a4e44223c096bd9221638ac22ae32583779aa8f4", "target_url": "http://127.0.0.1:18742/article.html?case=run-20260908t060022017587z", "expected_tags": ["acceptance", "run-20260908t060022017587z"], "expected_notes": "Private research notes run-20260908t060022017587z\nSecond line: retain this context."}
+{"time": "2026-09-08T06:00:22.053516+00:00", "kind": "database_observation", "label": "initial", "rows": [{"id": 3, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055046533629z", "title": "Private run-20260908t055046533629z", "notes": "", "shared": 0, "tags": ["acceptance", "run-20260908t055046533629z"]}]}
+{"time": "2026-09-08T06:00:22.053739+00:00", "kind": "check", "name": "initial_scope_unused", "status": "PASS", "evidence": {"retained_baseline_ids": [3]}}
+{"time": "2026-09-08T06:00:22.056546+00:00", "kind": "process_started", "name": "article", "pid": 78399, "command": ["-m", "http.server", "18742", "--bind", "127.0.0.1", "--directory", ".acceptance-study/article"], "private_logs": ["article.stdout.private.txt", "article.stderr.private.txt"]}
+{"time": "2026-09-08T06:00:22.162478+00:00", "kind": "scenario", "name": "note-loss", "mutation": "runtime pre_save clears notes"}
+{"time": "2026-09-08T06:00:22.165343+00:00", "kind": "process_started", "name": "application", "pid": 78403, "command": ["<TASK_ROOT>/work/linkding-hardened/.acceptance-study/artifacts/run-20260908T060022017587Z/native-pack/server.py", "--project", "<TASK_ROOT>/work/linkding-hardened", "--note-loss"], "private_logs": ["application.stdout.private.txt", "application.stderr.private.txt"]}
+{"time": "2026-09-08T06:00:23.941684+00:00", "kind": "browser_started", "fresh_profile": true, "sandbox": true, "version": "152.0.7977.76"}
+{"time": "2026-09-08T06:00:24.077471+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 302}
+{"time": "2026-09-08T06:00:24.083928+00:00", "kind": "http", "method": "GET", "path": "/login", "status": 301}
+{"time": "2026-09-08T06:00:24.101012+00:00", "kind": "http", "method": "GET", "path": "/login/", "status": 200}
+{"time": "2026-09-08T06:00:25.235876+00:00", "kind": "normal_browser_login", "user": "fa_alice"}
+{"time": "2026-09-08T06:00:25.236163+00:00", "kind": "check", "name": "normal_login", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T06:00:25.450298+00:00", "kind": "check", "name": "invalid_url_feedback", "status": "PASS", "evidence": {"message": "Enter a valid URL.", "url_input": "http://"}}
+{"time": "2026-09-08T06:00:25.451373+00:00", "kind": "database_observation", "label": "invalid URL", "rows": [{"id": 3, "owner": "fa_alice", "url": "http://127.0.0.1:18742/article.html?case=run-20260908t055046533629z", "title": "Private run-20260908t055046533629z", "notes": "", "shared": 0, "tags": ["acceptance", "run-20260908t055046533629z"]}]}
+{"time": "2026-09-08T06:00:25.451491+00:00", "kind": "check", "name": "invalid_url_not_persisted", "status": "PASS", "evidence": {}}
+{"time": "2026-09-08T06:00:25.507779+00:00", "kind": "browser_evidence", "label": "invalid-url", "url": "http://127.0.0.1:18741/bookmarks/new"}
+{"time": "2026-09-08T06:00:26.056722+00:00", "kind": "check", "name": "real_http_metadata", "status": "PASS", "evidence": {"metadata_title": "Acceptance study article", "response_status": 200, "requested_article": "http://127.0.0.1:18742/article.html?case=run-20260908t060022017587z"}}
+{"time": "2026-09-08T06:00:26.201689+00:00", "kind": "http", "method": "GET", "path": "/bookmarks", "status": 200}
+{"time": "2026-09-08T06:00:26.429324+00:00", "kind": "check", "name": "invalid_recovery", "status": "PASS", "evidence": {"bookmark_id": 12}}
+{"time": "2026-09-08T06:00:26.458641+00:00", "kind": "http", "method": "GET", "path": "/bookmarks/12/edit", "status": 200}
+{"time": "2026-09-08T06:00:26.564848+00:00", "kind": "check", "name": "save_private_tags_notes", "status": "FAIL", "evidence": {"bookmark_id": 12, "fields": {"url": "http://127.0.0.1:18742/article.html?case=run-20260908t060022017587z", "title": "Private run-20260908t060022017587z", "notes": "", "tags": "acceptance run-20260908t060022017587z"}}}
+{"time": "2026-09-08T06:00:26.565277+00:00", "kind": "obstacle", "phase": "invalid URL and recovery", "category": "business", "error_type": "BusinessMismatch", "detail": "save_private_tags_notes", "target_id": 12, "control_id": null}
+{"time": "2026-09-08T06:00:26.612294+00:00", "kind": "browser_evidence", "label": "obstacle", "url": "http://127.0.0.1:18741/bookmarks/12/edit"}
+{"time": "2026-09-08T06:00:28.466950+00:00", "kind": "browser_closed"}
+{"time": "2026-09-08T06:00:28.480004+00:00", "kind": "process_stopped", "name": "application", "pid": 78403, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T06:00:28.484275+00:00", "kind": "process_stopped", "name": "article", "pid": 78399, "returncode": -15, "port_closed": true}
+{"time": "2026-09-08T06:00:28.484549+00:00", "kind": "process_logs", "pid": 78399, "files": ["article.stdout.private.txt", "article.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T06:00:28.484682+00:00", "kind": "process_logs", "pid": 78403, "files": ["application.stdout.private.txt", "application.stderr.private.txt"], "errors": [], "truncated": []}
+{"time": "2026-09-08T06:00:28.530196+00:00", "kind": "execution_inputs_unchanged", "pack": true, "environment": true, "pinned_source": true}
+{"time": "2026-09-08T06:00:28.531382+00:00", "kind": "finished", "exit_code": 1, "evidence": "<TASK_ROOT>/work/linkding-hardened/.acceptance-study/artifacts/run-20260908T060022017587Z"}

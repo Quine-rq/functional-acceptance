@@ -1,0 +1,10 @@
+command: ['/Library/Frameworks/Python.framework/Versions/3.14/bin/python3', '-B', '-m', 'unittest', 'test_smoke.py']
+exit_code: 0
+stdout:
+
+stderr:
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.061s
+
+OK

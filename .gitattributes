@@ -1,0 +1,6 @@
+# Captured evidence includes CSV CRLF and original terminal blank lines.
+# Preserve these bytes across checkouts; check_record.py verifies their digests.
+evals/results/2026-09-08-product-hardening/** -text whitespace=cr-at-eol
+evals/results/2026-09-08-product-hardening/diagnostics/raf-render-callsite-injection/report.md whitespace=cr-at-eol,-blank-at-eof
+evals/results/2026-09-08-product-hardening/diagnostics/raf-render-wait-recheck/report.md whitespace=cr-at-eol,-blank-at-eof
+evals/results/2026-09-08-product-hardening/independent/readiness-final-report.md whitespace=cr-at-eol,-blank-at-eof

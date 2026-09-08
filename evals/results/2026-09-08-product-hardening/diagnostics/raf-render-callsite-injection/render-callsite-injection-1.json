@@ -1,0 +1,1425 @@
+{
+  "round": 1,
+  "events": [
+    {
+      "time_ms": 1788849789530.4001,
+      "kind": "turbo:load",
+      "phase": "dispatch",
+      "detail_url_path": "/bookmarks",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789530.9001,
+      "kind": "turbo:load",
+      "phase": "after-dispatch",
+      "detail_url_path": "/bookmarks",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789541.6,
+      "kind": "action",
+      "name": "list.ready",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789589.1,
+      "kind": "frame.attribute",
+      "attribute": "busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": true,
+        "aria_busy": true,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789589.1,
+      "kind": "frame.attribute",
+      "attribute": "aria-busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": true,
+        "aria_busy": true,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789633.1,
+      "kind": "frame.attribute",
+      "attribute": "busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789633.1,
+      "kind": "frame.attribute",
+      "attribute": "aria-busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789699.9001,
+      "kind": "turbo:frame-render",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.1,
+      "kind": "turbo:frame-load",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.2002,
+      "kind": "injection.armed",
+      "delay_ms": 150,
+      "target_callsite": {
+        "bundle_sha256": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+        "line": 19,
+        "start_column": 11228,
+        "end_column": 11258,
+        "callback_source": "()=>e()"
+      },
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.2002,
+      "kind": "frame.attribute",
+      "attribute": "complete",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.3,
+      "kind": "turbo:frame-render",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.3,
+      "kind": "turbo:frame-load",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.6,
+      "kind": "turbo:before-visit",
+      "phase": "dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.1,
+      "kind": "injection.passthrough",
+      "candidate_number": 1,
+      "callback_source": "[nonmatching callback body omitted]",
+      "registration_stack": [
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 1286,
+          "function_name": "Ce.refresh"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 492,
+          "function_name": "Ce.setValue"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11962,
+          "function_name": "ze.visitRequestStarted"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7747,
+          "function_name": "We.startRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7632,
+          "function_name": "We.simulateRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7463,
+          "function_name": "We.issueRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11907,
+          "function_name": "ze.visitStarted"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 6752,
+          "function_name": "We.start"
+        }
+      ],
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.6,
+      "kind": "injection.matched",
+      "delay_ms": 150,
+      "callback_source": "()=>e()",
+      "matched_callsite": {
+        "source_path": "/static/bundle.js",
+        "line": 19,
+        "column": 11228,
+        "function_name": ""
+      },
+      "registration_stack": [
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11228,
+          "function_name": ""
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11143,
+          "function_name": "We.render"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 8122,
+          "function_name": "We.loadResponse"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 12105,
+          "function_name": "ze.visitRequestCompleted"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7868,
+          "function_name": "We.recordResponse"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7652,
+          "function_name": "We.simulateRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7463,
+          "function_name": "We.issueRequest"
+        }
+      ],
+      "passed_through": 1,
+      "raf_restored": true,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.6,
+      "kind": "turbo:before-visit",
+      "phase": "after-dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.8,
+      "kind": "action",
+      "name": "modal.visible",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789702.9001,
+      "kind": "action",
+      "name": "delete.begin",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789716.9001,
+      "kind": "injection.original_callback_due",
+      "raf_timestamp": 297,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789737.2002,
+      "kind": "dropdown.added",
+      "count": 1,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789759.4001,
+      "kind": "action",
+      "name": "delete.returned",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789762.2002,
+      "kind": "action",
+      "name": "confirm.observed_visible",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789867.3,
+      "kind": "injection.delivered",
+      "delay_ms": 150,
+      "raf_restored": true,
+      "cancel_restored": true,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789867.4001,
+      "kind": "turbo:before-cache",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789868.6,
+      "kind": "turbo:before-cache",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789868.6,
+      "kind": "dropdown.removed",
+      "count": 1,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789868.8,
+      "kind": "turbo:render",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789868.9001,
+      "kind": "turbo:render",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789869,
+      "kind": "turbo:load",
+      "phase": "dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789869,
+      "kind": "turbo:load",
+      "phase": "after-dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    }
+  ],
+  "final_state": {
+    "url_path": "/bookmarks?details=14",
+    "document_preview": false,
+    "document_aria_busy": false,
+    "frame_present": true,
+    "frame_complete": true,
+    "complete_attribute": true,
+    "busy": false,
+    "aria_busy": false,
+    "dropdown_count": 0,
+    "confirm_present": false,
+    "confirm_visible": false
+  },
+  "before_cache_correlated_removal": true,
+  "removed_before_exit": true,
+  "exit_action": "Escape",
+  "events_after_exit": [
+    {
+      "time_ms": 1788849789530.4001,
+      "kind": "turbo:load",
+      "phase": "dispatch",
+      "detail_url_path": "/bookmarks",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789530.9001,
+      "kind": "turbo:load",
+      "phase": "after-dispatch",
+      "detail_url_path": "/bookmarks",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789541.6,
+      "kind": "action",
+      "name": "list.ready",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789589.1,
+      "kind": "frame.attribute",
+      "attribute": "busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": true,
+        "aria_busy": true,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789589.1,
+      "kind": "frame.attribute",
+      "attribute": "aria-busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": true,
+        "aria_busy": true,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789633.1,
+      "kind": "frame.attribute",
+      "attribute": "busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789633.1,
+      "kind": "frame.attribute",
+      "attribute": "aria-busy",
+      "state": {
+        "url_path": "/bookmarks",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": false,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789699.9001,
+      "kind": "turbo:frame-render",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.1,
+      "kind": "turbo:frame-load",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.2002,
+      "kind": "injection.armed",
+      "delay_ms": 150,
+      "target_callsite": {
+        "bundle_sha256": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+        "line": 19,
+        "start_column": 11228,
+        "end_column": 11258,
+        "callback_source": "()=>e()"
+      },
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.2002,
+      "kind": "frame.attribute",
+      "attribute": "complete",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.3,
+      "kind": "turbo:frame-render",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.3,
+      "kind": "turbo:frame-load",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789700.6,
+      "kind": "turbo:before-visit",
+      "phase": "dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.1,
+      "kind": "injection.passthrough",
+      "candidate_number": 1,
+      "callback_source": "[nonmatching callback body omitted]",
+      "registration_stack": [
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 1286,
+          "function_name": "Ce.refresh"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 492,
+          "function_name": "Ce.setValue"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11962,
+          "function_name": "ze.visitRequestStarted"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7747,
+          "function_name": "We.startRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7632,
+          "function_name": "We.simulateRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7463,
+          "function_name": "We.issueRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11907,
+          "function_name": "ze.visitStarted"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 6752,
+          "function_name": "We.start"
+        }
+      ],
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.6,
+      "kind": "injection.matched",
+      "delay_ms": 150,
+      "callback_source": "()=>e()",
+      "matched_callsite": {
+        "source_path": "/static/bundle.js",
+        "line": 19,
+        "column": 11228,
+        "function_name": ""
+      },
+      "registration_stack": [
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11228,
+          "function_name": ""
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 11143,
+          "function_name": "We.render"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 8122,
+          "function_name": "We.loadResponse"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 12105,
+          "function_name": "ze.visitRequestCompleted"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7868,
+          "function_name": "We.recordResponse"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7652,
+          "function_name": "We.simulateRequest"
+        },
+        {
+          "source_path": "/static/bundle.js",
+          "line": 19,
+          "column": 7463,
+          "function_name": "We.issueRequest"
+        }
+      ],
+      "passed_through": 1,
+      "raf_restored": true,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.6,
+      "kind": "turbo:before-visit",
+      "phase": "after-dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789701.8,
+      "kind": "action",
+      "name": "modal.visible",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789702.9001,
+      "kind": "action",
+      "name": "delete.begin",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789716.9001,
+      "kind": "injection.original_callback_due",
+      "raf_timestamp": 297,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789737.2002,
+      "kind": "dropdown.added",
+      "count": 1,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789759.4001,
+      "kind": "action",
+      "name": "delete.returned",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789762.2002,
+      "kind": "action",
+      "name": "confirm.observed_visible",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789867.3,
+      "kind": "injection.delivered",
+      "delay_ms": 150,
+      "raf_restored": true,
+      "cancel_restored": true,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789867.4001,
+      "kind": "turbo:before-cache",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      }
+    },
+    {
+      "time_ms": 1788849789868.6,
+      "kind": "turbo:before-cache",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789868.6,
+      "kind": "dropdown.removed",
+      "count": 1,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789868.8,
+      "kind": "turbo:render",
+      "phase": "dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789868.9001,
+      "kind": "turbo:render",
+      "phase": "after-dispatch",
+      "detail_url_path": null,
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": true,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789869,
+      "kind": "turbo:load",
+      "phase": "dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849789869,
+      "kind": "turbo:load",
+      "phase": "after-dispatch",
+      "detail_url_path": "/bookmarks?details=14",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    },
+    {
+      "time_ms": 1788849790222.2002,
+      "kind": "action",
+      "name": "exit.begin",
+      "state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 0,
+        "confirm_present": false,
+        "confirm_visible": false
+      }
+    }
+  ],
+  "state_after_exit": {
+    "url_path": "/bookmarks?details=14",
+    "document_preview": false,
+    "document_aria_busy": false,
+    "frame_present": true,
+    "frame_complete": true,
+    "complete_attribute": true,
+    "busy": false,
+    "aria_busy": false,
+    "dropdown_count": 0,
+    "confirm_present": false,
+    "confirm_visible": false
+  },
+  "outcome": "observed"
+}

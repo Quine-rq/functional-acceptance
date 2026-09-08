@@ -26,7 +26,7 @@ class SkillPackageTests(unittest.TestCase):
     def test_only_runtime_resources_ship(self):
         self.assertEqual(set(inventory(SKILL)), {
             "SKILL.md", "agents/openai.yaml", "scripts/acceptance.py",
-            "references/material-format.md", "references/host-compatibility.md",
+            "references/material-format.md", "references/host-compatibility.md", "references/native-workflow.md",
         })
         self.assertFalse(any(p.is_symlink() for p in SKILL.rglob("*")))
         # A root SKILL.md makes ecosystem installers select the entire checkout.

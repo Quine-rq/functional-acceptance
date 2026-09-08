@@ -1,0 +1,40 @@
+[
+  {
+    "record": "claude-coverage-with-v1",
+    "host": "Claude Code",
+    "version": "2.1.220 (Claude Code)",
+    "configuration": "with_skill",
+    "code": 1,
+    "started_at": "2026-09-08T05:53:16.721Z",
+    "ended_at": "2026-09-08T05:53:18.404Z",
+    "result_subtype": "success",
+    "is_error": true,
+    "api_status": 403,
+    "task_tools_executed": false,
+    "protected_changes": [],
+    "created_files": [],
+    "reported_cost_usd": 0,
+    "raw_trace_sha256": "788e0c56360e083ed28f8360034d6d097bc990650d3035ee1450cd1c8c70932b",
+    "classification": "environment/authentication; not a completed model task",
+    "privacy": "Raw trace kept local; third-party provider routing/migration message omitted. No credential forwarding or configuration change."
+  },
+  {
+    "record": "claude-coverage-without-v1",
+    "host": "Claude Code",
+    "version": "2.1.220 (Claude Code)",
+    "configuration": "without_skill",
+    "code": 1,
+    "started_at": "2026-09-08T05:53:20.675Z",
+    "ended_at": "2026-09-08T05:53:22.437Z",
+    "result_subtype": "success",
+    "is_error": true,
+    "api_status": 403,
+    "task_tools_executed": false,
+    "protected_changes": [],
+    "created_files": [],
+    "reported_cost_usd": 0,
+    "raw_trace_sha256": "6746218488dd0845f003a9e0bb2070e83edab08ad4a3f130d2c5b7448df95d17",
+    "classification": "environment/authentication; not a completed model task",
+    "privacy": "Raw trace kept local; third-party provider routing/migration message omitted. No credential forwarding or configuration change."
+  }
+]

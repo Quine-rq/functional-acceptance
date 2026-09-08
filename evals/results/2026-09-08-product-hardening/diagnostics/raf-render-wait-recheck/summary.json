@@ -1,0 +1,321 @@
+{
+  "elapsed_ms": 7402,
+  "error_type": null,
+  "all_bookmark_rows_unchanged": true,
+  "source_and_environment_unchanged": true,
+  "old_final_results_unchanged": true,
+  "ports_free": {
+    "18741": true,
+    "18742": true
+  },
+  "processes": [
+    {
+      "name": "article",
+      "pid": 94367,
+      "returncode": -15
+    },
+    {
+      "name": "application",
+      "pid": 94368,
+      "returncode": -15
+    }
+  ],
+  "blocked_write_attempts": [],
+  "source_hashes": {
+    "bookmarks/static/bundle.js": "b3bd8d18e0e05750a2440bf6b33ebdb3769422a134bbc7db5d13c342fb0b85f9",
+    "node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js": "d89c6484a76483f8dcd87a9440bc0678028ae76f3d2f0937dee092bab8cd8dfd",
+    "bookmarks/frontend/components/confirm-dropdown.js": "1b30a3d7f55c51d81db65d827afc3afedd5eeeb448b8274de4e1495b92dac62b"
+  },
+  "candidate_scripts": {
+    "accept.py": "84a4b4fa488c4b9fad2e5148770e12e392110a9b2834ff08f443b5c12d8a3d26",
+    "prepare.py": "a2df835be909c7d6d219cb3b40edbf0fdd9631e03905cc8f1160f9c445777e66",
+    "server.py": "63b1b402def9a4fbcc477ff317bc1b41957695033d7498625bf24be9e6186863",
+    "support.py": "493cd346337bf278880c83026bc4f4eba781a5878578f510cbdf3389d837a4f9"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "outcome": "observed",
+      "final_state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      },
+      "before_cache_correlated_removal": false,
+      "removed_before_exit": false,
+      "exit_action": "Cancel",
+      "matched_count": 1,
+      "timeline": [
+        {
+          "event": "injection.passthrough",
+          "relative_ms": 2.2,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "injection.matched",
+          "relative_ms": 2.7,
+          "dropdown": 0,
+          "confirm": false,
+          "matched_callsite": {
+            "source_path": "/static/bundle.js",
+            "line": 19,
+            "column": 11228,
+            "function_name": ""
+          },
+          "callback_source": "()=>e()",
+          "raf_restored": true
+        },
+        {
+          "event": "injection.original_callback_due",
+          "relative_ms": 16.6,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "injection.delivered",
+          "relative_ms": 167.7,
+          "dropdown": 0,
+          "confirm": false,
+          "raf_restored": true,
+          "cancel_restored": true
+        },
+        {
+          "event": "turbo:before-cache",
+          "relative_ms": 167.8,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "turbo:load",
+          "relative_ms": 169,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "details.navigation_completed",
+          "relative_ms": 186.2,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "delete.begin",
+          "relative_ms": 191.7,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "dropdown.added",
+          "relative_ms": 219.7,
+          "dropdown": 1,
+          "confirm": false
+        },
+        {
+          "event": "confirm.observed_visible",
+          "relative_ms": 239.5,
+          "dropdown": 1,
+          "confirm": true
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "outcome": "observed",
+      "final_state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      },
+      "before_cache_correlated_removal": false,
+      "removed_before_exit": false,
+      "exit_action": "Cancel",
+      "matched_count": 1,
+      "timeline": [
+        {
+          "event": "injection.passthrough",
+          "relative_ms": 0.7,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "injection.matched",
+          "relative_ms": 0.8,
+          "dropdown": 0,
+          "confirm": false,
+          "matched_callsite": {
+            "source_path": "/static/bundle.js",
+            "line": 19,
+            "column": 11228,
+            "function_name": ""
+          },
+          "callback_source": "()=>e()",
+          "raf_restored": true
+        },
+        {
+          "event": "injection.original_callback_due",
+          "relative_ms": 16.9,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "injection.delivered",
+          "relative_ms": 168.2,
+          "dropdown": 0,
+          "confirm": false,
+          "raf_restored": true,
+          "cancel_restored": true
+        },
+        {
+          "event": "turbo:before-cache",
+          "relative_ms": 168.3,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "turbo:load",
+          "relative_ms": 169.2,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "details.navigation_completed",
+          "relative_ms": 186.1,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "delete.begin",
+          "relative_ms": 191.8,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "dropdown.added",
+          "relative_ms": 220,
+          "dropdown": 1,
+          "confirm": false
+        },
+        {
+          "event": "confirm.observed_visible",
+          "relative_ms": 242.2,
+          "dropdown": 1,
+          "confirm": true
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "outcome": "observed",
+      "final_state": {
+        "url_path": "/bookmarks?details=14",
+        "document_preview": false,
+        "document_aria_busy": false,
+        "frame_present": true,
+        "frame_complete": true,
+        "complete_attribute": true,
+        "busy": false,
+        "aria_busy": false,
+        "dropdown_count": 1,
+        "confirm_present": true,
+        "confirm_visible": true
+      },
+      "before_cache_correlated_removal": false,
+      "removed_before_exit": false,
+      "exit_action": "Cancel",
+      "matched_count": 1,
+      "timeline": [
+        {
+          "event": "injection.passthrough",
+          "relative_ms": 0.6,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "injection.matched",
+          "relative_ms": 0.6,
+          "dropdown": 0,
+          "confirm": false,
+          "matched_callsite": {
+            "source_path": "/static/bundle.js",
+            "line": 19,
+            "column": 11228,
+            "function_name": ""
+          },
+          "callback_source": "()=>e()",
+          "raf_restored": true
+        },
+        {
+          "event": "injection.original_callback_due",
+          "relative_ms": 17,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "injection.delivered",
+          "relative_ms": 168.2,
+          "dropdown": 0,
+          "confirm": false,
+          "raf_restored": true,
+          "cancel_restored": true
+        },
+        {
+          "event": "turbo:before-cache",
+          "relative_ms": 168.4,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "turbo:load",
+          "relative_ms": 169.9,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "details.navigation_completed",
+          "relative_ms": 186.9,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "delete.begin",
+          "relative_ms": 193.4,
+          "dropdown": 0,
+          "confirm": false
+        },
+        {
+          "event": "dropdown.added",
+          "relative_ms": 220.5,
+          "dropdown": 1,
+          "confirm": false
+        },
+        {
+          "event": "confirm.observed_visible",
+          "relative_ms": 243.3,
+          "dropdown": 1,
+          "confirm": true
+        }
+      ]
+    }
+  ],
+  "gate_passed": true,
+  "outer_elapsed_ms": 8170,
+  "observer_bytes_unchanged": true,
+  "scope": "Only controlled mechanism recheck, not natural-root-cause proof or human-user evidence.",
+  "request_monitoring_boundary": "Guard installed after normal login; no bookmark writes sent, but login may update sessions."
+}

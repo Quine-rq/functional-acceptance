@@ -49,7 +49,7 @@ For Codex, install a project-local copy:
 DO_NOT_TRACK=1 npx --yes skills@1.5.24 add Quine-rq/functional-acceptance --skill functional-acceptance --agent codex --copy --yes
 ```
 
-Replace `codex` with exactly one target below. No `--global`, wildcard target, hooks, MCP servers, or permission allowlist is needed. The installed package contains five files; tests, evaluation outputs, repository `AGENTS.md`, and development dependencies are not copied.
+Replace `codex` with exactly one target below. No `--global`, wildcard target, hooks, MCP servers, or permission allowlist is needed. The current package contains six files, including the native-workflow reference; tests, evaluation outputs, repository `AGENTS.md`, and development dependencies are not copied. The older five-file measurements below describe their recorded source revision.
 
 | Host | Installer target | Project location | Discovery / invocation reference |
 | --- | --- | --- | --- |
@@ -120,4 +120,19 @@ It creates and cleans an isolated temporary project and does not install into th
 
 The behavior probe also found that PATH CLI 0.146.0 could discover the Skill but could not invoke the configured model. An existing app-bundled 0.153.4 executable worked without changing the user's model or global setup. Record the actual executable/version and distinguish host startup errors from Skill behavior; this observation is not a minimum-version guarantee.
 
-Next gates: repeated behavior checks, another host's real invocation, missing-tool handling, independent replay of the assisted second-project handoff, and license/release decisions. This preview does not declare those complete.
+## Product-hardening follow-up
+
+The [new record](evals/results/2026-09-08-product-hardening/README.md) adds a
+six-file package, repeated native Codex comparisons and a maintained linkding
+handoff. Packaging and behavior remain separate: the current installed Skill was
+actually read in four of five measured Codex requests. A historical-evidence
+request did not load it, despite the installed path being listed.
+
+Claude Code 2.1.220 was invoked in two isolated project configurations using its
+existing authentication. Both stopped with authentication 403 before task tool
+execution. No credential was migrated, forwarded to a suggested endpoint or
+reconfigured. They are environment failures, not second-host compatibility proof.
+Cursor, Copilot and OpenCode still have installer checks only.
+
+Current local checks and release gates are in [the results](PRODUCT-HARDENING-RESULTS.md).
+No new remote CI or release success is implied by historical green jobs.
