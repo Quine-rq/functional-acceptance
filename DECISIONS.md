@@ -1,6 +1,6 @@
 # Design decisions and references
 
-This is the public design baseline, revision v0.2. Decisions below constrain future implementation; they are not evidence of a working product or competitive performance.
+The original design baseline is revision v0.2. Decisions below constrain implementation; they are not evidence of competitive performance. Current implementation scope is tracked in [M1-PLAN.md](M1-PLAN.md) and [README.md](README.md).
 
 ## Keep the project a Skill
 
@@ -22,9 +22,9 @@ Evidence is tied to the actual target, object, identity, attempt, and retention 
 
 ## Version expectations separately from observations
 
-**Status: proposed implementation decision.** Freeze the contract for a run; changed requirements produce a new contract, while fixes and reruns produce new observations. Retaining both adds some bookkeeping but prevents historical failures from disappearing when expectations, artifacts, or attempts change.
+**Status: implemented for the M1 local format.** Freeze the exact contract bytes for a run; changed requirements produce a new contract, while fixes and reruns produce new observations. Retaining both adds some bookkeeping but prevents historical failures from disappearing when expectations, artifacts, or attempts change.
 
-This is not a general event-sourcing system. The final schema and storage format remain subject to the first controlled sample.
+This is not a general event-sourcing system. The experimental `m1` format is documented in [references/material-format.md](references/material-format.md); unknown versions are rejected, and no migration or compatibility promise has been established.
 
 ## Keep ownership with the project
 
@@ -41,7 +41,11 @@ The following primary references informed the design. They are not a tested comp
 - [Playwright retries](https://playwright.dev/docs/test-retries): preserving the distinction between first-run and retried outcomes.
 - [Maestro Flutter support](https://docs.maestro.dev/get-started/supported-platform/flutter): a possible mobile execution combination with platform-specific prerequisites.
 - [FinalRun test-and-fix Skill](https://github.com/droid-ash/finalrun-agent/blob/main/skills/finalrun-test-and-fix/SKILL.md): an existing workflow reference; this project's default scope keeps acceptance separate from repair.
+- [Python unittest](https://docs.python.org/3/library/unittest.html) and [CSV](https://docs.python.org/3/library/csv.html): standard-library native regression checks and explicit CSV parsing in M1.
+- [Official checkout](https://github.com/actions/checkout) and [setup-python](https://github.com/actions/setup-python): CI uses fixed v7 commit identities, read-only contents permission, and no persisted checkout credentials. CI setup does not publish reports, install the Skill, or deploy a target.
 
 ## Still unresolved
 
-The first concrete sample, tool-result mapping, package schema, installation channel, license, and supported host versions are not selected or validated. The next step is one bounded vertical slice, followed by the comparisons in [VALIDATION.md](VALIDATION.md), not a broader feature list.
+The first sample is offline paginated JSON exported through a native Python process to CSV. The upstream pages are synthetic. The material helper supports only `csv-exact/v1` with a bounded native process record; it is not a general executor or arbitrary-log adapter. Python standard-library `unittest`, subprocesses, and CSV parsing keep the native checks usable without the Skill.
+
+Installation channel, license, multi-host support, cross-project usefulness, and external user benefits remain unresolved. Next are the scoped trust checks and comparisons in [VALIDATION.md](VALIDATION.md), not a broader support list.

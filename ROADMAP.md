@@ -1,6 +1,6 @@
 # Roadmap
 
-Milestones are ordered by evidence, not dates. All runtime work and product evaluations are still pending.
+Milestones are ordered by evidence, not dates. M1 now has a controlled local implementation; the broader product and release gates remain pending.
 
 ## M0 — Public design baseline
 
@@ -13,23 +13,25 @@ The repository being public is not evidence that the Skill works.
 
 ## M1 — One usable vertical slice
 
-- [ ] Choose one isolated sample with a known healthy state, a known defect, and independent expected results.
-- [ ] Write a short Skill entrypoint and only the references required by that sample.
-- [ ] Reuse an existing native execution tool; do not create a universal runner or action language.
-- [ ] Implement and test the minimum evidence/report helper needed by the slice.
-- [ ] Preserve every explicit user target as a check, a visible gap, or a sourced exclusion.
+- [x] Choose one isolated sample with a known healthy state, a known defect, and independent expected results.
+- [x] Write a short Skill entrypoint and only the references required by that sample.
+- [x] Reuse an existing native execution tool; do not create a universal runner or action language.
+- [x] Implement and test the minimum evidence/report helper needed by the slice.
+- [x] Preserve every submitted explicit user target as a check, a visible gap, or a sourced exclusion; user-goal extraction still requires host evaluation.
 
-**Exit:** the healthy sample passes with valid evidence; the known defect produces a real counterexample; missing required observations remain unverified. Report the actual tool, target, and scope. Code compiling or tests exiting successfully is insufficient.
+**Exit:** the healthy sample passes with valid evidence; the known defect produces a real counterexample; missing required observations remain unverified. The implemented boundary is local synthetic pages → real Python CLI → local CSV. Code compiling or tests exiting successfully is insufficient; this is not external-project or production evidence.
 
 ## M2 — Trust, interruption, and reusable assets
 
 - [ ] Exercise the relevant false-green cases from the evaluation plan.
-- [ ] Verify the actual execution target and any substituted dependencies.
-- [ ] Preserve failed attempts and unfinished side-effect responsibility.
-- [ ] Keep first-run evidence verifiable through a second run and normal cleanup, within its declared retention period.
-- [ ] Produce a native regression entrypoint with explicit setup, cleanup, and manual-observation requirements.
+- [x] Bind the local sample's actual executable/input snapshots and disclose its synthetic upstream; other target types remain pending.
+- [x] Preserve registered failed attempts and incomplete local process responsibility; remote writes and resume behavior remain pending.
+- [x] Keep first-run local evidence verifiable through a second run; owner removal invalidates qualification, with no background cleanup.
+- [x] Produce and independently agent-replay a native regression entrypoint with explicit setup and cleanup, without the Skill/helper.
 
 **Exit:** another developer, without the original conversation or this Skill installed, can use the native checks from a clean state. Unknown background work cannot be reported as safely finished.
+
+The clean-directory replay so far used an independent agent, not an external human developer. M2 is partially covered; the full false-green matrix and external handoff are not declared complete.
 
 ## M3 — Demonstrate useful reuse
 

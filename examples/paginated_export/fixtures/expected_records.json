@@ -1,0 +1,7 @@
+[
+  {"id": "r-001", "title": "示例, Hello", "notes": "第一行\n第二行"},
+  {"id": "r-002", "title": "Quote \"double\"", "notes": "café ☕"},
+  {"id": "r-003", "title": "雪 / snow", "notes": ""},
+  {"id": "r-004", "title": "Emoji 🚀", "notes": "CRLF\r\nnext"},
+  {"id": "r-005", "title": "最后一页", "notes": "END, \"边界\"\n末尾"}
+]

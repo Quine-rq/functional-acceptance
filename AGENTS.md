@@ -1,6 +1,6 @@
 # Working on Functional Acceptance
 
-This repository currently contains a design baseline, not an installable Skill. Read [DESIGN.md](DESIGN.md) for scope, [CONTEXT.md](CONTEXT.md) for terminology, and the relevant sections of [ARCHITECTURE.md](ARCHITECTURE.md) before implementation. [ROADMAP.md](ROADMAP.md) defines the next small milestones.
+This repository contains an experimental M1 Skill, offline helper, and controlled sample, not a supported release. Read [DESIGN.md](DESIGN.md) for product scope, [CONTEXT.md](CONTEXT.md) for terminology, and [M1-PLAN.md](M1-PLAN.md) plus [references/material-format.md](references/material-format.md) for the implemented boundary. [ROADMAP.md](ROADMAP.md) defines the next small milestones.
 
 ## Task and authority
 
@@ -18,4 +18,4 @@ This repository currently contains a design baseline, not an installable Skill. 
 - Use synthetic data and authorized isolated targets. Never commit credentials, customer data, private evidence, or machine-specific paths.
 - State which checks were actually run. A design review or document check is not an L1–L4 product evaluation and must not become a production-readiness claim.
 
-There are no build or test commands yet. Add runnable instructions alongside the first actual implementation; do not invent successful checks or installation commands.
+Run the two native test commands in [README.md](README.md) after relevant changes. They cover different boundaries: helper/collector checks and a standalone sample regression pack. Keep tests behavior-based, use new temporary directories, and record actual results separately from the larger planned evaluation matrix.
