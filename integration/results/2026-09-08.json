@@ -1,0 +1,48 @@
+{
+  "source_commit": "f4b1ef9bb1b57f69e9b0a9107fa484df879c006c",
+  "date": "2026-09-08",
+  "local": {
+    "platform": "macOS",
+    "python_versions": ["3.10.20", "3.14.4"],
+    "python_tests_per_version": {"helper_collector_package": 66, "standalone": 23},
+    "node_version": "22.22.3",
+    "installer_version": "1.5.24",
+    "installer_tests": {"passed": 10, "failed": 0, "skipped": 0},
+    "installer_targets": ["codex", "claude-code", "cursor", "github-copilot", "opencode"]
+  },
+  "codex_discovery": {
+    "host_version": "0.146.0",
+    "protocol": "app-server stdio skills/list",
+    "installed_discovered": true,
+    "enabled": true,
+    "scope": "repo",
+    "ui_metadata_loaded": true,
+    "removed_not_discovered": true,
+    "earlier_attempts": ["restricted startup: initialize timeout", "restricted startup: initialize timeout with classified permission error"],
+    "normal_process_permissions": "passed twice",
+    "model_invoked": false,
+    "workflow_execution": "not tested"
+  },
+  "github_install": {
+    "source": "https://github.com/Quine-rq/functional-acceptance/tree/f4b1ef9bb1b57f69e9b0a9107fa484df879c006c/skills/functional-acceptance",
+    "target": "claude-code",
+    "project_copy_matches_source": true,
+    "lock_ref": "f4b1ef9bb1b57f69e9b0a9107fa484df879c006c",
+    "removed": true,
+    "host_invoked": false,
+    "sha256": {
+      "SKILL.md": "6cc1d0e7a1e533672fe019316566e59c69cad464599d54fa25337e01887a1698",
+      "agents/openai.yaml": "3915177bc3dad3f97a21e9e46a2914e7dcdfa038f466151eef6d9cc597aad4ba",
+      "references/host-compatibility.md": "a0feb7361ce005270c00f4c336024e339a6c5d1c38d5e910a54b255469fc953d",
+      "references/material-format.md": "480e298c075f326e8668033011fc3ff0d52e19377a2e4640cb661168055bcf6f",
+      "scripts/acceptance.py": "a39e374bca45e5581e658ae87bffbeae94f0f828922250a5f1c1f5eaf2b409a3"
+    }
+  },
+  "ci": {
+    "url": "https://github.com/Quine-rq/functional-acceptance/actions/runs/34185450287",
+    "head_sha": "f4b1ef9bb1b57f69e9b0a9107fa484df879c006c",
+    "platform": "Ubuntu 24.04",
+    "jobs": {"native (3.10)": "success", "native (3.14)": "success", "installation": "success"}
+  },
+  "limits": ["No cross-host model workflow evaluation", "No second business project", "No Windows execution claim", "No third-party installer interruption or atomic-upgrade guarantee", "No supported release"]
+}

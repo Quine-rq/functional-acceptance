@@ -93,7 +93,7 @@ npm --prefix integration test
 
 They exercise the pinned `skills` CLI in disposable projects. No agent login or global Skill installation is required. These npm dependencies are not part of the installed Skill.
 
-[CI](.github/workflows/checks.yml) runs these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Both jobs passed for M2 source `c26a86f` ([run #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278)); the [validation record](M2-RESULTS.md#remote-ci) includes an earlier failure and its correction. Check the run for the commit you use; an earlier green build does not validate later changes.
+[CI](.github/workflows/checks.yml) runs the Python suites on Ubuntu 24.04 with Python 3.10 and 3.14, plus a separate Node 22.22.3 installation job, using read-only permissions and commit-pinned actions. All three jobs passed for integration source `f4b1ef9` ([run](https://github.com/Quine-rq/functional-acceptance/actions/runs/34185450287)); [earlier M2 results](M2-RESULTS.md#remote-ci) retain a previous failure and its correction. Check the run for the commit you use; an earlier green build does not validate later changes.
 
 ## Documentation and next steps
 

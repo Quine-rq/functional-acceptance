@@ -93,7 +93,7 @@ npm --prefix integration test
 
 它们在临时项目中实际调用固定版本的 `skills` 安装工具，不要求登录 Agent 或全局安装 Skill。这些 npm 依赖不会进入用户的 Skill 包。
 
-[CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行检查，使用只读权限和固定到提交的 Actions。M2 源码 `c26a86f` 的两个任务均已通过（[运行 #3](https://github.com/Quine-rq/functional-acceptance/actions/runs/34183660278)），[验证记录](M2-RESULTS.md#remote-ci)也保留了此前失败及修正过程。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
+[CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行原生检查，另有 Node 22.22.3 安装集成任务，使用只读权限和固定到提交的 Actions。接入源码 `f4b1ef9` 的三个任务均已通过（[运行记录](https://github.com/Quine-rq/functional-acceptance/actions/runs/34185450287)），[此前的 M2 记录](M2-RESULTS.md#remote-ci)也保留了早期失败及修正过程。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
 
 ## 文档与下一步
 

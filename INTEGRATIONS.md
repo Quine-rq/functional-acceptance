@@ -87,6 +87,10 @@ Without Node, the same package directory can be copied manually into the documen
 
 ## Measured coverage — 2026-09-08
 
+Source commit `f4b1ef9bb1b57f69e9b0a9107fa484df879c006c`: 66 helper/collector/package tests and 23 standalone tests passed locally on both Python 3.10.20 and 3.14.4; all ten installer tests passed on Node 22.22.3. [The matching CI run](https://github.com/Quine-rq/functional-acceptance/actions/runs/34185450287) passed both Python jobs and the installation job on Ubuntu 24.04. The record describes this source revision, not later changes.
+
+A separate installation from that exact GitHub commit into a temporary Claude Code project path returned all five files byte-identical to the source, retained the full commit in `skills-lock.json`, and was then removed. This tested remote retrieval and source pinning, not the Claude model. [Machine-readable record and file digests](integration/results/2026-09-08.json).
+
 | Layer | Observed result | What it does not prove |
 | --- | --- | --- |
 | Package | Shared YAML parsed; all local links stay inside the package; only the five runtime files ship | Useful model behavior or every future host version |
