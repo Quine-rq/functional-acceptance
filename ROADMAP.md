@@ -28,6 +28,7 @@ The repository being public is not evidence that the Skill works.
 - [x] Preserve registered failed attempts and incomplete local process responsibility; remote writes and resume behavior remain pending.
 - [x] Keep first-run local evidence verifiable through a second run; owner removal invalidates qualification, with no background cleanup.
 - [x] Produce and independently agent-replay a native regression entrypoint with explicit setup and cleanup, without the Skill/helper.
+- [x] Publish complete local report files without replacement; exercise write interruption, disk failure, concurrent delivery, and explicit handoff of report-cleanup failures. See [M2 results](M2-RESULTS.md).
 
 **Exit:** another developer, without the original conversation or this Skill installed, can use the native checks from a clean state. Unknown background work cannot be reported as safely finished.
 

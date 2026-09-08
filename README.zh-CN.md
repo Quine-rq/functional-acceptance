@@ -44,6 +44,8 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 
 每条命令都会在本仓库的 `.acceptance/runs/` 下创建独立目录，并打印位置。打开其中的 `report.md` 查看结论，或读取 `report.json` 获取结构化结果。同一目录还保留了验收标准、实际执行的程序和输入快照、进程记录，以及 `attempt-1/output.csv`。
 
+报告交付失败时，摘要会保持“未完成”，并标明本次实际创建的目录。若其中已有 `report-delivery.json`，可查看报告写入或清理失败的详情。中断留下的临时文件不是正式报告，历史报告中的 PASS 也不能替代本次尚未完成的交接。
+
 每次运行的材料独立保留在本地。需要指定位置时，添加 `--run-dir NEW_DIRECTORY`；程序会拒绝使用已存在的运行目录。不再需要某次材料时，用文件管理器删除那一个已确认的目录即可；删除后，这次证据就无法再次核查。
 
 如果只想检查导出程序，不使用 Skill 或报告工具，可按[独立示例说明](examples/paginated_export/README.md)运行。
@@ -54,7 +56,7 @@ python3 -B examples/paginated_export/accept.py --case missing-observation
 
 当前示例实际覆盖的是**合成分页数据 → 真实 Python 进程 → 本地 CSV 文件**。报告检查导出完整性和字段内容，输入异常与文件安全另有测试。真实上游 API、浏览器、数据库、手机和第二个项目都还没有验证。
 
-[本地验证记录](M1-RESULTS.md)记载了 77 个通过的测试方法，以及另一名 Agent 对独立示例的重跑。这不代表外部用户已经用得顺手、节省了时间，或具备生产可用性。安装流程和正式版本仍待验证，克隆源码不等于安装了 Skill。
+[M1 验证记录](M1-RESULTS.md)记载了首批 77 个通过的测试方法，以及另一名 Agent 对独立示例的重跑。[M2 报告交付检查](M2-RESULTS.md)将本地测试补至 84 个方法，覆盖中断、磁盘错误和未完成交接。这不代表外部用户已经用得顺手、节省了时间，或具备生产可用性。安装流程和正式版本仍待验证，克隆源码不等于安装了 Skill。
 
 ### 安全与证据边界
 
@@ -74,12 +76,12 @@ python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py'
 
 第一条检查核验工具和证据采集程序；第二条独立检查导出程序，不依赖 Skill 或核验工具，也会确认故意注入的缺陷能被检出。检出缺陷的测试通过，不表示那次缺陷导出正确。
 
-[CI](.github/workflows/checks.yml) 已配置 Ubuntu 24.04 + Python 3.10/3.14，使用只读权限和固定到提交的 Actions。远端 CI 尚未验证，不能把已写好的配置当成通过记录。
+[CI](.github/workflows/checks.yml) 在 Ubuntu 24.04 + Python 3.10/3.14 上运行检查，使用只读权限和固定到提交的 Actions。初始 M1 源码 `1eb78de` 的两个任务均已通过（[运行 #1](https://github.com/Quine-rq/functional-acceptance/actions/runs/34182582017)）。使用时仍需查看对应提交的运行结果，旧版本的绿灯不能证明后续改动也通过。
 
 ## 文档与下一步
 
 - **了解使用方法：** [Skill 指令](SKILL.md)、[独立示例](examples/paginated_export/README.md)、[材料格式](references/material-format.md)。
-- **核对实现进展：** [M1 范围](M1-PLAN.md)、[本地验证记录](M1-RESULTS.md)、[路线图](ROADMAP.md)。
+- **核对实现进展：** [M1 范围](M1-PLAN.md)、[M1 验证记录](M1-RESULTS.md)、[M2 加固记录](M2-RESULTS.md)、[路线图](ROADMAP.md)。
 - **了解设计：** [产品设计](DESIGN.md)、[架构](ARCHITECTURE.md)、[评估计划](VALIDATION.md)。这些是中文详细文档，其中计划执行的评估不代表已经通过。
 
 接下来会继续检查失败路径和交接流程，在第二个获授权项目中尝试复用，并对比同一个 Agent 使用与不使用 Skill 的效果。这些验证先于正式发布。

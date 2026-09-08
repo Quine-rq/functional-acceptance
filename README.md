@@ -44,6 +44,8 @@ The last two exit codes are intentional; run the commands separately, not joined
 
 Each command prints a new run directory under this repository's `.acceptance/runs/`. Open `report.md` there for the findings or `report.json` for structured results. The same directory contains the fixed expectations, executed program and input snapshots, process record, and `attempt-1/output.csv`.
 
+If report delivery fails, the response stays incomplete and identifies the directory created by that invocation. Inspect `report-delivery.json` when present for report-writing or cleanup errors. An interrupted temporary file is not a finished report, and a retained historical PASS does not override an incomplete handoff.
+
 Runs are kept separate and retained locally. To choose a location, add `--run-dir NEW_DIRECTORY`; existing run directories are refused. When you no longer need a run, remove only that identified directory with your file manager. Deleted evidence can no longer be rechecked.
 
 Want to inspect the exporter without the Skill or report helper? Follow the [standalone sample guide](examples/paginated_export/README.md) (Chinese).
@@ -54,7 +56,7 @@ The workflow is designed to use tools already available in a project, rather tha
 
 Today, the working example covers **synthetic pages → real Python process → local CSV file**. The report checks complete export and exact field values; input errors and file safety have separate tests. No real upstream API, browser, database, mobile device, or second project has been validated.
 
-The [local validation record](M1-RESULTS.md) documents 77 passing test methods and an independent agent's replay of the standalone sample. It does not establish external-user usefulness, time savings, or production readiness. A verified installation path and a supported release are still pending; do not treat cloning the source as installing the Skill.
+The [M1 validation record](M1-RESULTS.md) documents the first 77 passing test methods and an independent agent's replay of the standalone sample. [M2 report-delivery checks](M2-RESULTS.md) bring the local suite to 84 methods, including interruption, disk failures, and incomplete handoff. These results do not establish external-user usefulness, time savings, or production readiness. A verified installation path and a supported release are still pending; do not treat cloning the source as installing the Skill.
 
 ### Safety and evidence limits
 
@@ -74,12 +76,12 @@ python3 -B -m unittest discover -s examples/paginated_export -p 'test_export.py'
 
 The first command tests the helper and evidence collector. The second tests the exporter independently of the Skill and helper, including whether the deliberately broken export is caught. A passing defect-detection test does not make that export correct.
 
-[CI](.github/workflows/checks.yml) is configured to run these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Hosted CI has not yet been verified; configuration alone is not a support claim.
+[CI](.github/workflows/checks.yml) runs these checks on Ubuntu 24.04 with Python 3.10 and 3.14, using read-only permissions and commit-pinned actions. Both jobs passed for the initial M1 source at `1eb78de` ([run #1](https://github.com/Quine-rq/functional-acceptance/actions/runs/34182582017)). Check the run for the commit you use; an earlier green build does not validate later changes.
 
 ## Documentation and next steps
 
 - **Explore the Skill:** [instructions](SKILL.md), [sample guide](examples/paginated_export/README.md), [material format](references/material-format.md).
-- **See what is implemented:** [M1 scope](M1-PLAN.md), [local validation](M1-RESULTS.md), [roadmap](ROADMAP.md).
+- **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
 Next: strengthen failure and handoff checks, try a second authorized project, and compare the same agent's work with and without the Skill. These checks come before a supported release.

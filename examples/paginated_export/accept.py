@@ -16,6 +16,14 @@ REPO = HERE.parents[1]
 COLUMNS = ["id", "title", "notes"]
 
 
+class ReportError(RuntimeError):
+    """Collector-authored report errors with fixed, safe public messages."""
+
+    def __init__(self, message, *, business_verdict=None):
+        super().__init__(message)
+        self.business_verdict = business_verdict
+
+
 def sha(data):
     return hashlib.sha256(data).hexdigest()
 
@@ -46,7 +54,7 @@ def stop_owned(process):
         return process.communicate(timeout=3)
 
 
-def collect(case, directory):
+def collect(case, directory, *, on_directory_created=None):
     # These are reviewed, bundled inputs, not executable material supplied by a report.
     program = (HERE / "export.py").read_bytes()
     source = (HERE / "fixtures" / "pages.json").read_bytes()
@@ -58,6 +66,8 @@ def collect(case, directory):
     parent.mkdir(parents=True, exist_ok=True)
     root = parent / directory.name
     root.mkdir(exist_ok=False)
+    if on_directory_created is not None:
+        on_directory_created(root)
     (root / "attempt-1").mkdir()
     write_new(root / "runtime.py", program)
     write_new(root / "input.json", source)
@@ -133,11 +143,25 @@ def collect(case, directory):
                                  "--format", format_name, "--output", report_name], cwd=root,
                                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=10)
         results.append(result)
+    # With --output, successful report delivery is silent on stdout. Retain
+    # diagnostics so two equal error exits cannot conceal publication/cleanup
+    # failures behind reports that happened to reach their destination names.
+    write_new(root / "report-delivery.json", json_bytes({"formats": [
+        {"format": name, "exit_code": result.returncode,
+         "stdout": result.stdout.decode("utf-8", errors="replace"),
+         "stderr": result.stderr.decode("utf-8", errors="replace")}
+        for name, result in zip(("json", "markdown"), results)
+    ]}))
     if any(result.returncode not in (0, 1, 2) for result in results) or not (root / "report.json").is_file() or not (root / "report.md").is_file():
-        raise RuntimeError("report unavailable; retained run is incomplete")
-    if results[0].returncode != results[1].returncode:
-        raise RuntimeError("report checks disagreed; evidence may have changed between reads; retained reports are historical, not a qualified handoff")
+        raise ReportError("report unavailable; retained run is incomplete")
     report = json.loads((root / "report.json").read_text(encoding="utf-8"))
+    if any(result.stdout for result in results):
+        raise ReportError(
+            "report delivery incomplete; inspect report-delivery.json and residual temporary files; retained reports are not a qualified handoff",
+            business_verdict=report["business_verdict"],
+        )
+    if results[0].returncode != results[1].returncode:
+        raise ReportError("report checks disagreed; evidence may have changed between reads; retained reports are historical, not a qualified handoff")
     print(json.dumps({"case": case, "run_directory": str(root), "business_verdict": report["business_verdict"],
                       "completion": report["completion"], "qualified_pass": report["qualified_pass"]}, ensure_ascii=False))
     return results[0].returncode
@@ -149,11 +173,26 @@ def main(argv=None):
     parser.add_argument("--run-dir", type=Path, help="New, dedicated directory; existing paths are refused")
     args = parser.parse_args(argv)
     directory = args.run_dir or REPO / ".acceptance" / "runs" / (args.case + "-" + uuid.uuid4().hex)
+    run_directory = None
+
+    def record_created_directory(root):
+        nonlocal run_directory
+        run_directory = str(root)
+
     try:
-        return collect(args.case, directory)
+        return collect(args.case, directory, on_directory_created=record_created_directory)
     except (OSError, ValueError, RuntimeError, subprocess.SubprocessError) as error:
-        print(json.dumps({"status": "incomplete", "error": str(error) if isinstance(error, RuntimeError) else type(error).__name__,
-                          "next": "Inspect the run directory and pending/native records; do not overwrite or blindly retry it."}))
+        next_step = (
+            "Inspect the run directory and pending/native records; do not overwrite or blindly retry it."
+            if run_directory is not None else
+            "No run directory was created. Resolve the failure and choose a new directory; existing paths are not owned by this invocation."
+        )
+        summary = {"status": "incomplete", "completion": "partial", "qualified_pass": False,
+                   "error": str(error) if isinstance(error, ReportError) else type(error).__name__,
+                   "run_directory": run_directory, "next": next_step}
+        if isinstance(error, ReportError) and error.business_verdict in ("PASS", "FAIL", "UNVERIFIED"):
+            summary["business_verdict"] = error.business_verdict
+        print(json.dumps(summary))
         return 2
 
 

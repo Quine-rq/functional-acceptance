@@ -11,8 +11,9 @@ import os
 from pathlib import Path, PurePosixPath
 import stat
 import sys
+import tempfile
 
-VERSION = "0.1.0-dev"
+VERSION = "0.1.1-dev"
 MAX_FILE = 2 * 1024 * 1024
 MAX_TOTAL = 16 * 1024 * 1024
 MAX_REFERENCES = 128
@@ -20,6 +21,13 @@ MAX_REFERENCES = 128
 
 class InvalidMaterial(ValueError):
     pass
+
+
+class ReportCleanupError(OSError):
+    def __init__(self, temporary, published):
+        super().__init__("report temporary-file cleanup failed")
+        self.temporary = temporary
+        self.published = published
 
 
 def require(condition, message):
@@ -399,6 +407,35 @@ def markdown(report):
     return "\n".join(lines) + "\n"
 
 
+def publish_report(destination, rendered):
+    """Expose only complete report bytes, without replacing an existing path.
+
+    A same-directory hard link publishes the flushed temporary file atomically.
+    An uncatchable interruption can leave a temporary file, never a half-written
+    report at the requested destination. This does not make stdout atomic.
+    """
+    temporary = None
+    published = False
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", newline="\n", delete=False,
+            prefix=".acceptance-report-", suffix=".tmp", dir=Path(destination).parent,
+        ) as stream:
+            temporary = Path(stream.name)
+            stream.write(rendered)
+            stream.flush()
+            os.fsync(stream.fileno())
+        # Linking refuses existing files, directories and even dangling links.
+        os.link(temporary, destination)
+        published = True
+    finally:
+        if temporary is not None:
+            try:
+                temporary.unlink()
+            except OSError as error:
+                raise ReportCleanupError(temporary, published) from error
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--contract", required=True)
@@ -412,21 +449,22 @@ def main(argv=None):
         report = assess(parse_json(contract_bytes), contract_bytes, parse_json(read_input(args.run)), args.root)
         rendered = markdown(report) if args.format == "markdown" else json.dumps(report, ensure_ascii=False, indent=2) + "\n"
         if args.output:
-            # Buffer before publishing, create exclusively, and remove only our incomplete file.
-            created = False
-            try:
-                with open(args.output, "x", encoding="utf-8", newline="\n") as stream:
-                    created = True
-                    stream.write(rendered)
-                    stream.flush()
-                    os.fsync(stream.fileno())
-            except OSError:
-                if created:
-                    os.unlink(args.output)
-                raise
+            publish_report(args.output, rendered)
         else:
             sys.stdout.write(rendered)
         return 1 if report["business_verdict"] == "FAIL" else (0 if report["qualified_pass"] else 2)
+    except ReportCleanupError as error:
+        # The assessment remains a historical fact; delivery and its residual
+        # responsibility are separate. Never remove an already published report.
+        sys.stdout.write(json.dumps({
+            "delivery_status": "incomplete", "completion": "partial", "qualified_pass": False,
+            "business_verdict": report["business_verdict"], "material_status": report["material_status"],
+            "output_published": error.published, "output": args.output if error.published else None,
+            "temporary_file": str(error.temporary), "cleanup": "residual",
+            "error": "report temporary-file cleanup failed; delivery is not complete",
+            "next": "Inspect the named run-owned temporary file and retained report; recheck before handoff.",
+        }) + "\n")
+        return 2
     except (InvalidMaterial, OSError, RecursionError, OverflowError) as error:
         # Do not echo raw input, filesystem paths, tokens, or tracebacks.
         message = str(error) if isinstance(error, InvalidMaterial) else "local input/output unavailable; no qualified report produced"

@@ -14,6 +14,12 @@ python3 scripts/acceptance.py --contract RUN/contract.json --run RUN/run.json --
 
 Replace `RUN` with one actual run directory. Use `--format markdown` for a human-readable report. Output goes to stdout unless `--output NEW_FILE` is supplied; existing files are never overwritten. Exit 0 means qualified scoped PASS, 1 means a valid counterexample, and 2 means incomplete, invalid, or unavailable material/output. A report still distinguishes business facts from cleanup and coverage.
 
+With `--output`, the helper writes and flushes a same-directory temporary file before publishing the complete report without overwriting an existing path. A killed writer can leave `.acceptance-report-*.tmp`; these are not delivered reports. This protects file visibility, not stdout redirection or crash/power-loss durability. Use a trusted local output directory with hard-link support.
+
+Report delivery with `--output` is silent on stdout when it succeeds, including valid FAIL/UNVERIFIED reports. A handled publication error produces a diagnostic response and exit 2. If temporary-file cleanup fails, the response distinguishes whether the report was published, preserves the business verdict, identifies the run-owned temporary file, and marks delivery partial/unqualified. An already published report is retained as history, not deleted or rewritten to conceal the failure. Inspect the named residual only after the writer has stopped, resolve its cleanup, and recheck before handing over a qualified result.
+
+The sample collector retains both helpers' exit codes and output in `report-delivery.json`. Nonempty helper stdout with `--output` prevents a qualified handoff even when both exit codes match. An incomplete collector response locates its run directory only if this invocation created it; a refused pre-existing path is not claimed as owned. No automatic retry, overwrite, or historical-PID cleanup is performed.
+
 JSON reports include `business_verdict`, `qualified_pass`, `completion`, `material_status`, per-goal/obligation/attempt details, cleanup/retention, and `material_usage`. A business PASS with unfinished execution or cleanup retains that fact but has `qualified_pass: false`, partial completion, and exit 2. The collector reopens material for each report format; if those checks disagree, its overall exit is incomplete and existing reports remain historical rather than a qualified handoff.
 
 ## Contract

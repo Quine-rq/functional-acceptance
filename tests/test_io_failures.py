@@ -5,6 +5,10 @@ boundaries. Its real child is deliberately slow, not the export sample: this
 proves owned-process cleanup, not export correctness. The material-budget test
 uses the real helper CLI with synthetic process records, not native collection.
 All fixtures are isolated and are removed by TemporaryDirectory.
+
+The report-cleanup probe runs the real collector, exporter, and helper CLIs.
+Only the helper's unlink boundary is faulted, after a complete report exists;
+the wrapper never supplies an assessment or replaces a command's result.
 """
 
 import contextlib
@@ -25,6 +29,68 @@ COLLECTOR_PATH = PROJECT_ROOT / "examples" / "paginated_export" / "accept.py"
 HELPER_PATH = PROJECT_ROOT / "scripts" / "acceptance.py"
 FILE_LIMIT = 2 * 1024 * 1024
 READ_LIMIT = 16 * 1024 * 1024
+
+
+# These wrappers live only in the owned child interpreters; no startup files,
+# environment changes, or fault hooks escape into unrelated Python processes.
+REPORT_CLEANUP_FAILURE_CLI = r"""
+import errno
+import hashlib
+import json
+import os
+from pathlib import Path
+import runpy
+import sys
+
+sys.argv = sys.argv[1:]
+destination = Path(sys.argv[sys.argv.index('--output') + 1]).resolve()
+real_unlink = os.unlink
+
+def fail_published_temporary_cleanup(path, *args, **kwargs):
+    candidate = Path(path).resolve()
+    if (candidate != destination and destination.is_file()
+            and candidate.is_file() and os.path.samefile(candidate, destination)):
+        # Observe real published bytes before the fault. Later report rewriting
+        # must not turn this historical observation into a different result.
+        observation = {
+            'published_file': str(destination),
+            'temporary_file': str(candidate),
+            'sha256': hashlib.sha256(destination.read_bytes()).hexdigest(),
+        }
+        sys.stderr.write('PUBLICATION_PROBE ' + json.dumps(observation) + '\n')
+        raise PermissionError(errno.EACCES, 'controlled report temporary unlink failure')
+    return real_unlink(path, *args, **kwargs)
+
+os.unlink = fail_published_temporary_cleanup
+runpy.run_path(sys.argv[0], run_name='__main__')
+"""
+
+COLLECTOR_WITH_REPORT_CLEANUP_FAILURE_CLI = r"""
+import runpy
+import subprocess
+import sys
+
+fault_wrapper = sys.argv[1]
+helper_path = sys.argv[2]
+sys.argv = sys.argv[3:]
+real_run = subprocess.run
+
+def run_with_helper_io_fault(command, *args, **kwargs):
+    if helper_path not in command:
+        return real_run(command, *args, **kwargs)
+    helper_index = command.index(helper_path)
+    wrapped = [sys.executable, '-B', '-c', fault_wrapper, *command[helper_index:]]
+    result = real_run(wrapped, *args, **kwargs)
+    # The collector receives the actual helper result, unchanged. Forward only
+    # the controlled boundary observations to this test's separate stderr pipe.
+    for line in result.stderr.splitlines(keepends=True):
+        if line.startswith(b'PUBLICATION_PROBE '):
+            sys.stderr.buffer.write(line)
+    return result
+
+subprocess.run = run_with_helper_io_fault
+runpy.run_path(sys.argv[0], run_name='__main__')
+"""
 
 
 def load_collector():
@@ -186,6 +252,54 @@ class ControlledIOFailureTests(unittest.TestCase):
         later = (run_directory / "report.md").read_text(encoding="utf-8")
         self.assertTrue(earlier["qualified_pass"])
         self.assertIn("Business: UNVERIFIED", later)
+
+    def test_published_report_cleanup_failure_remains_an_incomplete_handoff(self):
+        for case, expected_verdict in (("healthy", "PASS"), ("defect", "FAIL")):
+            with self.subTest(case=case):
+                run_directory = self.workspace / (case + "-report-cleanup")
+                result = subprocess.run(
+                    [sys.executable, "-B", "-c", COLLECTOR_WITH_REPORT_CLEANUP_FAILURE_CLI,
+                     REPORT_CLEANUP_FAILURE_CLI, str(HELPER_PATH), str(COLLECTOR_PATH),
+                     "--case", case, "--run-dir", str(run_directory)],
+                    capture_output=True, text=True, timeout=30,
+                )
+                observations = [
+                    json.loads(line.removeprefix("PUBLICATION_PROBE "))
+                    for line in result.stderr.splitlines()
+                    if line.startswith("PUBLICATION_PROBE ")
+                ]
+                self.assertEqual(
+                    {Path(item["published_file"]).name for item in observations},
+                    {"report.json", "report.md"},
+                    "Both real helper formats must publish before their cleanup fails: "
+                    + result.stdout + result.stderr,
+                )
+                for observation in observations:
+                    published = Path(observation["published_file"])
+                    temporary = Path(observation["temporary_file"])
+                    self.assertEqual(published.parent, run_directory)
+                    self.assertEqual(temporary.parent, run_directory)
+                    self.assertEqual(digest(published.read_bytes()), observation["sha256"],
+                                     "Published historical reports must not be rewritten after the failure.")
+                    self.assertTrue(temporary.is_file(), "The controlled cleanup fault must leave a real residual.")
+                    self.assertEqual(temporary.read_bytes(), published.read_bytes())
+
+                report = json.loads((run_directory / "report.json").read_text(encoding="utf-8"))
+                markdown_report = (run_directory / "report.md").read_text(encoding="utf-8")
+                self.assertEqual(report["business_verdict"], expected_verdict)
+                self.assertIn("Business: " + expected_verdict, markdown_report)
+                self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+                summary = json.loads(result.stdout)
+                self.assertIsNot(summary.get("qualified_pass"), True, summary)
+                self.assertNotEqual(summary.get("completion"), "complete", summary)
+                self.assertEqual(summary.get("run_directory"), str(run_directory), summary)
+                # Cleanup ownership may be expressed in any field or message;
+                # do not freeze an error sentence or a new response structure.
+                self.assertRegex(
+                    json.dumps(summary, ensure_ascii=False),
+                    r"(?i)(cleanup|temporary|residu|清理|临时|残留)",
+                    "The handoff must disclose the remaining report-cleanup responsibility.",
+                )
 
 
 if __name__ == "__main__":

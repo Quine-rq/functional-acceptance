@@ -9,6 +9,7 @@ These are controlled local CLI/file checks, not host-agent or real-API tests.
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -235,11 +236,59 @@ class CollectorCLITests(unittest.TestCase):
         snapshot = self.directory_snapshot(run_dir)
         second = self.collect("defect", run_dir)
         self.assertEqual(second.returncode, 2, second.stdout + second.stderr)
+        summary = json.loads(second.stdout)
+        self.assertEqual(summary["status"], "incomplete")
+        self.assertIsNone(summary["run_directory"], "An old run is not owned by this invocation.")
+        self.assertIn("No run directory was created", summary["next"])
+        self.assertIn("choose a new directory", summary["next"])
         self.assertEqual(self.directory_snapshot(run_dir), snapshot)
         self.assertNotIn("Traceback", second.stdout + second.stderr)
         recheck, report = self.recheck_in_fresh_process(run_dir)
         self.assertEqual(recheck.returncode, 0, recheck.stdout + recheck.stderr)
         self.assert_report(report, "PASS", "complete")
+
+    def test_default_run_failure_hands_off_its_retained_pending_evidence(self):
+        # Control only the filesystem error at the public retained-record
+        # boundary. The CLI chooses its real random directory, creates actual
+        # material, and runs the real exporter before this injected write error.
+        driver = (
+            "import builtins,runpy,sys\n"
+            "from pathlib import Path\n"
+            "from unittest.mock import patch\n"
+            "original_open = Path.open\n"
+            "error_type = getattr(builtins, sys.argv[2])\n"
+            "def fail_record_write(path, *args, **kwargs):\n"
+            "    if path.name == 'execution.json' and args == ('xb',):\n"
+            "        raise error_type('synthetic-secret-do-not-print')\n"
+            "    return original_open(path, *args, **kwargs)\n"
+            "sys.argv = [sys.argv[1], '--case', 'healthy']\n"
+            "with patch.object(Path, 'open', fail_record_write):\n"
+            "    runpy.run_path(sys.argv[0], run_name='__main__')\n"
+        )
+        for error_type in ("OSError", "RuntimeError"):
+            with self.subTest(error_type=error_type):
+                isolated_repo = self.workspace / error_type
+                sample = isolated_repo / "examples" / "paginated_export"
+                shutil.copytree(COLLECTOR.parent, sample, ignore=shutil.ignore_patterns("__pycache__"))
+                process = subprocess.run(
+                    [sys.executable, "-B", "-c", driver, str(sample / "accept.py"), error_type],
+                    cwd=self.workspace, text=True, capture_output=True,
+                    timeout=30, check=False,
+                )
+                self.assertEqual(process.returncode, 2, process.stdout + process.stderr)
+                summary = json.loads(process.stdout)
+                self.assertEqual(summary["status"], "incomplete")
+                runs = list((isolated_repo / ".acceptance" / "runs").iterdir())
+                self.assertEqual(len(runs), 1, "A failed attempt must not cause an automatic retry.")
+                pending = self.read_json(runs[0] / "run.pending.json")
+                self.assertEqual(pending["execution_state"], "unknown")
+                self.assertEqual(pending["cleanup"]["state"], "unknown")
+                self.assertTrue((runs[0] / "attempt-1" / "output.csv").is_file())
+                self.assertFalse((runs[0] / "run.json").exists())
+                self.assertEqual(Path(summary["run_directory"]), runs[0])
+                self.assertIn("do not overwrite or blindly retry", summary["next"])
+                self.assertNotIn("synthetic-secret-do-not-print", process.stdout + process.stderr)
+                self.assertNotIn("Traceback", process.stdout + process.stderr)
 
     def test_existing_empty_and_nonempty_directories_are_refused_unchanged(self):
         for populated in (False, True):
