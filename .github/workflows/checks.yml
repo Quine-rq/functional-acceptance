@@ -29,7 +29,19 @@ jobs:
       - name: Standalone native regression pack
         run: python -B -m unittest discover -s examples/paginated_export -p 'test_export.py' -v
       - name: SQLite pack process lifecycle (synthetic, no upstream dependencies)
-        run: python -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_lifecycle.py -v
+        run: |
+          if output=$(python -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_lifecycle.py -v 2>&1); then
+            printf '%s\n' "$output"
+          else
+            status=$?
+            printf '%s\n' "$output"
+            message=${output: -8000}
+            message=${message//'%'/'%25'}
+            message=${message//$'\r'/'%0D'}
+            message=${message//$'\n'/'%0A'}
+            printf '::error title=SQLite lifecycle regression failed::%s\n' "$message"
+            exit "$status"
+          fi
       - name: SQLite pack pre-import identity guard (synthetic, no upstream dependencies)
         run: python -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_identity.py -v
       - name: Retained evidence consistency (not live host or browser execution)
