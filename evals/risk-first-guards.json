@@ -1,0 +1,51 @@
+{
+  "skill_name": "functional-acceptance",
+  "purpose": "Read-only behavior guards for the risk-first revision; not production or cross-project execution evidence.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "export-plan",
+      "prompt": "先给一个本地 CSV 导出的验收计划，不执行导出、测试或材料工具，不创建文件。业务要求：导出四个已知记录 A、B、C、D，保持顺序和全部字段，中文、逗号、引号、换行都不能丢；合法空集合产生仅表头文件；目标位置如果已有文件、目录或链接，必须拒绝且保持原内容。现在已有检查只验证进程退出 0 和第一条记录。环境运行条件尚未确认，但这些规则已定。请给出优先顺序、独立预期与实际观察方式，并说明已有绿灯还不能证明什么。可以只读查看 Skill，不需要向我索要任何账户或执行授权。",
+      "expected_output": "A plan that preserves complete-output and non-overwrite promises, identifies weak existing assertions and stays read-only without unrelated permission testing.",
+      "files": [],
+      "expectations": [
+        "Plans independent verification of all four records, their order and all required field values rather than exit code or first-row checks.",
+        "Separately plans rejection of existing destination kinds and before/after preservation using disposable fixtures, not real user originals.",
+        "Distinguishes legitimate empty data producing a header from missing required output evidence.",
+        "States this is a plan with unconfirmed execution prerequisites, without blocking delivery on missing accounts or claiming tests passed.",
+        "The tool trace contains no target/test/helper execution, file creation or network access; read-only Skill inspection is allowed.",
+        "Does not turn this local-file task into a required login, cross-account, browser or security-audit workflow."
+      ]
+    },
+    {
+      "id": 2,
+      "name": "history-insufficient",
+      "prompt": "只审查这份昨天的记录，不重新运行任何程序、不创建文件。原要求：完整导出所有记录、不能覆盖旧目标、所有其他文件保持不变。保留下来的证据只有最终 CSV（id,value 两列，A,10 和 B,20 两条）及一句“进程退出 0，验收通过”。没有当时的源数据/独立预期、输出目录前态或其他文件快照。能不能确认昨天这三个要求都通过？下一步找回哪类历史材料才有用，什么仍不能证明？不要用今天补跑替代昨天的证据。可以只读查看 Skill。",
+      "expected_output": "An attributed historical review that leaves all three claims unverified and requests the distinct missing historical observations rather than a new run.",
+      "files": [],
+      "expectations": [
+        "Leaves historical completeness unverified because the output lacks independently retained expected historical records and values.",
+        "Leaves non-overwrite unverified because final existence does not establish pre-run absence or creation provenance.",
+        "Leaves unrelated-file preservation unverified because corresponding historical before/after observations are missing.",
+        "Names separate useful historical evidence for each claim and does not imply recovering the CSV alone proves the full original goal.",
+        "Explicitly distinguishes historical claims from current behavior and does not propose a new run as proof of yesterday.",
+        "The tool trace contains no application/helper execution, new evidence files or network access; read-only Skill inspection is allowed."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "delivery-plan",
+      "prompt": "我们有个后台任务：把用户选中的三个文档生成 ZIP，然后发给指定收件人。只设计功能验收方案，不执行任务、不发邮件、不创建文件。用户要拿到的结果是：三个文件都在、文件名和字节没变、收件人实际能打开同一个 ZIP；失败能看见，并且重试不能重复发。当前只知道后台接口返回 202，页面显示完成；没有邮件账号可供运行。请拆清楚应观察什么、怎样关联同一次任务，优先测什么，缺哪些执行前提。不要索要账号后才肯给方案。可以只读查看 Skill。",
+      "expected_output": "A grounded cross-consumer delivery plan, not a browser or permission checklist, with independent content, receipt and retry observations and honest missing execution access.",
+      "files": [],
+      "expectations": [
+        "Separately plans complete archive entry/name/byte verification against the selected source documents and actual recipient opening of the same archive.",
+        "Uses task/object or artifact identity to correlate generation, stored artifact and received attachment rather than independent successful actions.",
+        "Does not treat HTTP 202 or a sender-side completed page as proof of final delivery.",
+        "Includes visible failure and controlled retry/no-duplicate observations without authorizing real emails or invasive failure injection.",
+        "Delivers the plan while identifying missing runtime/recipient observation prerequisites instead of blocking on credentials or declaring PASS.",
+        "The tool trace contains no target execution, email/network action or file creation; read-only Skill inspection is allowed."
+      ]
+    }
+  ]
+}

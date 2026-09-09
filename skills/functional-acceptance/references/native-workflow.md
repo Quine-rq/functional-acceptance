@@ -26,11 +26,74 @@ observations with the exact object/request and final response, including redirec
 Inspect collected values before labelling a mismatch; a selector error or response
 from another object does not prove a business defect.
 
+Observe the actual controls before scripting them. Wait for the user-visible state
+needed by the next step (authenticated page, loaded fields, confirmed removal),
+including application confirmation controls. A fixed sleep or a successful click
+does not establish that state. Use native waits within the remaining budget.
+
+Keep expected values separate from observed values and from later edits. Snapshot
+independent fixture/requirement values before filling or submitting; copy nested
+structures by value, not a shared mutable reference. Record a new expected version
+for a later authorized edit while preserving earlier comparisons. Reopen the same
+object and compare full required fields rather than deriving expected from actual.
+
+Structure checks around their dependencies, not one unguarded sequence. Catch an
+observer fault at its check boundary and preserve it separately from assertion
+failures. Continue only checks whose preconditions still hold; a failed parser for
+one object need not block an independent check on another. Keep required objects
+alive. Successful partial runs remain evidence, not a reason to rerun everything.
+
 Test code is software too. Validate a newly generated check before handing it off:
 run it, inspect its actual artifacts, and check that report/observer errors remain
 distinct from product failure. A deliberately broken control is useful only when
 it is authorized, isolated and clearly labelled; do not mutate a user's application
 merely to demonstrate the Skill.
+
+## Keep a usable handoff throughout execution
+
+The host can disappear before a final reply or cleanup. Save enough to continue
+without that reply; this is a recording discipline, not an automatic recovery
+service. Reuse native per-test reporting where it preserves the information below.
+Otherwise use a small run-owned Markdown/JSON record and separate attempt files;
+no particular filename, schema, language or dependency is required.
+
+1. **Before execution:** in the authorized evidence location, retain run/target
+   identity, every contract obligation with its independent expectation, the
+   original-state baseline (including relevant relations) or explicit gaps, and
+   the native entrypoint/prerequisites for continuing. Initially all untouched
+   obligations are UNVERIFIED and execution/cleanup are unconfirmed. A draft
+   [acceptance report](acceptance-report.md) can serve as the index. If persistent
+   writes are not authorized, keep the record in the conversation and disclose
+   that interruption recovery depends on its retention; do not create files.
+2. **Before a side effect:** record the exact run-owned object or request marker,
+   intended change, permitted scope and next read that could establish its state.
+   Record an owned process/job handle when available. Intent does not prove the
+   action started or completed. A generated script must record these boundaries
+   during execution, not return one in-memory summary at the end.
+3. **After each check:** persist attempt identity, the actual observation/evidence
+   reference, comparison and narrow verdict, or the observer fault and missing
+   observation. Leave untouched goals visible. Verify this record is readable
+   before dependent work; retain previous completed records instead of repeatedly
+   truncating the only copy. New immutable records or the project's tested atomic
+   publication mechanism are sufficient. Never treat a partial file as complete.
+4. **On uncertainty or interruption:** retain any active/unknown operation, affected
+   obligations and next safe observation. Inspect that operation before repeating
+   it, even if a list is empty or a command timed out. Continue independent checks
+   only when they cannot race with the unknown effects. Do not infer terminal
+   state from a stale PID, missing record or lost connection. If recording fails,
+   stop starting new business effects, attempt bounded shutdown of owned work,
+   and disclose delivery failure and the last readable evidence location.
+5. **At handoff or resume:** reconcile the original obligations against readable
+   records, including failed/corrected attempts. Recheck current target, authority,
+   writer state and evidence identity before further action. Recorded commands
+   are instructions to review, not permission to replay them. An unfinished
+   attempt stays UNVERIFIED until a new valid observation; retain earlier facts.
+   Final cleanup follows confirmed writer termination and object ownership.
+
+Completed records may survive a killed executor; unsaved observations, a final
+chat response and cleanup cannot be guaranteed. File visibility is not a claim
+of power-loss durability. A read-only handoff can explain the retained history;
+it does not itself establish current environment state or authorize recovery.
 
 ## Failure triage
 
@@ -41,6 +104,12 @@ merely to demonstrate the Skill.
 | Required tool, permission, identity or service unavailable | Environment gap; affected outcome UNVERIFIED, state prerequisite and safe recovery |
 | Required observation cannot be obtained | UNVERIFIED; distinguish missing evidence from observing a required artifact was not created |
 
+For a denied-access check, first establish the same live object's authorized
+positive control. Inspect private content or state changes through the actual
+entrypoint; status codes, an empty list or a deleted object alone do not establish
+denial. Preserve requests to known run-owned objects; do not enumerate strangers'
+objects or add a new role/operation beyond task authority.
+
 Preserve all attempts and disclose observer corrections. A later successful
 recheck does not erase an earlier qualified business failure. Capture sufficient
 startup/error details locally to diagnose failures; avoid credential-bearing
@@ -49,6 +118,13 @@ artifact is safe to publish. If evidence delivery fails, stop owned work and han
 off its location/responsibility without claiming a complete report.
 
 ## Native handoff and the next change
+
+Compare the required originals with the recorded baseline, including relevant
+relations and associated content. Track secondary objects created by the workflow
+as well as its main object. Removing the main object need not remove an attachment,
+label or background job. Clean only conclusively run-owned effects within scope,
+after their writers are terminal; otherwise disclose identity, status and owner.
+Keep evidence distinct from operational residue.
 
 Leave one reviewed repeat entrypoint with its working directory, prerequisites,
 source/fixture identity, expected verdicts, evidence locations and cleanup limits.
