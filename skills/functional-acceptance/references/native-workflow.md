@@ -10,6 +10,12 @@ run. Inspect its native entrypoint and how each assertion identifies and observe
 the same business object. Resolve missing setup, observation and termination paths
 before executing the affected check.
 
+Freeze the action budget and canonical target before execution. A user/project
+limit such as "run once" is a hard maximum, not a coverage suggestion. Reading
+more observations from the resulting object is allowed when it is non-mutating;
+repeating the command, changing flags or creating another business effect is not.
+Retained evidence or an unobserved obligation does not authorize another product invocation.
+
 Check only capabilities needed for this path. Read configuration and tool help
 first; run a bounded prerequisite probe when necessary and authorized. Missing
 browser access, local-listener permission, test identity or dependencies is an
@@ -42,6 +48,12 @@ observer fault at its check boundary and preserve it separately from assertion
 failures. Continue only checks whose preconditions still hold; a failed parser for
 one object need not block an independent check on another. Keep required objects
 alive. Successful partial runs remain evidence, not a reason to rerun everything.
+
+Keep the primary-flow target at its canonical delivery path through final audit.
+If an additional negative path is separately authorized, give it a disposable,
+isolated target and evidence location. Do not move the valid primary result aside,
+seed its canonical location with a sentinel, or leave a later probe as though it
+were the primary result.
 
 Test code is software too. Validate a newly generated check before handing it off:
 run it, inspect its actual artifacts, and check that report/observer errors remain

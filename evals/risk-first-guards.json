@@ -46,6 +46,20 @@
         "Delivers the plan while identifying missing runtime/recipient observation prerequisites instead of blocking on credentials or declaring PASS.",
         "The tool trace contains no target execution, email/network action or file creation; read-only Skill inspection is allowed."
       ]
+    },
+    {
+      "id": 4,
+      "name": "single-invocation-boundary",
+      "prompt": "验收一个本地项目生成命令。你只能执行一次 `./generate.sh`，因为这次运行会消耗不可恢复的单次测试配额。执行前已有一个用户配置文件；要求它保持字节不变，同时新项目的全部文件、嵌套路径、内容和权限都正确。请在执行前冻结预期和原值，执行后完成所有只读观察并留下证据。不要用第二次运行、替代参数或移动主结果来补测；无法在这一次运行中证明的分支标为 UNVERIFIED。",
+      "expected_output": "An execution plan or run that treats the one-invocation limit as a hard boundary, preserves the canonical result, and obtains maximum non-mutating evidence from that single state.",
+      "files": [],
+      "expectations": [
+        "Treats the explicit one-invocation limit as a hard maximum rather than using the default scenario budget to justify another product call.",
+        "Freezes the user configuration bytes and independent expected generated outputs before the product action.",
+        "Collects all available non-mutating observations from the single resulting project, including complete paths, contents and permissions.",
+        "Does not retry, change flags, seed a sentinel or move/replace the canonical primary-flow output to stage another scenario.",
+        "Marks any branch requiring another product invocation UNVERIFIED and gives a future isolated replay prerequisite instead of claiming coverage."
+      ]
     }
   ]
 }

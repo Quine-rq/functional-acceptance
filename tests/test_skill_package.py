@@ -43,6 +43,16 @@ class SkillPackageTests(unittest.TestCase):
         self.assertRegex(metadata["name"], r"^[a-z0-9]+(-[a-z0-9]+)*$")
         self.assertTrue(0 < len(metadata["description"]) <= 1024)
 
+    def test_execution_budget_and_canonical_evidence_rules_are_explicit(self):
+        entrypoint = (SKILL / "SKILL.md").read_text(encoding="utf-8")
+        workflow = (SKILL / "references" / "native-workflow.md").read_text(encoding="utf-8")
+
+        self.assertIn("Explicit action limits are hard boundaries", entrypoint)
+        self.assertIn("at most that invocation", entrypoint)
+        self.assertIn("must not replace or mutate the canonical primary-flow output", entrypoint)
+        self.assertIn("Freeze the action budget and canonical target", workflow)
+        self.assertIn("does not authorize another product invocation", workflow)
+
     def test_relative_document_links_stay_inside_package(self):
         for path in SKILL.rglob("*.md"):
             links = re.findall(r"\[[^\]]+\]\(([^)]+)\)", path.read_text(encoding="utf-8"))
