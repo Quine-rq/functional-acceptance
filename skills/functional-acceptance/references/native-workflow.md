@@ -23,10 +23,27 @@ actionable gap, not a reason to replace a requested UI flow with an API assertio
 Name the smallest missing capability and next safe check. Use the host's normal
 approval path if the user wants to grant it; Skill text grants no permissions.
 
+## Qualify evidence before reusing it
+
+Existing tests preserve useful setup and regression history, but their names and green exits do not establish coverage. Before counting one toward an obligation, inspect the executable arrangement and answer:
+
+1. Which actor, identity, state and ordering make this outcome hard?
+2. Does the setup force that decisive precondition, or does it quietly make the race or failure impossible?
+3. Does the assertion observe the user result and its cardinality, or only an internal proxy or process exit?
+4. What plausible product execution would violate the promise while this test still passes?
+
+If question 4 has an in-scope answer, keep the old test as supporting evidence and add one independent check that forces the missing condition. For a claimed fix, make that disconfirming check the first decisive run; a later broad green suite cannot erase its counterexample. If the missing condition needs unavailable authority or a real surface, retain it as UNVERIFIED.
+
+For concurrent state changes, write the required partial order before running: which actors must first observe what state, where the single decision should occur, and how many prompts, writes, permissions or side effects may result. Use events or barriers at an observation or dependency seam to force the contested interleaving without replacing the product decision. Prefer one deterministic schedule to a stress loop; sleeps may allow progress after an event but cannot prove simultaneous arrival. Verify terminal workers, queue/state cleanup and the next safe operation after resolution.
+
+This qualification applies beyond thread races. For retries, force the uncertain response before the repeated request; for deduplication, make contenders observe the same empty/idempotency state; for cache fill, align misses before publication; for recovery, interrupt before the terminal marker. The purpose is to reproduce the causal precondition, not to manufacture a defect.
+
 ## Reuse before generating
 
-Preserve working setup, fixtures, assertions, tracing and cleanup. Add only the
-missing outcome check in the project's native conventions and authorized paths.
+Preserve working setup, fixtures, assertions, tracing and cleanup after qualifying
+what they actually cover. Add only the missing outcome check in the project's
+native conventions and authorized paths; do not inherit an existing test's coverage
+claim from its name, comment or earlier report.
 For UI tests, prefer user-visible locators and waiting assertions. Correlate network
 observations with the exact object/request and final response, including redirects.
 Inspect collected values before labelling a mismatch; a selector error or response
