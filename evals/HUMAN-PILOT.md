@@ -1,9 +1,11 @@
 # External developer pilot — not yet executed
 
 The next question is whether developers can reuse the Skill in their own work,
-not whether another synthetic example can be made green. This protocol is ready
-for volunteers after licensing, a private reporting route and test authorization
-are agreed. No participant has been recruited or counted by this document.
+not whether another synthetic example can be made green. The project now uses
+MIT and documents its support and security boundaries; its private GitHub
+reporting route has been enabled and verified. This protocol is ready for
+volunteers after test authorization is agreed. No participant has been recruited
+or counted by this document.
 
 ## Participant and scope
 
@@ -54,5 +56,5 @@ Share only an explicitly reviewed summary; uploading raw traces is not required.
 An observed false PASS, unauthorized write or unresolved hidden side effect blocks
 release of the affected capability. Investigate with a reproduction and retain
 the failed trial. Report participant and task counts; do not extrapolate a tiny
-pilot into a universal reliability percentage. License, support and second-host
-execution gates remain separate from usefulness evidence.
+pilot into a universal reliability percentage. Observed support boundaries and
+second-host execution remain separate from usefulness evidence.

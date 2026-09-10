@@ -1,5 +1,10 @@
 # Product hardening — implementation contract
 
+> Historical plan note: the licensing and support items below were written for
+> the 2026-09-08 baseline. The repository now uses the [MIT License](LICENSE)
+> and publishes [security](SECURITY.md) and [support](SUPPORT.md) boundaries;
+> private reporting has since been enabled and verified.
+
 Started 2026-09-08 from `5ec62872eaef6509058b88dded031664beb940d1`.
 This is the implementation plan, not evidence of completion.
 

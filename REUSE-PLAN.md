@@ -1,5 +1,10 @@
 # Reuse and recovery: implementation contract
 
+> Historical plan note: its licensing and private-contact tasks describe the
+> plan's original baseline. The repository now uses the [MIT License](LICENSE)
+> and publishes [security](SECURITY.md) and [support](SUPPORT.md) boundaries.
+> The private reporting route has since been enabled and verified.
+
 Starting point: `ac8eda6e35b58583ae521f2989302c73dbb1d0fa`, 2026-09-08.
 
 ## User result

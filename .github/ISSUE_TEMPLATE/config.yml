@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security-sensitive report
+    url: https://github.com/Quine-rq/functional-acceptance/security
+    about: Follow SECURITY.md. Do not put vulnerability details in a public issue.
+  - name: Support boundaries
+    url: https://github.com/Quine-rq/functional-acceptance/blob/main/SUPPORT.md
+    about: Check the preview support scope and installation guidance before opening an issue.

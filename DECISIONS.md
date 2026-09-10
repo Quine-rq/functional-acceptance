@@ -1,5 +1,10 @@
 # Design decisions and references
 
+> Historical decision record: its unresolved-license wording describes the
+> 2026-09-08 baseline. The repository now uses the [MIT License](LICENSE); see
+> [SECURITY.md](SECURITY.md) and [SUPPORT.md](SUPPORT.md) for the current
+> preview boundaries. Its host and external-use evidence remains unresolved.
+
 The original design baseline is revision v0.2. Decisions below constrain implementation; they are not evidence of competitive performance. Current implementation scope is tracked in [M1-PLAN.md](M1-PLAN.md) and [README.md](README.md).
 
 ## Keep the project a Skill

@@ -8,7 +8,7 @@ Functional Acceptance is a skill for coding agents to verify features through re
 
 For example: an export command reports success, but the CSV is missing the final record. Acceptance means opening the file and checking its contents—not stopping at exit code `0`.
 
-> Installable development preview, not a supported release. Start in an isolated test project; licensing is still pending.
+> Installable development preview, not a supported release. Start in an isolated test project. Released under the [MIT License](LICENSE).
 
 ## Start in your project
 
@@ -146,10 +146,11 @@ journeys. Previously blocked host and unfamiliar-project work is recorded separa
 - **See what is implemented:** [M1 scope](M1-PLAN.md), [M1 validation](M1-RESULTS.md), [M2 hardening](M2-RESULTS.md), [roadmap](ROADMAP.md).
 - **Understand the design:** [product design](DESIGN.md), [architecture](ARCHITECTURE.md), [evaluation plan](VALIDATION.md). These detailed documents are in Chinese; planned evaluations are not passing test results.
 
-Next release gates: reliable full-flow execution in a second host, external developers using their own projects, demonstrated benefit beyond the baseline, and license/security-support decisions. The [native follow-up](NATIVE-FOLLOWUP-RESULTS.md) explains the latest improvements and remaining failures. Passing local checks is not a supported-release claim.
+Next release gates: reliable full-flow execution in a second host, external developers using their own projects, and demonstrated benefit beyond the baseline. The [external-developer pilot](evals/HUMAN-PILOT.md) explains how unfamiliar users can participate without sharing their project or raw evidence. The [native follow-up](NATIVE-FOLLOWUP-RESULTS.md) explains the latest improvements and remaining failures. Passing local checks is not a supported-release claim.
 
 ## Feedback and licensing
 
 Have a feature that looks successful but fails in actual use? Share its expected behavior and a small reproduction using synthetic data. Those cases are more useful at this stage than requests for broad platform support.
 
-License selection is pending. No open-source license has been applied to this repository yet.
+This project is available under the [MIT License](LICENSE).
+Read [SUPPORT.md](SUPPORT.md) for the preview's support boundary, [SECURITY.md](SECURITY.md) before reporting a vulnerability, and [CONTRIBUTING.md](CONTRIBUTING.md) before preparing a pull request.

@@ -1,0 +1,34 @@
+name: External developer pilot
+description: Volunteer a non-production project for the independent onboarding study.
+title: "pilot: "
+labels:
+  - pilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read evals/HUMAN-PILOT.md first. Do not share source code, credentials, customer data, raw logs, or any production target here. A maintainer may ask only for the reviewed summary described by the protocol.
+  - type: input
+    id: project_type
+    attributes:
+      label: Anonymized project type and agent host
+      placeholder: "For example: local Python CLI / Codex desktop"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Real user goal and independently observable outcome
+    validations:
+      required: true
+  - type: checkboxes
+    id: safeguards
+    attributes:
+      label: Safeguards
+      options:
+        - label: The project is non-production and I have authority to run the proposed local checks.
+          required: true
+        - label: I will keep raw evidence and any sensitive project material local.
+          required: true
+        - label: I understand that this preview has no response-time or compatibility SLA.
+          required: true

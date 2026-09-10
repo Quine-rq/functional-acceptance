@@ -14,8 +14,9 @@ Milestones are ordered by evidence, not dates. M1 now has a controlled local imp
    omitted failure branch. Use fair with/without-Skill comparisons rather than
    promoting old/new-Skill scores to proof of benefit.
 3. **Human trial and release decision:** observe external developers on their own
-   authorized projects, including a repeat use. Resolve licensing and support
-   scope before a supported release. An installable preview is not that release.
+   authorized projects, including a repeat use. The project now uses the MIT
+   License and publishes support/reporting boundaries; validate those boundaries
+   in practice before a supported release. An installable preview is not that release.
 
 The historical milestone records below remain intact; local phase 1 checks do not
 close their behavior, external-user or release gates.
@@ -25,7 +26,7 @@ close their behavior, external-user or release gates.
 - [x] Document the stack-independent product definition and bounded acceptance workflow.
 - [x] Define target preservation, evidence qualification, safe stopping, and native handoff.
 - [x] Specify counterexamples and fair with/without-Skill comparisons.
-- [ ] Select a license before distributing an installable release.
+- [x] Select the [MIT License](LICENSE) before distributing an installable release.
 
 The repository being public is not evidence that the Skill works.
 
@@ -79,7 +80,8 @@ natural-trigger matrix, causal benefit experiment or external-human M3 exit.
 - [ ] Provide a verified install/uninstall path and an explicit tested support matrix.
 - [ ] Exercise version pinning and compatibility with older materials.
 - [ ] Publish a safe healthy/defective/insufficient-evidence demonstration.
-- [ ] Resolve licensing, dependency attribution, and a responsible security-reporting route.
+- [ ] Confirm dependency attribution.
+- [x] Enable and verify the documented private security-reporting route.
 - [ ] Obtain authorization for the release.
 
 **Exit:** release claims match the demonstrated scope. This is not an automatic approval for users to deploy their own products.

@@ -31,7 +31,7 @@ These are design references, not copied implementations. Their support claims do
 
 ## Install into one project
 
-Development preview, not a supported release. Read the [Skill](skills/functional-acceptance/SKILL.md) and its resources first. License selection is still pending.
+Development preview, not a supported release. Read the [Skill](skills/functional-acceptance/SKILL.md) and its resources first. It is available under the [MIT License](LICENSE); supported versions and reporting routes are described in [SUPPORT.md](SUPPORT.md) and [SECURITY.md](SECURITY.md).
 
 The tested installer is `skills@1.5.24`, requiring Node 22.20+. It is a separate third-party tool, not part of the Skill runtime. The following commands may download it from npm and fetch this public repository. `DO_NOT_TRACK=1` disables that installer's telemetry; the host's own data handling is separate.
 
@@ -183,8 +183,8 @@ particular prose. Existing installer tests compare every installed file with the
 source, so the new templates participate in install/update/removal verification.
 Tests use disposable projects and do not alter global Skill installations.
 
-No paid model calls, fresh remote-source installation, new remote CI run, supported
-release or license selection occurred in this phase. The new description and
+No paid model calls, fresh remote-source installation, new remote CI run, or supported
+release occurred in this phase. The new description and
 reference routing still need behavior evaluation. A first-time executor completing
 a useful acceptance from just the README/request, and external-human usability,
 remain unverified. Earlier host results above must not be relabelled as tests of
