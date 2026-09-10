@@ -109,3 +109,13 @@ natural discovery, healthy-history discrimination or full-flow second-host testi
 The final Codex candidate still has an omitted overwrite-rejection check. Therefore
 the broad behavior/benefit and M3/M4 release gates remain open; no checkbox above
 is promoted by a successful process exit or a small targeted score.
+
+A later Cookiecutter repeat added a development-only write-once invocation ledger
+and ran three fresh pairs for each of two cases. Both configurations produced 6/6
+correct business verdicts, no false PASS and one product invocation per run. The
+formal 46/48 versus 45/48 difference came from an uninstrumented no-network claim,
+not user-outcome accuracy. Extra product invocation did not recur; the healthy runs
+also received an equal coordinator clarification about inapplicable conditions, so
+their verdict cannot isolate the Skill's contribution. The next causal test must
+avoid both that reinforcement and enumerating the answer inside the task description,
+while still retaining an independent hidden oracle.

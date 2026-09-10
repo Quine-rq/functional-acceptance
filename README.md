@@ -89,7 +89,7 @@ The Skill uses the Agent Skills format and tools already available in the projec
 
 | Agent / environment | What has been checked | Still unverified |
 | --- | --- | --- |
-| Codex | Native execution, planning, retained-history review and regression trials | Reliable full coverage: a recorded run omitted a required failure branch |
+| Codex | Native execution, planning, retained-history review, regression trials and 12 repeated Cookiecutter runs | Benefit on natural, under-specified user requests and unfamiliar external use |
 | Claude Code | Actual, explicitly loaded read-only history reviews | Natural loading, healthy-history discrimination and complete executing journeys |
 | Cursor, GitHub Copilot, OpenCode | Project-local install, replacement and removal only | Native discovery and useful execution |
 | Mobile devices / other remote services | Intended applications only | Real-device and service-specific acceptance |
@@ -121,6 +121,8 @@ python3 -B -S -m unittest discover -s examples/sqlite_utils/acceptance -p test_i
 ```
 
 The first command tests the helper, evidence collector, relocatable Skill package and native example's safety/report contracts. The second tests the exporter independently of the Skill and helper. The third and fourth check the SQLite pack's process lifecycle and pre-import guard with synthetic controls, not its business flow. These commands do not run the host-dependent linkding browser journey. A passing defect-detection test does not make that export correct.
+
+[`EVALUATION-HARNESS.md`](EVALUATION-HARNESS.md) documents the development-only write-once invocation ledger used for repeated evals. Its runner is outside `skills/functional-acceptance`, is excluded from installed package bytes, and does not grant command authority. It records one reviewed subprocess and fails closed on timeout, observer failure, retry, or a surviving owned descendant.
 
 Installer integration checks are development-only and need Node 22.20+:
 
